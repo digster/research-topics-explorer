@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Playwright / test artifacts
+.playwright-mcp/
+*.png
+*.jpg
+*.jpeg
+
+# Node (only if anyone adds tooling later)
+node_modules/
+npm-debug.log*
+
+# Local env
+.env
+.env.local
