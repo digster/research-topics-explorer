@@ -232,28 +232,30 @@ section.panel {
   color: var(--fg-faint);
 }
 
-/* ---------- Knowledge Graph view ---------- */
-#graph svg { width: 100%; height: 100%; cursor: grab; }
-#graph svg:active { cursor: grabbing; }
-#graph .node { cursor: pointer; }
-#graph .node text {
+/* ---------- Knowledge Graph view (shared by Graph & Creators) ---------- */
+/* Styles are scoped to the .force-graph SVG class (set by renderGraph) so
+   the same rules apply whether the graph is mounted in #graph or #creators. */
+.force-graph { width: 100%; height: 100%; cursor: grab; }
+.force-graph:active { cursor: grabbing; }
+.force-graph .node { cursor: pointer; }
+.force-graph .node text {
   font: 11px var(--sans);
   fill: var(--fg-dim);
   pointer-events: none;
   text-anchor: middle;
   dominant-baseline: middle;
 }
-#graph .node.dim circle { opacity: 0.18; }
-#graph .node.dim text   { opacity: 0.18; }
-#graph .node.highlight circle { stroke: var(--fg); stroke-width: 2; }
-#graph .node.highlight text { fill: var(--fg); font-weight: 600; }
-#graph .link {
+.force-graph .node.dim circle { opacity: 0.18; }
+.force-graph .node.dim text   { opacity: 0.18; }
+.force-graph .node.highlight circle { stroke: var(--fg); stroke-width: 2; }
+.force-graph .node.highlight text   { fill: var(--fg); font-weight: 600; }
+.force-graph .link {
   stroke: var(--line-2);
   stroke-opacity: 0.5;
   stroke-width: 0.7;
 }
-#graph .link.dim { stroke-opacity: 0.05; }
-#graph .link.highlight { stroke: var(--accent); stroke-opacity: 0.9; stroke-width: 1.5; }
+.force-graph .link.dim { stroke-opacity: 0.05; }
+.force-graph .link.highlight { stroke: var(--accent); stroke-opacity: 0.9; stroke-width: 1.5; }
 
 .graph-overlay {
   position: absolute; bottom: 14px; left: 14px;
@@ -748,6 +750,7 @@ function renderGraph(targetId = "graph", subset = null) {
     .map(e => ({ source: e.source, target: e.target }));
 
   const svg = d3.select(container).append("svg")
+    .attr("class", "force-graph")
     .attr("viewBox", [0, 0, width, height]);
 
   const root = svg.append("g");
