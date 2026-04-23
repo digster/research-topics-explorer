@@ -413,6 +413,73 @@ section.panel {
 .hubs-tabs button:hover { color: var(--fg); }
 .hubs-tabs button.active { color: var(--fg); border-bottom-color: var(--accent); }
 
+/* ---------- Disciplines view ---------- */
+/* Thematic groupings of all v5/v6/v7 topics under the v5 10-phase study
+   sequence. Each discipline is a column; each row is a topic with its
+   version badge. Clicking a row opens the existing detail panel. */
+#disciplines { overflow: auto; padding: 28px 32px 60px; }
+.disciplines-intro {
+  font: 12px/1.55 var(--sans);
+  color: var(--fg-dim);
+  max-width: 760px;
+  margin: 0 0 22px;
+}
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.discipline-col {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 18px 14px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.discipline-col .phase-tag {
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.discipline-col h3 {
+  font: 600 18px/1.25 var(--sans);
+  color: var(--fg);
+  margin: 0;
+}
+.discipline-col .subtitle {
+  font: 12px/1.55 var(--sans);
+  color: var(--fg-dim);
+  margin: 0 0 4px;
+}
+.discipline-topic {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 10px; align-items: center;
+  padding: 8px 10px;
+  background: var(--bg-elev-2);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 100ms, transform 100ms;
+}
+.discipline-topic:hover { border-color: var(--line-2); transform: translateY(-1px); }
+.discipline-topic .num {
+  font: 11px/1 var(--mono);
+  color: var(--fg-faint);
+  text-align: right;
+}
+.discipline-topic .name { font-size: 13px; color: var(--fg); line-height: 1.35; }
+.discipline-topic.unresolved { opacity: 0.45; cursor: default; }
+.discipline-topic.unresolved:hover { transform: none; border-color: transparent; }
+.discipline-col .empty-col {
+  font: 12px var(--sans);
+  color: var(--fg-faint);
+  padding: 8px 2px;
+  font-style: italic;
+}
+
 /* ---------- Misc ---------- */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -438,6 +505,7 @@ section.panel {
       <button data-view="roadmap">Roadmap</button>
       <button data-view="cards">Cards</button>
       <button data-view="hubs">Hubs</button>
+      <button data-view="disciplines">Disciplines</button>
       <button data-view="creators">Creators</button>
     </nav>
     <div class="stats" id="stats"></div>
@@ -480,11 +548,12 @@ section.panel {
   </aside>
 
   <main>
-    <div id="graph"    class="view active"></div>
-    <div id="roadmap"  class="view"></div>
-    <div id="cards"    class="view"></div>
-    <div id="hubs"     class="view"></div>
-    <div id="creators" class="view"></div>
+    <div id="graph"       class="view active"></div>
+    <div id="roadmap"     class="view"></div>
+    <div id="cards"       class="view"></div>
+    <div id="hubs"        class="view"></div>
+    <div id="disciplines" class="view"></div>
+    <div id="creators"    class="view"></div>
   </main>
 
   <section class="panel" id="panel">
@@ -1073,16 +1142,106 @@ function renderCreators() {
 }
 
 /* =============================================================================
+   View 6 — Disciplines (thematic groupings across v5/v6/v7)
+   =============================================================================
+   Renders DATA.disciplines (produced by parse.mjs from disciplines.md) as
+   a responsive grid of phase columns. Each row lists a topic with its
+   version badge and opens the standard detail panel on click.
+   Respects the global visibleTopics() filter so Version/Tier/Phase/Search
+   in the left sidebar transparently filter rows here too.
+*/
+
+function renderDisciplines() {
+  const root = document.getElementById("disciplines");
+  root.innerHTML = "";
+
+  const disciplines = (DATA && DATA.disciplines) || [];
+  if (!disciplines.length) {
+    root.innerHTML = `
+      <div style="padding:40px; color: var(--fg-faint); font: 13px var(--sans); max-width: 560px;">
+        No disciplines defined. Create <code>disciplines.md</code> and run
+        <code style="font: 12px var(--mono);">node parse.mjs</code> to populate this view.
+      </div>`;
+    return;
+  }
+
+  // Intro paragraph explaining the view's intent — keeps the page
+  // self-describing even when opened fresh via a deep-link.
+  const intro = document.createElement("p");
+  intro.className = "disciplines-intro";
+  intro.textContent =
+    "Thematic groupings of all topics across v5, v6, and v7 under the v5-author's 10-phase study sequence. " +
+    "Each row is one topic; click to open its details. Left-sidebar filters apply.";
+  root.appendChild(intro);
+
+  const visIds = new Set(visibleTopics().map(t => t.id));
+  const grid = document.createElement("div");
+  grid.className = "disciplines-grid";
+
+  // Sort by phase number so Phase 1 is always leftmost regardless of
+  // declaration order in disciplines.md.
+  const sorted = [...disciplines].sort((a, b) => a.phase - b.phase);
+
+  for (const d of sorted) {
+    const col = document.createElement("div");
+    col.className = "discipline-col";
+
+    col.innerHTML = `
+      <div class="phase-tag">Phase ${d.phase}</div>
+      <h3>${escapeHtml(d.name)}</h3>
+      ${d.subtitle ? `<p class="subtitle">${escapeHtml(d.subtitle)}</p>` : ""}
+    `;
+
+    let renderedRows = 0;
+    d.topics.forEach((entry, i) => {
+      const topic = entry.targetId ? TOPIC_BY_ID.get(entry.targetId) : null;
+
+      // If we have a resolved topic but it's filtered out by the sidebar,
+      // skip the row entirely (keeps the grid tight under active filters).
+      if (topic && !visIds.has(topic.id)) return;
+
+      const row = document.createElement("div");
+      row.className = "discipline-topic" + (topic ? "" : " unresolved");
+      row.innerHTML = `
+        <span class="num">${i + 1}</span>
+        <span class="name">${escapeHtml(topic ? topic.name : entry.raw)}</span>
+        ${topic
+          ? `<span class="badge ${topic.version}">${topic.version}</span>`
+          : `<span class="badge" title="Unresolved topic name in disciplines.md" style="background: var(--bg-elev-2); color: var(--fg-faint);">?</span>`
+        }
+      `;
+      if (topic) row.addEventListener("click", () => selectTopic(topic.id));
+      col.appendChild(row);
+      renderedRows++;
+    });
+
+    // When filters hide every topic in a column, show a gentle placeholder
+    // so the user understands why the column looks empty.
+    if (renderedRows === 0) {
+      const empty = document.createElement("div");
+      empty.className = "empty-col";
+      empty.textContent = "No topics match current filters.";
+      col.appendChild(empty);
+    }
+
+    grid.appendChild(col);
+  }
+
+  root.appendChild(grid);
+}
+
+/* =============================================================================
    Dispatcher
    ============================================================================= */
 
 function renderCurrentView() {
   switch (STATE.view) {
-    case "graph":    renderGraph(); break;
-    case "roadmap":  renderRoadmap(); break;
-    case "cards":    renderCards(); break;
-    case "hubs":     renderHubs(); break;
-    case "creators": renderCreators(); break;
+    case "graph":       renderGraph(); break;
+    case "roadmap":     renderRoadmap(); break;
+    case "cards":       renderCards(); break;
+    case "hubs":        renderHubs(); break;
+    case "disciplines": renderDisciplines(); break;
+    case "creators":    renderCreators(); break;
   }
 }
 

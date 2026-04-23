@@ -343,6 +343,60 @@ function resolveConnection(raw, index) {
   return candidates[0][1];
 }
 
+// --- disciplines parser ----------------------------------------------------
+
+// Parses disciplines.md into:
+//   [{ phase, name, subtitle, topics: [{ raw, targetId }] }, ...]
+// Shape of source file:
+//   ## Phase N: Name
+//   Optional subtitle paragraph.
+//   ### Topics
+//   - Topic Name
+//   - Another Topic
+//
+// Topic names are resolved against the *same* fuzzy index used for
+// "Connects to:" resolution, so v5/v6/v7 topic names are all matchable
+// using their canonical form from the source markdowns.
+function parseDisciplines(md, index) {
+  const { body } = stripFrontmatter(md);
+  const sections = splitSections(body, 2); // ## Phase N: ...
+  const disciplines = [];
+
+  for (const section of sections) {
+    const m = section.heading.match(/^Phase\s+(\d+)\s*:\s*(.+)$/i);
+    if (!m) continue; // skip non-phase level-2 headings (e.g. the doc title)
+    const phase = Number(m[1]);
+    const name = m[2].trim();
+
+    // Subtitle = first non-empty paragraph between the ## heading and the
+    // first ### sub-heading (if any). Multi-line paragraphs are preserved.
+    const beforeTopics = section.body.split(/^###\s/m)[0].trim();
+    const subtitle = beforeTopics.split(/\n\n+/)[0].trim();
+
+    // Collect bullet items under the "### Topics" sub-section.
+    // Only keep lines that begin with a "- " or "* " bullet marker — this
+    // naturally excludes horizontal-rule separators (`---`) and blank lines
+    // that live between phase sections. A final letter-character check
+    // guards against any remaining punctuation-only lines.
+    const topicsSec = splitSections(section.body, 3).find((s) =>
+      /^Topics/i.test(s.heading)
+    );
+    const topicNames = (topicsSec?.body || "")
+      .split("\n")
+      .filter((l) => /^\s*[-*]\s+\S/.test(l)) // must be a bullet with content
+      .map((l) => l.replace(/^\s*[-*]\s+/, "").trim())
+      .filter((l) => l && /[A-Za-z]/.test(l));
+
+    const resolved = topicNames.map((n) => ({
+      raw: n,
+      targetId: resolveConnection(n, index),
+    }));
+
+    disciplines.push({ phase, name, subtitle, topics: resolved });
+  }
+  return disciplines;
+}
+
 // --- main ------------------------------------------------------------------
 
 async function main() {
@@ -387,6 +441,25 @@ async function main() {
     delete t.connectionsRaw; // keep payload tight
   }
 
+  // Parse the thematic disciplines overlay, if present. This is optional —
+  // the Disciplines view renders a graceful empty state when the file is
+  // absent. Every discipline topic name is resolved through the shared
+  // `resolveConnection` index so it matches canonical topic ids.
+  let disciplines = [];
+  let unresolvedDisciplines = [];
+  try {
+    const dMd = await readFile(join(__dirname, "disciplines.md"), "utf8");
+    disciplines = parseDisciplines(dMd, index);
+    for (const d of disciplines) {
+      for (const t of d.topics) {
+        if (!t.targetId) unresolvedDisciplines.push(`P${d.phase}/${d.name}: ${t.raw}`);
+      }
+    }
+  } catch (err) {
+    if (err.code !== "ENOENT") throw err;
+    // disciplines.md simply doesn't exist — that's fine.
+  }
+
   // Stats for the README and sanity check.
   const stats = {
     topicsTotal: allTopics.length,
@@ -397,6 +470,8 @@ async function main() {
     },
     edges: edges.length,
     unresolvedConnections: unresolved,
+    disciplines: disciplines.length,
+    unresolvedDisciplines: unresolvedDisciplines.length,
     generatedAt: new Date().toISOString(),
   };
 
@@ -408,6 +483,7 @@ async function main() {
     topics: allTopics,
     edges,
     creators,
+    disciplines,
   };
 
   // Emit data.js
@@ -424,6 +500,12 @@ async function main() {
   console.log(`  edges:  ${stats.edges}`);
   console.log(`  unresolved connections: ${stats.unresolvedConnections}`);
   console.log(`  creators (v7 Group A): ${creators.length}`);
+  console.log(`  disciplines: ${stats.disciplines} (unresolved discipline topics: ${stats.unresolvedDisciplines})`);
+  // Surface unresolved discipline entries so curators can fix typos quickly.
+  if (unresolvedDisciplines.length) {
+    console.log("  — unresolved discipline topic names:");
+    for (const line of unresolvedDisciplines) console.log("      • " + line);
+  }
 }
 
 main().catch((err) => {

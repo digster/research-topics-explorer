@@ -10,7 +10,9 @@ window.RESEARCH_DATA = {
     },
     "edges": 588,
     "unresolvedConnections": 278,
-    "generatedAt": "2026-04-17T14:45:34.004Z"
+    "disciplines": 10,
+    "unresolvedDisciplines": 0,
+    "generatedAt": "2026-04-23T22:55:45.090Z"
   },
   "topics": [
     {
@@ -10459,5 +10461,725 @@ window.RESEARCH_DATA = {
     "v7-frank-lloyd-wright",
     "v7-louis-kahn",
     "v7-leonardo-da-vinci"
+  ],
+  "disciplines": [
+    {
+      "phase": 1,
+      "name": "The Meta-Frameworks",
+      "subtitle": "First contact. Feedback, entropy, evidence, paradigms — the conceptual grammar every subsequent topic assumes.",
+      "topics": [
+        {
+          "raw": "Systems Thinking & System Dynamics",
+          "targetId": "v5-systems-thinking-and-system-dynamics"
+        },
+        {
+          "raw": "Cybernetics & Control Theory",
+          "targetId": "v5-cybernetics-and-control-theory"
+        },
+        {
+          "raw": "Information Theory",
+          "targetId": "v5-information-theory"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Structure & Connection",
+      "subtitle": "The mathematics of pattern, change, and abstraction — scaffolding for complexity, networks, dynamics, and structural thinking.",
+      "topics": [
+        {
+          "raw": "Complex Systems & Chaos Theory",
+          "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Category Theory & Abstract Algebra",
+          "targetId": "v5-category-theory-and-abstract-algebra"
+        },
+        {
+          "raw": "Philosophy of Mathematics",
+          "targetId": "v5-philosophy-of-mathematics"
+        },
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Mind & Perception",
+      "subtitle": "From structure to the mind that perceives structure — cognition, experience, and the boundaries of the thinking self.",
+      "topics": [
+        {
+          "raw": "Cognitive Science & Perception",
+          "targetId": "v5-cognitive-science-and-perception"
+        },
+        {
+          "raw": "Phenomenology & Embodied Experience",
+          "targetId": "v5-phenomenology-and-embodied-experience"
+        },
+        {
+          "raw": "Philosophy of Mind & Consciousness",
+          "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Somatic Practices & Movement Science",
+          "targetId": "v6-somatic-practices-and-movement-science"
+        },
+        {
+          "raw": "Developmental Psychology",
+          "targetId": "v7-developmental-psychology"
+        },
+        {
+          "raw": "Psychoanalysis",
+          "targetId": "v7-psychoanalysis"
+        },
+        {
+          "raw": "Flow & Positive Psychology",
+          "targetId": "v7-flow-and-positive-psychology"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Language, Signs & Representation",
+      "subtitle": "How meaning gets made, encoded, transmitted, and shaped by the systems that carry it.",
+      "topics": [
+        {
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
+        },
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Writing Systems, Notation & Symbolic Representation",
+          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Rhetoric, Narrative Theory & Story Systems",
+          "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
+        },
+        {
+          "raw": "Metaphor Theory & Conceptual Blending",
+          "targetId": "v6-metaphor-theory-and-conceptual-blending"
+        },
+        {
+          "raw": "Memory, Mnemonic Systems & Externalized Knowledge",
+          "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
+        },
+        {
+          "raw": "Dance Notation & Movement Analysis",
+          "targetId": "v6-dance-notation-and-movement-analysis"
+        },
+        {
+          "raw": "Jorge Luis Borges",
+          "targetId": "v7-jorge-luis-borges"
+        },
+        {
+          "raw": "Italo Calvino",
+          "targetId": "v7-italo-calvino"
+        },
+        {
+          "raw": "Ursula K. Le Guin",
+          "targetId": "v7-ursula-k-le-guin"
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Culture, History & Worldview",
+      "subtitle": "Zoom out to civilizational context — traditions, technology's cultural role, the history of computing itself.",
+      "topics": [
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "History of Computing & The Personal Computer Revolution",
+          "targetId": "v5-history-of-computing-and-the-personal-computer-revolution"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Political Philosophy",
+          "targetId": "v7-political-philosophy"
+        },
+        {
+          "raw": "Ethics (Consequentialism / Deontology / Virtue)",
+          "targetId": "v7-ethics-consequentialism-deontology-virtue"
+        },
+        {
+          "raw": "Existentialism",
+          "targetId": "v7-existentialism"
+        },
+        {
+          "raw": "Japanese Aesthetics",
+          "targetId": "v7-japanese-aesthetics"
+        },
+        {
+          "raw": "Andrei Tarkovsky",
+          "targetId": "v7-andrei-tarkovsky"
+        },
+        {
+          "raw": "Akira Kurosawa",
+          "targetId": "v7-akira-kurosawa"
+        },
+        {
+          "raw": "Hayao Miyazaki / Studio Ghibli",
+          "targetId": "v7-hayao-miyazaki-studio-ghibli"
+        },
+        {
+          "raw": "Ways of Seeing",
+          "targetId": "v7-ways-of-seeing"
+        },
+        {
+          "raw": "Zen and the Art of Motorcycle Maintenance",
+          "targetId": "v7-zen-and-the-art-of-motorcycle-maintenance"
+        },
+        {
+          "raw": "Seeing Like a State",
+          "targetId": "v7-seeing-like-a-state"
+        },
+        {
+          "raw": "Finite and Infinite Games",
+          "targetId": "v7-finite-and-infinite-games"
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "name": "Design & Making",
+      "subtitle": "From theory to artifact. The disciplines where perception, notation, interface, and aesthetics become things people actually use.",
+      "topics": [
+        {
+          "raw": "Pattern Languages, Design Methods & Morphological Analysis",
+          "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
+        },
+        {
+          "raw": "Human-Computer Interaction & Interface Design",
+          "targetId": "v5-human-computer-interaction-and-interface-design"
+        },
+        {
+          "raw": "Typography & Graphic Design History",
+          "targetId": "v5-typography-and-graphic-design-history"
+        },
+        {
+          "raw": "Color Science & Theory",
+          "targetId": "v5-color-science-and-theory"
+        },
+        {
+          "raw": "Cartography & Data Visualization",
+          "targetId": "v5-cartography-and-data-visualization"
+        },
+        {
+          "raw": "Photography & Optics",
+          "targetId": "v5-photography-and-optics"
+        },
+        {
+          "raw": "Computer Graphics & Computational Imaging",
+          "targetId": "v5-computer-graphics-and-computational-imaging"
+        },
+        {
+          "raw": "Game Design, Ludology & Interactive Systems",
+          "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Hypertext & Hypermedia",
+          "targetId": "v6-hypertext-and-hypermedia"
+        },
+        {
+          "raw": "Information Architecture",
+          "targetId": "v6-information-architecture"
+        },
+        {
+          "raw": "Islamic Geometric Patterns & Ornament",
+          "targetId": "v6-islamic-geometric-patterns-and-ornament"
+        },
+        {
+          "raw": "Alan Kay",
+          "targetId": "v7-alan-kay"
+        },
+        {
+          "raw": "Bret Victor",
+          "targetId": "v7-bret-victor"
+        },
+        {
+          "raw": "Donald Knuth",
+          "targetId": "v7-donald-knuth"
+        },
+        {
+          "raw": "Dieter Rams",
+          "targetId": "v7-dieter-rams"
+        },
+        {
+          "raw": "Tadao Ando",
+          "targetId": "v7-tadao-ando"
+        },
+        {
+          "raw": "Frank Lloyd Wright",
+          "targetId": "v7-frank-lloyd-wright"
+        },
+        {
+          "raw": "Louis Kahn",
+          "targetId": "v7-louis-kahn"
+        },
+        {
+          "raw": "Leonardo da Vinci",
+          "targetId": "v7-leonardo-da-vinci"
+        },
+        {
+          "raw": "M.C. Escher",
+          "targetId": "v7-m-c-escher"
+        },
+        {
+          "raw": "How Buildings Learn",
+          "targetId": "v7-how-buildings-learn"
+        },
+        {
+          "raw": "The Design of Everyday Things",
+          "targetId": "v7-the-design-of-everyday-things"
+        },
+        {
+          "raw": "The Sciences of the Artificial",
+          "targetId": "v7-the-sciences-of-the-artificial"
+        },
+        {
+          "raw": "The Mythical Man-Month",
+          "targetId": "v7-the-mythical-man-month"
+        },
+        {
+          "raw": "Domain-Driven Design",
+          "targetId": "v7-domain-driven-design"
+        },
+        {
+          "raw": "Structure and Interpretation of Computer Programs (SICP)",
+          "targetId": "v7-structure-and-interpretation-of-computer-programs-sicp"
+        },
+        {
+          "raw": "Horology & Mechanical Watchmaking",
+          "targetId": "v7-horology-and-mechanical-watchmaking"
+        },
+        {
+          "raw": "Japanese Joinery & Traditional Woodworking",
+          "targetId": "v7-japanese-joinery-and-traditional-woodworking"
+        },
+        {
+          "raw": "Luthiery",
+          "targetId": "v7-luthiery"
+        },
+        {
+          "raw": "Letterpress, Hand Typesetting & Bookbinding",
+          "targetId": "v7-letterpress-hand-typesetting-and-bookbinding"
+        },
+        {
+          "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
+          "targetId": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison"
+        },
+        {
+          "raw": "Ceramics & Kiln Traditions",
+          "targetId": "v7-ceramics-and-kiln-traditions"
+        }
+      ]
+    },
+    {
+      "phase": 7,
+      "name": "Life, Form & Nature",
+      "subtitle": "How living systems generate form, self-organize, and coordinate — and what design can learn from 3.8 billion years of R&D.",
+      "topics": [
+        {
+          "raw": "Biomimicry & Nature-Inspired Design",
+          "targetId": "v5-biomimicry-and-nature-inspired-design"
+        },
+        {
+          "raw": "Morphogenesis & Biological Pattern Formation",
+          "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Artificial Life & Self-Organization",
+          "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        },
+        {
+          "raw": "Behavioral Ecology & Sociobiology",
+          "targetId": "v6-behavioral-ecology-and-sociobiology"
+        },
+        {
+          "raw": "Neuroethology",
+          "targetId": "v6-neuroethology"
+        },
+        {
+          "raw": "Evolutionary Epistemology",
+          "targetId": "v6-evolutionary-epistemology"
+        },
+        {
+          "raw": "Cell & Molecular Biology",
+          "targetId": "v7-cell-and-molecular-biology"
+        },
+        {
+          "raw": "Immunology",
+          "targetId": "v7-immunology"
+        },
+        {
+          "raw": "Paleontology & Deep Time",
+          "targetId": "v7-paleontology-and-deep-time"
+        },
+        {
+          "raw": "Climate Science & Earth Systems",
+          "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Fermentation & Traditional Food Biotechnology",
+          "targetId": "v7-fermentation-and-traditional-food-biotechnology"
+        },
+        {
+          "raw": "Bonsai & Japanese Gardening (Karesansui)",
+          "targetId": "v7-bonsai-and-japanese-gardening-karesansui"
+        },
+        {
+          "raw": "Permaculture & Regenerative Agriculture",
+          "targetId": "v7-permaculture-and-regenerative-agriculture"
+        },
+        {
+          "raw": "On Growth and Form",
+          "targetId": "v7-on-growth-and-form"
+        },
+        {
+          "raw": "Thinking in Systems: A Primer",
+          "targetId": "v7-thinking-in-systems-a-primer"
+        },
+        {
+          "raw": "Gregory Bateson",
+          "targetId": "v7-gregory-bateson"
+        }
+      ]
+    },
+    {
+      "phase": 8,
+      "name": "Quantitative Reasoning & Decision",
+      "subtitle": "Formal reasoning under uncertainty — probability, strategy, causation, learning, optimization, measurement.",
+      "topics": [
+        {
+          "raw": "Decision Theory & Rationality",
+          "targetId": "v5-decision-theory-and-rationality"
+        },
+        {
+          "raw": "Game Theory & Mechanism Design",
+          "targetId": "v5-game-theory-and-mechanism-design"
+        },
+        {
+          "raw": "Causal Inference & Causal Models",
+          "targetId": "v5-causal-inference-and-causal-models"
+        },
+        {
+          "raw": "Machine Learning & Statistical Learning Theory",
+          "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Operations Research & Optimization",
+          "targetId": "v5-operations-research-and-optimization"
+        },
+        {
+          "raw": "Measurement Theory, Metrology & Representation",
+          "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "Probabilistic Programming & Graphical Models",
+          "targetId": "v6-probabilistic-programming-and-graphical-models"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling in Economics",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "Linear Algebra",
+          "targetId": "v7-linear-algebra"
+        },
+        {
+          "raw": "Real & Complex Analysis",
+          "targetId": "v7-real-and-complex-analysis"
+        },
+        {
+          "raw": "Statistics (Classical & Modern)",
+          "targetId": "v7-statistics-classical-and-modern"
+        }
+      ]
+    },
+    {
+      "phase": 9,
+      "name": "Signal, Sound & Simulation",
+      "subtitle": "Technical and perceptual infrastructure of audio, media, and simulated worlds.",
+      "topics": [
+        {
+          "raw": "Digital Signal Processing (DSP)",
+          "targetId": "v5-digital-signal-processing-dsp"
+        },
+        {
+          "raw": "Musical Acoustics & Psychoacoustics",
+          "targetId": "v5-musical-acoustics-and-psychoacoustics"
+        },
+        {
+          "raw": "Generative Music & Algorithmic Composition",
+          "targetId": "v5-generative-music-and-algorithmic-composition"
+        },
+        {
+          "raw": "Simulation & Physics Engines",
+          "targetId": "v5-simulation-and-physics-engines"
+        },
+        {
+          "raw": "Stochastic Processes & Random Walks",
+          "targetId": "v6-stochastic-processes-and-random-walks"
+        },
+        {
+          "raw": "Sound Design & Foley",
+          "targetId": "v6-sound-design-and-foley"
+        },
+        {
+          "raw": "Brian Eno",
+          "targetId": "v7-brian-eno"
+        },
+        {
+          "raw": "Iannis Xenakis",
+          "targetId": "v7-iannis-xenakis"
+        },
+        {
+          "raw": "John Cage",
+          "targetId": "v7-john-cage"
+        }
+      ]
+    },
+    {
+      "phase": 10,
+      "name": "Frontiers & Deep Structure",
+      "subtitle": "The most specialized, formally demanding, or implementation-heavy topics — maximally powerful because the foundation is in place.",
+      "topics": [
+        {
+          "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time",
+          "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
+        },
+        {
+          "raw": "Mathematical Physics & Symmetry",
+          "targetId": "v5-mathematical-physics-and-symmetry"
+        },
+        {
+          "raw": "Geometry, Topology & Spatial Computation",
+          "targetId": "v5-geometry-topology-and-spatial-computation"
+        },
+        {
+          "raw": "Quantum Computing & Quantum Information",
+          "targetId": "v5-quantum-computing-and-quantum-information"
+        },
+        {
+          "raw": "Compiler Design & Programming Language Theory",
+          "targetId": "v5-compiler-design-and-programming-language-theory"
+        },
+        {
+          "raw": "Neuroscience & Neural Computation",
+          "targetId": "v5-neuroscience-and-neural-computation"
+        },
+        {
+          "raw": "Robotics & Embodied Intelligence",
+          "targetId": "v5-robotics-and-embodied-intelligence"
+        },
+        {
+          "raw": "Materials Science, Metamaterials & Programmable Matter",
+          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
+        },
+        {
+          "raw": "Type Theory & Homotopy Type Theory",
+          "targetId": "v6-type-theory-and-homotopy-type-theory"
+        },
+        {
+          "raw": "Knowledge Graphs, Ontologies & The Semantic Web",
+          "targetId": "v6-knowledge-graphs-ontologies-and-the-semantic-web"
+        },
+        {
+          "raw": "Functional Programming & Lambda Calculus",
+          "targetId": "v6-functional-programming-and-lambda-calculus"
+        },
+        {
+          "raw": "Formal Verification & Model Checking",
+          "targetId": "v6-formal-verification-and-model-checking"
+        },
+        {
+          "raw": "Concurrency Theory",
+          "targetId": "v6-concurrency-theory"
+        },
+        {
+          "raw": "Reservoir Computing & Neuromorphic Computation",
+          "targetId": "v6-reservoir-computing-and-neuromorphic-computation"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "Chronobiology & Circadian Rhythms",
+          "targetId": "v6-chronobiology-and-circadian-rhythms"
+        },
+        {
+          "raw": "Origami & Computational Folding",
+          "targetId": "v6-origami-and-computational-folding"
+        },
+        {
+          "raw": "Quantum Mechanics (as physics)",
+          "targetId": "v7-quantum-mechanics-as-physics"
+        },
+        {
+          "raw": "Cosmology & Astrophysics",
+          "targetId": "v7-cosmology-and-astrophysics"
+        },
+        {
+          "raw": "Sailing & Navigation",
+          "targetId": "v7-sailing-and-navigation"
+        },
+        {
+          "raw": "Perfumery & Olfactory Composition",
+          "targetId": "v7-perfumery-and-olfactory-composition"
+        },
+        {
+          "raw": "Marvin Minsky",
+          "targetId": "v7-marvin-minsky"
+        },
+        {
+          "raw": "Seymour Papert",
+          "targetId": "v7-seymour-papert"
+        },
+        {
+          "raw": "Rich Hickey",
+          "targetId": "v7-rich-hickey"
+        },
+        {
+          "raw": "Leslie Lamport",
+          "targetId": "v7-leslie-lamport"
+        },
+        {
+          "raw": "Gödel, Escher, Bach: An Eternal Golden Braid",
+          "targetId": "v7-g-del-escher-bach-an-eternal-golden-braid"
+        },
+        {
+          "raw": "The Road to Reality",
+          "targetId": "v7-the-road-to-reality"
+        },
+        {
+          "raw": "AI Alignment & Safety",
+          "targetId": "v7-ai-alignment-and-safety"
+        },
+        {
+          "raw": "Mechanistic Interpretability",
+          "targetId": "v7-mechanistic-interpretability"
+        },
+        {
+          "raw": "Synthetic Biology & CRISPR-era Genetics",
+          "targetId": "v7-synthetic-biology-and-crispr-era-genetics"
+        },
+        {
+          "raw": "Brain-Computer Interfaces & Spatial Computing",
+          "targetId": "v7-brain-computer-interfaces-and-spatial-computing"
+        },
+        {
+          "raw": "Prediction Markets & Epistemic Infrastructure",
+          "targetId": "v7-prediction-markets-and-epistemic-infrastructure"
+        },
+        {
+          "raw": "Longtermism & Existential Risk Studies",
+          "targetId": "v7-longtermism-and-existential-risk-studies"
+        },
+        {
+          "raw": "Digital Commons & Platform Economics",
+          "targetId": "v7-digital-commons-and-platform-economics"
+        }
+      ]
+    }
   ]
 };
