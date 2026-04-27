@@ -15,3 +15,7 @@
 ## 2026-04-26
 
 > Prepare this repo to be deployed as a GitHub site.
+
+## 2026-04-27
+
+> Allow me to mark the disciplines that I've worked on, on the cards page. The cards which are marked should have a pastel colored background(suggest a color). This card background color should reflect on the cards page, roadmap and disciplines page.

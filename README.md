@@ -19,6 +19,10 @@ Open `index.html` directly in a browser — no install, no build, no dev server.
 
 The right side panel renders the selected topic's full markdown description, key figures, outgoing connections, and incoming references — every chip is clickable to navigate.
 
+### Mark topics as worked on
+
+Each card on the **Cards** view has a small `✓` toggle next to its version badge. Click it to mark the topic as something you've worked on; the card picks up a soft mint pastel wash. The same wash appears on the matching tile in **Roadmap** and the matching row in **Disciplines**, so your progress reads at a glance across views. State is persisted in `localStorage` under the key `rte:markedTopics` (a JSON array of topic ids) — clearing site data resets it.
+
 ## Quick start
 
 ```sh

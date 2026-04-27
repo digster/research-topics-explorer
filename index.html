@@ -26,6 +26,13 @@
   --accent-v6:  #c39bff;
   --accent-v7:  #6fd2c0;
   --warn:       #e8c46c;
+
+  /* Pastel mint wash applied to topics the user has marked as "worked on".
+     Low-alpha sage tint reads as a soft "completed" state on the dark theme
+     without clashing with the v5/v6/v7 accent palette. */
+  --marked-bg:     rgba(149, 213, 178, 0.14);
+  --marked-accent: rgba(149, 213, 178, 0.55);
+
   --radius:     6px;
   --mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -358,6 +365,7 @@ section.panel {
 }
 .topic-card:hover { border-color: var(--line-2); transform: translateY(-1px); }
 .topic-card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.topic-card .top-right { display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; }
 .topic-card .name { font-size: 14px; font-weight: 600; line-height: 1.3; color: var(--fg); }
 .topic-card .figures { font-size: 12px; color: var(--fg-dim); font-style: italic; }
 .topic-card .excerpt { font-size: 12px; color: var(--fg-dim); line-height: 1.5; }
@@ -492,6 +500,49 @@ section.panel {
   border: 1px solid var(--line); border-radius: 3px;
   color: var(--fg-dim); background: var(--bg-elev-2);
 }
+
+/* ---------- Marked-as-worked-on state ----------
+   A soft mint wash applied across all three views (Cards, Roadmap,
+   Disciplines) when STATE.markedIds includes the topic's id. The tint
+   sits over each view's existing card background — we override only the
+   background so layout, padding, and accent borders stay intact. */
+.topic-card.marked,
+.phase-card.marked,
+.discipline-topic.marked {
+  background: var(--marked-bg);
+}
+/* Roadmap cards already use a left-accent stripe per version — switch
+   that stripe to the mint accent so the marked state reads on the tile
+   even at a glance from the column gutter. */
+.phase-card.marked        { border-left-color: var(--marked-accent); }
+.discipline-topic.marked  { border-color: var(--marked-accent); }
+
+/* ---------- Card "mark as worked on" toggle ----------
+   Tiny square button injected into each topic-card's .top row. Clicking
+   it must NOT trigger card selection — the JS handler stops propagation.
+   The .on state inverts to a filled mint chip so the affordance reads
+   even when the surrounding card already has the pastel wash. */
+.mark-toggle {
+  background: transparent;
+  border: 1px solid var(--line-2);
+  color: var(--fg-faint);
+  width: 22px; height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background 120ms, color 120ms, border-color 120ms;
+  flex-shrink: 0;
+}
+.mark-toggle:hover { color: var(--fg-dim); border-color: var(--fg-faint); }
+.mark-toggle.on {
+  background: var(--marked-accent);
+  border-color: var(--marked-accent);
+  color: var(--bg);
+}
+.mark-toggle.on:hover { color: var(--bg); }
 </style>
 </head>
 
@@ -580,6 +631,19 @@ const TOPIC_BY_ID = new Map(TOPICS.map(t => [t.id, t]));
 
 // --- Global filter / view state -------------------------------------------
 
+// Persisted "marked as worked on" topic ids. Stored as a JSON array in
+// localStorage and rehydrated into a Set on load for O(1) lookups during
+// render. Set semantics also avoid accidental duplicates.
+const MARKED_KEY = "rte:markedTopics";
+function loadMarked() {
+  try { return JSON.parse(localStorage.getItem(MARKED_KEY) || "[]"); }
+  catch { return []; }
+}
+function saveMarked() {
+  try { localStorage.setItem(MARKED_KEY, JSON.stringify([...STATE.markedIds])); }
+  catch { /* private mode / quota — silent: in-memory state still works */ }
+}
+
 const STATE = {
   view: "graph",
   selectedId: null,
@@ -588,7 +652,21 @@ const STATE = {
   groups: new Set(),    // empty = all
   phases: new Set(),    // empty = all
   cardsSort: "name",
+  markedIds: new Set(loadMarked()),  // topic ids the user has flagged as worked on
 };
+
+// Toggle the "worked on" mark for a topic. Re-renders all three affected
+// views so the pastel wash stays consistent regardless of which tab is
+// currently visible (DOM is small enough that a full re-render is cheap
+// and avoids a fan-out of view-specific update calls).
+function toggleMarked(id) {
+  if (STATE.markedIds.has(id)) STATE.markedIds.delete(id);
+  else STATE.markedIds.add(id);
+  saveMarked();
+  renderCards();
+  renderRoadmap();
+  renderDisciplines();
+}
 
 // Populate group/phase filter sets dynamically from data
 const ALL_GROUPS = [...new Set(TOPICS.map(t => `${t.version}:${t.group}`))].sort();
@@ -967,7 +1045,12 @@ function renderRoadmap() {
 
     [...v5topics.map(t => ({...t, _v: "v5"})), ...v6topics.map(t => ({...t, _v: "v6"}))].forEach(t => {
       const card = document.createElement("div");
-      card.className = "phase-card" + (t._v === "v6" ? " v6" : "");
+      // Read-only mirror of the Cards-page marking: append .marked so the
+      // shared CSS rule paints the pastel wash here too. Toggling lives
+      // exclusively on the Cards page per spec.
+      card.className = "phase-card"
+        + (t._v === "v6" ? " v6" : "")
+        + (STATE.markedIds.has(t.id) ? " marked" : "");
       card.innerHTML = `
         <div class="name">${escapeHtml(t.name)}</div>
         <div class="meta"><span>${t.tier}</span><span>in ${t.inDegree} · out ${t.outDegree}</span></div>
@@ -1027,14 +1110,25 @@ function renderCards() {
 
   for (const t of sorted) {
     const card = document.createElement("div");
-    card.className = "topic-card";
+    // Toggle .marked so the global CSS (.topic-card.marked) paints the
+    // pastel wash. Same join-key (topic.id) is used by the roadmap and
+    // disciplines renderers — that's how the marking stays in sync.
+    const isMarked = STATE.markedIds.has(t.id);
+    card.className = "topic-card" + (isMarked ? " marked" : "");
     const excerpt = t.pitch
       ? t.pitch
       : (t.description.split(/(?<=\.)\s/)[0] || "").slice(0, 180);
     card.innerHTML = `
       <div class="top">
         <span class="name">${escapeHtml(t.name)}</span>
-        <span class="badge ${t.version}">${t.version}</span>
+        <div class="top-right">
+          <span class="badge ${t.version}">${t.version}</span>
+          <button type="button"
+                  class="mark-toggle${isMarked ? " on" : ""}"
+                  aria-pressed="${isMarked}"
+                  aria-label="${isMarked ? "Unmark as worked on" : "Mark as worked on"}"
+                  title="${isMarked ? "Unmark as worked on" : "Mark as worked on"}">✓</button>
+        </div>
       </div>
       ${t.keyFigures.length ? `<div class="figures">${escapeHtml(t.keyFigures.slice(0,4).join(", "))}${t.keyFigures.length>4?"…":""}</div>` : ""}
       <div class="excerpt">${escapeHtml(excerpt)}${excerpt.length >= 180 ? "…" : ""}</div>
@@ -1045,6 +1139,13 @@ function renderCards() {
       </div>
     `;
     card.addEventListener("click", () => selectTopic(t.id));
+    // stopPropagation: the toggle is nested inside the card, so without
+    // this the click would also trigger selectTopic and open the side
+    // panel every time the user marks/unmarks.
+    card.querySelector(".mark-toggle").addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMarked(t.id);
+    });
     grid.appendChild(card);
   }
 
@@ -1201,7 +1302,12 @@ function renderDisciplines() {
       if (topic && !visIds.has(topic.id)) return;
 
       const row = document.createElement("div");
-      row.className = "discipline-topic" + (topic ? "" : " unresolved");
+      // Mirror the Cards-page marking on resolved rows. Unresolved rows
+      // (no matching topic.id in TOPICS) intentionally cannot be marked
+      // — there's nothing stable to key off.
+      row.className = "discipline-topic"
+        + (topic ? "" : " unresolved")
+        + (topic && STATE.markedIds.has(topic.id) ? " marked" : "");
       row.innerHTML = `
         <span class="num">${i + 1}</span>
         <span class="name">${escapeHtml(topic ? topic.name : entry.raw)}</span>
