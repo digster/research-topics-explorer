@@ -1,5 +1,7 @@
 # Research Topics Explorer
 
+> **Live demo:** `https://<github-username>.github.io/research-topics-explorer/` — replace `<github-username>` with the account that hosts this repo. See [Deployment](#deployment) below.
+
 A static, no-server visualization tool for exploring 162 research topics curated across `research-topics-v5.md`, `research-topics-v6.md`, and `research-topics-v7.md`.
 
 Open `index.html` directly in a browser — no install, no build, no dev server. The app is a single page with six interactive views over the same dataset.
@@ -25,6 +27,36 @@ open index.html
 ```
 
 That's it.
+
+## Deployment
+
+The app is fully static (no build step, no server, no API), so it deploys to **GitHub Pages** as-is from the `main` branch.
+
+### One-time setup
+
+1. Push this repository to GitHub (any name; the URL pattern below assumes `research-topics-explorer`).
+2. In the repo on GitHub, go to **Settings → Pages**.
+3. Under **Build and deployment**, set:
+   - **Source:** *Deploy from a branch*
+   - **Branch:** `main` &nbsp;/&nbsp; folder `/ (root)`
+4. **Save.** The first build runs in ~30–60 seconds.
+
+The site will be served at:
+
+```
+https://<github-username>.github.io/<repo-name>/
+```
+
+### Subsequent deploys
+
+Every push to `main` republishes automatically. There is no build pipeline to wait on — Pages simply serves the files at the publish root.
+
+### Notes
+
+- A zero-byte `.nojekyll` file at the repo root tells Pages to **skip Jekyll processing** and serve files verbatim. It's already committed; do not delete it.
+- All asset references in [index.html](index.html) are relative (`data.js`) or absolute `https://` CDN URLs (`d3@7`, `marked@13`), so the app works unmodified at the project-page subpath. No `<base>` tag or rewrites needed.
+- Pages has **no Node runtime**. If you change any of the source markdown files, regenerate `data.js` locally (`node parse.mjs`) and **commit the updated `data.js`** along with your markdown changes — otherwise the deployed site will be out of sync.
+- The default `https://*.github.io` domain serves over HTTPS, so the CDN scripts won't trigger mixed-content warnings.
 
 ## Regenerating the data
 
