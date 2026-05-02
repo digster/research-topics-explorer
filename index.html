@@ -463,7 +463,9 @@ section.panel {
 }
 .discipline-topic {
   display: grid;
-  grid-template-columns: 22px 1fr auto;
+  /* 4 tracks: ordinal · name · version-badge · mark-toggle.
+     Unresolved rows render only 3 children, leaving the 4th track at 0 width. */
+  grid-template-columns: 22px 1fr auto auto;
   gap: 10px; align-items: center;
   padding: 8px 10px;
   background: var(--bg-elev-2);
@@ -1305,9 +1307,10 @@ function renderDisciplines() {
       // Mirror the Cards-page marking on resolved rows. Unresolved rows
       // (no matching topic.id in TOPICS) intentionally cannot be marked
       // — there's nothing stable to key off.
+      const isMarked = topic && STATE.markedIds.has(topic.id);
       row.className = "discipline-topic"
         + (topic ? "" : " unresolved")
-        + (topic && STATE.markedIds.has(topic.id) ? " marked" : "");
+        + (isMarked ? " marked" : "");
       row.innerHTML = `
         <span class="num">${i + 1}</span>
         <span class="name">${escapeHtml(topic ? topic.name : entry.raw)}</span>
@@ -1315,8 +1318,25 @@ function renderDisciplines() {
           ? `<span class="badge ${topic.version}">${topic.version}</span>`
           : `<span class="badge" title="Unresolved topic name in disciplines.md" style="background: var(--bg-elev-2); color: var(--fg-faint);">?</span>`
         }
+        ${topic
+          ? `<button type="button"
+                     class="mark-toggle${isMarked ? " on" : ""}"
+                     aria-pressed="${isMarked}"
+                     aria-label="${isMarked ? "Unmark as worked on" : "Mark as worked on"}"
+                     title="${isMarked ? "Unmark as worked on" : "Mark as worked on"}">✓</button>`
+          : ``
+        }
       `;
-      if (topic) row.addEventListener("click", () => selectTopic(topic.id));
+      if (topic) {
+        row.addEventListener("click", () => selectTopic(topic.id));
+        // stopPropagation: the toggle is nested inside the row, so without
+        // this the click would also trigger selectTopic and open the side
+        // panel every time the user marks/unmarks.
+        row.querySelector(".mark-toggle").addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMarked(topic.id);
+        });
+      }
       col.appendChild(row);
       renderedRows++;
     });
