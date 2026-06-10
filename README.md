@@ -2,7 +2,7 @@
 
 > **Live demo:** `https://<github-username>.github.io/research-topics-explorer/` — replace `<github-username>` with the account that hosts this repo. See [Deployment](#deployment) below.
 
-A static, no-server visualization tool for exploring 162 research topics curated across `research-topics-v5.md`, `research-topics-v6.md`, and `research-topics-v7.md`.
+A static, no-server visualization tool for exploring 162 research topics. The single source of truth is `research-topics.csv`; the original markdown files (`research-topics-v5/6/7.md`, `disciplines.md`) are kept as historical reference but are no longer read by any code.
 
 Open `index.html` directly in a browser — no install, no build, no dev server. The app is a single page with six interactive views over the same dataset.
 
@@ -59,12 +59,12 @@ Every push to `main` republishes automatically. There is no build pipeline to wa
 
 - A zero-byte `.nojekyll` file at the repo root tells Pages to **skip Jekyll processing** and serve files verbatim. It's already committed; do not delete it.
 - All asset references in [index.html](index.html) are relative (`data.js`) or absolute `https://` CDN URLs (`d3@7`, `marked@13`), so the app works unmodified at the project-page subpath. No `<base>` tag or rewrites needed.
-- Pages has **no Node runtime**. If you change any of the source markdown files, regenerate `data.js` locally (`node parse.mjs`) and **commit the updated `data.js`** along with your markdown changes — otherwise the deployed site will be out of sync.
+- Pages has **no Node runtime**. If you edit `research-topics.csv`, regenerate `data.js` locally (`node parse.mjs`) and **commit the updated `data.js`** along with your CSV changes — otherwise the deployed site will be out of sync.
 - The default `https://*.github.io` domain serves over HTTPS, so the CDN scripts won't trigger mixed-content warnings.
 
 ## Regenerating the data
 
-The dataset is pre-processed once into `data.js` because browsers block `fetch()` on `file://` URLs. If you edit the source markdown files, regenerate with:
+The dataset lives in `research-topics.csv` (162 rows, one per topic) and is pre-processed into `data.js` because browsers block `fetch()` on `file://` URLs. If you edit the CSV, regenerate with:
 
 ```sh
 node parse.mjs
@@ -75,32 +75,31 @@ Output:
 ```
 ✓ data.js written
   topics: 162 (v5=56, v6=35, v7=71)
-  edges:  588
-  unresolved connections: 278
-  creators (v7 Group A): 23
-  disciplines: 10 (unresolved discipline topics: 0)
+  edges: 588 resolved, 279 unresolved connection slots
+  disciplines: 10
+  creators: 23
 ```
 
 The parser:
-- Extracts H3 topics from each `## Tier` / `## Group` section
-- Pulls metadata (tier, phase, idCode, one-line pitch) from the master tables
-- Resolves "Connects to" / "Resonates with" strings to topic IDs using token-aligned prefix/suffix matching plus a small alias table (HCI, ML, DSP, GEB, SICP, …)
-- Parses the optional `disciplines.md` overlay into phase-grouped thematic columns, resolving each bullet to a topic id via the shared index
+- Reads `research-topics.csv` (RFC 4180; multi-value cells like `key_figures` are pipe-separated)
+- Builds edges from `connects_to_ids`, which is positionally aligned with `connects_to_raw` — an empty slot means that connection never resolved to a topic
+- Groups topics into the 10 thematic discipline columns via `discipline_phase` / `discipline_name`
 - Computes in/out degree per topic
 
-Roughly 30% of raw connection strings remain unresolved — they reference broad fields ("biology", "economics", "AI agents") that have no dedicated topic in this dataset. Those still appear in the side panel as faded chips.
+Roughly 30% of raw connection strings have no resolved target — they reference broad fields ("biology", "economics", "AI agents") that have no dedicated topic in this dataset. Those still appear in the side panel as faded chips. To add or fix a connection, edit the `connects_to_ids` slot for that row in the CSV.
 
 ## Architecture
 
 ```
 research-topics-explorer/
-├── research-topics-v5.md     # source (untouched)
-├── research-topics-v6.md     # source (untouched)
-├── research-topics-v7.md     # source (untouched)
-├── disciplines.md            # thematic overlay (phase → topics)
-├── parse.mjs                 # one-shot Node parser → data.js
+├── research-topics.csv       # source of truth (topics, connections, disciplines)
+├── parse.mjs                 # one-shot Node parser: research-topics.csv → data.js
 ├── data.js                   # generated, ~350KB, sets window.RESEARCH_DATA
 ├── index.html                # single-file app (HTML + CSS + JS)
+├── research-topics-v5.md     # historical source (no longer parsed)
+├── research-topics-v6.md     # historical source (no longer parsed)
+├── research-topics-v7.md     # historical source (no longer parsed)
+├── disciplines.md            # historical overlay (no longer parsed)
 ├── memory/                   # per-day work logs (per repo CLAUDE.md convention)
 └── README.md
 ```
@@ -131,8 +130,8 @@ Reload-safe and bookmarkable.
 
 ## Known limitations
 
-- Browsers (Chrome, Safari) cannot `fetch()` from `file://` — that's why the data ships as `data.js`, not `data.json`
-- Connection resolution is heuristic; abbreviations like "AI" map to the closest topic via aliases
+- Browsers (Chrome, Safari) cannot `fetch()` from `file://` — that's why the data ships as `data.js`, not `data.csv`
+- Connections are only as good as the `connects_to_ids` column in the CSV; unresolved slots render as faded chips
 - Force layout for 162 nodes can take a few seconds to settle on first load
 
 ## License
