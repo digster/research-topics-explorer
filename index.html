@@ -21,10 +21,15 @@
   --fg-faint:   #5a6370;
   --line:       #232830;
   --line-2:     #2c333d;
+  /* Hand-picked accents for known dataset versions. Versions present in the
+     data but missing a --accent-vN here get a deterministic generated hue at
+     boot (see injectVersionStyles), so new CSV versions render without any
+     CSS edits — add an entry below only to override the generated color. */
   --accent:     #7aa7ff;        /* v5 hue */
   --accent-v5:  #7aa7ff;
   --accent-v6:  #c39bff;
   --accent-v7:  #6fd2c0;
+  --accent-v8:  #f0a06c;
   --warn:       #e8c46c;
 
   /* Pastel mint wash applied to topics the user has marked as "worked on".
@@ -190,9 +195,9 @@ section.panel {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.badge.v5 { background: rgba(122,167,255,0.15); color: var(--accent-v5); }
-.badge.v6 { background: rgba(195,155,255,0.15); color: var(--accent-v6); }
-.badge.v7 { background: rgba(111,210,192,0.15); color: var(--accent-v7); }
+/* .badge.vN rules (one per dataset version) are generated at boot by
+   injectVersionStyles() so any version present in the data gets a styled
+   badge — no per-version rule needs to live here. */
 .badge.tier { background: var(--bg-elev-2); color: var(--fg-dim); }
 
 .panel h2 {
@@ -323,7 +328,8 @@ section.panel {
   transition: border-color 100ms, transform 100ms;
 }
 .phase-card:hover { border-color: var(--line-2); transform: translateY(-1px); }
-.phase-card.v6 { border-left-color: var(--accent-v6); opacity: 0.78; }
+/* .phase-card.vN overlay rules (version stripe + dimmed opacity for non-v5
+   "likely phase" placements) are generated at boot by injectVersionStyles(). */
 .phase-card .name { font-size: 13px; line-height: 1.35; color: var(--fg); }
 .phase-card .meta {
   font: 10px var(--mono); color: var(--fg-faint);
@@ -398,8 +404,7 @@ section.panel {
 .hub-row .name .dim { color: var(--fg-faint); font: 10px var(--mono); margin-left: 6px; }
 .hub-row .bar-wrap { background: var(--bg-elev); height: 14px; border-radius: 3px; overflow: hidden; }
 .hub-row .bar { height: 100%; background: var(--accent); border-radius: 3px; transition: width 200ms; }
-.hub-row .bar.v6 { background: var(--accent-v6); }
-.hub-row .bar.v7 { background: var(--accent-v7); }
+/* .bar.vN per-version colors are generated at boot by injectVersionStyles(). */
 .hub-row .num { font: 12px var(--mono); color: var(--fg-dim); text-align: right; }
 
 .hubs-tabs {
@@ -631,6 +636,60 @@ const TOPICS = DATA.topics;
 const EDGES  = DATA.edges;
 const TOPIC_BY_ID = new Map(TOPICS.map(t => [t.id, t]));
 
+// --- Versions ---------------------------------------------------------------
+// Everything version-related (filters, colors, legend, stats, sorts) derives
+// from the versions actually present in the data, so a new version added to
+// the CSV shows up everywhere with zero code changes here.
+
+// Natural ordering: "v9" < "v10" (string compare would say otherwise).
+// Unrecognized tags sort last rather than disappearing.
+function versionNum(v) {
+  const n = Number(String(v).replace(/^v/i, ""));
+  return Number.isNaN(n) ? Infinity : n;
+}
+
+const ALL_VERSIONS = [...new Set(TOPICS.map(t => t.version))]
+  .sort((a, b) => versionNum(a) - versionNum(b) || a.localeCompare(b));
+
+const VERSION_COUNTS = new Map(
+  ALL_VERSIONS.map(v => [v, TOPICS.filter(t => t.version === v).length]));
+
+// Accent color for a version: the stylesheet's --accent-vN if hand-picked,
+// otherwise a deterministic golden-angle hue so unknown future versions are
+// still visually distinct (and stable across reloads).
+function versionColor(v) {
+  const picked = getComputedStyle(document.documentElement)
+    .getPropertyValue(`--accent-${v}`).trim();
+  if (picked) return picked;
+  const hue = (versionNum(v) * 137.508) % 360;
+  return `hsl(${hue.toFixed(1)} 60% 70%)`;
+}
+
+// Generate the per-version CSS (badge chip, hubs bar, roadmap overlay card,
+// and the --accent-vN variable itself when not hand-picked). Runs once at
+// boot, before any view renders. :not(.marked) keeps the static
+// .phase-card.marked mint-stripe override winning — this injected sheet
+// comes later in the cascade, so without the guard it would beat it.
+function injectVersionStyles() {
+  const rules = [];
+  for (const v of ALL_VERSIONS) {
+    const hasPicked = getComputedStyle(document.documentElement)
+      .getPropertyValue(`--accent-${v}`).trim() !== "";
+    if (!hasPicked) rules.push(`:root { --accent-${v}: ${versionColor(v)}; }`);
+    rules.push(
+      `.badge.${v} { background: color-mix(in srgb, var(--accent-${v}) 15%, transparent); color: var(--accent-${v}); }`,
+      `.hub-row .bar.${v} { background: var(--accent-${v}); }`,
+      `.phase-card.${v} { opacity: 0.78; }`,
+      `.phase-card.${v}:not(.marked) { border-left-color: var(--accent-${v}); }`
+    );
+  }
+  const style = document.createElement("style");
+  style.id = "version-styles";
+  style.textContent = rules.join("\n");
+  document.head.appendChild(style);
+}
+injectVersionStyles();
+
 // --- Global filter / view state -------------------------------------------
 
 // Persisted "marked as worked on" topic ids. Stored as a JSON array in
@@ -650,7 +709,7 @@ const STATE = {
   view: "graph",
   selectedId: null,
   search: "",
-  versions: new Set(["v5", "v6", "v7"]),
+  versions: new Set(ALL_VERSIONS),   // all dataset versions visible by default
   groups: new Set(),    // empty = all
   phases: new Set(),    // empty = all
   cardsSort: "name",
@@ -679,7 +738,7 @@ const ALL_PHASES = [...new Set(TOPICS.filter(t => t.version === "v5" && t.phase 
 document.getElementById("stats").innerHTML = `
   <span><b>${DATA.stats.topicsTotal}</b>topics</span>
   <span><b>${DATA.stats.edges}</b>edges</span>
-  <span><b>${DATA.stats.byVersion.v5}/${DATA.stats.byVersion.v6}/${DATA.stats.byVersion.v7}</b>v5/v6/v7</span>
+  <span><b>${ALL_VERSIONS.map(v => VERSION_COUNTS.get(v)).join("/")}</b>${ALL_VERSIONS.join("/")}</span>
 `;
 
 // --- Filter sidebar -------------------------------------------------------
@@ -688,8 +747,8 @@ function buildFilters() {
   // Versions
   const vEl = document.getElementById("filter-version");
   vEl.innerHTML = "";
-  for (const v of ["v5","v6","v7"]) {
-    const count = TOPICS.filter(t => t.version === v).length;
+  for (const v of ALL_VERSIONS) {
+    const count = VERSION_COUNTS.get(v);
     const lbl = document.createElement("label");
     lbl.innerHTML = `
       <input type="checkbox" data-version="${v}" ${STATE.versions.has(v) ? "checked":""}/>
@@ -754,7 +813,7 @@ document.getElementById("search").addEventListener("input", e => {
 });
 
 document.getElementById("reset-filters").addEventListener("click", () => {
-  STATE.versions = new Set(["v5","v6","v7"]);
+  STATE.versions = new Set(ALL_VERSIONS);
   STATE.groups = new Set();
   STATE.phases = new Set();
   STATE.search = "";
@@ -854,7 +913,7 @@ function renderPanel() {
       </div>` : ""}
 
     <div class="source">
-      from <code>${t.version === "v5" ? "research-topics-v5.md" : t.version === "v6" ? "research-topics-v6.md" : "research-topics-v7.md"}</code>
+      from <code>${escapeHtml(t.sourceFile || "research-topics.csv")}</code>
       ${t.sourceDate ? ` · ${t.sourceDate}` : ""}
     </div>
   `;
@@ -874,10 +933,8 @@ function escapeHtml(s) {
 
 let graphSim = null;
 let graphState = null; // { svg, link, node, nodes, links, transform }
-
-function colorForVersion(v) {
-  return v === "v5" ? "var(--accent-v5)" : v === "v6" ? "var(--accent-v6)" : "var(--accent-v7)";
-}
+// Node fills reference var(--accent-vN) directly; injectVersionStyles()
+// guarantees the variable exists for every version in the data.
 
 function renderGraph(targetId = "graph", subset = null) {
   const container = document.getElementById(targetId);
@@ -953,9 +1010,9 @@ function renderGraph(targetId = "graph", subset = null) {
   overlay.className = "graph-overlay";
   overlay.innerHTML = `
     <div class="legend">
-      <span><span class="swatch" style="background: var(--accent-v5)"></span>v5 (${TOPICS.filter(t=>t.version==="v5").length})</span>
-      <span><span class="swatch" style="background: var(--accent-v6)"></span>v6 (${TOPICS.filter(t=>t.version==="v6").length})</span>
-      <span><span class="swatch" style="background: var(--accent-v7)"></span>v7 (${TOPICS.filter(t=>t.version==="v7").length})</span>
+      ${ALL_VERSIONS.map(v =>
+        `<span><span class="swatch" style="background: var(--accent-${v})"></span>${v} (${VERSION_COUNTS.get(v)})</span>`
+      ).join("")}
     </div>
     <div class="muted">node size = in-degree · drag · scroll to zoom</div>
     <div style="display:flex; gap:6px;">
@@ -1011,7 +1068,12 @@ function highlightGraphNeighborhood(id) {
 }
 
 /* =============================================================================
-   View 2 — Phase Roadmap (v5)
+   View 2 — Phase Roadmap
+   v5 topics anchor each column via their firm `phase`. Every other version
+   overlays via `likelyPhase` ("3" or "3 or 7" — the first number wins), so
+   v6, v8, and any future version with a likely_phase column value appear
+   automatically. Overlay cards are dimmed with a version-colored stripe to
+   read as "probable placement" against the firm v5 sequence.
    ============================================================================= */
 
 function renderRoadmap() {
@@ -1025,16 +1087,24 @@ function renderRoadmap() {
   for (const p of ALL_PHASES) v5ByPhase[p] = [];
   TOPICS.filter(t => t.version === "v5" && t.phase != null).forEach(t => v5ByPhase[t.phase].push(t));
 
-  // v6 overlays — items where likelyPhase is a single number
-  const v6Overlay = {};
-  for (const p of ALL_PHASES) v6Overlay[p] = [];
-  TOPICS.filter(t => t.version === "v6" && t.likelyPhase).forEach(t => {
+  // Overlays — non-v5 topics whose likelyPhase starts with a phase number.
+  // Out-of-range phases (no v5 column to land in) are skipped by the
+  // `if (overlay[p])` guard rather than crashing the render.
+  const overlay = {};
+  for (const p of ALL_PHASES) overlay[p] = [];
+  TOPICS.filter(t => t.version !== "v5" && t.likelyPhase).forEach(t => {
     const m = String(t.likelyPhase).match(/^\d+/);
     if (m) {
       const p = Number(m[0]);
-      if (v6Overlay[p]) v6Overlay[p].push(t);
+      if (overlay[p]) overlay[p].push(t);
     }
   });
+  // Group overlay cards by version (then name) so each column reads as
+  // "v5 sequence, then v6 suggestions, then v8 suggestions, …".
+  for (const p of ALL_PHASES) {
+    overlay[p].sort((a, b) =>
+      versionNum(a.version) - versionNum(b.version) || a.name.localeCompare(b.name));
+  }
 
   const visIds = new Set(visibleTopics().map(t => t.id));
 
@@ -1042,16 +1112,16 @@ function renderRoadmap() {
     const col = document.createElement("div");
     col.className = "phase-col";
     const v5topics = v5ByPhase[p].filter(t => visIds.has(t.id));
-    const v6topics = v6Overlay[p].filter(t => visIds.has(t.id));
-    col.innerHTML = `<div class="phase-header">Phase ${p} <span class="count">· ${v5topics.length}${v6topics.length ? ` + ${v6topics.length}` : ""}</span></div>`;
+    const overlayTopics = overlay[p].filter(t => visIds.has(t.id));
+    col.innerHTML = `<div class="phase-header">Phase ${p} <span class="count">· ${v5topics.length}${overlayTopics.length ? ` + ${overlayTopics.length}` : ""}</span></div>`;
 
-    [...v5topics.map(t => ({...t, _v: "v5"})), ...v6topics.map(t => ({...t, _v: "v6"}))].forEach(t => {
+    [...v5topics, ...overlayTopics].forEach(t => {
       const card = document.createElement("div");
       // Read-only mirror of the Cards-page marking: append .marked so the
       // shared CSS rule paints the pastel wash here too. Toggling lives
       // exclusively on the Cards page per spec.
       card.className = "phase-card"
-        + (t._v === "v6" ? " v6" : "")
+        + (t.version !== "v5" ? ` ${t.version}` : "")
         + (STATE.markedIds.has(t.id) ? " marked" : "");
       card.innerHTML = `
         <div class="name">${escapeHtml(t.name)}</div>
@@ -1099,7 +1169,7 @@ function renderCards() {
     switch (STATE.cardsSort) {
       case "indegree":  return b.inDegree - a.inDegree || a.name.localeCompare(b.name);
       case "outdegree": return b.outDegree - a.outDegree || a.name.localeCompare(b.name);
-      case "version":   return a.version.localeCompare(b.version) || a.name.localeCompare(b.name);
+      case "version":   return versionNum(a.version) - versionNum(b.version) || a.name.localeCompare(b.name);
       case "tier":      return (a.tier+a.name).localeCompare(b.tier+b.name);
       default:          return a.name.localeCompare(b.name);
     }

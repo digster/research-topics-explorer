@@ -23,3 +23,8 @@
 ## 2026-06-09
 
 > Create a csv based schema which will be a superset of the three MD files. Then plan to migrate the data to this csv file. This file will be used as the database for the research topics exploration. Do not change anything else in the repo.
+
+## 2026-06-10
+
+> The parse tool is not able to handle new additions to the csv file. For example, the v8 entries added(also foolproof it for the future). Also the horizontal scrolling in the roadmap section through the bottom scroll bar is not ideal. Suggest a solution.
+> *(Follow-up during planning: roadmap scrolling concern withdrawn — shift+wheel suffices. v8 should appear on the Roadmap as an overlay like v6.)*
