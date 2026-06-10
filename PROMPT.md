@@ -19,3 +19,7 @@
 ## 2026-04-27
 
 > Allow me to mark the disciplines that I've worked on, on the cards page. The cards which are marked should have a pastel colored background(suggest a color). This card background color should reflect on the cards page, roadmap and disciplines page.
+
+## 2026-06-09
+
+> Create a csv based schema which will be a superset of the three MD files. Then plan to migrate the data to this csv file. This file will be used as the database for the research topics exploration. Do not change anything else in the repo.
