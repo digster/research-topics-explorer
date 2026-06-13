@@ -28,3 +28,16 @@
 
 > The parse tool is not able to handle new additions to the csv file. For example, the v8 entries added(also foolproof it for the future). Also the horizontal scrolling in the roadmap section through the bottom scroll bar is not ideal. Suggest a solution.
 > *(Follow-up during planning: roadmap scrolling concern withdrawn — shift+wheel suffices. v8 should appear on the Roadmap as an overlay like v6.)*
+
+## 2026-06-11
+
+> Can you think of better UI ideas to explore the topics? Don't change anything yet. Just show me visually.
+> *(Ideation only — visual mockups shown in chat, no app changes made.)*
+
+## 2026-06-12
+
+> Based on the research-topics.csv file, think of new topics that don't necessarily have to fit in the current framework.
+> *(Ideation only — proposed new topics in chat across three registers: discipline-shaped gaps, new node-types, and implied people/books. No CSV or app changes made.)*
+
+> Update the csv with the following topics (also make sure to work on the latest csv as I have removed some old topics) — [31 topics: Scaling Laws & Allometry, Chemistry/Reaction Networks, Cryptography & Coding Theory, Sociology & Social Network Analysis, Actor-Network Theory & STS, Ritual as Coordination Technology, Energy Systems/Infrastructure, Recursion & Self-Reference, Peirce, Leibniz, Poincaré, Mandelbrot, J.J. Gibson, Saussure, Baudrillard, McLuhan, Foucault, Deleuze, Lévi-Strauss, Maturana & Varela, Stafford Beer, Tufte, Margulis, Pāṇini & Generative Grammar, I Ching as combinatorial system, Ubuntu, Joseph Needham, Navya-Nyāya, The Glass Bead Game (book), Metaphors We Live By (book), A Thousand Plateaus (book)].
+> *(Added all 31 as a new **v9** batch in 5 groups; generalized the Creators view to be label-based so v9 people are first-class creators; rich v9↔v9 cross-linking. Regenerated data.js → 203 topics. Asked two clarifying questions first; both answered "recommended" option.)*

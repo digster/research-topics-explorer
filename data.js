@@ -2,18 +2,19 @@
 // Regenerate with: node parse.mjs
 window.RESEARCH_DATA = {
   "stats": {
-    "topicsTotal": 192,
+    "topicsTotal": 203,
     "byVersion": {
       "v5": 56,
-      "v6": 35,
-      "v7": 71,
-      "v8": 30
+      "v6": 32,
+      "v7": 66,
+      "v8": 18,
+      "v9": 31
     },
-    "edges": 760,
-    "unresolvedConnections": 280,
+    "edges": 834,
+    "unresolvedConnections": 263,
     "disciplines": 10,
     "unresolvedDisciplines": 0,
-    "generatedAt": "2026-06-10T22:53:06.328Z"
+    "generatedAt": "2026-06-13T03:13:26.268Z"
   },
   "topics": [
     {
@@ -70,7 +71,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-artificial-life-and-self-organization"
         }
       ],
-      "inDegree": 18,
+      "inDegree": 19,
       "outDegree": 5
     },
     {
@@ -122,7 +123,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
         }
       ],
-      "inDegree": 11,
+      "inDegree": 13,
       "outDegree": 5
     },
     {
@@ -175,7 +176,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
         }
       ],
-      "inDegree": 30,
+      "inDegree": 34,
       "outDegree": 6
     },
     {
@@ -220,7 +221,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 9,
+      "inDegree": 15,
       "outDegree": 2
     },
     {
@@ -278,7 +279,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-mathematical-physics-and-symmetry"
         }
       ],
-      "inDegree": 10,
+      "inDegree": 11,
       "outDegree": 8
     },
     {
@@ -319,7 +320,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 11,
+      "inDegree": 12,
       "outDegree": 2
     },
     {
@@ -425,7 +426,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-mathematical-physics-and-symmetry"
         }
       ],
-      "inDegree": 12,
+      "inDegree": 11,
       "outDegree": 4
     },
     {
@@ -486,7 +487,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-game-design-ludology-and-interactive-systems"
         }
       ],
-      "inDegree": 35,
+      "inDegree": 33,
       "outDegree": 6
     },
     {
@@ -544,7 +545,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-epistemology-and-philosophy-of-knowledge"
         }
       ],
-      "inDegree": 4,
+      "inDegree": 5,
       "outDegree": 7
     },
     {
@@ -602,7 +603,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 6,
+      "inDegree": 5,
       "outDegree": 6
     },
     {
@@ -661,7 +662,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
         }
       ],
-      "inDegree": 12,
+      "inDegree": 13,
       "outDegree": 5
     },
     {
@@ -719,7 +720,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-decision-theory-and-rationality"
         }
       ],
-      "inDegree": 11,
+      "inDegree": 14,
       "outDegree": 6
     },
     {
@@ -781,7 +782,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
         }
       ],
-      "inDegree": 20,
+      "inDegree": 23,
       "outDegree": 6
     },
     {
@@ -827,7 +828,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 5,
+      "inDegree": 7,
       "outDegree": 3
     },
     {
@@ -875,7 +876,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-aesthetics-and-philosophy-of-art"
         }
       ],
-      "inDegree": 20,
+      "inDegree": 17,
       "outDegree": 5
     },
     {
@@ -924,7 +925,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-neuroscience-and-neural-computation"
         }
       ],
-      "inDegree": 15,
+      "inDegree": 16,
       "outDegree": 6
     },
     {
@@ -973,7 +974,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-aesthetics-and-philosophy-of-art"
         }
       ],
-      "inDegree": 15,
+      "inDegree": 21,
       "outDegree": 5
     },
     {
@@ -1018,7 +1019,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-logic-formal-semantics-and-model-theory"
         }
       ],
-      "inDegree": 9,
+      "inDegree": 12,
       "outDegree": 5
     },
     {
@@ -1059,7 +1060,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 8,
+      "inDegree": 11,
       "outDegree": 3
     },
     {
@@ -1114,7 +1115,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-game-design-ludology-and-interactive-systems"
         }
       ],
-      "inDegree": 19,
+      "inDegree": 24,
       "outDegree": 6
     },
     {
@@ -1173,7 +1174,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-game-design-ludology-and-interactive-systems"
         }
       ],
-      "inDegree": 10,
+      "inDegree": 12,
       "outDegree": 6
     },
     {
@@ -1231,7 +1232,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-aesthetics-and-philosophy-of-art"
         }
       ],
-      "inDegree": 5,
+      "inDegree": 7,
       "outDegree": 8
     },
     {
@@ -1285,7 +1286,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
         }
       ],
-      "inDegree": 9,
+      "inDegree": 12,
       "outDegree": 6
     },
     {
@@ -1334,7 +1335,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
         }
       ],
-      "inDegree": 10,
+      "inDegree": 16,
       "outDegree": 5
     },
     {
@@ -1384,7 +1385,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
         }
       ],
-      "inDegree": 6,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -1438,7 +1439,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-category-theory-and-abstract-algebra"
         }
       ],
-      "inDegree": 18,
+      "inDegree": 15,
       "outDegree": 5
     },
     {
@@ -1548,7 +1549,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-game-design-ludology-and-interactive-systems"
         }
       ],
-      "inDegree": 8,
+      "inDegree": 7,
       "outDegree": 3
     },
     {
@@ -1686,7 +1687,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 2
     },
     {
@@ -1732,7 +1733,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 5,
+      "inDegree": 6,
       "outDegree": 2
     },
     {
@@ -1781,7 +1782,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-game-design-ludology-and-interactive-systems"
         }
       ],
-      "inDegree": 22,
+      "inDegree": 23,
       "outDegree": 5
     },
     {
@@ -1839,7 +1840,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-cognitive-science-and-perception"
         }
       ],
-      "inDegree": 15,
+      "inDegree": 12,
       "outDegree": 7
     },
     {
@@ -1897,7 +1898,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
         }
       ],
-      "inDegree": 4,
+      "inDegree": 3,
       "outDegree": 6
     },
     {
@@ -1955,7 +1956,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 9,
+      "inDegree": 8,
       "outDegree": 3
     },
     {
@@ -2009,7 +2010,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
         }
       ],
-      "inDegree": 10,
+      "inDegree": 9,
       "outDegree": 5
     },
     {
@@ -2210,7 +2211,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 8,
+      "inDegree": 2,
       "outDegree": 3
     },
     {
@@ -2421,7 +2422,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
         }
       ],
-      "inDegree": 5,
+      "inDegree": 7,
       "outDegree": 4
     },
     {
@@ -2466,7 +2467,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 2,
+      "inDegree": 0,
       "outDegree": 2
     },
     {
@@ -2508,7 +2509,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 7,
+      "inDegree": 8,
       "outDegree": 2
     },
     {
@@ -2557,7 +2558,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-mathematical-physics-and-symmetry"
         }
       ],
-      "inDegree": 6,
+      "inDegree": 7,
       "outDegree": 2
     },
     {
@@ -2603,7 +2604,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
         }
       ],
-      "inDegree": 13,
+      "inDegree": 12,
       "outDegree": 4
     },
     {
@@ -2656,7 +2657,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-mathematical-physics-and-symmetry"
         }
       ],
-      "inDegree": 8,
+      "inDegree": 10,
       "outDegree": 4
     },
     {
@@ -2772,7 +2773,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
         }
       ],
-      "inDegree": 14,
+      "inDegree": 12,
       "outDegree": 4
     },
     {
@@ -2885,7 +2886,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-geometry-topology-and-spatial-computation"
         }
       ],
-      "inDegree": 10,
+      "inDegree": 7,
       "outDegree": 3
     },
     {
@@ -2943,7 +2944,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 5
     },
     {
@@ -2997,7 +2998,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-dynamical-systems-and-bifurcation-theory"
         }
       ],
-      "inDegree": 3,
+      "inDegree": 6,
       "outDegree": 4
     },
     {
@@ -3052,7 +3053,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-robotics-and-embodied-intelligence"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 7
     },
     {
@@ -3106,7 +3107,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-cybernetics-and-control-theory"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 4,
       "outDegree": 7
     },
     {
@@ -3160,7 +3161,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 1,
+      "inDegree": 2,
       "outDegree": 4
     },
     {
@@ -3274,7 +3275,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-biomimicry-and-nature-inspired-design"
         }
       ],
-      "inDegree": 7,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -3324,7 +3325,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 5,
+      "inDegree": 6,
       "outDegree": 3
     },
     {
@@ -3428,7 +3429,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 6
     },
     {
@@ -3478,7 +3479,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 4,
+      "inDegree": 5,
       "outDegree": 3
     },
     {
@@ -3636,7 +3637,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-complex-systems-and-chaos-theory"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 4,
       "outDegree": 5
     },
     {
@@ -3687,7 +3688,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 3,
+      "inDegree": 5,
       "outDegree": 4
     },
     {
@@ -3737,7 +3738,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -3791,7 +3792,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-artificial-life-and-self-organization"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 0,
       "outDegree": 5
     },
     {
@@ -3842,7 +3843,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 2,
+      "inDegree": 1,
       "outDegree": 3
     },
     {
@@ -3892,7 +3893,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-network-science-and-graph-theory"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -4090,7 +4091,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-dynamical-systems-and-bifurcation-theory"
         }
       ],
-      "inDegree": 5,
+      "inDegree": 6,
       "outDegree": 5
     },
     {
@@ -4185,7 +4186,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 1,
+      "inDegree": 0,
       "outDegree": 2
     },
     {
@@ -4230,98 +4231,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 2
-    },
-    {
-      "id": "v6-dance-notation-and-movement-analysis",
-      "name": "Dance Notation & Movement Analysis",
-      "version": "v6",
-      "sourceFile": "research-topics-v6.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Tier C — Interesting Niche Additions",
-      "keyFigures": [
-        "Rudolf Laban",
-        "Benesh",
-        "Eshkol-Wachman",
-        "Ann Hutchinson Guest"
-      ],
-      "description": "Labanotation, Benesh Movement Notation, effort-shape theory. The rare notational system for the moving body — a clean case study for the thesis that \"writing systems shape what can be expressed,\" applied to a non-textual, non-auditory medium.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "4",
-      "pitch": "",
-      "idCode": "C3",
-      "connections": [
-        {
-          "raw": "Writing Systems & Notation",
-          "targetId": null
-        },
-        {
-          "raw": "Semiotics",
-          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
-        },
-        {
-          "raw": "Phenomenology",
-          "targetId": "v5-phenomenology-and-embodied-experience"
-        },
-        {
-          "raw": "Filmmaking",
-          "targetId": null
-        },
-        {
-          "raw": "Music Theory (rhythm)",
-          "targetId": null
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 2
-    },
-    {
-      "id": "v6-sound-design-and-foley",
-      "name": "Sound Design & Foley",
-      "version": "v6",
-      "sourceFile": "research-topics-v6.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Tier C — Interesting Niche Additions",
-      "keyFigures": [
-        "Walter Murch",
-        "Ben Burtt",
-        "Randy Thom",
-        "Jack Foley",
-        "Gary Rydstrom"
-      ],
-      "description": "The designed soundscape of film and games, distinct from musical scoring. Murch's *In the Blink of an Eye* bridges sound design and editing; Ben Burtt's work on *Star Wars* is applied psychoacoustics. A missing companion to the vault's Filmmaking and Music Theory topics.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "9",
-      "pitch": "",
-      "idCode": "C4",
-      "connections": [
-        {
-          "raw": "Filmmaking",
-          "targetId": null
-        },
-        {
-          "raw": "Music Theory",
-          "targetId": null
-        },
-        {
-          "raw": "Musical Acoustics & Psychoacoustics",
-          "targetId": "v5-musical-acoustics-and-psychoacoustics"
-        },
-        {
-          "raw": "Software Synthesizer",
-          "targetId": null
-        },
-        {
-          "raw": "Game Design",
-          "targetId": "v5-game-design-ludology-and-interactive-systems"
-        }
-      ],
-      "inDegree": 1,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -4367,49 +4277,8 @@ window.RESEARCH_DATA = {
           "targetId": "v5-philosophy-of-mind-and-consciousness"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 4
-    },
-    {
-      "id": "v6-somatic-practices-and-movement-science",
-      "name": "Somatic Practices & Movement Science",
-      "version": "v6",
-      "sourceFile": "research-topics-v6.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Tier C — Interesting Niche Additions",
-      "keyFigures": [
-        "F.M. Alexander",
-        "Moshé Feldenkrais",
-        "Ida Rolf",
-        "Thomas Hanna"
-      ],
-      "description": "Body-centered disciplines that treat movement as a cognitive practice. A practical complement to phenomenology and embodied cognition, and an often-overlooked branch of the \"mind-body\" track in both Western and Eastern traditions.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "3 or 6",
-      "pitch": "",
-      "idCode": "C6",
-      "connections": [
-        {
-          "raw": "Phenomenology",
-          "targetId": "v5-phenomenology-and-embodied-experience"
-        },
-        {
-          "raw": "Cognitive Science",
-          "targetId": "v5-cognitive-science-and-perception"
-        },
-        {
-          "raw": "Ecological Psychology",
-          "targetId": "v5-ecological-psychology-and-affordance-theory"
-        },
-        {
-          "raw": "Architecture (body in space)",
-          "targetId": null
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 3
     },
     {
       "id": "v6-comparative-mythology-and-depth-psychology",
@@ -4454,7 +4323,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-aesthetics-and-philosophy-of-art"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 5,
       "outDegree": 3
     },
     {
@@ -4591,7 +4460,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-history-and-philosophy-of-science"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 4
     },
     {
@@ -5280,7 +5149,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-ethics-consequentialism-deontology-virtue"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 0,
       "outDegree": 1
     },
     {
@@ -5406,7 +5275,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 1,
+      "inDegree": 0,
       "outDegree": 1
     },
     {
@@ -5702,7 +5571,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-metaphor-theory-and-conceptual-blending"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -5975,7 +5844,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 3
     },
     {
@@ -6053,7 +5922,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-photography-and-optics"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 0,
       "outDegree": 4
     },
     {
@@ -6296,91 +6165,6 @@ window.RESEARCH_DATA = {
       "outDegree": 1
     },
     {
-      "id": "v7-luthiery",
-      "name": "Luthiery",
-      "version": "v7",
-      "sourceFile": "research-topics-v7.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Group C — Craft-Focused Deep Dives",
-      "keyFigures": [
-        "Stradivari",
-        "Guarneri",
-        "Antonio de Torres (guitar)",
-        "the Cremonese tradition",
-        "modern makers like Samuel Zygmuntowicz"
-      ],
-      "description": "Making stringed instruments — violins, guitars, cellos, lutes — is a synthesis of wood science, acoustics, geometry, and personal hand-feel. The Cremonese secret is mostly gone; what remains is two hundred years of attempted reverse-engineering, plus a new generation of computational luthiers using finite-element analysis and modal-matching. *The Strad* magazine archives and the Violin Society of America's journals document the current state of the art.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": null,
-      "pitch": "Stringed-instrument making as physics + craft",
-      "idCode": "C3",
-      "connections": [
-        {
-          "raw": "Musical Acoustics (v5)",
-          "targetId": "v5-musical-acoustics-and-psychoacoustics"
-        },
-        {
-          "raw": "Music Theory",
-          "targetId": null
-        },
-        {
-          "raw": "Software Synthesizer",
-          "targetId": null
-        },
-        {
-          "raw": "Materials Science (v5)",
-          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 2
-    },
-    {
-      "id": "v7-letterpress-hand-typesetting-and-bookbinding",
-      "name": "Letterpress, Hand Typesetting & Bookbinding",
-      "version": "v7",
-      "sourceFile": "research-topics-v7.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Group C — Craft-Focused Deep Dives",
-      "keyFigures": [
-        "Gutenberg",
-        "Bodoni",
-        "William Morris & the Kelmscott Press",
-        "modern fine presses (Arion",
-        "Thornwillow",
-        "the Whittington Press)"
-      ],
-      "description": "The physical substrate of what v5's Typography topic treats abstractly. Setting metal type by hand, understanding the feel of a slug of lead, binding signatures, sewing cords, gilding edges, marbling endpapers: each is a self-contained craft. Useful not just as nostalgia but as a way of understanding *why* digital typography makes the decisions it does. Bringhurst's *Elements of Typographic Style* bridges the print and digital worlds.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": null,
-      "pitch": "The physical substrate of typography",
-      "idCode": "C4",
-      "connections": [
-        {
-          "raw": "Typography (v5)",
-          "targetId": "v5-typography-and-graphic-design-history"
-        },
-        {
-          "raw": "Writing Systems (v5)",
-          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
-        },
-        {
-          "raw": "Memory & Mnemonics (v6)",
-          "targetId": null
-        },
-        {
-          "raw": "Craft Mastery",
-          "targetId": null
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 2
-    },
-    {
       "id": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
       "name": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
       "version": "v7",
@@ -6423,93 +6207,6 @@ window.RESEARCH_DATA = {
       "outDegree": 4
     },
     {
-      "id": "v7-ceramics-and-kiln-traditions",
-      "name": "Ceramics & Kiln Traditions",
-      "version": "v7",
-      "sourceFile": "research-topics-v7.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Group C — Craft-Focused Deep Dives",
-      "keyFigures": [
-        "Raku",
-        "Shōji Hamada",
-        "Bernard Leach",
-        "the anagama and noborigama kiln traditions",
-        "Song Dynasty celadons"
-      ],
-      "description": "Pottery turns out to contain an enormous chemistry problem (glazes and body formulation) wrapped in an enormous physics problem (kiln firing schedules and reduction atmospheres) wrapped in a design problem (form, weight, tactility). The mingei folk-craft movement of Yanagi Sōetsu connects pottery to a whole philosophy of everyday beauty. Wood-fired anagama kilns run for days and their ash becomes part of the glaze; digitally-controlled electric kilns make entirely different aesthetic trade-offs.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": null,
-      "pitch": "Chemistry + physics + form, fired together",
-      "idCode": "C6",
-      "connections": [
-        {
-          "raw": "Japanese Aesthetics (Group D)",
-          "targetId": "v7-japanese-aesthetics"
-        },
-        {
-          "raw": "Materials Science (v5)",
-          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
-        },
-        {
-          "raw": "Craft Mastery",
-          "targetId": null
-        },
-        {
-          "raw": "Chemistry",
-          "targetId": null
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 2
-    },
-    {
-      "id": "v7-fermentation-and-traditional-food-biotechnology",
-      "name": "Fermentation & Traditional Food Biotechnology",
-      "version": "v7",
-      "sourceFile": "research-topics-v7.md",
-      "sourceDate": "2026-04-16",
-      "group": "C",
-      "groupLabel": "Group C — Craft-Focused Deep Dives",
-      "keyFigures": [
-        "Sandor Katz",
-        "Noma's fermentation lab",
-        "miso",
-        "koji",
-        "sourdough",
-        "kimchi",
-        "lambic beer",
-        "natural wine"
-      ],
-      "description": "Applied microbiology with thousands of years of empirical refinement. *The Art of Fermentation* (Katz) is the readable encyclopedia; *The Noma Guide to Fermentation* is the modernist-restaurant adaptation. Connecting threads run everywhere: living cultures as self-sustaining systems; flavor as a function of microbial succession; preservation without refrigeration; the Aspergillus oryzae (koji) as the most industrially consequential fungus you have never heard of.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": null,
-      "pitch": "Living cultures as self-sustaining systems",
-      "idCode": "C7",
-      "connections": [
-        {
-          "raw": "Ecology (v6)",
-          "targetId": "v6-ecology-and-ecosystem-dynamics"
-        },
-        {
-          "raw": "Cell & Molecular Biology (Group D)",
-          "targetId": "v7-cell-and-molecular-biology"
-        },
-        {
-          "raw": "Chemistry",
-          "targetId": null
-        },
-        {
-          "raw": "Craft Mastery",
-          "targetId": null
-        }
-      ],
-      "inDegree": 1,
-      "outDegree": 2
-    },
-    {
       "id": "v7-perfumery-and-olfactory-composition",
       "name": "Perfumery & Olfactory Composition",
       "version": "v7",
@@ -6548,7 +6245,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-psychoanalysis"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 0,
       "outDegree": 3
     },
     {
@@ -6927,7 +6624,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-complex-systems-and-chaos-theory"
         }
       ],
-      "inDegree": 5,
+      "inDegree": 4,
       "outDegree": 3
     },
     {
@@ -7052,7 +6749,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-longtermism-and-existential-risk-studies"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 4
     },
     {
@@ -7099,7 +6796,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 6,
+      "inDegree": 8,
       "outDegree": 1
     },
     {
@@ -7143,7 +6840,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-philosophy-of-mind-and-consciousness"
         }
       ],
-      "inDegree": 7,
+      "inDegree": 8,
       "outDegree": 3
     },
     {
@@ -7275,47 +6972,6 @@ window.RESEARCH_DATA = {
       "outDegree": 3
     },
     {
-      "id": "v7-flow-and-positive-psychology",
-      "name": "Flow & Positive Psychology",
-      "version": "v7",
-      "sourceFile": "research-topics-v7.md",
-      "sourceDate": "2026-04-16",
-      "group": "D",
-      "groupLabel": "Group D — Disciplinary Deep Dives",
-      "keyFigures": [
-        "Csikszentmihalyi",
-        "Seligman",
-        "Peterson",
-        "Fredrickson"
-      ],
-      "description": "A psychology concerned with what makes lives flourish rather than with what makes them fail. Flow (total absorption in challenge-matched activity), character strengths, gratitude, resilience, meaningful engagement. The field has internal debates about rigor (the replication crisis has been unkind to parts of it), but the core findings on flow in particular are a useful bridge from cognition to craft practice — and from clinical-deficit models of the mind to capability-building ones.",
-      "tier": "D",
-      "phase": null,
-      "likelyPhase": null,
-      "pitch": "A psychology of flourishing, not just of deficit",
-      "idCode": "D15",
-      "connections": [
-        {
-          "raw": "Craft Mastery",
-          "targetId": null
-        },
-        {
-          "raw": "Cognitive Science (v5)",
-          "targetId": "v5-cognitive-science-and-perception"
-        },
-        {
-          "raw": "Music Theory",
-          "targetId": null
-        },
-        {
-          "raw": "HCI",
-          "targetId": "v5-human-computer-interaction-and-interface-design"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 2
-    },
-    {
       "id": "v7-japanese-aesthetics",
       "name": "Japanese Aesthetics",
       "version": "v7",
@@ -7353,7 +7009,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-tadao-ando"
         }
       ],
-      "inDegree": 5,
+      "inDegree": 4,
       "outDegree": 3
     },
     {
@@ -7483,7 +7139,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-ethics-consequentialism-deontology-virtue"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 2,
       "outDegree": 3
     },
     {
@@ -7654,7 +7310,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-attention-studies-and-the-attention-economy"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -7708,7 +7364,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-probabilistic-programming-and-graphical-models"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 7
     },
     {
@@ -7904,7 +7560,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-dynamical-systems-and-bifurcation-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 6
     },
     {
@@ -8182,7 +7838,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-climate-science-and-earth-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 6
     },
     {
@@ -8280,7 +7936,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-cell-and-molecular-biology"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 6
     },
     {
@@ -8327,55 +7983,6 @@ window.RESEARCH_DATA = {
         {
           "raw": "Collective Intelligence & Coordination Systems",
           "targetId": "v5-collective-intelligence-and-coordination-systems"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 6
-    },
-    {
-      "id": "v8-bioacoustics-and-animal-communication",
-      "name": "Bioacoustics & Animal Communication",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "B",
-      "groupLabel": "Tier B — Strong Specialist Additions",
-      "keyFigures": [
-        "von Frisch",
-        "Roger Payne",
-        "Peter Slater",
-        "Tecumseh Fitch"
-      ],
-      "description": "Signal and meaning without human language: whale song, the syntactic structure of birdsong, the bee waggle dance, frog choruses, and the ultrasound of bats. It studies how information is encoded, transmitted, and decoded in biological sound, sitting between Neuroethology, Linguistics, and DSP. A natural probe of where communication ends and language begins, with deep ties to Musical Acoustics, Semiotics, and the evolutionary logic of signaling.",
-      "tier": "B",
-      "phase": null,
-      "likelyPhase": "7 or 9",
-      "pitch": "Whale song, birdsong syntax, and the bee waggle dance",
-      "idCode": "B7",
-      "connections": [
-        {
-          "raw": "Neuroethology",
-          "targetId": "v6-neuroethology"
-        },
-        {
-          "raw": "Linguistics & Natural Language Structure",
-          "targetId": "v5-linguistics-and-natural-language-structure"
-        },
-        {
-          "raw": "Digital Signal Processing (DSP)",
-          "targetId": "v5-digital-signal-processing-dsp"
-        },
-        {
-          "raw": "Musical Acoustics & Psychoacoustics",
-          "targetId": "v5-musical-acoustics-and-psychoacoustics"
-        },
-        {
-          "raw": "Semiotics, Structuralism & The Science of Signs",
-          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
-        },
-        {
-          "raw": "Behavioral Ecology & Sociobiology",
-          "targetId": "v6-behavioral-ecology-and-sociobiology"
         }
       ],
       "inDegree": 0,
@@ -8578,332 +8185,1251 @@ window.RESEARCH_DATA = {
       "outDegree": 6
     },
     {
-      "id": "v8-tilings-aperiodic-order-and-quasicrystals",
-      "name": "Tilings, Aperiodic Order & Quasicrystals",
-      "version": "v8",
+      "id": "v9-chemistry-and-reaction-networks",
+      "name": "Chemistry / Reaction Networks",
+      "version": "v9",
       "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
+      "sourceDate": "2026-06-12",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
       "keyFigures": [
-        "Penrose",
-        "Hao Wang",
-        "Shechtman",
-        "Conway"
+        "Linus Pauling",
+        "Ilya Prigogine",
+        "Stuart Kauffman",
+        "Le Chatelier",
+        "the Belousov–Zhabotinsky reaction"
       ],
-      "description": "The mathematics of covering the plane, and especially of order without repetition. Penrose tilings, Wang tiles (whose tileability is undecidable, linking pattern to Computational Complexity), and Shechtman's Nobel-winning physical quasicrystals show that aperiodic long-range order is both possible and real. Distinct from periodic Islamic ornament, it bridges Geometry, crystallographic Symmetry, metamaterials, and morphogenetic pattern formation.",
-      "tier": "C",
+      "description": "The science of matter and its transformations, read as a systems discipline. Beyond the periodic table and bonding lies a dynamical world: reaction networks, autocatalysis, oscillating reactions like Belousov–Zhabotinsky, and Prigogine's dissipative structures that self-organize far from equilibrium. Stuart Kauffman's autocatalytic sets make chemistry the bridge between dead matter and the origin of life. It is the missing middle layer between physics and biology — where thermodynamics, materials, and living form all meet.",
+      "tier": "A",
       "phase": null,
-      "likelyPhase": "10 or 6",
-      "pitch": "Order without repetition — Penrose tiles to physical quasicrystals",
-      "idCode": "C1",
+      "likelyPhase": "10",
+      "pitch": "The missing middle science — matter, transformation, and self-organizing reaction networks",
+      "idCode": "A1",
       "connections": [
         {
-          "raw": "Geometry, Topology & Spatial Computation",
-          "targetId": "v5-geometry-topology-and-spatial-computation"
-        },
-        {
-          "raw": "Islamic Geometric Patterns & Ornament",
-          "targetId": "v6-islamic-geometric-patterns-and-ornament"
+          "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time",
+          "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
         },
         {
           "raw": "Materials Science, Metamaterials & Programmable Matter",
           "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
+        },
+        {
+          "raw": "Artificial Life & Self-Organization",
+          "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        },
+        {
+          "raw": "Synthetic Biology & CRISPR-era Genetics",
+          "targetId": "v7-synthetic-biology-and-crispr-era-genetics"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-cryptography-and-coding-theory",
+      "name": "Cryptography & Coding Theory",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
+      "keyFigures": [
+        "Claude Shannon",
+        "Whitfield Diffie & Martin Hellman",
+        "Rivest, Shamir & Adleman (RSA)",
+        "Richard Hamming",
+        "Claude Berrou (turbo codes)"
+      ],
+      "description": "Two siblings of information theory: coding theory adds structured redundancy so messages survive noise, while cryptography hides them from adversaries. From Shannon's secrecy theorems and Hamming's error-correcting codes to Diffie–Hellman key exchange, RSA, and the elliptic-curve and lattice schemes underwriting modern security and blockchains. It is where number theory, computational complexity, and information theory turn adversarial — the formal study of trust, secrecy, and reliable transmission.",
+      "tier": "A",
+      "phase": null,
+      "likelyPhase": "10",
+      "pitch": "Trust, secrecy, and reliable transmission — information theory turned adversarial",
+      "idCode": "A2",
+      "connections": [
+        {
+          "raw": "Information Theory",
+          "targetId": "v5-information-theory"
         },
         {
           "raw": "Computational Complexity & Intractability",
           "targetId": "v8-computational-complexity-and-intractability"
         },
         {
-          "raw": "Mathematical Physics & Symmetry",
-          "targetId": "v5-mathematical-physics-and-symmetry"
+          "raw": "Quantum Computing & Quantum Information",
+          "targetId": "v5-quantum-computing-and-quantum-information"
+        },
+        {
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Digital Commons & Platform Economics",
+          "targetId": "v7-digital-commons-and-platform-economics"
+        },
+        {
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        }
+      ],
+      "inDegree": 2,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-sociology-and-social-network-analysis",
+      "name": "Sociology & Social Network Analysis",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
+      "keyFigures": [
+        "Émile Durkheim",
+        "Max Weber",
+        "Mark Granovetter",
+        "Pierre Bourdieu",
+        "Harrison White"
+      ],
+      "description": "How social structure shapes — and is shaped by — individual action. Durkheim's social facts and Weber's verstehen meet the formal machinery of social network analysis: Granovetter's 'strength of weak ties,' structural holes, homophily, and Harrison White's relational sociology. Bourdieu's fields, habitus, and forms of capital give it depth. It is network science aimed squarely at people — the empirical complement to anthropology and collective intelligence.",
+      "tier": "A",
+      "phase": null,
+      "likelyPhase": "5",
+      "pitch": "Social structure as a network — weak ties, fields, and the shape of the social",
+      "idCode": "A3",
+      "connections": [
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-actor-network-theory-and-sts",
+      "name": "Actor-Network Theory & STS",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
+      "keyFigures": [
+        "Bruno Latour",
+        "Michel Callon",
+        "John Law",
+        "Donna Haraway",
+        "Madeleine Akrich"
+      ],
+      "description": "Science and Technology Studies treats knowledge and technology as things made, not found — and Actor-Network Theory takes the radical step of granting agency to objects as well as people. Latour, Callon, and Law trace how facts and machines get stabilized through heterogeneous networks of humans and non-humans; Haraway complicates the boundaries further. It is, almost literally, network science applied to the social life of things — a natural bridge between media theory, the history of science, and sociology.",
+      "tier": "A",
+      "phase": null,
+      "likelyPhase": "5",
+      "pitch": "Knowledge and machines as networks of people *and* things",
+      "idCode": "A4",
+      "connections": [
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        }
+      ],
+      "inDegree": 3,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-ritual-as-coordination-technology",
+      "name": "Ritual as Coordination Technology",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
+      "keyFigures": [
+        "Roy Rappaport",
+        "Émile Durkheim",
+        "Victor Turner",
+        "Catherine Bell",
+        "Richard Sosis"
+      ],
+      "description": "Ritual viewed not as superstition but as social technology — a way groups synchronize belief, signal commitment, and coordinate at scale. Rappaport reads ritual as the foundation of meaning and social contract; Durkheim saw collective effervescence binding the group; evolutionary accounts (Sosis, Henrich) frame costly, hard-to-fake rites as solutions to trust and free-rider problems. It connects comparative mythology, anthropology, and game theory: how shared action manufactures shared reality.",
+      "tier": "A",
+      "phase": null,
+      "likelyPhase": "5",
+      "pitch": "How shared action manufactures shared reality and solves trust at scale",
+      "idCode": "A5",
+      "connections": [
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Game Theory & Mechanism Design",
+          "targetId": "v5-game-theory-and-mechanism-design"
+        },
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "name": "Energy Systems, Infrastructure & How the World Really Works",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
+      "keyFigures": [
+        "Vaclav Smil",
+        "Thomas P. Hughes (Networks of Power)",
+        "Buckminster Fuller",
+        "Cesare Marchetti"
+      ],
+      "description": "The unglamorous material substrate of civilization: energy, food, materials, and the vast technical systems that move them. Vaclav Smil's quantitative realism and Thomas Hughes's history of electrical 'networks of power' show how grids, supply chains, and the four pillars (steel, cement, plastics, ammonia) actually sustain modern life. Buckminster Fuller's 'doing more with less' and Marchetti's energy-transition curves round it out. It is the systems-thinking of the physical world — where thermodynamics, materials, climate, and urbanism become infrastructure.",
+      "tier": "A",
+      "phase": null,
+      "likelyPhase": "6",
+      "pitch": "The material substrate of civilization — energy, infrastructure, and how the world actually runs",
+      "idCode": "A6",
+      "connections": [
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time",
+          "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
+        },
+        {
+          "raw": "Climate Science & Earth Systems",
+          "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Materials Science, Metamaterials & Programmable Matter",
+          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Operations Research & Optimization",
+          "targetId": "v5-operations-research-and-optimization"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-scaling-laws-and-allometry",
+      "name": "Scaling Laws & Allometry",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "B",
+      "groupLabel": "Group B — Cross-Cutting Concepts & Lenses",
+      "keyFigures": [
+        "Geoffrey West",
+        "Max Kleiber",
+        "Julian Huxley",
+        "D'Arcy Thompson",
+        "Luís Bettencourt"
+      ],
+      "description": "Why doubling a system's size rarely doubles its properties. From Kleiber's 3/4-power metabolic law and Galileo's square-cube problem to Geoffrey West's universal scaling of organisms, cities, and companies, allometry reveals deep regularities that cut across biology, physics, and the social world. Power laws, dimensional analysis, and self-similarity tie it directly to fractals, renormalization, and complex systems. A lens, not a field: ask of anything, 'how does it change with scale?'",
+      "tier": "B",
+      "phase": null,
+      "likelyPhase": "2",
+      "pitch": "How properties change with size — power laws across organisms, cities, and firms",
+      "idCode": "B1",
+      "connections": [
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Complex Systems & Chaos Theory",
+          "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
         },
         {
           "raw": "Morphogenesis & Biological Pattern Formation",
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 6
     },
     {
-      "id": "v8-textiles-weaving-and-the-jacquard-loom",
-      "name": "Textiles, Weaving & the Jacquard Loom",
-      "version": "v8",
+      "id": "v9-recursion-and-self-reference",
+      "name": "Recursion & Self-Reference",
+      "version": "v9",
       "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
+      "sourceDate": "2026-06-12",
+      "group": "B",
+      "groupLabel": "Group B — Cross-Cutting Concepts & Lenses",
       "keyFigures": [
-        "Jacquard",
-        "Anni Albers",
-        "Ada Lovelace",
-        "Harlizius-Klück"
+        "Kurt Gödel",
+        "Douglas Hofstadter",
+        "Alonzo Church",
+        "Stephen Kleene",
+        "Haskell Curry"
       ],
-      "description": "Perhaps the richest thread from craft to computation: the Jacquard loom's punched cards directly inspired Babbage and Hollerith, making weaving an ancestor of programming, while Anni Albers reframed cloth as a structural and conceptual medium. Warp and weft are a binary substrate, and pattern is literally encoded instruction. Bridges the History of Computing and notation to Islamic geometric pattern, pattern languages, computational folding, and materials.",
-      "tier": "C",
+      "description": "A structure that refers to, or contains, itself — the engine behind computation, paradox, and surprising depth. Gödel's incompleteness, the lambda calculus's fixed-point combinators, fractals, and Hofstadter's 'strange loops' all turn on the same move. It is where logic, category theory, type theory, and functional programming converge, and where self-reference flips from bug to feature: the way finite rules generate infinite worlds.",
+      "tier": "B",
       "phase": null,
-      "likelyPhase": "6",
-      "pitch": "Punched cards, binary cloth, and the ancestor of programming",
-      "idCode": "C2",
-      "connections": [
-        {
-          "raw": "History of Computing & The Personal Computer Revolution",
-          "targetId": "v5-history-of-computing-and-the-personal-computer-revolution"
-        },
-        {
-          "raw": "Writing Systems, Notation & Symbolic Representation",
-          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
-        },
-        {
-          "raw": "Islamic Geometric Patterns & Ornament",
-          "targetId": "v6-islamic-geometric-patterns-and-ornament"
-        },
-        {
-          "raw": "Pattern Languages, Design Methods & Morphological Analysis",
-          "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
-        },
-        {
-          "raw": "Origami & Computational Folding",
-          "targetId": "v6-origami-and-computational-folding"
-        },
-        {
-          "raw": "Materials Science, Metamaterials & Programmable Matter",
-          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 6
-    },
-    {
-      "id": "v8-comics-and-sequential-art",
-      "name": "Comics & Sequential Art",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
-      "keyFigures": [
-        "Scott McCloud",
-        "Will Eisner",
-        "Töpffer"
-      ],
-      "description": "How meaning is built from images in deliberate sequence: panels, gutters, and the reader's 'closure' that fills the space between frames. McCloud's and Eisner's theory treats the comic as a unique grammar of time-in-space, distinct from both prose and film. A tidy intrinsic-domain pick bridging Semiotics, Narrative theory, the cognitive science of inference, Typography, the depiction of time, and Berger's ways of seeing.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "4 or 6",
-      "pitch": "Meaning through panels, gutters, and closure",
-      "idCode": "C3",
-      "connections": [
-        {
-          "raw": "Semiotics, Structuralism & The Science of Signs",
-          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
-        },
-        {
-          "raw": "Rhetoric, Narrative Theory & Story Systems",
-          "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
-        },
-        {
-          "raw": "Cognitive Science & Perception",
-          "targetId": "v5-cognitive-science-and-perception"
-        },
-        {
-          "raw": "Typography & Graphic Design History",
-          "targetId": "v5-typography-and-graphic-design-history"
-        },
-        {
-          "raw": "Philosophy of Time",
-          "targetId": "v6-philosophy-of-time"
-        },
-        {
-          "raw": "Ways of Seeing",
-          "targetId": "v7-ways-of-seeing"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 6
-    },
-    {
-      "id": "v8-oulipo-and-constrained-writing",
-      "name": "Oulipo & Constrained Writing",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
-      "keyFigures": [
-        "Queneau",
-        "Georges Perec",
-        "Calvino",
-        "Harry Mathews"
-      ],
-      "description": "Literature generated under deliberate formal constraint: Perec's novel without the letter e, Queneau's combinatorial Hundred Thousand Billion Poems, the lipogram, the S+7 method. The Oulipo treats constraint not as limitation but as a generative engine, the humanities' direct analogue of procedural generation. Bridges Linguistics and notation to recreational mathematics, algorithmic composition, and the combinatorial literary craft of Calvino, an Oulipo member.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "4",
-      "pitch": "Literature as a generative engine of formal constraint",
-      "idCode": "C4",
-      "connections": [
-        {
-          "raw": "Linguistics & Natural Language Structure",
-          "targetId": "v5-linguistics-and-natural-language-structure"
-        },
-        {
-          "raw": "Recreational Mathematics & Puzzles",
-          "targetId": "v8-recreational-mathematics-and-puzzles"
-        },
-        {
-          "raw": "Generative Music & Algorithmic Composition",
-          "targetId": "v5-generative-music-and-algorithmic-composition"
-        },
-        {
-          "raw": "Italo Calvino",
-          "targetId": "v7-italo-calvino"
-        },
-        {
-          "raw": "Writing Systems, Notation & Symbolic Representation",
-          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
-        },
-        {
-          "raw": "Rhetoric, Narrative Theory & Story Systems",
-          "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 6
-    },
-    {
-      "id": "v8-animation-and-the-illusion-of-life",
-      "name": "Animation & the Illusion of Life",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
-      "keyFigures": [
-        "Thomas & Johnston",
-        "Norman McLaren",
-        "John Lasseter"
-      ],
-      "description": "The empirical craft of making drawn or simulated motion read as alive: Disney's twelve principles (squash-and-stretch, anticipation, timing, follow-through) codified by Thomas and Johnston, extended by McLaren's abstract experiments and Pixar's computational revival. Distinct from live-action filmmaking, it is effectively an applied science of motion perception, bridging Cognitive Science, affordance cues, Computer Graphics, the legible movement studied in robotics, and Ghibli's hand-drawn tradition.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "6",
-      "pitch": "The twelve principles — an empirical science of living motion",
-      "idCode": "C5",
-      "connections": [
-        {
-          "raw": "Cognitive Science & Perception",
-          "targetId": "v5-cognitive-science-and-perception"
-        },
-        {
-          "raw": "Ecological Psychology & Affordance Theory",
-          "targetId": "v5-ecological-psychology-and-affordance-theory"
-        },
-        {
-          "raw": "Computer Graphics & Computational Imaging",
-          "targetId": "v5-computer-graphics-and-computational-imaging"
-        },
-        {
-          "raw": "Robotics & Embodied Intelligence",
-          "targetId": "v5-robotics-and-embodied-intelligence"
-        },
-        {
-          "raw": "Hayao Miyazaki / Studio Ghibli",
-          "targetId": "v7-hayao-miyazaki-studio-ghibli"
-        },
-        {
-          "raw": "Game Design, Ludology & Interactive Systems",
-          "targetId": "v5-game-design-ludology-and-interactive-systems"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 6
-    },
-    {
-      "id": "v8-tuning-systems-and-temperament",
-      "name": "Tuning Systems & Temperament",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
-      "keyFigures": [
-        "Pythagoras",
-        "Werckmeister",
-        "Harry Partch",
-        "Sethares"
-      ],
-      "description": "The centuries-long negotiation between mathematical ratio and musical practicality: Pythagorean tuning, just intonation, the comma problem, equal temperament's compromise, and Partch's and Sethares's explorations of microtonality and timbre-matched scales. It is the clearest case in music that notation and system determine what is expressible. Bridges Musical Acoustics and algorithmic composition to the history of mathematics, symmetry, and the signal processing of pitch.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "9",
-      "pitch": "Ratio versus practice — just intonation to microtonality",
-      "idCode": "C6",
-      "connections": [
-        {
-          "raw": "Musical Acoustics & Psychoacoustics",
-          "targetId": "v5-musical-acoustics-and-psychoacoustics"
-        },
-        {
-          "raw": "Generative Music & Algorithmic Composition",
-          "targetId": "v5-generative-music-and-algorithmic-composition"
-        },
-        {
-          "raw": "History of Mathematics",
-          "targetId": "v6-history-of-mathematics"
-        },
-        {
-          "raw": "Mathematical Physics & Symmetry",
-          "targetId": "v5-mathematical-physics-and-symmetry"
-        },
-        {
-          "raw": "Digital Signal Processing (DSP)",
-          "targetId": "v5-digital-signal-processing-dsp"
-        },
-        {
-          "raw": "Writing Systems, Notation & Symbolic Representation",
-          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 6
-    },
-    {
-      "id": "v8-change-ringing-and-campanology",
-      "name": "Change Ringing & Campanology",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
-      "keyFigures": [
-        "Fabian Stedman",
-        "Wilfrid Wilson",
-        "Arthur Cayley"
-      ],
-      "description": "A 350-year-old English practice of ringing tower bells through long sequences of permutations ('methods' and 'peals') with no order repeated until the pattern closes. It is, quite literally, group theory and combinatorial path-finding executed by a coordinated team on heavy bronze, complete with its own notation. A delightful, deeply corpus-aligned bridge from abstract algebra and recreational mathematics to notation, acoustics, and real-time collective coordination.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "9 or 2",
-      "pitch": "Permutation groups performed on tower bells",
-      "idCode": "C7",
+      "likelyPhase": "2",
+      "pitch": "Finite rules that fold back on themselves to generate infinite worlds",
+      "idCode": "B2",
       "connections": [
         {
           "raw": "Category Theory & Abstract Algebra",
           "targetId": "v5-category-theory-and-abstract-algebra"
         },
         {
-          "raw": "Recreational Mathematics & Puzzles",
-          "targetId": "v8-recreational-mathematics-and-puzzles"
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Type Theory & Homotopy Type Theory",
+          "targetId": "v6-type-theory-and-homotopy-type-theory"
+        },
+        {
+          "raw": "Functional Programming & Lambda Calculus",
+          "targetId": "v6-functional-programming-and-lambda-calculus"
+        },
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Gödel, Escher, Bach",
+          "targetId": "v7-g-del-escher-bach-an-eternal-golden-braid"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-charles-sanders-peirce",
+      "name": "Charles Sanders Peirce",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Collected Papers",
+        "'How to Make Our Ideas Clear'",
+        "the triadic sign",
+        "abduction",
+        "existential graphs"
+      ],
+      "description": "America's most original philosopher and the founder of both pragmatism and modern semiotics. Peirce's triadic sign (icon, index, symbol) is richer than Saussure's dyad, his theory of abduction names the logic of hypothesis-formation, and his existential graphs are a diagrammatic logic decades ahead of their time. A working scientist and logician who thought meaning, inference, and reality form one continuous inquiry — endlessly generative, famously hard to finish reading.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Pragmatism, the triadic sign, abduction, and a diagrammatic logic",
+      "idCode": "C1",
+      "connections": [
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "Ferdinand de Saussure",
+          "targetId": "v9-ferdinand-de-saussure"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-gottfried-leibniz",
+      "name": "Gottfried Leibniz",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "characteristica universalis",
+        "calculus ratiocinator",
+        "Monadology",
+        "binary arithmetic",
+        "the calculus"
+      ],
+      "description": "The patron saint of this entire project's dream: a universal notation for thought. Leibniz invented binary arithmetic, co-invented the calculus (and its superior notation), built calculating machines, and imagined a characteristica universalis with a calculus ratiocinator — a formal language in which disputes could be settled by computation ('let us calculate'). His monadology still echoes in process philosophy. Three centuries early, he glimpsed logic, computation, and notation as one.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "'Let us calculate' — the dream of a universal notation for thought",
+      "idCode": "C2",
+      "connections": [
+        {
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
         },
         {
           "raw": "Writing Systems, Notation & Symbolic Representation",
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
         },
         {
-          "raw": "Musical Acoustics & Psychoacoustics",
-          "targetId": "v5-musical-acoustics-and-psychoacoustics"
+          "raw": "Philosophy of Mathematics",
+          "targetId": "v5-philosophy-of-mathematics"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
+        }
+      ],
+      "inDegree": 2,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-henri-poincare",
+      "name": "Henri Poincaré",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Science and Hypothesis",
+        "the three-body problem",
+        "the Poincaré conjecture",
+        "qualitative dynamics",
+        "analysis situs"
+      ],
+      "description": "The last universalist, who founded the qualitative theory of dynamical systems and, with the three-body problem, discovered chaos before the word existed. He created algebraic topology ('analysis situs'), shaped relativity's prehistory, and wrote luminously on the role of intuition and convention in science. Poincaré is the hinge between nineteenth-century analysis and the twentieth century's complex-systems thinking.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Founder of topology and the discoverer of chaos in the three-body problem",
+      "idCode": "C3",
+      "connections": [
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Complex Systems & Chaos Theory",
+          "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Geometry, Topology & Spatial Computation",
+          "targetId": "v5-geometry-topology-and-spatial-computation"
+        },
+        {
+          "raw": "Philosophy of Mathematics",
+          "targetId": "v5-philosophy-of-mathematics"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-benoit-mandelbrot",
+      "name": "Benoit Mandelbrot",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "The Fractal Geometry of Nature",
+        "the Mandelbrot set",
+        "fractional Brownian motion",
+        "'roughness'",
+        "fat-tailed markets"
+      ],
+      "description": "The maverick who gave roughness a geometry. Mandelbrot saw that coastlines, clouds, prices, and turbulence share a fractal, self-similar structure that smooth Euclidean math had ignored, and the Mandelbrot set became the era's emblem of infinite complexity from a simple rule. His work on fat-tailed, wildly-varying financial returns was decades ahead of mainstream finance. A bridge from pure geometry to scaling laws, chaos, and risk.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "A geometry of roughness — fractals, self-similarity, and fat tails",
+      "idCode": "C4",
+      "connections": [
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Complex Systems & Chaos Theory",
+          "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
+        },
+        {
+          "raw": "Stochastic Processes & Random Walks",
+          "targetId": "v6-stochastic-processes-and-random-walks"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-j-j-gibson",
+      "name": "J.J. Gibson",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "The Ecological Approach to Visual Perception",
+        "affordances",
+        "direct perception",
+        "optic flow",
+        "the ambient optic array"
+      ],
+      "description": "The psychologist who turned perception inside out. Instead of the brain reconstructing a world from impoverished retinal images, Gibson argued that the ambient optic array already carries rich structure, and that we directly perceive affordances — what the environment offers for action. His ecological approach reframed mind as agent-in-environment, seeding ecological psychology, embodied cognition, and the design vocabulary of affordances now central to HCI.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Direct perception and affordances — mind as agent-in-environment",
+      "idCode": "C5",
+      "connections": [
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Cognitive Science & Perception",
+          "targetId": "v5-cognitive-science-and-perception"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Human-Computer Interaction & Interface Design",
+          "targetId": "v5-human-computer-interaction-and-interface-design"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-ferdinand-de-saussure",
+      "name": "Ferdinand de Saussure",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Course in General Linguistics",
+        "signifier/signified",
+        "langue vs parole",
+        "arbitrariness of the sign",
+        "synchrony vs diachrony"
+      ],
+      "description": "The founder of structural linguistics and a father of semiotics, whose posthumous Course in General Linguistics reframed language as a system of differences. The arbitrary bond of signifier and signified, the split between langue and parole, and the priority of synchronic structure over historical change became the template for structuralism across anthropology, literary theory, and beyond. To study meaning, he taught, study the system, not the word.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Language as a system of differences — the signifier, the signified, and structure",
+      "idCode": "C6",
+      "connections": [
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
+        },
+        {
+          "raw": "Charles Sanders Peirce",
+          "targetId": "v9-charles-sanders-peirce"
+        },
+        {
+          "raw": "Claude Lévi-Strauss",
+          "targetId": "v9-claude-levi-strauss"
+        }
+      ],
+      "inDegree": 2,
+      "outDegree": 4
+    },
+    {
+      "id": "v9-jean-baudrillard",
+      "name": "Jean Baudrillard",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Simulacra and Simulation",
+        "hyperreality",
+        "the precession of simulacra",
+        "'the desert of the real'"
+      ],
+      "description": "The theorist of the image age, who argued that signs have detached from reality altogether. In Simulacra and Simulation he traces the 'precession of simulacra' — the map that precedes the territory, the copy with no original — and names hyperreality, the condition in which media-saturated representations feel more real than the real. Provocative, overstated, and uncannily prescient about a world of feeds, filters, and synthetic media.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Hyperreality and simulacra — when the map precedes the territory",
+      "idCode": "C7",
+      "connections": [
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 4
+    },
+    {
+      "id": "v9-marshall-mcluhan",
+      "name": "Marshall McLuhan",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Understanding Media",
+        "The Gutenberg Galaxy",
+        "'the medium is the message'",
+        "hot vs cool media",
+        "the global village"
+      ],
+      "description": "The prophet of media ecology, who insisted the medium is the message: each technology of communication reshapes the human sensorium and social scale, regardless of content. The Gutenberg Galaxy traced how print made us linear and individual; his 'global village' and hot/cool distinction anticipated the electronic age. Gnomic, aphoristic, and often right — the indispensable starting point for thinking about media as environment.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "'The medium is the message' — technologies reshape the sensorium",
+      "idCode": "C8",
+      "connections": [
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "History of Computing & The Personal Computer Revolution",
+          "targetId": "v5-history-of-computing-and-the-personal-computer-revolution"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Typography & Graphic Design History",
+          "targetId": "v5-typography-and-graphic-design-history"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 4
+    },
+    {
+      "id": "v9-michel-foucault",
+      "name": "Michel Foucault",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Discipline and Punish",
+        "The Order of Things",
+        "The Archaeology of Knowledge",
+        "power/knowledge",
+        "biopolitics"
+      ],
+      "description": "The historian-philosopher of power and knowledge. Foucault showed how discourses, institutions, and everyday practices produce both subjects and 'truths' — the clinic, the prison, the confession — and how power operates not only by repression but by shaping what can be thought. Discipline and Punish's panopticon and his late concept of biopolitics remain essential tools for reading surveillance, normalization, and the politics of categories.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Power/knowledge — how discourse and discipline produce subjects and truths",
+      "idCode": "C9",
+      "connections": [
+        {
+          "raw": "Political Philosophy",
+          "targetId": "v7-political-philosophy"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-gilles-deleuze",
+      "name": "Gilles Deleuze",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Difference and Repetition",
+        "A Thousand Plateaus",
+        "the rhizome",
+        "assemblage",
+        "'becoming'"
+      ],
+      "description": "A philosopher of difference, multiplicity, and becoming who built concepts like tools. With Guattari he opposed the branching 'tree' of hierarchy to the rhizome — a non-hierarchical network with no center and any-to-any connection — and developed assemblage theory, a vocabulary for heterogeneous wholes that resonates strongly with network and complexity thinking. Difficult, generative, and a major influence on contemporary theory of systems and media.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Difference, the rhizome, and assemblages — networks as philosophy",
+      "idCode": "C10",
+      "connections": [
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "A Thousand Plateaus",
+          "targetId": "v9-a-thousand-plateaus"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-claude-levi-strauss",
+      "name": "Claude Lévi-Strauss",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "The Savage Mind",
+        "Structural Anthropology",
+        "Mythologiques",
+        "binary oppositions",
+        "the bricoleur"
+      ],
+      "description": "The founder of structural anthropology, who applied Saussure's linguistics to culture itself. Beneath the dazzling variety of kinship systems and myths he sought invariant structures — binary oppositions, transformations, the logic of the concrete — arguing the 'savage mind' is as rigorous as the scientific one. His figure of the bricoleur, improvising with whatever is at hand, has become a touchstone far beyond anthropology.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Structural anthropology — invariant patterns beneath myth and kinship",
+      "idCode": "C11",
+      "connections": [
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
+        },
+        {
+          "raw": "Ferdinand de Saussure",
+          "targetId": "v9-ferdinand-de-saussure"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-maturana-and-varela",
+      "name": "Humberto Maturana & Francisco Varela",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Autopoiesis and Cognition",
+        "The Tree of Knowledge",
+        "The Embodied Mind",
+        "structural coupling",
+        "enaction"
+      ],
+      "description": "The Chilean biologists who defined life in terms of self-production. Their concept of autopoiesis — a system that continuously regenerates the network of processes that produce it — recast cognition as the activity of living, not representation of a pre-given world. The Embodied Mind brought this enactive view into dialogue with phenomenology and Buddhist practice, founding enactivism and feeding directly into today's active-inference accounts of mind.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Autopoiesis and enaction — life and cognition as self-producing processes",
+      "idCode": "C12",
+      "connections": [
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Artificial Life & Self-Organization",
+          "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Cognitive Science & Perception",
+          "targetId": "v5-cognitive-science-and-perception"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
+        },
+        {
+          "raw": "Philosophy of Mind & Consciousness",
+          "targetId": "v5-philosophy-of-mind-and-consciousness"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-stafford-beer",
+      "name": "Stafford Beer",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Brain of the Firm",
+        "The Heart of Enterprise",
+        "the Viable System Model",
+        "Project Cybersyn",
+        "requisite variety"
+      ],
+      "description": "The founder of management cybernetics, who took Wiener's ideas into the running of firms and states. His Viable System Model maps any viable organization onto a recursive cybernetic architecture, and Project Cybersyn — a real-time control room for Allende's Chile — remains the boldest attempt to steer an economy by feedback. Beer thought regulation, variety, and viability were the true subject of organization.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Management cybernetics — the Viable System Model and Project Cybersyn",
+      "idCode": "C13",
+      "connections": [
+        {
+          "raw": "Cybernetics & Control Theory",
+          "targetId": "v5-cybernetics-and-control-theory"
+        },
+        {
+          "raw": "Systems Thinking & System Dynamics",
+          "targetId": "v5-systems-thinking-and-system-dynamics"
+        },
+        {
+          "raw": "Operations Research & Optimization",
+          "targetId": "v5-operations-research-and-optimization"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 4
+    },
+    {
+      "id": "v9-edward-tufte",
+      "name": "Edward Tufte",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "The Visual Display of Quantitative Information",
+        "Envisioning Information",
+        "sparklines",
+        "chartjunk",
+        "the data-ink ratio"
+      ],
+      "description": "The authority on the visual display of information. Tufte's principles — maximize the data-ink ratio, banish chartjunk, respect graphical integrity, favor small multiples — turned data visualization into a discipline with standards. His invention of sparklines and his analyses (from Minard's march on Moscow to the Challenger disaster) show that how you draw the evidence can change what it means. Design in the service of clear thinking.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "The data-ink ratio, chartjunk, and the integrity of visual evidence",
+      "idCode": "C14",
+      "connections": [
+        {
+          "raw": "Cartography & Data Visualization",
+          "targetId": "v5-cartography-and-data-visualization"
+        },
+        {
+          "raw": "Typography & Graphic Design History",
+          "targetId": "v5-typography-and-graphic-design-history"
+        },
+        {
+          "raw": "Color Science & Theory",
+          "targetId": "v5-color-science-and-theory"
+        },
+        {
+          "raw": "Human-Computer Interaction & Interface Design",
+          "targetId": "v5-human-computer-interaction-and-interface-design"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 4
+    },
+    {
+      "id": "v9-lynn-margulis",
+      "name": "Lynn Margulis",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Symbiosis in Cell Evolution",
+        "endosymbiotic theory",
+        "symbiogenesis",
+        "the Gaia hypothesis",
+        "serial endosymbiosis"
+      ],
+      "description": "The biologist who showed that cooperation, not just competition, drives evolution. Her endosymbiotic theory — that mitochondria and chloroplasts began as free-living bacteria engulfed and kept — was rejected for years and is now textbook fact. She argued symbiogenesis is a major engine of evolutionary novelty, and co-developed the Gaia hypothesis with Lovelock. A fierce advocate for the microbial, networked view of life.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Endosymbiosis and symbiogenesis — evolution by merger, not just rivalry",
+      "idCode": "C15",
+      "connections": [
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
+        },
+        {
+          "raw": "Cell & Molecular Biology",
+          "targetId": "v7-cell-and-molecular-biology"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-joseph-needham",
+      "name": "Joseph Needham",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "C",
+      "groupLabel": "Group C — Individual Thinkers & Creators",
+      "keyFigures": [
+        "Science and Civilisation in China",
+        "the Needham Question",
+        "Chinese technology",
+        "comparative history of science"
+      ],
+      "description": "The biochemist who became the West's great historian of Chinese science. His monumental Science and Civilisation in China documented how China led the world in technology for centuries, and posed the 'Needham Question': why, then, did modern science arise in Europe and not there? A model of comparative, civilizational history that dismantles the assumption of a single Western road to knowledge.",
+      "tier": "C",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "Chinese science and the 'Needham Question' of why modern science arose in the West",
+      "idCode": "C16",
+      "connections": [
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
+        }
+      ],
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-panini-and-generative-grammar",
+      "name": "Pāṇini & Generative Grammar",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "D",
+      "groupLabel": "Group D — Non-Western & Comparative Knowledge Systems",
+      "keyFigures": [
+        "the Aṣṭādhyāyī",
+        "metarules (paribhāṣā)",
+        "the śiva sūtras",
+        "Backus–Naur Form (its echo)",
+        "Noam Chomsky (the modern parallel)"
+      ],
+      "description": "Around the 4th century BCE the Sanskrit grammarian Pāṇini wrote the Aṣṭādhyāyī: roughly 4,000 ordered, recursive rules — with metarules governing their own application — that generate the well-formed sentences of a language. It is a formal generative grammar more than two millennia before Chomsky, and its rule-and-metarule architecture prefigures Backus–Naur Form and programming-language theory. The ancient world's most striking proof that grammar can be computation.",
+      "tier": "D",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "A formal generative grammar from the 4th century BCE — computation before computers",
+      "idCode": "D1",
+      "connections": [
+        {
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
+        },
+        {
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Writing Systems, Notation & Symbolic Representation",
+          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Compiler Design & Programming Language Theory",
+          "targetId": "v5-compiler-design-and-programming-language-theory"
+        },
+        {
+          "raw": "Navya-Nyāya",
+          "targetId": "v9-navya-nyaya"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-i-ching-as-combinatorial-system",
+      "name": "I Ching as Combinatorial System",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "D",
+      "groupLabel": "Group D — Non-Western & Comparative Knowledge Systems",
+      "keyFigures": [
+        "King Wen",
+        "the 64 hexagrams",
+        "Leibniz's binary reading",
+        "Richard Wilhelm (translation)",
+        "Carl Jung (synchronicity)"
+      ],
+      "description": "Beneath its use as an oracle, the I Ching is a complete combinatorial system: 64 hexagrams built from six binary lines, each yin or yang, with rules of transformation between them. Leibniz, shown the King Wen sequence, recognized his own binary arithmetic and took it as evidence for a universal symbolic order. Read structurally rather than mystically, it is one of humanity's oldest formal notations — a finite alphabet generating a space of states and changes.",
+      "tier": "D",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "64 hexagrams from binary lines — an ancient combinatorial notation Leibniz read as binary",
+      "idCode": "D2",
+      "connections": [
+        {
+          "raw": "Writing Systems, Notation & Symbolic Representation",
+          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "Information Theory",
+          "targetId": "v5-information-theory"
+        },
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
+        }
+      ],
+      "inDegree": 2,
+      "outDegree": 6
+    },
+    {
+      "id": "v9-ubuntu-and-african-relational-philosophy",
+      "name": "Ubuntu / African Relational Philosophy",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "D",
+      "groupLabel": "Group D — Non-Western & Comparative Knowledge Systems",
+      "keyFigures": [
+        "'Umuntu ngumuntu ngabantu'",
+        "Desmond Tutu",
+        "John Mbiti",
+        "Kwame Gyekye",
+        "Mogobe Ramose"
+      ],
+      "description": "'Umuntu ngumuntu ngabantu' — a person is a person through other persons. The southern-African concept of ubuntu, elaborated by thinkers like Mbiti, Gyekye, Ramose, and Tutu, grounds personhood, ethics, and justice in relationship and community rather than the isolated individual. It offers a non-Western, fundamentally relational ontology — a sharp counterpoint to liberal individualism and a resource for thinking about commons, restorative justice, and the self as a node in a web of obligation.",
+      "tier": "D",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "'A person is a person through other persons' — a relational ontology of self and ethics",
+      "idCode": "D3",
+      "connections": [
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "Political Philosophy",
+          "targetId": "v7-political-philosophy"
+        },
+        {
+          "raw": "Ethics (Consequentialism / Deontology / Virtue)",
+          "targetId": "v7-ethics-consequentialism-deontology-virtue"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
         },
         {
           "raw": "Collective Intelligence & Coordination Systems",
@@ -8914,184 +9440,188 @@ window.RESEARCH_DATA = {
       "outDegree": 5
     },
     {
-      "id": "v8-acoustic-ecology-and-soundscape-studies",
-      "name": "Acoustic Ecology & Soundscape Studies",
-      "version": "v8",
+      "id": "v9-navya-nyaya",
+      "name": "Navya-Nyāya",
+      "version": "v9",
       "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
+      "sourceDate": "2026-06-12",
+      "group": "D",
+      "groupLabel": "Group D — Non-Western & Comparative Knowledge Systems",
       "keyFigures": [
-        "R. Murray Schafer",
-        "Bernie Krause",
-        "Barry Truax"
+        "Gaṅgeśa Upādhyāya",
+        "the Tattvacintāmaṇi",
+        "Raghunātha Śiromaṇi",
+        "pervasion (vyāpti)",
+        "qualified cognition"
       ],
-      "description": "Treats the sonic environment as a composed whole: Schafer's 'soundscape,' the keynote sounds and signals of a place, Krause's biophony/geophony/anthrophony, and Truax's acoustic communication. It studies how sound situates us and how human noise reshapes ecosystems, bridging Sound Design and Foley to Ecology, the phenomenology of listening, media theory, and musical acoustics.",
-      "tier": "C",
+      "description": "The 'new logic' of medieval India, founded by Gaṅgeśa in the 14th century, developed a rigorous technical language for analyzing cognition, inference, and relations — centuries before Western symbolic logic. Its precise treatment of pervasion (vyāpti), negation, and the structure of qualified cognition rivals modern formal semantics, and its specialized terminology let philosophers state claims with near-mathematical exactness. A reminder that formal logic has more than one lineage.",
+      "tier": "D",
       "phase": null,
-      "likelyPhase": "9",
-      "pitch": "The environment as a composed sonic field",
-      "idCode": "C8",
+      "likelyPhase": null,
+      "pitch": "Medieval India's 'new logic' — a technical language for inference and cognition",
+      "idCode": "D4",
       "connections": [
         {
-          "raw": "Sound Design & Foley",
-          "targetId": "v6-sound-design-and-foley"
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
         },
         {
-          "raw": "Ecology & Ecosystem Dynamics",
-          "targetId": "v6-ecology-and-ecosystem-dynamics"
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
         },
         {
-          "raw": "Phenomenology & Embodied Experience",
-          "targetId": "v5-phenomenology-and-embodied-experience"
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
         },
         {
-          "raw": "Media Theory & Philosophy of Technology",
-          "targetId": "v5-media-theory-and-philosophy-of-technology"
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
         },
         {
-          "raw": "Musical Acoustics & Psychoacoustics",
-          "targetId": "v5-musical-acoustics-and-psychoacoustics"
+          "raw": "Pāṇini & Generative Grammar",
+          "targetId": "v9-panini-and-generative-grammar"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 5
     },
     {
-      "id": "v8-culinary-science-and-gastronomy",
-      "name": "Culinary Science & Gastronomy",
-      "version": "v8",
+      "id": "v9-the-glass-bead-game",
+      "name": "The Glass Bead Game",
+      "version": "v9",
       "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
+      "sourceDate": "2026-06-12",
+      "group": "E",
+      "groupLabel": "Group E — Seminal Books & Texts",
       "keyFigures": [
-        "Harold McGee",
-        "Hervé This",
-        "Ferran Adrià"
+        "Hermann Hesse",
+        "1943",
+        "the order of Castalia",
+        "Magister Ludi",
+        "Joseph Knecht"
       ],
-      "description": "The chemistry, physics, and craft of cooking: Maillard reactions, emulsions, gels, and heat transfer (McGee), and the deconstructive experiments of molecular gastronomy (This, Adrià). It treats the kitchen as a laboratory and the dish as engineered experience, pairing naturally with the corpus's existing fermentation and olfactory-composition crafts and reaching into molecular biology, the anthropology of cuisine, and material transformation.",
-      "tier": "C",
+      "description": "Hermann Hesse's final novel imagines Castalia, an austere intellectual order whose members play the Glass Bead Game — a contemplative synthesis of all the arts and sciences, drawing themes from music, mathematics, and beyond into a single unifying language. It is, in effect, a fictional portrait of the dream behind a project like this one: the longing for a grammar that connects every discipline. Hesse won the Nobel partly on its strength, even as the book quietly questions whether such a tower of pure mind can be lived in.",
+      "tier": "E",
       "phase": null,
-      "likelyPhase": "6 or 7",
-      "pitch": "The kitchen as laboratory, the dish as engineered experience",
-      "idCode": "C9",
+      "likelyPhase": null,
+      "pitch": "A novel about a contemplative game that unifies all knowledge — this project's own dream",
+      "idCode": "E1",
       "connections": [
         {
-          "raw": "Fermentation & Traditional Food Biotechnology",
-          "targetId": "v7-fermentation-and-traditional-food-biotechnology"
+          "raw": "Finite and Infinite Games",
+          "targetId": "v7-finite-and-infinite-games"
         },
         {
-          "raw": "Perfumery & Olfactory Composition",
-          "targetId": "v7-perfumery-and-olfactory-composition"
-        },
-        {
-          "raw": "Cell & Molecular Biology",
-          "targetId": "v7-cell-and-molecular-biology"
-        },
-        {
-          "raw": "Anthropology, Cultural Evolution & Technology Studies",
-          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
-        },
-        {
-          "raw": "Materials Science, Metamaterials & Programmable Matter",
-          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
-        }
-      ],
-      "inDegree": 0,
-      "outDegree": 5
-    },
-    {
-      "id": "v8-stage-magic-illusion-and-misdirection",
-      "name": "Stage Magic, Illusion & Misdirection",
-      "version": "v8",
-      "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
-      "keyFigures": [
-        "Robert-Houdin",
-        "Teller",
-        "Gustav Kuhn"
-      ],
-      "description": "The deliberate engineering of false perception: sleight of hand, misdirection of attention, and the exploitation of cognitive and perceptual gaps. Practitioners from Robert-Houdin to Teller are, in effect, applied scientists of attention, and the field now feeds peer-reviewed cognitive research. Bridges Cognitive Science and the attention economy to Aesthetics, the strategic deception of Game Theory, and the phenomenology of belief.",
-      "tier": "C",
-      "phase": null,
-      "likelyPhase": "3 or 6",
-      "pitch": "Engineering false perception as applied attention science",
-      "idCode": "C10",
-      "connections": [
-        {
-          "raw": "Cognitive Science & Perception",
-          "targetId": "v5-cognitive-science-and-perception"
-        },
-        {
-          "raw": "Attention Studies & The Attention Economy",
-          "targetId": "v6-attention-studies-and-the-attention-economy"
+          "raw": "Gödel, Escher, Bach",
+          "targetId": "v7-g-del-escher-bach-an-eternal-golden-braid"
         },
         {
           "raw": "Aesthetics & Philosophy of Art",
           "targetId": "v5-aesthetics-and-philosophy-of-art"
         },
         {
-          "raw": "Game Theory & Mechanism Design",
-          "targetId": "v5-game-theory-and-mechanism-design"
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
         },
         {
-          "raw": "Phenomenology & Embodied Experience",
-          "targetId": "v5-phenomenology-and-embodied-experience"
+          "raw": "Generative Music & Algorithmic Composition",
+          "targetId": "v5-generative-music-and-algorithmic-composition"
         }
       ],
       "inDegree": 0,
       "outDegree": 5
     },
     {
-      "id": "v8-recreational-mathematics-and-puzzles",
-      "name": "Recreational Mathematics & Puzzles",
-      "version": "v8",
+      "id": "v9-metaphors-we-live-by",
+      "name": "Metaphors We Live By",
+      "version": "v9",
       "sourceFile": "research-topics.csv",
-      "sourceDate": "2026-06-10",
-      "group": "C",
-      "groupLabel": "Tier C — Niche but Distinctive (Crafts & Intrinsic Picks)",
+      "sourceDate": "2026-06-12",
+      "group": "E",
+      "groupLabel": "Group E — Seminal Books & Texts",
       "keyFigures": [
-        "Martin Gardner",
-        "Dudeney",
-        "Conway"
+        "George Lakoff & Mark Johnson",
+        "1980",
+        "conceptual metaphor",
+        "'argument is war'",
+        "embodied cognition"
       ],
-      "description": "The play side of rigor: Gardner's columns, Dudeney's puzzles, Conway's Game of Life and surreal numbers, polyominoes, and the mathematics of games. It is a historically important on-ramp to deep ideas (Life seeded much of artificial life and complexity), bridging Geometry, abstract algebra, and combinatorics to game design, the artificial-life lineage, and the history of mathematics. Serious mathematics frequently arrives disguised as a puzzle.",
-      "tier": "C",
+      "description": "Lakoff and Johnson's slim 1980 book overturned the idea that metaphor is mere ornament. They showed that abstract thought is pervasively structured by conceptual metaphors grounded in bodily experience — argument is war, time is money, more is up — so that metaphor is a property of thought, not just language. The founding text of conceptual-metaphor theory and a cornerstone of embodied cognition.",
+      "tier": "E",
       "phase": null,
-      "likelyPhase": "2 or 6",
-      "pitch": "The play side of rigor — Conway's Life as the on-ramp",
-      "idCode": "C11",
+      "likelyPhase": null,
+      "pitch": "Metaphor as the structure of thought, not decoration — argument is war, time is money",
+      "idCode": "E2",
       "connections": [
         {
-          "raw": "Geometry, Topology & Spatial Computation",
-          "targetId": "v5-geometry-topology-and-spatial-computation"
+          "raw": "Metaphor Theory & Conceptual Blending",
+          "targetId": "v6-metaphor-theory-and-conceptual-blending"
         },
         {
-          "raw": "Game Design, Ludology & Interactive Systems",
-          "targetId": "v5-game-design-ludology-and-interactive-systems"
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
         },
         {
-          "raw": "Category Theory & Abstract Algebra",
-          "targetId": "v5-category-theory-and-abstract-algebra"
+          "raw": "Cognitive Science & Perception",
+          "targetId": "v5-cognitive-science-and-perception"
         },
         {
-          "raw": "Artificial Life & Self-Organization",
-          "targetId": "v5-artificial-life-and-self-organization"
+          "raw": "Phenomenology & Embodied Experience",
+          "targetId": "v5-phenomenology-and-embodied-experience"
         },
         {
-          "raw": "History of Mathematics",
-          "targetId": "v6-history-of-mathematics"
-        },
-        {
-          "raw": "Writing Systems, Notation & Symbolic Representation",
-          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 6
+      "inDegree": 0,
+      "outDegree": 5
+    },
+    {
+      "id": "v9-a-thousand-plateaus",
+      "name": "A Thousand Plateaus",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-06-12",
+      "group": "E",
+      "groupLabel": "Group E — Seminal Books & Texts",
+      "keyFigures": [
+        "Gilles Deleuze & Félix Guattari",
+        "1980",
+        "the rhizome",
+        "assemblages",
+        "smooth vs striated space"
+      ],
+      "description": "The second volume of Deleuze and Guattari's Capitalism and Schizophrenia is less a book to read straight through than a toolbox of concepts: the rhizome, assemblages, smooth versus striated space, becoming, the body without organs. Wildly interdisciplinary and deliberately non-linear, it has become a key source for thinking about networks, multiplicities, and self-organization across philosophy, geography, media, and complexity studies.",
+      "tier": "E",
+      "phase": null,
+      "likelyPhase": null,
+      "pitch": "A toolbox of concepts — rhizome, assemblage, becoming — for a networked world",
+      "idCode": "E3",
+      "connections": [
+        {
+          "raw": "Gilles Deleuze",
+          "targetId": "v9-gilles-deleuze"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Complex Systems & Chaos Theory",
+          "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        }
+      ],
+      "inDegree": 1,
+      "outDegree": 5
     }
   ],
   "edges": [
@@ -10931,26 +11461,6 @@ window.RESEARCH_DATA = {
       "raw": "Pattern Languages"
     },
     {
-      "source": "v6-dance-notation-and-movement-analysis",
-      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
-      "raw": "Semiotics"
-    },
-    {
-      "source": "v6-dance-notation-and-movement-analysis",
-      "target": "v5-phenomenology-and-embodied-experience",
-      "raw": "Phenomenology"
-    },
-    {
-      "source": "v6-sound-design-and-foley",
-      "target": "v5-musical-acoustics-and-psychoacoustics",
-      "raw": "Musical Acoustics & Psychoacoustics"
-    },
-    {
-      "source": "v6-sound-design-and-foley",
-      "target": "v5-game-design-ludology-and-interactive-systems",
-      "raw": "Game Design"
-    },
-    {
       "source": "v6-attention-studies-and-the-attention-economy",
       "target": "v5-cognitive-science-and-perception",
       "raw": "Cognitive Science"
@@ -10969,21 +11479,6 @@ window.RESEARCH_DATA = {
       "source": "v6-attention-studies-and-the-attention-economy",
       "target": "v5-philosophy-of-mind-and-consciousness",
       "raw": "Philosophy of Mind"
-    },
-    {
-      "source": "v6-somatic-practices-and-movement-science",
-      "target": "v5-phenomenology-and-embodied-experience",
-      "raw": "Phenomenology"
-    },
-    {
-      "source": "v6-somatic-practices-and-movement-science",
-      "target": "v5-cognitive-science-and-perception",
-      "raw": "Cognitive Science"
-    },
-    {
-      "source": "v6-somatic-practices-and-movement-science",
-      "target": "v5-ecological-psychology-and-affordance-theory",
-      "raw": "Ecological Psychology"
     },
     {
       "source": "v6-comparative-mythology-and-depth-psychology",
@@ -11571,26 +12066,6 @@ window.RESEARCH_DATA = {
       "raw": "Japanese Aesthetics (Group D)"
     },
     {
-      "source": "v7-luthiery",
-      "target": "v5-musical-acoustics-and-psychoacoustics",
-      "raw": "Musical Acoustics (v5)"
-    },
-    {
-      "source": "v7-luthiery",
-      "target": "v5-materials-science-metamaterials-and-programmable-matter",
-      "raw": "Materials Science (v5)"
-    },
-    {
-      "source": "v7-letterpress-hand-typesetting-and-bookbinding",
-      "target": "v5-typography-and-graphic-design-history",
-      "raw": "Typography (v5)"
-    },
-    {
-      "source": "v7-letterpress-hand-typesetting-and-bookbinding",
-      "target": "v5-writing-systems-notation-and-symbolic-representation",
-      "raw": "Writing Systems (v5)"
-    },
-    {
       "source": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
       "target": "v5-typography-and-graphic-design-history",
       "raw": "Typography (v5)"
@@ -11609,26 +12084,6 @@ window.RESEARCH_DATA = {
       "source": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
       "target": "v6-islamic-geometric-patterns-and-ornament",
       "raw": "Islamic Geometric Patterns (v6)"
-    },
-    {
-      "source": "v7-ceramics-and-kiln-traditions",
-      "target": "v7-japanese-aesthetics",
-      "raw": "Japanese Aesthetics (Group D)"
-    },
-    {
-      "source": "v7-ceramics-and-kiln-traditions",
-      "target": "v5-materials-science-metamaterials-and-programmable-matter",
-      "raw": "Materials Science (v5)"
-    },
-    {
-      "source": "v7-fermentation-and-traditional-food-biotechnology",
-      "target": "v6-ecology-and-ecosystem-dynamics",
-      "raw": "Ecology (v6)"
-    },
-    {
-      "source": "v7-fermentation-and-traditional-food-biotechnology",
-      "target": "v7-cell-and-molecular-biology",
-      "raw": "Cell & Molecular Biology (Group D)"
     },
     {
       "source": "v7-perfumery-and-olfactory-composition",
@@ -11879,16 +12334,6 @@ window.RESEARCH_DATA = {
       "source": "v7-developmental-psychology",
       "target": "v5-neuroscience-and-neural-computation",
       "raw": "Neuroscience (v5)"
-    },
-    {
-      "source": "v7-flow-and-positive-psychology",
-      "target": "v5-cognitive-science-and-perception",
-      "raw": "Cognitive Science (v5)"
-    },
-    {
-      "source": "v7-flow-and-positive-psychology",
-      "target": "v5-human-computer-interaction-and-interface-design",
-      "raw": "HCI"
     },
     {
       "source": "v7-japanese-aesthetics",
@@ -12436,36 +12881,6 @@ window.RESEARCH_DATA = {
       "raw": "Collective Intelligence & Coordination Systems"
     },
     {
-      "source": "v8-bioacoustics-and-animal-communication",
-      "target": "v6-neuroethology",
-      "raw": "Neuroethology"
-    },
-    {
-      "source": "v8-bioacoustics-and-animal-communication",
-      "target": "v5-linguistics-and-natural-language-structure",
-      "raw": "Linguistics & Natural Language Structure"
-    },
-    {
-      "source": "v8-bioacoustics-and-animal-communication",
-      "target": "v5-digital-signal-processing-dsp",
-      "raw": "Digital Signal Processing (DSP)"
-    },
-    {
-      "source": "v8-bioacoustics-and-animal-communication",
-      "target": "v5-musical-acoustics-and-psychoacoustics",
-      "raw": "Musical Acoustics & Psychoacoustics"
-    },
-    {
-      "source": "v8-bioacoustics-and-animal-communication",
-      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
-      "raw": "Semiotics, Structuralism & The Science of Signs"
-    },
-    {
-      "source": "v8-bioacoustics-and-animal-communication",
-      "target": "v6-behavioral-ecology-and-sociobiology",
-      "raw": "Behavioral Ecology & Sociobiology"
-    },
-    {
       "source": "v8-spatial-cognition-and-cognitive-maps",
       "target": "v5-cognitive-science-and-perception",
       "raw": "Cognitive Science & Perception"
@@ -12586,314 +13001,799 @@ window.RESEARCH_DATA = {
       "raw": "Measurement Theory, Metrology & Representation"
     },
     {
-      "source": "v8-tilings-aperiodic-order-and-quasicrystals",
-      "target": "v5-geometry-topology-and-spatial-computation",
-      "raw": "Geometry, Topology & Spatial Computation"
+      "source": "v9-chemistry-and-reaction-networks",
+      "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time"
     },
     {
-      "source": "v8-tilings-aperiodic-order-and-quasicrystals",
-      "target": "v6-islamic-geometric-patterns-and-ornament",
-      "raw": "Islamic Geometric Patterns & Ornament"
-    },
-    {
-      "source": "v8-tilings-aperiodic-order-and-quasicrystals",
+      "source": "v9-chemistry-and-reaction-networks",
       "target": "v5-materials-science-metamaterials-and-programmable-matter",
       "raw": "Materials Science, Metamaterials & Programmable Matter"
     },
     {
-      "source": "v8-tilings-aperiodic-order-and-quasicrystals",
-      "target": "v8-computational-complexity-and-intractability",
-      "raw": "Computational Complexity & Intractability"
-    },
-    {
-      "source": "v8-tilings-aperiodic-order-and-quasicrystals",
-      "target": "v5-mathematical-physics-and-symmetry",
-      "raw": "Mathematical Physics & Symmetry"
-    },
-    {
-      "source": "v8-tilings-aperiodic-order-and-quasicrystals",
-      "target": "v5-morphogenesis-and-biological-pattern-formation",
-      "raw": "Morphogenesis & Biological Pattern Formation"
-    },
-    {
-      "source": "v8-textiles-weaving-and-the-jacquard-loom",
-      "target": "v5-history-of-computing-and-the-personal-computer-revolution",
-      "raw": "History of Computing & The Personal Computer Revolution"
-    },
-    {
-      "source": "v8-textiles-weaving-and-the-jacquard-loom",
-      "target": "v5-writing-systems-notation-and-symbolic-representation",
-      "raw": "Writing Systems, Notation & Symbolic Representation"
-    },
-    {
-      "source": "v8-textiles-weaving-and-the-jacquard-loom",
-      "target": "v6-islamic-geometric-patterns-and-ornament",
-      "raw": "Islamic Geometric Patterns & Ornament"
-    },
-    {
-      "source": "v8-textiles-weaving-and-the-jacquard-loom",
-      "target": "v5-pattern-languages-design-methods-and-morphological-analysis",
-      "raw": "Pattern Languages, Design Methods & Morphological Analysis"
-    },
-    {
-      "source": "v8-textiles-weaving-and-the-jacquard-loom",
-      "target": "v6-origami-and-computational-folding",
-      "raw": "Origami & Computational Folding"
-    },
-    {
-      "source": "v8-textiles-weaving-and-the-jacquard-loom",
-      "target": "v5-materials-science-metamaterials-and-programmable-matter",
-      "raw": "Materials Science, Metamaterials & Programmable Matter"
-    },
-    {
-      "source": "v8-comics-and-sequential-art",
-      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
-      "raw": "Semiotics, Structuralism & The Science of Signs"
-    },
-    {
-      "source": "v8-comics-and-sequential-art",
-      "target": "v5-rhetoric-narrative-theory-and-story-systems",
-      "raw": "Rhetoric, Narrative Theory & Story Systems"
-    },
-    {
-      "source": "v8-comics-and-sequential-art",
-      "target": "v5-cognitive-science-and-perception",
-      "raw": "Cognitive Science & Perception"
-    },
-    {
-      "source": "v8-comics-and-sequential-art",
-      "target": "v5-typography-and-graphic-design-history",
-      "raw": "Typography & Graphic Design History"
-    },
-    {
-      "source": "v8-comics-and-sequential-art",
-      "target": "v6-philosophy-of-time",
-      "raw": "Philosophy of Time"
-    },
-    {
-      "source": "v8-comics-and-sequential-art",
-      "target": "v7-ways-of-seeing",
-      "raw": "Ways of Seeing"
-    },
-    {
-      "source": "v8-oulipo-and-constrained-writing",
-      "target": "v5-linguistics-and-natural-language-structure",
-      "raw": "Linguistics & Natural Language Structure"
-    },
-    {
-      "source": "v8-oulipo-and-constrained-writing",
-      "target": "v8-recreational-mathematics-and-puzzles",
-      "raw": "Recreational Mathematics & Puzzles"
-    },
-    {
-      "source": "v8-oulipo-and-constrained-writing",
-      "target": "v5-generative-music-and-algorithmic-composition",
-      "raw": "Generative Music & Algorithmic Composition"
-    },
-    {
-      "source": "v8-oulipo-and-constrained-writing",
-      "target": "v7-italo-calvino",
-      "raw": "Italo Calvino"
-    },
-    {
-      "source": "v8-oulipo-and-constrained-writing",
-      "target": "v5-writing-systems-notation-and-symbolic-representation",
-      "raw": "Writing Systems, Notation & Symbolic Representation"
-    },
-    {
-      "source": "v8-oulipo-and-constrained-writing",
-      "target": "v5-rhetoric-narrative-theory-and-story-systems",
-      "raw": "Rhetoric, Narrative Theory & Story Systems"
-    },
-    {
-      "source": "v8-animation-and-the-illusion-of-life",
-      "target": "v5-cognitive-science-and-perception",
-      "raw": "Cognitive Science & Perception"
-    },
-    {
-      "source": "v8-animation-and-the-illusion-of-life",
-      "target": "v5-ecological-psychology-and-affordance-theory",
-      "raw": "Ecological Psychology & Affordance Theory"
-    },
-    {
-      "source": "v8-animation-and-the-illusion-of-life",
-      "target": "v5-computer-graphics-and-computational-imaging",
-      "raw": "Computer Graphics & Computational Imaging"
-    },
-    {
-      "source": "v8-animation-and-the-illusion-of-life",
-      "target": "v5-robotics-and-embodied-intelligence",
-      "raw": "Robotics & Embodied Intelligence"
-    },
-    {
-      "source": "v8-animation-and-the-illusion-of-life",
-      "target": "v7-hayao-miyazaki-studio-ghibli",
-      "raw": "Hayao Miyazaki / Studio Ghibli"
-    },
-    {
-      "source": "v8-animation-and-the-illusion-of-life",
-      "target": "v5-game-design-ludology-and-interactive-systems",
-      "raw": "Game Design, Ludology & Interactive Systems"
-    },
-    {
-      "source": "v8-tuning-systems-and-temperament",
-      "target": "v5-musical-acoustics-and-psychoacoustics",
-      "raw": "Musical Acoustics & Psychoacoustics"
-    },
-    {
-      "source": "v8-tuning-systems-and-temperament",
-      "target": "v5-generative-music-and-algorithmic-composition",
-      "raw": "Generative Music & Algorithmic Composition"
-    },
-    {
-      "source": "v8-tuning-systems-and-temperament",
-      "target": "v6-history-of-mathematics",
-      "raw": "History of Mathematics"
-    },
-    {
-      "source": "v8-tuning-systems-and-temperament",
-      "target": "v5-mathematical-physics-and-symmetry",
-      "raw": "Mathematical Physics & Symmetry"
-    },
-    {
-      "source": "v8-tuning-systems-and-temperament",
-      "target": "v5-digital-signal-processing-dsp",
-      "raw": "Digital Signal Processing (DSP)"
-    },
-    {
-      "source": "v8-tuning-systems-and-temperament",
-      "target": "v5-writing-systems-notation-and-symbolic-representation",
-      "raw": "Writing Systems, Notation & Symbolic Representation"
-    },
-    {
-      "source": "v8-change-ringing-and-campanology",
-      "target": "v5-category-theory-and-abstract-algebra",
-      "raw": "Category Theory & Abstract Algebra"
-    },
-    {
-      "source": "v8-change-ringing-and-campanology",
-      "target": "v8-recreational-mathematics-and-puzzles",
-      "raw": "Recreational Mathematics & Puzzles"
-    },
-    {
-      "source": "v8-change-ringing-and-campanology",
-      "target": "v5-writing-systems-notation-and-symbolic-representation",
-      "raw": "Writing Systems, Notation & Symbolic Representation"
-    },
-    {
-      "source": "v8-change-ringing-and-campanology",
-      "target": "v5-musical-acoustics-and-psychoacoustics",
-      "raw": "Musical Acoustics & Psychoacoustics"
-    },
-    {
-      "source": "v8-change-ringing-and-campanology",
-      "target": "v5-collective-intelligence-and-coordination-systems",
-      "raw": "Collective Intelligence & Coordination Systems"
-    },
-    {
-      "source": "v8-acoustic-ecology-and-soundscape-studies",
-      "target": "v6-sound-design-and-foley",
-      "raw": "Sound Design & Foley"
-    },
-    {
-      "source": "v8-acoustic-ecology-and-soundscape-studies",
-      "target": "v6-ecology-and-ecosystem-dynamics",
-      "raw": "Ecology & Ecosystem Dynamics"
-    },
-    {
-      "source": "v8-acoustic-ecology-and-soundscape-studies",
-      "target": "v5-phenomenology-and-embodied-experience",
-      "raw": "Phenomenology & Embodied Experience"
-    },
-    {
-      "source": "v8-acoustic-ecology-and-soundscape-studies",
-      "target": "v5-media-theory-and-philosophy-of-technology",
-      "raw": "Media Theory & Philosophy of Technology"
-    },
-    {
-      "source": "v8-acoustic-ecology-and-soundscape-studies",
-      "target": "v5-musical-acoustics-and-psychoacoustics",
-      "raw": "Musical Acoustics & Psychoacoustics"
-    },
-    {
-      "source": "v8-culinary-science-and-gastronomy",
-      "target": "v7-fermentation-and-traditional-food-biotechnology",
-      "raw": "Fermentation & Traditional Food Biotechnology"
-    },
-    {
-      "source": "v8-culinary-science-and-gastronomy",
-      "target": "v7-perfumery-and-olfactory-composition",
-      "raw": "Perfumery & Olfactory Composition"
-    },
-    {
-      "source": "v8-culinary-science-and-gastronomy",
-      "target": "v7-cell-and-molecular-biology",
-      "raw": "Cell & Molecular Biology"
-    },
-    {
-      "source": "v8-culinary-science-and-gastronomy",
-      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
-      "raw": "Anthropology, Cultural Evolution & Technology Studies"
-    },
-    {
-      "source": "v8-culinary-science-and-gastronomy",
-      "target": "v5-materials-science-metamaterials-and-programmable-matter",
-      "raw": "Materials Science, Metamaterials & Programmable Matter"
-    },
-    {
-      "source": "v8-stage-magic-illusion-and-misdirection",
-      "target": "v5-cognitive-science-and-perception",
-      "raw": "Cognitive Science & Perception"
-    },
-    {
-      "source": "v8-stage-magic-illusion-and-misdirection",
-      "target": "v6-attention-studies-and-the-attention-economy",
-      "raw": "Attention Studies & The Attention Economy"
-    },
-    {
-      "source": "v8-stage-magic-illusion-and-misdirection",
-      "target": "v5-aesthetics-and-philosophy-of-art",
-      "raw": "Aesthetics & Philosophy of Art"
-    },
-    {
-      "source": "v8-stage-magic-illusion-and-misdirection",
-      "target": "v5-game-theory-and-mechanism-design",
-      "raw": "Game Theory & Mechanism Design"
-    },
-    {
-      "source": "v8-stage-magic-illusion-and-misdirection",
-      "target": "v5-phenomenology-and-embodied-experience",
-      "raw": "Phenomenology & Embodied Experience"
-    },
-    {
-      "source": "v8-recreational-mathematics-and-puzzles",
-      "target": "v5-geometry-topology-and-spatial-computation",
-      "raw": "Geometry, Topology & Spatial Computation"
-    },
-    {
-      "source": "v8-recreational-mathematics-and-puzzles",
-      "target": "v5-game-design-ludology-and-interactive-systems",
-      "raw": "Game Design, Ludology & Interactive Systems"
-    },
-    {
-      "source": "v8-recreational-mathematics-and-puzzles",
-      "target": "v5-category-theory-and-abstract-algebra",
-      "raw": "Category Theory & Abstract Algebra"
-    },
-    {
-      "source": "v8-recreational-mathematics-and-puzzles",
+      "source": "v9-chemistry-and-reaction-networks",
       "target": "v5-artificial-life-and-self-organization",
       "raw": "Artificial Life & Self-Organization"
     },
     {
-      "source": "v8-recreational-mathematics-and-puzzles",
+      "source": "v9-chemistry-and-reaction-networks",
+      "target": "v6-astrobiology-and-origin-of-life",
+      "raw": "Astrobiology & Origin of Life"
+    },
+    {
+      "source": "v9-chemistry-and-reaction-networks",
+      "target": "v7-synthetic-biology-and-crispr-era-genetics",
+      "raw": "Synthetic Biology & CRISPR-era Genetics"
+    },
+    {
+      "source": "v9-chemistry-and-reaction-networks",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v5-information-theory",
+      "raw": "Information Theory"
+    },
+    {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v8-computational-complexity-and-intractability",
+      "raw": "Computational Complexity & Intractability"
+    },
+    {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v5-quantum-computing-and-quantum-information",
+      "raw": "Quantum Computing & Quantum Information"
+    },
+    {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v7-digital-commons-and-platform-economics",
+      "raw": "Digital Commons & Platform Economics"
+    },
+    {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v9-gottfried-leibniz",
+      "raw": "Gottfried Leibniz"
+    },
+    {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "raw": "Complexity Economics & Agent-Based Modeling"
+    },
+    {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v6-cliodynamics-and-mathematical-history",
+      "raw": "Cliodynamics & Mathematical History"
+    },
+    {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v5-history-and-philosophy-of-science",
+      "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v9-ritual-as-coordination-technology",
+      "target": "v6-comparative-mythology-and-depth-psychology",
+      "raw": "Comparative Mythology & Depth Psychology"
+    },
+    {
+      "source": "v9-ritual-as-coordination-technology",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v9-ritual-as-coordination-technology",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v9-ritual-as-coordination-technology",
+      "target": "v5-game-theory-and-mechanism-design",
+      "raw": "Game Theory & Mechanism Design"
+    },
+    {
+      "source": "v9-ritual-as-coordination-technology",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time"
+    },
+    {
+      "source": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "target": "v7-climate-science-and-earth-systems",
+      "raw": "Climate Science & Earth Systems"
+    },
+    {
+      "source": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "target": "v5-materials-science-metamaterials-and-programmable-matter",
+      "raw": "Materials Science, Metamaterials & Programmable Matter"
+    },
+    {
+      "source": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "raw": "Complexity Economics & Agent-Based Modeling"
+    },
+    {
+      "source": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "target": "v5-operations-research-and-optimization",
+      "raw": "Operations Research & Optimization"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v5-complex-systems-and-chaos-theory",
+      "raw": "Complex Systems & Chaos Theory"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v5-morphogenesis-and-biological-pattern-formation",
+      "raw": "Morphogenesis & Biological Pattern Formation"
+    },
+    {
+      "source": "v9-recursion-and-self-reference",
+      "target": "v5-category-theory-and-abstract-algebra",
+      "raw": "Category Theory & Abstract Algebra"
+    },
+    {
+      "source": "v9-recursion-and-self-reference",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v9-recursion-and-self-reference",
+      "target": "v6-type-theory-and-homotopy-type-theory",
+      "raw": "Type Theory & Homotopy Type Theory"
+    },
+    {
+      "source": "v9-recursion-and-self-reference",
+      "target": "v6-functional-programming-and-lambda-calculus",
+      "raw": "Functional Programming & Lambda Calculus"
+    },
+    {
+      "source": "v9-recursion-and-self-reference",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v9-recursion-and-self-reference",
+      "target": "v7-g-del-escher-bach-an-eternal-golden-braid",
+      "raw": "Gödel, Escher, Bach"
+    },
+    {
+      "source": "v9-charles-sanders-peirce",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-charles-sanders-peirce",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
+    },
+    {
+      "source": "v9-charles-sanders-peirce",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v9-charles-sanders-peirce",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
+    },
+    {
+      "source": "v9-charles-sanders-peirce",
+      "target": "v9-ferdinand-de-saussure",
+      "raw": "Ferdinand de Saussure"
+    },
+    {
+      "source": "v9-gottfried-leibniz",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v9-gottfried-leibniz",
+      "target": "v5-writing-systems-notation-and-symbolic-representation",
+      "raw": "Writing Systems, Notation & Symbolic Representation"
+    },
+    {
+      "source": "v9-gottfried-leibniz",
+      "target": "v5-philosophy-of-mathematics",
+      "raw": "Philosophy of Mathematics"
+    },
+    {
+      "source": "v9-gottfried-leibniz",
       "target": "v6-history-of-mathematics",
       "raw": "History of Mathematics"
     },
     {
-      "source": "v8-recreational-mathematics-and-puzzles",
+      "source": "v9-gottfried-leibniz",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
+    },
+    {
+      "source": "v9-gottfried-leibniz",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
+    },
+    {
+      "source": "v9-henri-poincare",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v9-henri-poincare",
+      "target": "v5-complex-systems-and-chaos-theory",
+      "raw": "Complex Systems & Chaos Theory"
+    },
+    {
+      "source": "v9-henri-poincare",
+      "target": "v5-geometry-topology-and-spatial-computation",
+      "raw": "Geometry, Topology & Spatial Computation"
+    },
+    {
+      "source": "v9-henri-poincare",
+      "target": "v5-philosophy-of-mathematics",
+      "raw": "Philosophy of Mathematics"
+    },
+    {
+      "source": "v9-henri-poincare",
+      "target": "v6-history-of-mathematics",
+      "raw": "History of Mathematics"
+    },
+    {
+      "source": "v9-benoit-mandelbrot",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v9-benoit-mandelbrot",
+      "target": "v5-complex-systems-and-chaos-theory",
+      "raw": "Complex Systems & Chaos Theory"
+    },
+    {
+      "source": "v9-benoit-mandelbrot",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
+      "source": "v9-benoit-mandelbrot",
+      "target": "v6-stochastic-processes-and-random-walks",
+      "raw": "Stochastic Processes & Random Walks"
+    },
+    {
+      "source": "v9-benoit-mandelbrot",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
+      "source": "v9-j-j-gibson",
+      "target": "v5-ecological-psychology-and-affordance-theory",
+      "raw": "Ecological Psychology & Affordance Theory"
+    },
+    {
+      "source": "v9-j-j-gibson",
+      "target": "v5-cognitive-science-and-perception",
+      "raw": "Cognitive Science & Perception"
+    },
+    {
+      "source": "v9-j-j-gibson",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v9-j-j-gibson",
+      "target": "v5-human-computer-interaction-and-interface-design",
+      "raw": "Human-Computer Interaction & Interface Design"
+    },
+    {
+      "source": "v9-j-j-gibson",
+      "target": "v9-maturana-and-varela",
+      "raw": "Humberto Maturana & Francisco Varela"
+    },
+    {
+      "source": "v9-ferdinand-de-saussure",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-ferdinand-de-saussure",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v9-ferdinand-de-saussure",
+      "target": "v9-charles-sanders-peirce",
+      "raw": "Charles Sanders Peirce"
+    },
+    {
+      "source": "v9-ferdinand-de-saussure",
+      "target": "v9-claude-levi-strauss",
+      "raw": "Claude Lévi-Strauss"
+    },
+    {
+      "source": "v9-jean-baudrillard",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v9-jean-baudrillard",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-jean-baudrillard",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v9-jean-baudrillard",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v9-marshall-mcluhan",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v9-marshall-mcluhan",
+      "target": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "raw": "History of Computing & The Personal Computer Revolution"
+    },
+    {
+      "source": "v9-marshall-mcluhan",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v9-marshall-mcluhan",
+      "target": "v5-typography-and-graphic-design-history",
+      "raw": "Typography & Graphic Design History"
+    },
+    {
+      "source": "v9-michel-foucault",
+      "target": "v7-political-philosophy",
+      "raw": "Political Philosophy"
+    },
+    {
+      "source": "v9-michel-foucault",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
+    },
+    {
+      "source": "v9-michel-foucault",
+      "target": "v5-history-and-philosophy-of-science",
+      "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v9-michel-foucault",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v9-michel-foucault",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v9-gilles-deleuze",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v9-gilles-deleuze",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v9-gilles-deleuze",
+      "target": "v6-philosophy-of-time",
+      "raw": "Philosophy of Time"
+    },
+    {
+      "source": "v9-gilles-deleuze",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v9-gilles-deleuze",
+      "target": "v9-a-thousand-plateaus",
+      "raw": "A Thousand Plateaus"
+    },
+    {
+      "source": "v9-claude-levi-strauss",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v9-claude-levi-strauss",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-claude-levi-strauss",
+      "target": "v6-comparative-mythology-and-depth-psychology",
+      "raw": "Comparative Mythology & Depth Psychology"
+    },
+    {
+      "source": "v9-claude-levi-strauss",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v9-claude-levi-strauss",
+      "target": "v9-ferdinand-de-saussure",
+      "raw": "Ferdinand de Saussure"
+    },
+    {
+      "source": "v9-maturana-and-varela",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v9-maturana-and-varela",
+      "target": "v5-artificial-life-and-self-organization",
+      "raw": "Artificial Life & Self-Organization"
+    },
+    {
+      "source": "v9-maturana-and-varela",
+      "target": "v5-cognitive-science-and-perception",
+      "raw": "Cognitive Science & Perception"
+    },
+    {
+      "source": "v9-maturana-and-varela",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
+      "source": "v9-maturana-and-varela",
+      "target": "v5-philosophy-of-mind-and-consciousness",
+      "raw": "Philosophy of Mind & Consciousness"
+    },
+    {
+      "source": "v9-stafford-beer",
+      "target": "v5-cybernetics-and-control-theory",
+      "raw": "Cybernetics & Control Theory"
+    },
+    {
+      "source": "v9-stafford-beer",
+      "target": "v5-systems-thinking-and-system-dynamics",
+      "raw": "Systems Thinking & System Dynamics"
+    },
+    {
+      "source": "v9-stafford-beer",
+      "target": "v5-operations-research-and-optimization",
+      "raw": "Operations Research & Optimization"
+    },
+    {
+      "source": "v9-stafford-beer",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v9-edward-tufte",
+      "target": "v5-cartography-and-data-visualization",
+      "raw": "Cartography & Data Visualization"
+    },
+    {
+      "source": "v9-edward-tufte",
+      "target": "v5-typography-and-graphic-design-history",
+      "raw": "Typography & Graphic Design History"
+    },
+    {
+      "source": "v9-edward-tufte",
+      "target": "v5-color-science-and-theory",
+      "raw": "Color Science & Theory"
+    },
+    {
+      "source": "v9-edward-tufte",
+      "target": "v5-human-computer-interaction-and-interface-design",
+      "raw": "Human-Computer Interaction & Interface Design"
+    },
+    {
+      "source": "v9-lynn-margulis",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
+    },
+    {
+      "source": "v9-lynn-margulis",
+      "target": "v7-cell-and-molecular-biology",
+      "raw": "Cell & Molecular Biology"
+    },
+    {
+      "source": "v9-lynn-margulis",
+      "target": "v5-evolutionary-developmental-biology-evo-devo",
+      "raw": "Evolutionary Developmental Biology (Evo-Devo)"
+    },
+    {
+      "source": "v9-lynn-margulis",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v9-lynn-margulis",
+      "target": "v6-astrobiology-and-origin-of-life",
+      "raw": "Astrobiology & Origin of Life"
+    },
+    {
+      "source": "v9-joseph-needham",
+      "target": "v5-history-and-philosophy-of-science",
+      "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v9-joseph-needham",
+      "target": "v6-history-of-mathematics",
+      "raw": "History of Mathematics"
+    },
+    {
+      "source": "v9-joseph-needham",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v9-joseph-needham",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v9-joseph-needham",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
+    },
+    {
+      "source": "v9-panini-and-generative-grammar",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v9-panini-and-generative-grammar",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v9-panini-and-generative-grammar",
       "target": "v5-writing-systems-notation-and-symbolic-representation",
       "raw": "Writing Systems, Notation & Symbolic Representation"
+    },
+    {
+      "source": "v9-panini-and-generative-grammar",
+      "target": "v5-compiler-design-and-programming-language-theory",
+      "raw": "Compiler Design & Programming Language Theory"
+    },
+    {
+      "source": "v9-panini-and-generative-grammar",
+      "target": "v9-navya-nyaya",
+      "raw": "Navya-Nyāya"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v5-writing-systems-notation-and-symbolic-representation",
+      "raw": "Writing Systems, Notation & Symbolic Representation"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v5-information-theory",
+      "raw": "Information Theory"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v6-comparative-mythology-and-depth-psychology",
+      "raw": "Comparative Mythology & Depth Psychology"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v9-gottfried-leibniz",
+      "raw": "Gottfried Leibniz"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
+    },
+    {
+      "source": "v9-ubuntu-and-african-relational-philosophy",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v9-ubuntu-and-african-relational-philosophy",
+      "target": "v7-political-philosophy",
+      "raw": "Political Philosophy"
+    },
+    {
+      "source": "v9-ubuntu-and-african-relational-philosophy",
+      "target": "v7-ethics-consequentialism-deontology-virtue",
+      "raw": "Ethics (Consequentialism / Deontology / Virtue)"
+    },
+    {
+      "source": "v9-ubuntu-and-african-relational-philosophy",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v9-ubuntu-and-african-relational-philosophy",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v9-navya-nyaya",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v9-navya-nyaya",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
+    },
+    {
+      "source": "v9-navya-nyaya",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v9-navya-nyaya",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v9-navya-nyaya",
+      "target": "v9-panini-and-generative-grammar",
+      "raw": "Pāṇini & Generative Grammar"
+    },
+    {
+      "source": "v9-the-glass-bead-game",
+      "target": "v7-finite-and-infinite-games",
+      "raw": "Finite and Infinite Games"
+    },
+    {
+      "source": "v9-the-glass-bead-game",
+      "target": "v7-g-del-escher-bach-an-eternal-golden-braid",
+      "raw": "Gödel, Escher, Bach"
+    },
+    {
+      "source": "v9-the-glass-bead-game",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v9-the-glass-bead-game",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v9-the-glass-bead-game",
+      "target": "v5-generative-music-and-algorithmic-composition",
+      "raw": "Generative Music & Algorithmic Composition"
+    },
+    {
+      "source": "v9-metaphors-we-live-by",
+      "target": "v6-metaphor-theory-and-conceptual-blending",
+      "raw": "Metaphor Theory & Conceptual Blending"
+    },
+    {
+      "source": "v9-metaphors-we-live-by",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v9-metaphors-we-live-by",
+      "target": "v5-cognitive-science-and-perception",
+      "raw": "Cognitive Science & Perception"
+    },
+    {
+      "source": "v9-metaphors-we-live-by",
+      "target": "v5-phenomenology-and-embodied-experience",
+      "raw": "Phenomenology & Embodied Experience"
+    },
+    {
+      "source": "v9-metaphors-we-live-by",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-a-thousand-plateaus",
+      "target": "v9-gilles-deleuze",
+      "raw": "Gilles Deleuze"
+    },
+    {
+      "source": "v9-a-thousand-plateaus",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v9-a-thousand-plateaus",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v9-a-thousand-plateaus",
+      "target": "v5-complex-systems-and-chaos-theory",
+      "raw": "Complex Systems & Chaos Theory"
+    },
+    {
+      "source": "v9-a-thousand-plateaus",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
     }
   ],
   "creators": [
@@ -12919,7 +13819,23 @@ window.RESEARCH_DATA = {
     "v7-tadao-ando",
     "v7-frank-lloyd-wright",
     "v7-louis-kahn",
-    "v7-leonardo-da-vinci"
+    "v7-leonardo-da-vinci",
+    "v9-charles-sanders-peirce",
+    "v9-gottfried-leibniz",
+    "v9-henri-poincare",
+    "v9-benoit-mandelbrot",
+    "v9-j-j-gibson",
+    "v9-ferdinand-de-saussure",
+    "v9-jean-baudrillard",
+    "v9-marshall-mcluhan",
+    "v9-michel-foucault",
+    "v9-gilles-deleuze",
+    "v9-claude-levi-strauss",
+    "v9-maturana-and-varela",
+    "v9-stafford-beer",
+    "v9-edward-tufte",
+    "v9-lynn-margulis",
+    "v9-joseph-needham"
   ],
   "disciplines": [
     {
@@ -12946,6 +13862,10 @@ window.RESEARCH_DATA = {
         {
           "raw": "History & Philosophy of Science",
           "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Stafford Beer",
+          "targetId": "v9-stafford-beer"
         }
       ]
     },
@@ -12987,8 +13907,20 @@ window.RESEARCH_DATA = {
           "targetId": "v8-synchronization-and-coupled-oscillators"
         },
         {
-          "raw": "Recreational Mathematics & Puzzles",
-          "targetId": "v8-recreational-mathematics-and-puzzles"
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
+        },
+        {
+          "raw": "Henri Poincaré",
+          "targetId": "v9-henri-poincare"
+        },
+        {
+          "raw": "Benoit Mandelbrot",
+          "targetId": "v9-benoit-mandelbrot"
         }
       ]
     },
@@ -13022,20 +13954,12 @@ window.RESEARCH_DATA = {
           "targetId": "v6-enactivism-and-enactive-cognition"
         },
         {
-          "raw": "Somatic Practices & Movement Science",
-          "targetId": "v6-somatic-practices-and-movement-science"
-        },
-        {
           "raw": "Psychoanalysis",
           "targetId": "v7-psychoanalysis"
         },
         {
           "raw": "Developmental Psychology",
           "targetId": "v7-developmental-psychology"
-        },
-        {
-          "raw": "Flow & Positive Psychology",
-          "targetId": "v7-flow-and-positive-psychology"
         },
         {
           "raw": "Free Energy Principle & Active Inference",
@@ -13046,8 +13970,12 @@ window.RESEARCH_DATA = {
           "targetId": "v8-spatial-cognition-and-cognitive-maps"
         },
         {
-          "raw": "Stage Magic, Illusion & Misdirection",
-          "targetId": "v8-stage-magic-illusion-and-misdirection"
+          "raw": "J.J. Gibson",
+          "targetId": "v9-j-j-gibson"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
         }
       ]
     },
@@ -13085,10 +14013,6 @@ window.RESEARCH_DATA = {
           "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
         },
         {
-          "raw": "Dance Notation & Movement Analysis",
-          "targetId": "v6-dance-notation-and-movement-analysis"
-        },
-        {
           "raw": "Jorge Luis Borges",
           "targetId": "v7-jorge-luis-borges"
         },
@@ -13105,12 +14029,32 @@ window.RESEARCH_DATA = {
           "targetId": "v8-classification-taxonomy-and-knowledge-organization"
         },
         {
-          "raw": "Comics & Sequential Art",
-          "targetId": "v8-comics-and-sequential-art"
+          "raw": "Charles Sanders Peirce",
+          "targetId": "v9-charles-sanders-peirce"
         },
         {
-          "raw": "Oulipo & Constrained Writing",
-          "targetId": "v8-oulipo-and-constrained-writing"
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "Ferdinand de Saussure",
+          "targetId": "v9-ferdinand-de-saussure"
+        },
+        {
+          "raw": "Pāṇini & Generative Grammar",
+          "targetId": "v9-panini-and-generative-grammar"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
+        },
+        {
+          "raw": "Navya-Nyāya",
+          "targetId": "v9-navya-nyaya"
+        },
+        {
+          "raw": "Metaphors We Live By",
+          "targetId": "v9-metaphors-we-live-by"
         }
       ]
     },
@@ -13206,6 +14150,54 @@ window.RESEARCH_DATA = {
         {
           "raw": "Monetary Theory & the History of Money",
           "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Ritual as Coordination Technology",
+          "targetId": "v9-ritual-as-coordination-technology"
+        },
+        {
+          "raw": "Jean Baudrillard",
+          "targetId": "v9-jean-baudrillard"
+        },
+        {
+          "raw": "Marshall McLuhan",
+          "targetId": "v9-marshall-mcluhan"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "Gilles Deleuze",
+          "targetId": "v9-gilles-deleuze"
+        },
+        {
+          "raw": "Claude Lévi-Strauss",
+          "targetId": "v9-claude-levi-strauss"
+        },
+        {
+          "raw": "Joseph Needham",
+          "targetId": "v9-joseph-needham"
+        },
+        {
+          "raw": "Ubuntu / African Relational Philosophy",
+          "targetId": "v9-ubuntu-and-african-relational-philosophy"
+        },
+        {
+          "raw": "The Glass Bead Game",
+          "targetId": "v9-the-glass-bead-game"
+        },
+        {
+          "raw": "A Thousand Plateaus",
+          "targetId": "v9-a-thousand-plateaus"
         }
       ]
     },
@@ -13331,32 +14323,16 @@ window.RESEARCH_DATA = {
           "targetId": "v7-japanese-joinery-and-traditional-woodworking"
         },
         {
-          "raw": "Luthiery",
-          "targetId": "v7-luthiery"
-        },
-        {
-          "raw": "Letterpress, Hand Typesetting & Bookbinding",
-          "targetId": "v7-letterpress-hand-typesetting-and-bookbinding"
-        },
-        {
           "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
           "targetId": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison"
         },
         {
-          "raw": "Ceramics & Kiln Traditions",
-          "targetId": "v7-ceramics-and-kiln-traditions"
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
         },
         {
-          "raw": "Textiles, Weaving & the Jacquard Loom",
-          "targetId": "v8-textiles-weaving-and-the-jacquard-loom"
-        },
-        {
-          "raw": "Animation & the Illusion of Life",
-          "targetId": "v8-animation-and-the-illusion-of-life"
-        },
-        {
-          "raw": "Culinary Science & Gastronomy",
-          "targetId": "v8-culinary-science-and-gastronomy"
+          "raw": "Edward Tufte",
+          "targetId": "v9-edward-tufte"
         }
       ]
     },
@@ -13418,10 +14394,6 @@ window.RESEARCH_DATA = {
           "targetId": "v7-on-growth-and-form"
         },
         {
-          "raw": "Fermentation & Traditional Food Biotechnology",
-          "targetId": "v7-fermentation-and-traditional-food-biotechnology"
-        },
-        {
           "raw": "Bonsai & Japanese Gardening (Karesansui)",
           "targetId": "v7-bonsai-and-japanese-gardening-karesansui"
         },
@@ -13458,8 +14430,8 @@ window.RESEARCH_DATA = {
           "targetId": "v8-niche-construction-theory"
         },
         {
-          "raw": "Bioacoustics & Animal Communication",
-          "targetId": "v8-bioacoustics-and-animal-communication"
+          "raw": "Lynn Margulis",
+          "targetId": "v9-lynn-margulis"
         }
       ]
     },
@@ -13560,10 +14532,6 @@ window.RESEARCH_DATA = {
           "targetId": "v6-stochastic-processes-and-random-walks"
         },
         {
-          "raw": "Sound Design & Foley",
-          "targetId": "v6-sound-design-and-foley"
-        },
-        {
           "raw": "Brian Eno",
           "targetId": "v7-brian-eno"
         },
@@ -13578,18 +14546,6 @@ window.RESEARCH_DATA = {
         {
           "raw": "Fluid Dynamics & Turbulence",
           "targetId": "v8-fluid-dynamics-and-turbulence"
-        },
-        {
-          "raw": "Tuning Systems & Temperament",
-          "targetId": "v8-tuning-systems-and-temperament"
-        },
-        {
-          "raw": "Change Ringing & Campanology",
-          "targetId": "v8-change-ringing-and-campanology"
-        },
-        {
-          "raw": "Acoustic Ecology & Soundscape Studies",
-          "targetId": "v8-acoustic-ecology-and-soundscape-studies"
         }
       ]
     },
@@ -13755,8 +14711,12 @@ window.RESEARCH_DATA = {
           "targetId": "v8-topological-data-analysis"
         },
         {
-          "raw": "Tilings, Aperiodic Order & Quasicrystals",
-          "targetId": "v8-tilings-aperiodic-order-and-quasicrystals"
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
         }
       ]
     }

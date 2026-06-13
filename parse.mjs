@@ -275,9 +275,13 @@ export function buildPayload(records) {
     generatedAt: new Date().toISOString(),
   };
 
-  // Identify likely "people" topics from v7 Group A (used by Creators view).
-  // Intentionally version-specific: v7 is the only "creators" dataset.
-  const creators = topics.filter((t) => t.version === "v7" && t.group === "A").map((t) => t.id);
+  // Identify "people" topics for the Creators view. Version-agnostic: any group
+  // whose label marks it as individual thinkers/creators counts, so adding a new
+  // version of creators (v7 Group A, v9 Group C, …) needs no change here — the
+  // same "derive from the data, don't hardcode versions" rule as byVersion.
+  const creators = topics
+    .filter((t) => /Individual Thinkers & Creators/i.test(t.groupLabel))
+    .map((t) => t.id);
 
   return {
     payload: { stats, topics, edges, creators, disciplines },

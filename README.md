@@ -2,7 +2,7 @@
 
 > **Live demo:** `https://<github-username>.github.io/research-topics-explorer/` — replace `<github-username>` with the account that hosts this repo. See [Deployment](#deployment) below.
 
-A static, no-server visualization tool for exploring 192 research topics across dataset versions v5–v8. The single source of truth is `research-topics.csv`; the original markdown files (`research-topics-v5/6/7.md`, `disciplines.md`) are kept as historical reference but are no longer read by any code.
+A static, no-server visualization tool for exploring 203 research topics across dataset versions v5–v9. The single source of truth is `research-topics.csv`; the original markdown files (`research-topics-v5/6/7.md`, `disciplines.md`) are kept as historical reference but are no longer read by any code.
 
 The pipeline is **version-agnostic**: every version-dependent surface (filters, colors, stats, graph legend, roadmap overlay) derives from the versions actually present in the CSV, so adding v9/v10 rows requires no code changes — see [Adding a new version](#adding-a-new-version).
 
@@ -17,7 +17,7 @@ Open `index.html` directly in a browser — no install, no build, no dev server.
 | Cards       | Searchable / sortable grid of every topic with figures + excerpt.                                  |
 | Hubs        | Top 30 topics by in-degree, out-degree, or cross-version "bridge score."                           |
 | Disciplines | Thematic column layout grouping all topics under the v5 10-phase study sequence.                   |
-| Creators    | Subgraph of v7 Group A thinkers + everything they reference.                                       |
+| Creators    | Subgraph of the thinker/creator topics (v7 Group A + v9 Group C) + everything they reference.       |
 
 The right side panel renders the selected topic's full markdown description, key figures, outgoing connections, and incoming references — every chip is clickable to navigate.
 
@@ -76,10 +76,10 @@ Output:
 
 ```
 ✓ data.js written
-  topics: 192 (v5=56, v6=35, v7=71, v8=30)
-  edges: 760 resolved, 280 unresolved connection slots
+  topics: 203 (v5=56, v6=32, v7=66, v8=18, v9=31)
+  edges: 834 resolved, 263 unresolved connection slots
   disciplines: 10
-  creators: 23
+  creators: 39
 ```
 
 The parser:
@@ -88,6 +88,7 @@ The parser:
 - Builds edges from `connects_to_ids`, which is positionally aligned with `connects_to_raw` — an empty slot means that connection never resolved to a topic
 - Groups topics into the 10 thematic discipline columns via `discipline_phase` / `discipline_name`
 - Computes in/out degree per topic and per-version counts (derived from the data, not a hardcoded version list)
+- Marks "creator" topics for the Creators view by `group_label` (any group labeled `… Individual Thinkers & Creators`), so creators across versions (v7 Group A, v9 Group C) are picked up without a hardcoded version
 
 ### Tests
 
@@ -105,7 +106,9 @@ It covers the CSV grammar, the payload transform (including unknown future versi
 2. Run `node parse.mjs` and commit both files.
 3. *(Optional)* Hand-pick an accent color by adding `--accent-v9: #…;` to the `:root` block in `index.html`. Without one, the app generates a deterministic fallback hue at boot, so this is purely cosmetic.
 
-Nothing else: filters, stats, legend, badges, hub bars, and the roadmap pick the new version up from the data.
+Nothing else: filters, stats, legend, badges, hub bars, and the roadmap pick the new version up from the data. To make a group of people show up in the **Creators** view, label their group `… Individual Thinkers & Creators` (the Creators filter matches on that label, not a version).
+
+The **v9** batch follows this pattern: 31 topics in five groups — A *Disciplines & Fields*, B *Cross-Cutting Concepts & Lenses* (e.g. Scaling Laws, Recursion), C *Individual Thinkers & Creators*, D *Non-Western & Comparative Knowledge Systems*, E *Seminal Books & Texts*. Only Groups A and B carry a `likely_phase` (Roadmap overlay); people, traditions, and books stay off the roadmap like v7.
 
 Roughly 30% of raw connection strings have no resolved target — they reference broad fields ("biology", "economics", "AI agents") that have no dedicated topic in this dataset. Those still appear in the side panel as faded chips. To add or fix a connection, edit the `connects_to_ids` slot for that row in the CSV.
 

@@ -61,9 +61,11 @@ if you add a version-dependent feature, derive it from `ALL_VERSIONS`.
   subtitles are presentation copy in `parse.mjs` (`DISCIPLINE_SUBTITLES`),
   not CSV data. An unknown phase still renders (subtitle empty + parser
   warning).
-- **Creators** — intentionally version-specific: v7 Group A rows are people,
-  and `parse.mjs` emits their ids as `payload.creators`. This is data
-  semantics, not a version hardcode.
+- **Creators** — `parse.mjs` emits the ids of "people" topics as
+  `payload.creators`, identified by `group_label` matching
+  `… Individual Thinkers & Creators` (v7 Group A, v9 Group C, …). Derived
+  from the data, not a version hardcode, so new creator cohorts join the
+  Creators view automatically as long as they use that group label.
 - **Marked as worked on** — Cards view toggles ids into
   `localStorage["rte:markedTopics"]`; Roadmap and Disciplines mirror the
   mint wash read-only. Topic ids are therefore a public, stable contract:

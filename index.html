@@ -897,7 +897,7 @@ function renderPanel() {
     <div class="description">${marked.parse(t.description || "")}</div>
 
     ${t.connections.length ? `
-      <h4>Outgoing — ${t.version === "v7" ? "resonates with" : "connects to"} (${t.connections.length})</h4>
+      <h4>Outgoing — ${/Individual Thinkers & Creators/i.test(t.groupLabel) ? "resonates with" : "connects to"} (${t.connections.length})</h4>
       <div class="chips">
         ${t.connections.map(c =>
           c.targetId
@@ -1298,12 +1298,13 @@ function renderHubs() {
 }
 
 /* =============================================================================
-   View 5 — Creators Network (subgraph of v7 Group A)
+   View 5 — Creators Network (the "people" topics, any version)
    ============================================================================= */
 
 function renderCreators() {
-  // Show people in v7 Group A AND any v5/v6/v7 topic they connect to,
-  // so the creators are embedded in their intellectual context.
+  // Show the creator/thinker topics (DATA.creators is derived from group labels
+  // in parse.mjs, so it spans v7 Group A, v9 Group C, …) AND any topic they
+  // connect to, so the creators are embedded in their intellectual context.
   const creators = new Set(DATA.creators);
   const involved = new Set(creators);
   for (const id of creators) {
