@@ -14,8 +14,8 @@ The visual encoding is **one accent colour per discipline** (the 10 thematic gro
 
 | View            | What it shows                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------|
-| Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress. Sort by discipline, most connected, or A–Z. |
-| Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = in-degree, node colour = discipline. Overlay legend doubles as a clickable version filter. |
+| Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress — **drag the divider on the rail's right edge to widen it** (handy for the longer discipline names; width is remembered). Sort by discipline, most connected, or A–Z. |
+| Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = in-degree, node colour = discipline. **Labels are adaptive** — only the top hubs are labelled at the default zoom; **zoom in to progressively reveal more**, and **hover** any node (or select it) to show its label. Overlay legend doubles as a clickable version filter. |
 | Thinkers        | Key figures aggregated across topics (~794 after filtering out non-name `key_figures` tokens — years, concept terms, quoted titles). Cards feature the people who thread through 2+ topics; search reveals everyone. A "profile" link jumps to a person's own topic node when one exists. |
 | Reader          | Focused, one-discipline-at-a-time reading layout — a reading-path rail, the current phase's topics with figures, and an "up next" preview. |
 | Hubs            | Top 30 topics by in-degree, out-degree, or cross-version/-discipline "bridge score" (carried over from the prior explorer). |
@@ -157,6 +157,8 @@ Views are `catalog` · `graph` · `thinkers` · `reader` · `hubs`. Reload-safe 
 - **Click** any node, card, or chip to open it in the side panel
 - **Drag** graph nodes to rearrange; click empty space to clear highlight
 - **Scroll** to zoom the graph; **freeze layout** locks the simulation
+- **Hover** a graph node to reveal its label; **zoom in** reveals more labels (top hubs are always shown)
+- **Drag the divider** on the right edge of the Catalog / Reader left rail to resize it (width is persisted)
 - **Search** matches topic names, key figures, and description text
 - Filter checkboxes for version / tier-group / phase compose with search
 

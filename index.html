@@ -54,6 +54,10 @@
 
   --radius: 8px;
   --radius-lg: 12px;
+
+  /* Left-rail widths (drag-adjustable; persisted to localStorage). */
+  --cat-rail-w: 220px;
+  --reader-rail-w: 230px;
   --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
   --sans:  -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
   --mono:  ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
@@ -192,7 +196,7 @@ input[type="search"]:focus, input[type="text"]:focus {
 /* =============================================================================
    Catalog view
    ============================================================================= */
-#catalog.active { display: grid; grid-template-columns: 220px minmax(0, 1fr); overflow: hidden; }
+#catalog.active { display: grid; grid-template-columns: var(--cat-rail-w) 6px minmax(0, 1fr); overflow: hidden; }
 .cat-rail {
   height: 100%; overflow: auto;
   border-right: 1px solid var(--line);
@@ -200,6 +204,16 @@ input[type="search"]:focus, input[type="text"]:focus {
   background: color-mix(in srgb, var(--paper) 60%, #fff 6%);
 }
 .cat-results { height: 100%; overflow: auto; padding: 18px 24px 60px; }
+
+/* Draggable divider that sits in its own 6px grid track and resizes the rail. */
+.rail-resizer { cursor: col-resize; position: relative; height: 100%; }
+.rail-resizer::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 1px; transform: translateX(-50%);
+  background: var(--line); transition: background 120ms, width 120ms;
+}
+.rail-resizer:hover::after, .rail-resizer.dragging::after { width: 3px; background: var(--accent); }
+body.col-resizing { cursor: col-resize; user-select: none; }
 
 .filter-group { margin-bottom: 20px; }
 .filter-group h3 {
@@ -266,12 +280,15 @@ input[type="search"]:focus, input[type="text"]:focus {
 .force-graph:active { cursor: grabbing; }
 .force-graph .node { cursor: pointer; }
 .force-graph .node text {
+  display: none;                                  /* hidden by default; revealed adaptively */
   font: 11px var(--sans); fill: var(--graph-text);
   pointer-events: none; text-anchor: middle; dominant-baseline: middle;
 }
+.force-graph .node text.show { display: block; }   /* zoom/importance reveal */
+.force-graph .node:hover text { display: block; }  /* always show on hover */
 .force-graph .node.dim circle, .force-graph .node.dim text { opacity: 0.16; }
 .force-graph .node.highlight circle { stroke: #fff; stroke-width: 2; }
-.force-graph .node.highlight text { fill: #fff; font-weight: 600; }
+.force-graph .node.highlight text { display: block; fill: #fff; font-weight: 600; }
 .force-graph .link { stroke: var(--graph-line); stroke-opacity: 0.5; stroke-width: 0.7; }
 .force-graph .link.dim { stroke-opacity: 0.05; }
 .force-graph .link.highlight { stroke: #d8a08c; stroke-opacity: 0.9; stroke-width: 1.5; }
@@ -341,7 +358,7 @@ input[type="search"]:focus, input[type="text"]:focus {
 /* =============================================================================
    Reader view (focused, one discipline at a time)
    ============================================================================= */
-#reader.active { display: grid; grid-template-columns: 230px minmax(0, 1fr) 250px; overflow: hidden; }
+#reader.active { display: grid; grid-template-columns: var(--reader-rail-w) 6px minmax(0, 1fr) 250px; overflow: hidden; }
 .reader-rail { height: 100%; overflow: auto; border-right: 1px solid var(--line); padding: 24px 18px 40px; }
 .reader-main { height: 100%; overflow: auto; padding: 30px 40px 80px; }
 .reader-aside { height: 100%; overflow: auto; border-left: 1px solid var(--line); padding: 26px 20px 40px; background: color-mix(in srgb, var(--paper) 60%, #fff 6%); }
@@ -624,6 +641,53 @@ const MARKED_KEY = "rte:markedTopics";
 function loadMarked() { try { return JSON.parse(localStorage.getItem(MARKED_KEY) || "[]"); } catch { return []; } }
 function saveMarked() { try { localStorage.setItem(MARKED_KEY, JSON.stringify([...STATE.markedIds])); } catch { /* private mode */ } }
 
+// Persisted left-rail widths (Catalog + Reader).
+const CAT_RAIL_KEY = "rte:catRailW";
+const READER_RAIL_KEY = "rte:readerRailW";
+
+/* -----------------------------------------------------------------------------
+   makeRailResizer — turns a thin divider element into a drag handle that resizes
+   a sidebar by writing a width (px) into a CSS variable on the grid container,
+   then persists the final width to localStorage. Applies any saved width up front.
+   container: grid element (#catalog/#reader) owning the CSS var.
+   railEl:    the <aside> being resized (used to read the live start width).
+   --------------------------------------------------------------------------- */
+function makeRailResizer(handle, container, railEl, cssVar, storageKey) {
+  if (!handle || !container || !railEl) return;
+
+  // Restore a previously chosen width.
+  const saved = parseFloat(localStorage.getItem(storageKey) || "");
+  if (!Number.isNaN(saved)) container.style.setProperty(cssVar, saved + "px");
+
+  // Keep the rail usable and never let the content column collapse.
+  const clampW = (w) => {
+    const max = Math.min(520, container.getBoundingClientRect().width - 360);
+    return Math.max(170, Math.min(max, w));
+  };
+
+  let startX = 0, startW = 0;
+  handle.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    handle.setPointerCapture(e.pointerId);
+    handle.classList.add("dragging");
+    document.body.classList.add("col-resizing");
+    startX = e.clientX;
+    startW = railEl.getBoundingClientRect().width;
+  });
+  handle.addEventListener("pointermove", (e) => {
+    if (!handle.classList.contains("dragging")) return;   // only while a drag is active
+    container.style.setProperty(cssVar, clampW(startW + (e.clientX - startX)) + "px");
+  });
+  const end = () => {
+    if (!handle.classList.contains("dragging")) return;
+    handle.classList.remove("dragging");
+    document.body.classList.remove("col-resizing");
+    try { localStorage.setItem(storageKey, String(Math.round(railEl.getBoundingClientRect().width))); } catch { /* private mode */ }
+  };
+  handle.addEventListener("pointerup", end);
+  handle.addEventListener("pointercancel", end);
+}
+
 const STATE = {
   view: "catalog",
   selectedId: null,
@@ -785,6 +849,7 @@ function buildCatalogChrome(root) {
       <div class="filter-group"><h3>Progress</h3><div id="f-progress"></div></div>
       <button class="reset-btn" id="cat-reset">Reset filters</button>
     </aside>
+    <div class="rail-resizer" id="cat-resizer"></div>
     <div class="cat-results">
       <div class="cat-toolbar">
         <div class="count" id="cat-count"></div>
@@ -822,7 +887,7 @@ function buildCatalogChrome(root) {
     const lbl = document.createElement("label");
     lbl.innerHTML = `<input type="checkbox" data-disc="${d.phase}" />
       <span class="dot" style="background:${discColor(d.phase)}"></span>
-      <span class="lbl">${escapeHtml(d.name)}</span>
+      <span class="lbl" title="${escapeHtml(d.name)}">${escapeHtml(d.name)}</span>
       <span class="cnt">${d.topics.filter(x => x.targetId).length}</span>`;
     lbl.querySelector("input").addEventListener("change", e => {
       if (STATE.disciplines.size === 0) DISCIPLINES.forEach(x => STATE.disciplines.add(x.phase));
@@ -871,6 +936,9 @@ function buildCatalogChrome(root) {
     STATE.search = ""; el("cat-search").value = "";
     syncCatalogRail(); renderCatalogResults();
   });
+
+  // Drag-to-resize the filter rail (width restored + persisted inside the helper).
+  makeRailResizer(el("cat-resizer"), el("catalog"), root.querySelector(".cat-rail"), "--cat-rail-w", CAT_RAIL_KEY);
 }
 
 // Reflect STATE into the rail's checkboxes (handles version toggles made from
@@ -949,6 +1017,16 @@ function renderGraph(targetId = "graph") {
     id: t.id, name: t.name, color: discOf(t.id).color,
     inDegree: t.inDegree, r: 4 + Math.sqrt(t.inDegree) * 2,
   }));
+  // Per-node zoom threshold for label reveal. Rank nodes by in-degree so the top
+  // hubs are always labelled (base view stays readable) and the long tail reveals
+  // progressively as you zoom in, rather than every label firing at once.
+  const BASE_LABELS = 16;                          // labels visible at default zoom (k=1)
+  const ranked = [...nodes].sort((a, b) => b.inDegree - a.inDegree);
+  ranked.forEach((n, i) => {
+    if (i < BASE_LABELS) { n.labelMinK = 0; return; }
+    const f = (i - BASE_LABELS) / Math.max(1, ranked.length - BASE_LABELS);
+    n.labelMinK = 1.05 + f * 2.35;                 // ramps 1.05 → 3.4 across the tail
+  });
   const links = EDGES
     .filter(e => visIds.has(e.source) && visIds.has(e.target) && e.source !== e.target)
     .map(e => ({ source: e.source, target: e.target }));
@@ -956,7 +1034,10 @@ function renderGraph(targetId = "graph") {
   const svg = d3.select(container).append("svg")
     .attr("class", "force-graph").attr("viewBox", [0, 0, width, height]);
   const rootG = svg.append("g");
-  svg.call(d3.zoom().scaleExtent([0.2, 4]).on("zoom", ev => rootG.attr("transform", ev.transform)));
+  svg.call(d3.zoom().scaleExtent([0.2, 4]).on("zoom", ev => {
+    rootG.attr("transform", ev.transform);
+    applyLabelZoom(ev.transform.k);
+  }));
 
   const link = rootG.append("g").attr("class", "links")
     .selectAll("line").data(links).join("line").attr("class", "link");
@@ -967,15 +1048,28 @@ function renderGraph(targetId = "graph") {
   node.append("title").text(d => d.name);
   node.append("circle").attr("r", d => d.r).attr("fill", d => d.color)
     .attr("fill-opacity", 0.88).attr("stroke", "var(--graph-bg)").attr("stroke-width", 1);
+  // Every node gets a (truncated) label; visibility is driven by zoom/importance,
+  // hover, and selection (see CSS + applyLabelZoom) rather than shown all at once.
   node.append("text").attr("dy", d => -d.r - 6)
-    .text(d => d.r > 7 ? (d.name.length > 28 ? d.name.slice(0, 26) + "…" : d.name) : "");
+    .text(d => d.name.length > 28 ? d.name.slice(0, 26) + "…" : d.name);
+
+  // Reveal labels whose threshold the current zoom clears, and counter-scale the
+  // font by k so labels stay a constant ~11px on screen at any zoom level.
+  function applyLabelZoom(k) {
+    node.selectAll("text")
+      .attr("font-size", (11 / k).toFixed(2))
+      .classed("show", d => k >= d.labelMinK);
+  }
+  applyLabelZoom(1);
 
   if (graphSim) graphSim.stop();
   graphSim = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(60).strength(0.4))
-    .force("charge", d3.forceManyBody().strength(-90))
+    .force("link", d3.forceLink(links).id(d => d.id).distance(95).strength(0.35))
+    .force("charge", d3.forceManyBody().strength(d => -140 - d.r * 14)) // size-aware repulsion
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collide", d3.forceCollide().radius(d => d.r + 4))
+    .force("x", d3.forceX(width / 2).strength(0.03))   // gentle pull keeps clusters from drifting
+    .force("y", d3.forceY(height / 2).strength(0.03))
+    .force("collide", d3.forceCollide().radius(d => d.r + 10).iterations(2))
     .on("tick", () => {
       link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
           .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
@@ -1008,7 +1102,7 @@ function buildGraphOverlay(container) {
         ${ALL_VERSIONS.map(v => `<span class="ver-chip${STATE.versions.has(v) ? "" : " off"}" data-version="${v}">${v} (${VERSION_COUNTS.get(v)})</span>`).join("")}
       </div>
     </div>
-    <div class="muted">node size = in-degree · drag · scroll to zoom</div>
+    <div class="muted">node size = in-degree · hover for label · zoom in to reveal more</div>
     <div class="gbtns"><button id="g-freeze">freeze</button><button id="g-reheat">reheat</button></div>
   `;
   container.appendChild(overlay);
@@ -1127,6 +1221,7 @@ function renderReader() {
       <div class="rail-title">Reading path</div>
       <div id="reader-path"></div>
     </aside>
+    <div class="rail-resizer" id="reader-resizer"></div>
     <div class="reader-main">
       <div class="crumb"><span class="dot-c" style="background:${cur.color2 || discColor(cur.phase)}"></span>Phase ${cur.phase} of ${DISCIPLINES.length}</div>
       <div class="ph-head">
@@ -1149,6 +1244,10 @@ function renderReader() {
       <div class="ten-list" id="reader-ten"></div>
     </aside>
   `;
+
+  // Drag-to-resize the reading-path rail. The chrome is rebuilt on every render,
+  // so re-wire each time; the helper re-applies the persisted width.
+  makeRailResizer(el("reader-resizer"), el("reader"), root.querySelector(".reader-rail"), "--reader-rail-w", READER_RAIL_KEY);
 
   // Left reading-path rail.
   const path = el("reader-path");
