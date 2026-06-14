@@ -6,24 +6,27 @@ A static, no-server visualization tool for exploring 203 research topics across 
 
 The pipeline is **version-agnostic**: every version-dependent surface (filters, colors, stats, graph legend, roadmap overlay) derives from the versions actually present in the CSV, so adding v9/v10 rows requires no code changes — see [Adding a new version](#adding-a-new-version).
 
-Open `index.html` directly in a browser — no install, no build, no dev server. The app is a single page with six interactive views over the same dataset.
+Open `index.html` directly in a browser — no install, no build, no dev server. The current app is **The Vault**, a light-editorial "Research Vault" with five interactive views over the same dataset. The previous six-view explorer is preserved verbatim at **`index.v0.html`** (open it directly; it reads the same `data.js`).
 
 ## Views
 
-| View        | What it shows                                                                                      |
-|-------------|----------------------------------------------------------------------------------------------------|
-| Graph       | Force-directed knowledge graph of all topics. Node size = in-degree.                               |
-| Roadmap     | v5's 10-phase study plan as swimlanes. Topics from every other version are overlaid into their first `likely_phase` (e.g. "3 or 7" → Phase 3) as dimmed, version-striped cards. |
-| Cards       | Searchable / sortable grid of every topic with figures + excerpt.                                  |
-| Hubs        | Top 30 topics by in-degree, out-degree, or cross-version "bridge score."                           |
-| Disciplines | Thematic column layout grouping all topics under the v5 10-phase study sequence.                   |
-| Creators    | Subgraph of the thinker/creator topics (v7 Group A + v9 Group C) + everything they reference.       |
+The visual encoding is **one accent colour per discipline** (the 10 thematic groupings); dataset version drops to a small secondary badge. The Knowledge Graph is the only view on a dark canvas — force graphs read best on dark.
 
-The right side panel renders the selected topic's full markdown description, key figures, outgoing connections, and incoming references — every chip is clickable to navigate.
+| View            | What it shows                                                                                      |
+|-----------------|----------------------------------------------------------------------------------------------------|
+| Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress. Sort by discipline, most connected, or A–Z. |
+| Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = in-degree, node colour = discipline. Overlay legend doubles as a clickable version filter. |
+| Thinkers        | The ~898 key figures aggregated across topics. Cards feature the people who thread through 2+ topics; search reveals everyone. A "profile" link jumps to a person's own topic node when one exists. |
+| Reader          | Focused, one-discipline-at-a-time reading layout — a reading-path rail, the current phase's topics with figures, and an "up next" preview. |
+| Hubs            | Top 30 topics by in-degree, out-degree, or cross-version/-discipline "bridge score" (carried over from the prior explorer). |
+
+The slide-over side panel renders the selected topic's full markdown description, key figures, outgoing connections, and incoming references — every chip is clickable to navigate. Press <kbd>Esc</kbd> or the ✕ to close it.
+
+Priority lanes (Start here / Foundations / Deep dives / Niche & emerging / Thinkers & texts) and per-topic discipline colours are **derived at boot** in `index.html` from `groupLabel` and the `disciplines` groupings respectively — no data-pipeline change.
 
 ### Mark topics as worked on
 
-Each card on the **Cards** view has a small `✓` toggle next to its version badge. Click it to mark the topic as something you've worked on; the card picks up a soft mint pastel wash. The same wash appears on the matching tile in **Roadmap** and the matching row in **Disciplines**, so your progress reads at a glance across views. State is persisted in `localStorage` under the key `rte:markedTopics` (a JSON array of topic ids) — clearing site data resets it.
+Each card in the **Catalog** view has a small `✓` toggle. Click it to mark the topic as **Done** (worked on); the card picks up a soft sage wash and the header progress meter (`X done · total`) ticks up. The same wash mirrors on the matching row in **Reader**, so your progress reads at a glance. State is persisted in `localStorage` under the key `rte:markedTopics` (a JSON array of topic ids), shared with `index.v0.html` — clearing site data resets it.
 
 ## Quick start
 
@@ -120,7 +123,8 @@ research-topics-explorer/
 ├── parse.mjs                 # Node parser: research-topics.csv → data.js (import-safe)
 ├── parse.test.mjs            # parser test suite — node --test parse.test.mjs
 ├── data.js                   # generated, sets window.RESEARCH_DATA
-├── index.html                # single-file app (HTML + CSS + JS)
+├── index.html                # current single-file app — "The Vault" (5 views, light-editorial)
+├── index.v0.html             # previous single-file explorer (6 views) — kept, reads the same data.js
 ├── ARCHITECTURE.md           # big-picture data flow + project conventions
 ├── research-topics-v5.md     # historical source (no longer parsed)
 ├── research-topics-v6.md     # historical source (no longer parsed)
@@ -143,10 +147,10 @@ No npm, no package.json, no node_modules.
 Selecting a topic or switching views updates the hash:
 
 ```
-index.html#view=graph&topic=v5-cybernetics-and-control-theory
+index.html#view=reader&topic=v5-information-theory
 ```
 
-Reload-safe and bookmarkable.
+Views are `catalog` · `graph` · `thinkers` · `reader` · `hubs`. Reload-safe and bookmarkable.
 
 ## Keyboard / mouse
 

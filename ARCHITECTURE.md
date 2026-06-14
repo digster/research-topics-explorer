@@ -25,9 +25,14 @@ research-topics.csv ──(node parse.mjs)──► data.js ──(<script src>)
   runtime, so any CSV edit must be followed by `node parse.mjs` and a commit
   of *both* files (deploy = serve repo root verbatim; `.nojekyll` keeps
   Jekyll out of the way).
-- **`index.html`** — the entire app: CSS + six views (Graph, Roadmap, Cards,
-  Hubs, Disciplines, Creators) + a shared detail side panel. No framework;
-  d3@7 and marked@13 come from jsdelivr CDN.
+- **`index.html`** — the current app, "The Vault": CSS + five views (Catalog,
+  Knowledge Graph, Thinkers, Reader, Hubs) + a shared slide-over detail panel,
+  in a light-editorial theme. No framework; d3@7 and marked@13 come from
+  jsdelivr CDN.
+- **`index.v0.html`** — the previous app: six views (Graph, Roadmap, Cards,
+  Hubs, Disciplines, Creators) on a dark theme. Kept verbatim and reads the
+  same `data.js`; both share the `rte:markedTopics` localStorage key. A redesign
+  is a new file, not an in-place rewrite, so the old surface stays runnable.
 
 ## The version-agnostic convention (load-bearing)
 
@@ -46,9 +51,36 @@ a version list.** Both layers derive versions from the data:
   `:not(.marked)` to keep the static `.phase-card.marked` mint stripe
   winning at equal specificity.
 
-History: v8 rows were once invisible because `index.html` hardcoded
+History: v8 rows were once invisible because the app hardcoded
 `new Set(["v5","v6","v7"])` while the parser happily emitted all rows —
 if you add a version-dependent feature, derive it from `ALL_VERSIONS`.
+
+## The Vault (`index.html`): a presentation layer, no pipeline edits
+
+The redesign re-presents the *same* `window.RESEARCH_DATA` through three new
+lenses computed **at boot, in `index.html`** — deliberately not in `parse.mjs`,
+to keep the data pipeline (and `data.js`) untouched:
+
+- **`DISCIPLINE_OF`** — `topic.id → {phase, name, color}`, built by scanning
+  `DATA.disciplines[].topics[].targetId`. Each topic sits in exactly one
+  discipline; its phase 1–10 maps to one of ten hand-picked accent colours
+  (`DISCIPLINE_COLORS`). This discipline colour is the app's *primary* visual
+  encoding (Catalog stripes/tags, graph node fill, Hubs bars); version is a
+  secondary badge.
+- **`LANE_OF` / `laneOf()`** — a "priority lane" (Start here / Foundations /
+  Deep dives / Niche & emerging / Thinkers & texts) derived by keyword-matching
+  `groupLabel`. Pure presentation; used only as a Catalog filter (there is no
+  Priority Board view).
+- **`buildThinkerIndex()`** — aggregates `keyFigures` across the *visible*
+  topics into `person → [topicId]` for the Thinkers view, so the version filter
+  narrows it. ~898 people; cards feature the 50 who thread through 2+ topics.
+
+Shared filtering still flows through `isTopicVisible()` / `visibleTopics()`
+(now version + discipline + lane + progress + search), so every view honours the
+version filter — editable from both the Catalog rail and the graph legend chips.
+Searchable views (Catalog, Thinkers) build their chrome once (guarded by a
+`data-built` flag) and only re-render the results container, so the search caret
+survives typing.
 
 ## Per-view semantics worth knowing
 
@@ -66,11 +98,13 @@ if you add a version-dependent feature, derive it from `ALL_VERSIONS`.
   `… Individual Thinkers & Creators` (v7 Group A, v9 Group C, …). Derived
   from the data, not a version hardcode, so new creator cohorts join the
   Creators view automatically as long as they use that group label.
-- **Marked as worked on** — Cards view toggles ids into
-  `localStorage["rte:markedTopics"]`; Roadmap and Disciplines mirror the
-  mint wash read-only. Topic ids are therefore a public, stable contract:
-  they appear in URL hashes (`#view=…&topic=…`) and localStorage, so
-  **never change the id slug scheme** without a migration.
+- **Marked as worked on** — a binary toggle writes ids into
+  `localStorage["rte:markedTopics"]` (Catalog cards in `index.html`; Cards view
+  in `index.v0.html`), and the sage wash mirrors read-only elsewhere (Reader in
+  the new app; Roadmap + Disciplines in v0). The key is shared across both apps.
+  Topic ids are therefore a public, stable contract: they appear in URL hashes
+  (`#view=…&topic=…`) and localStorage, so **never change the id slug scheme**
+  without a migration.
 
 ## Workflows
 

@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Research Topics Explorer</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+<style>
+/* =============================================================================
+   Research Topics Explorer — dark, minimal, research-mood
+   Single-page, no framework, no server. Loads data via window.RESEARCH_DATA.
+   ============================================================================= */
+
+:root {
+  --bg:          #0d0f12;
+  --bg-elev:    #14171c;
+  --bg-elev-2:  #1a1e25;
+  --fg:          #e3e7ee;
+  --fg-dim:     #98a0ad;
+  --fg-faint:   #5a6370;
+  --line:       #232830;
+  --line-2:     #2c333d;
+  /* Hand-picked accents for known dataset versions. Versions present in the
+     data but missing a --accent-vN here get a deterministic generated hue at
+     boot (see injectVersionStyles), so new CSV versions render without any
+     CSS edits — add an entry below only to override the generated color. */
+  --accent:     #7aa7ff;        /* v5 hue */
+  --accent-v5:  #7aa7ff;
+  --accent-v6:  #c39bff;
+  --accent-v7:  #6fd2c0;
+  --accent-v8:  #f0a06c;
+  --warn:       #e8c46c;
+
+  /* Pastel mint wash applied to topics the user has marked as "worked on".
+     Low-alpha sage tint reads as a soft "completed" state on the dark theme
+     without clashing with the v5/v6/v7 accent palette. */
+  --marked-bg:     rgba(149, 213, 178, 0.14);
+  --marked-accent: rgba(149, 213, 178, 0.55);
+
+  --radius:     6px;
+  --mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.5 var(--sans);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faint grid backdrop — research-notebook feel */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(to right,  rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- App shell ---------- */
+#app {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 220px 1fr 360px;
+  grid-template-rows: 56px 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar main panel";
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  display: flex; align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-elev);
+  gap: 24px;
+}
+header h1 {
+  font: 600 13px/1 var(--mono);
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+header h1 .dim { color: var(--fg-faint); font-weight: 400; }
+nav.tabs { display: flex; gap: 2px; }
+nav.tabs button {
+  background: transparent;
+  border: 0;
+  color: var(--fg-dim);
+  font: 12px/1 var(--mono);
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+nav.tabs button:hover { color: var(--fg); background: var(--bg-elev-2); }
+nav.tabs button.active { color: var(--fg); background: var(--bg-elev-2); box-shadow: inset 0 -1px 0 var(--accent); }
+
+.stats {
+  margin-left: auto;
+  display: flex; gap: 18px;
+  font: 11px/1 var(--mono);
+  color: var(--fg-faint);
+}
+.stats b { color: var(--fg-dim); font-weight: 600; margin-right: 4px; }
+
+/* ---------- Sidebar (filters) ---------- */
+aside.filters {
+  grid-area: sidebar;
+  border-right: 1px solid var(--line);
+  background: var(--bg-elev);
+  padding: 18px 16px;
+  overflow-y: auto;
+}
+.filter-group { margin-bottom: 22px; }
+.filter-group h3 {
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin: 0 0 8px 0;
+}
+.filter-group label {
+  display: flex; align-items: center; gap: 8px;
+  padding: 4px 0;
+  font-size: 13px;
+  color: var(--fg-dim);
+  cursor: pointer;
+  user-select: none;
+}
+.filter-group label:hover { color: var(--fg); }
+.filter-group label input { accent-color: var(--accent); }
+.filter-group .dim-count { color: var(--fg-faint); font: 11px var(--mono); margin-left: auto; }
+
+input[type="search"], input[type="text"] {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--fg);
+  padding: 7px 9px;
+  border-radius: var(--radius);
+  font: 13px var(--sans);
+  outline: none;
+}
+input[type="search"]:focus, input[type="text"]:focus { border-color: var(--accent); }
+
+/* ---------- Main view container ---------- */
+main {
+  grid-area: main;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+.view { position: absolute; inset: 0; display: none; }
+.view.active { display: block; }
+
+/* ---------- Side panel ---------- */
+section.panel {
+  grid-area: panel;
+  border-left: 1px solid var(--line);
+  background: var(--bg-elev);
+  overflow-y: auto;
+  padding: 22px 22px 60px;
+}
+.panel .empty {
+  color: var(--fg-faint);
+  font: 13px var(--sans);
+  text-align: center;
+  margin-top: 100px;
+  padding: 0 12px;
+}
+.panel .badges {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 99px;
+  font: 10px/1.2 var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/* .badge.vN rules (one per dataset version) are generated at boot by
+   injectVersionStyles() so any version present in the data gets a styled
+   badge — no per-version rule needs to live here. */
+.badge.tier { background: var(--bg-elev-2); color: var(--fg-dim); }
+
+.panel h2 {
+  font: 600 22px/1.25 var(--sans);
+  margin: 0 0 6px 0;
+  color: var(--fg);
+}
+.panel .figures {
+  font: italic 13px/1.5 var(--sans);
+  color: var(--fg-dim);
+  margin-bottom: 14px;
+}
+.panel .description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--fg);
+  margin-bottom: 18px;
+}
+.panel .description p { margin: 0 0 12px; }
+.panel h4 {
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin: 18px 0 8px 0;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  background: var(--bg-elev-2);
+  border: 1px solid var(--line);
+  color: var(--fg-dim);
+  padding: 4px 9px;
+  border-radius: 99px;
+  font: 12px var(--sans);
+  cursor: pointer;
+  transition: color 80ms, border-color 80ms;
+}
+.chip:hover { color: var(--fg); border-color: var(--line-2); }
+.chip.unresolved { color: var(--fg-faint); cursor: default; opacity: 0.55; }
+
+.panel .source {
+  margin-top: 24px;
+  font: 11px var(--mono);
+  color: var(--fg-faint);
+}
+
+/* ---------- Knowledge Graph view (shared by Graph & Creators) ---------- */
+/* Styles are scoped to the .force-graph SVG class (set by renderGraph) so
+   the same rules apply whether the graph is mounted in #graph or #creators. */
+.force-graph { width: 100%; height: 100%; cursor: grab; }
+.force-graph:active { cursor: grabbing; }
+.force-graph .node { cursor: pointer; }
+.force-graph .node text {
+  font: 11px var(--sans);
+  fill: var(--fg-dim);
+  pointer-events: none;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+.force-graph .node.dim circle { opacity: 0.18; }
+.force-graph .node.dim text   { opacity: 0.18; }
+.force-graph .node.highlight circle { stroke: var(--fg); stroke-width: 2; }
+.force-graph .node.highlight text   { fill: var(--fg); font-weight: 600; }
+.force-graph .link {
+  stroke: var(--line-2);
+  stroke-opacity: 0.5;
+  stroke-width: 0.7;
+}
+.force-graph .link.dim { stroke-opacity: 0.05; }
+.force-graph .link.highlight { stroke: var(--accent); stroke-opacity: 0.9; stroke-width: 1.5; }
+
+.graph-overlay {
+  position: absolute; bottom: 14px; left: 14px;
+  background: rgba(20,23,28,0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font: 11px var(--mono);
+  color: var(--fg-dim);
+  pointer-events: auto;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.graph-overlay .legend { display: flex; gap: 12px; align-items: center; }
+.graph-overlay .swatch {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block; margin-right: 4px; vertical-align: middle;
+}
+.graph-overlay button {
+  background: transparent; border: 1px solid var(--line);
+  color: var(--fg-dim); padding: 4px 8px;
+  border-radius: 4px; cursor: pointer;
+  font: 11px var(--mono);
+}
+.graph-overlay button:hover { color: var(--fg); border-color: var(--line-2); }
+
+/* ---------- Roadmap view ---------- */
+#roadmap {
+  overflow: auto;
+  padding: 24px;
+}
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(180px, 1fr));
+  gap: 14px;
+  min-width: 1900px;
+}
+.phase-col {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.phase-header {
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 4px;
+}
+.phase-header .count { color: var(--fg-dim); margin-left: 6px; font-weight: 400; }
+.phase-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent-v5);
+  border-radius: 4px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: border-color 100ms, transform 100ms;
+}
+.phase-card:hover { border-color: var(--line-2); transform: translateY(-1px); }
+/* .phase-card.vN overlay rules (version stripe + dimmed opacity for non-v5
+   "likely phase" placements) are generated at boot by injectVersionStyles(). */
+.phase-card .name { font-size: 13px; line-height: 1.35; color: var(--fg); }
+.phase-card .meta {
+  font: 10px var(--mono); color: var(--fg-faint);
+  margin-top: 6px;
+  display: flex; justify-content: space-between;
+}
+
+/* ---------- Cards view ---------- */
+#cards { overflow: auto; padding: 20px 24px; }
+.cards-toolbar {
+  display: flex; gap: 12px; align-items: center;
+  margin-bottom: 16px;
+  font: 12px var(--mono);
+  color: var(--fg-faint);
+}
+.cards-toolbar select {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  color: var(--fg-dim);
+  font: 12px var(--mono);
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+.topic-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex; flex-direction: column; gap: 8px;
+  min-height: 120px;
+  transition: border-color 100ms, transform 100ms;
+}
+.topic-card:hover { border-color: var(--line-2); transform: translateY(-1px); }
+.topic-card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.topic-card .top-right { display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.topic-card .name { font-size: 14px; font-weight: 600; line-height: 1.3; color: var(--fg); }
+.topic-card .figures { font-size: 12px; color: var(--fg-dim); font-style: italic; }
+.topic-card .excerpt { font-size: 12px; color: var(--fg-dim); line-height: 1.5; }
+.topic-card .stats-line {
+  margin-top: auto;
+  font: 10px var(--mono);
+  color: var(--fg-faint);
+  display: flex; gap: 12px;
+}
+
+/* ---------- Hubs view ---------- */
+#hubs { overflow: auto; padding: 24px 28px; }
+#hubs h2 {
+  font: 600 14px var(--sans);
+  margin: 0 0 4px 0;
+  color: var(--fg);
+}
+#hubs .sub { font-size: 12px; color: var(--fg-dim); margin-bottom: 18px; }
+.hub-row {
+  display: grid;
+  grid-template-columns: 320px 1fr 60px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+.hub-row:hover { background: var(--bg-elev); border-radius: 4px; }
+.hub-row .name { font-size: 13px; color: var(--fg); padding-left: 4px; }
+.hub-row .name .dim { color: var(--fg-faint); font: 10px var(--mono); margin-left: 6px; }
+.hub-row .bar-wrap { background: var(--bg-elev); height: 14px; border-radius: 3px; overflow: hidden; }
+.hub-row .bar { height: 100%; background: var(--accent); border-radius: 3px; transition: width 200ms; }
+/* .bar.vN per-version colors are generated at boot by injectVersionStyles(). */
+.hub-row .num { font: 12px var(--mono); color: var(--fg-dim); text-align: right; }
+
+.hubs-tabs {
+  display: flex; gap: 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.hubs-tabs button {
+  background: transparent; border: 0;
+  color: var(--fg-dim);
+  font: 11px var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.hubs-tabs button:hover { color: var(--fg); }
+.hubs-tabs button.active { color: var(--fg); border-bottom-color: var(--accent); }
+
+/* ---------- Disciplines view ---------- */
+/* Thematic groupings of all v5/v6/v7 topics under the v5 10-phase study
+   sequence. Each discipline is a column; each row is a topic with its
+   version badge. Clicking a row opens the existing detail panel. */
+#disciplines { overflow: auto; padding: 28px 32px 60px; }
+.disciplines-intro {
+  font: 12px/1.55 var(--sans);
+  color: var(--fg-dim);
+  max-width: 760px;
+  margin: 0 0 22px;
+}
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.discipline-col {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 18px 14px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.discipline-col .phase-tag {
+  font: 600 10px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.discipline-col h3 {
+  font: 600 18px/1.25 var(--sans);
+  color: var(--fg);
+  margin: 0;
+}
+.discipline-col .subtitle {
+  font: 12px/1.55 var(--sans);
+  color: var(--fg-dim);
+  margin: 0 0 4px;
+}
+.discipline-topic {
+  display: grid;
+  /* 4 tracks: ordinal · name · version-badge · mark-toggle.
+     Unresolved rows render only 3 children, leaving the 4th track at 0 width. */
+  grid-template-columns: 22px 1fr auto auto;
+  gap: 10px; align-items: center;
+  padding: 8px 10px;
+  background: var(--bg-elev-2);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 100ms, transform 100ms;
+}
+.discipline-topic:hover { border-color: var(--line-2); transform: translateY(-1px); }
+.discipline-topic .num {
+  font: 11px/1 var(--mono);
+  color: var(--fg-faint);
+  text-align: right;
+}
+.discipline-topic .name { font-size: 13px; color: var(--fg); line-height: 1.35; }
+.discipline-topic.unresolved { opacity: 0.45; cursor: default; }
+.discipline-topic.unresolved:hover { transform: none; border-color: transparent; }
+.discipline-col .empty-col {
+  font: 12px var(--sans);
+  color: var(--fg-faint);
+  padding: 8px 2px;
+  font-style: italic;
+}
+
+/* ---------- Misc ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--line-2); }
+
+.muted { color: var(--fg-faint); }
+.kbd {
+  font: 10px var(--mono); padding: 1px 5px;
+  border: 1px solid var(--line); border-radius: 3px;
+  color: var(--fg-dim); background: var(--bg-elev-2);
+}
+
+/* ---------- Marked-as-worked-on state ----------
+   A soft mint wash applied across all three views (Cards, Roadmap,
+   Disciplines) when STATE.markedIds includes the topic's id. The tint
+   sits over each view's existing card background — we override only the
+   background so layout, padding, and accent borders stay intact. */
+.topic-card.marked,
+.phase-card.marked,
+.discipline-topic.marked {
+  background: var(--marked-bg);
+}
+/* Roadmap cards already use a left-accent stripe per version — switch
+   that stripe to the mint accent so the marked state reads on the tile
+   even at a glance from the column gutter. */
+.phase-card.marked        { border-left-color: var(--marked-accent); }
+.discipline-topic.marked  { border-color: var(--marked-accent); }
+
+/* ---------- Card "mark as worked on" toggle ----------
+   Tiny square button injected into each topic-card's .top row. Clicking
+   it must NOT trigger card selection — the JS handler stops propagation.
+   The .on state inverts to a filled mint chip so the affordance reads
+   even when the surrounding card already has the pastel wash. */
+.mark-toggle {
+  background: transparent;
+  border: 1px solid var(--line-2);
+  color: var(--fg-faint);
+  width: 22px; height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background 120ms, color 120ms, border-color 120ms;
+  flex-shrink: 0;
+}
+.mark-toggle:hover { color: var(--fg-dim); border-color: var(--fg-faint); }
+.mark-toggle.on {
+  background: var(--marked-accent);
+  border-color: var(--marked-accent);
+  color: var(--bg);
+}
+.mark-toggle.on:hover { color: var(--bg); }
+</style>
+</head>
+
+<body>
+
+<div id="app">
+  <header>
+    <h1>Research Topics <span class="dim">/ Explorer</span></h1>
+    <nav class="tabs" id="tabs">
+      <button data-view="graph"    class="active">Graph</button>
+      <button data-view="roadmap">Roadmap</button>
+      <button data-view="cards">Cards</button>
+      <button data-view="hubs">Hubs</button>
+      <button data-view="disciplines">Disciplines</button>
+      <button data-view="creators">Creators</button>
+    </nav>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <aside class="filters">
+    <div class="filter-group">
+      <h3>Search</h3>
+      <input type="search" id="search" placeholder="Topic, figure, or text…" />
+    </div>
+
+    <div class="filter-group">
+      <h3>Version</h3>
+      <div id="filter-version"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Tier / Group</h3>
+      <div id="filter-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Phase (v5)</h3>
+      <div id="filter-phase"></div>
+    </div>
+
+    <div class="filter-group" style="margin-top: 30px;">
+      <button id="reset-filters" style="background: var(--bg-elev-2); border: 1px solid var(--line); color: var(--fg-dim); padding: 6px 12px; border-radius: 4px; font: 11px var(--mono); cursor: pointer; width: 100%;">Reset filters</button>
+    </div>
+
+    <div class="filter-group" style="font: 10px var(--mono); color: var(--fg-faint);">
+      <h3>Tips</h3>
+      <p style="margin: 4px 0; line-height: 1.5;">
+        <span class="kbd">click</span> a topic to open<br/>
+        <span class="kbd">drag</span> graph nodes<br/>
+        <span class="kbd">scroll</span> to zoom graph<br/>
+        URL hash deep-links views &amp; topics
+      </p>
+    </div>
+  </aside>
+
+  <main>
+    <div id="graph"       class="view active"></div>
+    <div id="roadmap"     class="view"></div>
+    <div id="cards"       class="view"></div>
+    <div id="hubs"        class="view"></div>
+    <div id="disciplines" class="view"></div>
+    <div id="creators"    class="view"></div>
+  </main>
+
+  <section class="panel" id="panel">
+    <div class="empty">Select a topic to see its details, key figures, full description and outgoing connections.</div>
+  </section>
+</div>
+
+<script src="data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@13/marked.min.js"></script>
+
+<script>
+"use strict";
+
+/* =============================================================================
+   Research Topics Explorer — main app script
+   All state, view rendering, and interaction logic lives here.
+   ============================================================================= */
+
+const DATA = window.RESEARCH_DATA;
+const TOPICS = DATA.topics;
+const EDGES  = DATA.edges;
+const TOPIC_BY_ID = new Map(TOPICS.map(t => [t.id, t]));
+
+// --- Versions ---------------------------------------------------------------
+// Everything version-related (filters, colors, legend, stats, sorts) derives
+// from the versions actually present in the data, so a new version added to
+// the CSV shows up everywhere with zero code changes here.
+
+// Natural ordering: "v9" < "v10" (string compare would say otherwise).
+// Unrecognized tags sort last rather than disappearing.
+function versionNum(v) {
+  const n = Number(String(v).replace(/^v/i, ""));
+  return Number.isNaN(n) ? Infinity : n;
+}
+
+const ALL_VERSIONS = [...new Set(TOPICS.map(t => t.version))]
+  .sort((a, b) => versionNum(a) - versionNum(b) || a.localeCompare(b));
+
+const VERSION_COUNTS = new Map(
+  ALL_VERSIONS.map(v => [v, TOPICS.filter(t => t.version === v).length]));
+
+// Accent color for a version: the stylesheet's --accent-vN if hand-picked,
+// otherwise a deterministic golden-angle hue so unknown future versions are
+// still visually distinct (and stable across reloads).
+function versionColor(v) {
+  const picked = getComputedStyle(document.documentElement)
+    .getPropertyValue(`--accent-${v}`).trim();
+  if (picked) return picked;
+  const hue = (versionNum(v) * 137.508) % 360;
+  return `hsl(${hue.toFixed(1)} 60% 70%)`;
+}
+
+// Generate the per-version CSS (badge chip, hubs bar, roadmap overlay card,
+// and the --accent-vN variable itself when not hand-picked). Runs once at
+// boot, before any view renders. :not(.marked) keeps the static
+// .phase-card.marked mint-stripe override winning — this injected sheet
+// comes later in the cascade, so without the guard it would beat it.
+function injectVersionStyles() {
+  const rules = [];
+  for (const v of ALL_VERSIONS) {
+    const hasPicked = getComputedStyle(document.documentElement)
+      .getPropertyValue(`--accent-${v}`).trim() !== "";
+    if (!hasPicked) rules.push(`:root { --accent-${v}: ${versionColor(v)}; }`);
+    rules.push(
+      `.badge.${v} { background: color-mix(in srgb, var(--accent-${v}) 15%, transparent); color: var(--accent-${v}); }`,
+      `.hub-row .bar.${v} { background: var(--accent-${v}); }`,
+      `.phase-card.${v} { opacity: 0.78; }`,
+      `.phase-card.${v}:not(.marked) { border-left-color: var(--accent-${v}); }`
+    );
+  }
+  const style = document.createElement("style");
+  style.id = "version-styles";
+  style.textContent = rules.join("\n");
+  document.head.appendChild(style);
+}
+injectVersionStyles();
+
+// --- Global filter / view state -------------------------------------------
+
+// Persisted "marked as worked on" topic ids. Stored as a JSON array in
+// localStorage and rehydrated into a Set on load for O(1) lookups during
+// render. Set semantics also avoid accidental duplicates.
+const MARKED_KEY = "rte:markedTopics";
+function loadMarked() {
+  try { return JSON.parse(localStorage.getItem(MARKED_KEY) || "[]"); }
+  catch { return []; }
+}
+function saveMarked() {
+  try { localStorage.setItem(MARKED_KEY, JSON.stringify([...STATE.markedIds])); }
+  catch { /* private mode / quota — silent: in-memory state still works */ }
+}
+
+const STATE = {
+  view: "graph",
+  selectedId: null,
+  search: "",
+  versions: new Set(ALL_VERSIONS),   // all dataset versions visible by default
+  groups: new Set(),    // empty = all
+  phases: new Set(),    // empty = all
+  cardsSort: "name",
+  markedIds: new Set(loadMarked()),  // topic ids the user has flagged as worked on
+};
+
+// Toggle the "worked on" mark for a topic. Re-renders all three affected
+// views so the pastel wash stays consistent regardless of which tab is
+// currently visible (DOM is small enough that a full re-render is cheap
+// and avoids a fan-out of view-specific update calls).
+function toggleMarked(id) {
+  if (STATE.markedIds.has(id)) STATE.markedIds.delete(id);
+  else STATE.markedIds.add(id);
+  saveMarked();
+  renderCards();
+  renderRoadmap();
+  renderDisciplines();
+}
+
+// Populate group/phase filter sets dynamically from data
+const ALL_GROUPS = [...new Set(TOPICS.map(t => `${t.version}:${t.group}`))].sort();
+const ALL_PHASES = [...new Set(TOPICS.filter(t => t.version === "v5" && t.phase != null).map(t => t.phase))].sort((a,b)=>a-b);
+
+// --- Stats bar ------------------------------------------------------------
+
+document.getElementById("stats").innerHTML = `
+  <span><b>${DATA.stats.topicsTotal}</b>topics</span>
+  <span><b>${DATA.stats.edges}</b>edges</span>
+  <span><b>${ALL_VERSIONS.map(v => VERSION_COUNTS.get(v)).join("/")}</b>${ALL_VERSIONS.join("/")}</span>
+`;
+
+// --- Filter sidebar -------------------------------------------------------
+
+function buildFilters() {
+  // Versions
+  const vEl = document.getElementById("filter-version");
+  vEl.innerHTML = "";
+  for (const v of ALL_VERSIONS) {
+    const count = VERSION_COUNTS.get(v);
+    const lbl = document.createElement("label");
+    lbl.innerHTML = `
+      <input type="checkbox" data-version="${v}" ${STATE.versions.has(v) ? "checked":""}/>
+      <span style="color: var(--accent-${v}); font: 11px var(--mono); text-transform: uppercase;">${v}</span>
+      <span class="dim-count">${count}</span>
+    `;
+    lbl.querySelector("input").addEventListener("change", e => {
+      if (e.target.checked) STATE.versions.add(v); else STATE.versions.delete(v);
+      onFiltersChanged();
+    });
+    vEl.appendChild(lbl);
+  }
+
+  // Groups (per-version)
+  const gEl = document.getElementById("filter-group");
+  gEl.innerHTML = "";
+  for (const key of ALL_GROUPS) {
+    const [version, group] = key.split(":");
+    const sample = TOPICS.find(t => t.version === version && t.group === group);
+    const count = TOPICS.filter(t => t.version === version && t.group === group).length;
+    const lbl = document.createElement("label");
+    lbl.innerHTML = `
+      <input type="checkbox" data-group="${key}" ${STATE.groups.size === 0 || STATE.groups.has(key) ? "checked":""}/>
+      <span style="font: 11px var(--mono);"><span style="color: var(--accent-${version});">${version}</span> ${group}</span>
+      <span class="dim-count">${count}</span>
+    `;
+    lbl.title = sample ? sample.groupLabel : "";
+    lbl.querySelector("input").addEventListener("change", e => {
+      // First interaction switches from "empty=all" to explicit-set semantics
+      if (STATE.groups.size === 0) {
+        ALL_GROUPS.forEach(k => STATE.groups.add(k));
+      }
+      if (e.target.checked) STATE.groups.add(key); else STATE.groups.delete(key);
+      onFiltersChanged();
+    });
+    gEl.appendChild(lbl);
+  }
+
+  // Phases
+  const pEl = document.getElementById("filter-phase");
+  pEl.innerHTML = "";
+  for (const p of ALL_PHASES) {
+    const count = TOPICS.filter(t => t.version === "v5" && t.phase === p).length;
+    const lbl = document.createElement("label");
+    lbl.innerHTML = `
+      <input type="checkbox" data-phase="${p}" ${STATE.phases.size === 0 || STATE.phases.has(p) ? "checked":""}/>
+      <span style="font: 11px var(--mono);">Phase ${p}</span>
+      <span class="dim-count">${count}</span>
+    `;
+    lbl.querySelector("input").addEventListener("change", e => {
+      if (STATE.phases.size === 0) ALL_PHASES.forEach(x => STATE.phases.add(x));
+      if (e.target.checked) STATE.phases.add(p); else STATE.phases.delete(p);
+      onFiltersChanged();
+    });
+    pEl.appendChild(lbl);
+  }
+}
+
+document.getElementById("search").addEventListener("input", e => {
+  STATE.search = e.target.value.trim().toLowerCase();
+  onFiltersChanged();
+});
+
+document.getElementById("reset-filters").addEventListener("click", () => {
+  STATE.versions = new Set(ALL_VERSIONS);
+  STATE.groups = new Set();
+  STATE.phases = new Set();
+  STATE.search = "";
+  document.getElementById("search").value = "";
+  buildFilters();
+  onFiltersChanged();
+});
+
+// --- Tabs / view switching ------------------------------------------------
+
+document.getElementById("tabs").addEventListener("click", e => {
+  const btn = e.target.closest("button[data-view]");
+  if (!btn) return;
+  setView(btn.dataset.view);
+});
+
+function setView(v) {
+  STATE.view = v;
+  document.querySelectorAll("nav.tabs button").forEach(b =>
+    b.classList.toggle("active", b.dataset.view === v));
+  document.querySelectorAll(".view").forEach(el =>
+    el.classList.toggle("active", el.id === v));
+  syncHash();
+  renderCurrentView();
+}
+
+// --- Filtering helper -----------------------------------------------------
+
+function isTopicVisible(t) {
+  if (!STATE.versions.has(t.version)) return false;
+  if (STATE.groups.size > 0 && !STATE.groups.has(`${t.version}:${t.group}`)) return false;
+  if (STATE.phases.size > 0 && t.version === "v5" && !STATE.phases.has(t.phase)) return false;
+  if (STATE.search) {
+    const q = STATE.search;
+    const hay = `${t.name} ${t.keyFigures.join(" ")} ${t.description}`.toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  return true;
+}
+
+function visibleTopics() { return TOPICS.filter(isTopicVisible); }
+
+function onFiltersChanged() {
+  renderCurrentView();
+}
+
+// --- Side panel rendering -------------------------------------------------
+
+function selectTopic(id) {
+  STATE.selectedId = id;
+  syncHash();
+  renderPanel();
+  // Tell the active view to reflect selection (graph highlight, card emphasis)
+  if (STATE.view === "graph") highlightGraphNeighborhood(id);
+  if (STATE.view === "creators") highlightGraphNeighborhood(id, "creators");
+}
+
+function renderPanel() {
+  const panel = document.getElementById("panel");
+  if (!STATE.selectedId) {
+    panel.innerHTML = `<div class="empty">Select a topic to see its details, key figures, full description and outgoing connections.</div>`;
+    return;
+  }
+  const t = TOPIC_BY_ID.get(STATE.selectedId);
+  if (!t) { panel.innerHTML = `<div class="empty">Topic not found.</div>`; return; }
+
+  // Resolve incoming references
+  const incoming = TOPICS.filter(o => o.connections.some(c => c.targetId === t.id));
+
+  panel.innerHTML = `
+    <div class="badges">
+      <span class="badge ${t.version}">${t.version}</span>
+      <span class="badge tier">${t.groupLabel}</span>
+      ${t.phase != null ? `<span class="badge tier">Phase ${t.phase}</span>` : ""}
+      ${t.likelyPhase ? `<span class="badge tier">~Phase ${t.likelyPhase}</span>` : ""}
+      ${t.idCode ? `<span class="badge tier">${t.idCode}</span>` : ""}
+      <span class="badge tier">in:${t.inDegree} · out:${t.outDegree}</span>
+    </div>
+    <h2>${escapeHtml(t.name)}</h2>
+    ${t.keyFigures.length ? `<div class="figures">${escapeHtml(t.keyFigures.join(", "))}</div>` : ""}
+    <div class="description">${marked.parse(t.description || "")}</div>
+
+    ${t.connections.length ? `
+      <h4>Outgoing — ${/Individual Thinkers & Creators/i.test(t.groupLabel) ? "resonates with" : "connects to"} (${t.connections.length})</h4>
+      <div class="chips">
+        ${t.connections.map(c =>
+          c.targetId
+            ? `<span class="chip" data-id="${c.targetId}">${escapeHtml(c.raw)}</span>`
+            : `<span class="chip unresolved" title="No matching topic in this dataset">${escapeHtml(c.raw)}</span>`
+        ).join("")}
+      </div>` : ""}
+
+    ${incoming.length ? `
+      <h4>Incoming — referenced by (${incoming.length})</h4>
+      <div class="chips">
+        ${incoming.map(o => `<span class="chip" data-id="${o.id}">${escapeHtml(o.name)}</span>`).join("")}
+      </div>` : ""}
+
+    <div class="source">
+      from <code>${escapeHtml(t.sourceFile || "research-topics.csv")}</code>
+      ${t.sourceDate ? ` · ${t.sourceDate}` : ""}
+    </div>
+  `;
+
+  panel.querySelectorAll(".chip[data-id]").forEach(el => {
+    el.addEventListener("click", () => selectTopic(el.dataset.id));
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+/* =============================================================================
+   View 1 — Knowledge Graph (D3 force layout)
+   ============================================================================= */
+
+let graphSim = null;
+let graphState = null; // { svg, link, node, nodes, links, transform }
+// Node fills reference var(--accent-vN) directly; injectVersionStyles()
+// guarantees the variable exists for every version in the data.
+
+function renderGraph(targetId = "graph", subset = null) {
+  const container = document.getElementById(targetId);
+  container.innerHTML = "";
+
+  const { width, height } = container.getBoundingClientRect();
+  const visible = subset || visibleTopics();
+  const visIds = new Set(visible.map(t => t.id));
+
+  const nodes = visible.map(t => ({
+    id: t.id,
+    name: t.name,
+    version: t.version,
+    inDegree: t.inDegree,
+    r: 4 + Math.sqrt(t.inDegree) * 2,
+  }));
+  const links = EDGES
+    .filter(e => visIds.has(e.source) && visIds.has(e.target) && e.source !== e.target)
+    .map(e => ({ source: e.source, target: e.target }));
+
+  const svg = d3.select(container).append("svg")
+    .attr("class", "force-graph")
+    .attr("viewBox", [0, 0, width, height]);
+
+  const root = svg.append("g");
+
+  // Zoom + pan
+  svg.call(d3.zoom()
+    .scaleExtent([0.2, 4])
+    .on("zoom", (event) => root.attr("transform", event.transform)));
+
+  const link = root.append("g").attr("class","links")
+    .selectAll("line").data(links).join("line").attr("class","link");
+
+  const node = root.append("g").attr("class","nodes")
+    .selectAll("g").data(nodes).join("g").attr("class","node")
+    .call(drag())
+    .on("click", (event, d) => { event.stopPropagation(); selectTopic(d.id); });
+
+  node.append("title").text(d => d.name);
+  node.append("circle")
+    .attr("r", d => d.r)
+    .attr("fill", d => `var(--accent-${d.version})`)
+    .attr("fill-opacity", 0.85)
+    .attr("stroke", "var(--bg)")
+    .attr("stroke-width", 1);
+  node.append("text")
+    .attr("dy", d => -d.r - 6)
+    .text(d => d.r > 7 ? d.name.length > 28 ? d.name.slice(0,26)+"…" : d.name : "");
+
+  if (graphSim) graphSim.stop();
+  graphSim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(60).strength(0.4))
+    .force("charge", d3.forceManyBody().strength(-90))
+    .force("center", d3.forceCenter(width/2, height/2))
+    .force("collide", d3.forceCollide().radius(d => d.r + 4))
+    .on("tick", () => {
+      link.attr("x1", d=>d.source.x).attr("y1", d=>d.source.y)
+          .attr("x2", d=>d.target.x).attr("y2", d=>d.target.y);
+      node.attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+
+  // Click empty space to clear highlight
+  svg.on("click", () => {
+    node.classed("dim", false).classed("highlight", false);
+    link.classed("dim", false).classed("highlight", false);
+  });
+
+  graphState = { svg, link, node, nodes, links, container: targetId };
+
+  // Add overlay (legend + freeze)
+  const overlay = document.createElement("div");
+  overlay.className = "graph-overlay";
+  overlay.innerHTML = `
+    <div class="legend">
+      ${ALL_VERSIONS.map(v =>
+        `<span><span class="swatch" style="background: var(--accent-${v})"></span>${v} (${VERSION_COUNTS.get(v)})</span>`
+      ).join("")}
+    </div>
+    <div class="muted">node size = in-degree · drag · scroll to zoom</div>
+    <div style="display:flex; gap:6px;">
+      <button id="freeze-btn">freeze layout</button>
+      <button id="reheat-btn">reheat</button>
+    </div>
+  `;
+  container.appendChild(overlay);
+  overlay.querySelector("#freeze-btn").addEventListener("click", () => graphSim.alphaTarget(0).stop());
+  overlay.querySelector("#reheat-btn").addEventListener("click", () => graphSim.alpha(0.5).restart());
+
+  // If something was selected, re-apply highlight
+  if (STATE.selectedId && visIds.has(STATE.selectedId)) {
+    setTimeout(() => highlightGraphNeighborhood(STATE.selectedId), 50);
+  }
+}
+
+function drag() {
+  function dragstarted(event, d) {
+    if (!event.active) graphSim.alphaTarget(0.3).restart();
+    d.fx = d.x; d.fy = d.y;
+  }
+  function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+  function dragended(event, d) {
+    if (!event.active) graphSim.alphaTarget(0);
+    d.fx = null; d.fy = null;
+  }
+  return d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended);
+}
+
+function highlightGraphNeighborhood(id) {
+  if (!graphState) return;
+  const { node, link, nodes, links } = graphState;
+  const neighbors = new Set([id]);
+  links.forEach(l => {
+    const s = typeof l.source === "object" ? l.source.id : l.source;
+    const t = typeof l.target === "object" ? l.target.id : l.target;
+    if (s === id) neighbors.add(t);
+    if (t === id) neighbors.add(s);
+  });
+  node.classed("dim", d => !neighbors.has(d.id))
+      .classed("highlight", d => d.id === id);
+  link.classed("dim", l => {
+        const s = typeof l.source === "object" ? l.source.id : l.source;
+        const t = typeof l.target === "object" ? l.target.id : l.target;
+        return !(s === id || t === id);
+      })
+      .classed("highlight", l => {
+        const s = typeof l.source === "object" ? l.source.id : l.source;
+        const t = typeof l.target === "object" ? l.target.id : l.target;
+        return s === id || t === id;
+      });
+}
+
+/* =============================================================================
+   View 2 — Phase Roadmap
+   v5 topics anchor each column via their firm `phase`. Every other version
+   overlays via `likelyPhase` ("3" or "3 or 7" — the first number wins), so
+   v6, v8, and any future version with a likely_phase column value appear
+   automatically. Overlay cards are dimmed with a version-colored stripe to
+   read as "probable placement" against the firm v5 sequence.
+   ============================================================================= */
+
+function renderRoadmap() {
+  const root = document.getElementById("roadmap");
+  root.innerHTML = "";
+
+  const grid = document.createElement("div");
+  grid.className = "roadmap-grid";
+
+  const v5ByPhase = {};
+  for (const p of ALL_PHASES) v5ByPhase[p] = [];
+  TOPICS.filter(t => t.version === "v5" && t.phase != null).forEach(t => v5ByPhase[t.phase].push(t));
+
+  // Overlays — non-v5 topics whose likelyPhase starts with a phase number.
+  // Out-of-range phases (no v5 column to land in) are skipped by the
+  // `if (overlay[p])` guard rather than crashing the render.
+  const overlay = {};
+  for (const p of ALL_PHASES) overlay[p] = [];
+  TOPICS.filter(t => t.version !== "v5" && t.likelyPhase).forEach(t => {
+    const m = String(t.likelyPhase).match(/^\d+/);
+    if (m) {
+      const p = Number(m[0]);
+      if (overlay[p]) overlay[p].push(t);
+    }
+  });
+  // Group overlay cards by version (then name) so each column reads as
+  // "v5 sequence, then v6 suggestions, then v8 suggestions, …".
+  for (const p of ALL_PHASES) {
+    overlay[p].sort((a, b) =>
+      versionNum(a.version) - versionNum(b.version) || a.name.localeCompare(b.name));
+  }
+
+  const visIds = new Set(visibleTopics().map(t => t.id));
+
+  for (const p of ALL_PHASES) {
+    const col = document.createElement("div");
+    col.className = "phase-col";
+    const v5topics = v5ByPhase[p].filter(t => visIds.has(t.id));
+    const overlayTopics = overlay[p].filter(t => visIds.has(t.id));
+    col.innerHTML = `<div class="phase-header">Phase ${p} <span class="count">· ${v5topics.length}${overlayTopics.length ? ` + ${overlayTopics.length}` : ""}</span></div>`;
+
+    [...v5topics, ...overlayTopics].forEach(t => {
+      const card = document.createElement("div");
+      // Read-only mirror of the Cards-page marking: append .marked so the
+      // shared CSS rule paints the pastel wash here too. Toggling lives
+      // exclusively on the Cards page per spec.
+      card.className = "phase-card"
+        + (t.version !== "v5" ? ` ${t.version}` : "")
+        + (STATE.markedIds.has(t.id) ? " marked" : "");
+      card.innerHTML = `
+        <div class="name">${escapeHtml(t.name)}</div>
+        <div class="meta"><span>${t.tier}</span><span>in ${t.inDegree} · out ${t.outDegree}</span></div>
+      `;
+      card.addEventListener("click", () => selectTopic(t.id));
+      col.appendChild(card);
+    });
+
+    grid.appendChild(col);
+  }
+
+  root.appendChild(grid);
+}
+
+/* =============================================================================
+   View 3 — Topic Cards
+   ============================================================================= */
+
+function renderCards() {
+  const root = document.getElementById("cards");
+  root.innerHTML = "";
+
+  const toolbar = document.createElement("div");
+  toolbar.className = "cards-toolbar";
+  toolbar.innerHTML = `
+    <span>Sort by</span>
+    <select id="cards-sort">
+      <option value="name">name</option>
+      <option value="indegree">in-degree (hubs first)</option>
+      <option value="outdegree">out-degree (most outbound)</option>
+      <option value="version">version then name</option>
+      <option value="tier">tier then name</option>
+    </select>
+    <span class="muted" id="cards-count"></span>
+  `;
+  root.appendChild(toolbar);
+
+  const sortSel = toolbar.querySelector("#cards-sort");
+  sortSel.value = STATE.cardsSort;
+  sortSel.addEventListener("change", () => { STATE.cardsSort = sortSel.value; renderCards(); });
+
+  const visible = visibleTopics();
+  const sorted = [...visible].sort((a,b) => {
+    switch (STATE.cardsSort) {
+      case "indegree":  return b.inDegree - a.inDegree || a.name.localeCompare(b.name);
+      case "outdegree": return b.outDegree - a.outDegree || a.name.localeCompare(b.name);
+      case "version":   return versionNum(a.version) - versionNum(b.version) || a.name.localeCompare(b.name);
+      case "tier":      return (a.tier+a.name).localeCompare(b.tier+b.name);
+      default:          return a.name.localeCompare(b.name);
+    }
+  });
+
+  toolbar.querySelector("#cards-count").textContent = `${sorted.length} topics`;
+
+  const grid = document.createElement("div");
+  grid.className = "cards-grid";
+
+  for (const t of sorted) {
+    const card = document.createElement("div");
+    // Toggle .marked so the global CSS (.topic-card.marked) paints the
+    // pastel wash. Same join-key (topic.id) is used by the roadmap and
+    // disciplines renderers — that's how the marking stays in sync.
+    const isMarked = STATE.markedIds.has(t.id);
+    card.className = "topic-card" + (isMarked ? " marked" : "");
+    const excerpt = t.pitch
+      ? t.pitch
+      : (t.description.split(/(?<=\.)\s/)[0] || "").slice(0, 180);
+    card.innerHTML = `
+      <div class="top">
+        <span class="name">${escapeHtml(t.name)}</span>
+        <div class="top-right">
+          <span class="badge ${t.version}">${t.version}</span>
+          <button type="button"
+                  class="mark-toggle${isMarked ? " on" : ""}"
+                  aria-pressed="${isMarked}"
+                  aria-label="${isMarked ? "Unmark as worked on" : "Mark as worked on"}"
+                  title="${isMarked ? "Unmark as worked on" : "Mark as worked on"}">✓</button>
+        </div>
+      </div>
+      ${t.keyFigures.length ? `<div class="figures">${escapeHtml(t.keyFigures.slice(0,4).join(", "))}${t.keyFigures.length>4?"…":""}</div>` : ""}
+      <div class="excerpt">${escapeHtml(excerpt)}${excerpt.length >= 180 ? "…" : ""}</div>
+      <div class="stats-line">
+        <span>${t.tier}</span>
+        ${t.phase != null ? `<span>Phase ${t.phase}</span>` : ""}
+        <span>in ${t.inDegree} · out ${t.outDegree}</span>
+      </div>
+    `;
+    card.addEventListener("click", () => selectTopic(t.id));
+    // stopPropagation: the toggle is nested inside the card, so without
+    // this the click would also trigger selectTopic and open the side
+    // panel every time the user marks/unmarks.
+    card.querySelector(".mark-toggle").addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMarked(t.id);
+    });
+    grid.appendChild(card);
+  }
+
+  root.appendChild(grid);
+}
+
+/* =============================================================================
+   View 4 — Hubs & Bridges
+   ============================================================================= */
+
+let hubsMode = "indegree"; // indegree | outdegree | bridges
+
+function renderHubs() {
+  const root = document.getElementById("hubs");
+  root.innerHTML = "";
+
+  root.innerHTML = `
+    <h2>Most-connected topics</h2>
+    <div class="sub">Topics ranked by how often the rest of the corpus references them. Bridges score topics that span multiple versions or tiers — the connective glue across the dataset.</div>
+    <div class="hubs-tabs" id="hubs-tabs">
+      <button data-mode="indegree"  ${hubsMode==="indegree" ? "class='active'":""}>In-degree</button>
+      <button data-mode="outdegree" ${hubsMode==="outdegree"? "class='active'":""}>Out-degree</button>
+      <button data-mode="bridges"   ${hubsMode==="bridges"  ? "class='active'":""}>Bridge score</button>
+    </div>
+    <div id="hubs-list"></div>
+  `;
+
+  root.querySelector("#hubs-tabs").addEventListener("click", e => {
+    const b = e.target.closest("button[data-mode]");
+    if (!b) return;
+    hubsMode = b.dataset.mode;
+    renderHubs();
+  });
+
+  const list = root.querySelector("#hubs-list");
+  const visible = visibleTopics();
+  const visIds = new Set(visible.map(t => t.id));
+
+  // Bridge score: out-edges that span versions OR tiers
+  function bridgeScore(t) {
+    let s = 0;
+    for (const c of t.connections) {
+      if (!c.targetId || !visIds.has(c.targetId)) continue;
+      const o = TOPIC_BY_ID.get(c.targetId);
+      if (o.version !== t.version) s += 2;
+      else if (o.group !== t.group) s += 1;
+    }
+    return s;
+  }
+
+  let scored;
+  if (hubsMode === "indegree") {
+    scored = visible.map(t => [t, t.connections.filter(c => !c.targetId || !visIds.has(c.targetId)).length, t.inDegree]);
+    // sort by inDegree (recompute against visible set to be precise)
+    const inV = new Map();
+    for (const t of visible) for (const c of t.connections) if (c.targetId && visIds.has(c.targetId)) inV.set(c.targetId, (inV.get(c.targetId)||0)+1);
+    scored = visible.map(t => ({ t, val: inV.get(t.id) || 0 }));
+  } else if (hubsMode === "outdegree") {
+    scored = visible.map(t => ({ t, val: t.connections.filter(c => c.targetId && visIds.has(c.targetId)).length }));
+  } else {
+    scored = visible.map(t => ({ t, val: bridgeScore(t) }));
+  }
+  scored.sort((a,b) => b.val - a.val);
+  scored = scored.slice(0, 30);
+
+  const max = Math.max(1, ...scored.map(x => x.val));
+  for (const { t, val } of scored) {
+    const row = document.createElement("div");
+    row.className = "hub-row";
+    row.innerHTML = `
+      <div class="name">${escapeHtml(t.name)} <span class="dim">${t.version}·${t.tier}</span></div>
+      <div class="bar-wrap"><div class="bar ${t.version}" style="width: ${(val/max*100).toFixed(1)}%"></div></div>
+      <div class="num">${val}</div>
+    `;
+    row.addEventListener("click", () => selectTopic(t.id));
+    list.appendChild(row);
+  }
+}
+
+/* =============================================================================
+   View 5 — Creators Network (the "people" topics, any version)
+   ============================================================================= */
+
+function renderCreators() {
+  // Show the creator/thinker topics (DATA.creators is derived from group labels
+  // in parse.mjs, so it spans v7 Group A, v9 Group C, …) AND any topic they
+  // connect to, so the creators are embedded in their intellectual context.
+  const creators = new Set(DATA.creators);
+  const involved = new Set(creators);
+  for (const id of creators) {
+    const t = TOPIC_BY_ID.get(id);
+    for (const c of t.connections) if (c.targetId) involved.add(c.targetId);
+  }
+  const subset = TOPICS.filter(t => involved.has(t.id) && isTopicVisible(t));
+  renderGraph("creators", subset);
+}
+
+/* =============================================================================
+   View 6 — Disciplines (thematic groupings across v5/v6/v7)
+   =============================================================================
+   Renders DATA.disciplines (produced by parse.mjs from the discipline
+   columns of research-topics.csv) as
+   a responsive grid of phase columns. Each row lists a topic with its
+   version badge and opens the standard detail panel on click.
+   Respects the global visibleTopics() filter so Version/Tier/Phase/Search
+   in the left sidebar transparently filter rows here too.
+*/
+
+function renderDisciplines() {
+  const root = document.getElementById("disciplines");
+  root.innerHTML = "";
+
+  const disciplines = (DATA && DATA.disciplines) || [];
+  if (!disciplines.length) {
+    root.innerHTML = `
+      <div style="padding:40px; color: var(--fg-faint); font: 13px var(--sans); max-width: 560px;">
+        No disciplines defined. Create <code>disciplines.md</code> and run
+        <code style="font: 12px var(--mono);">node parse.mjs</code> to populate this view.
+      </div>`;
+    return;
+  }
+
+  // Intro paragraph explaining the view's intent — keeps the page
+  // self-describing even when opened fresh via a deep-link.
+  const intro = document.createElement("p");
+  intro.className = "disciplines-intro";
+  intro.textContent =
+    "Thematic groupings of all topics across v5, v6, and v7 under the v5-author's 10-phase study sequence. " +
+    "Each row is one topic; click to open its details. Left-sidebar filters apply.";
+  root.appendChild(intro);
+
+  const visIds = new Set(visibleTopics().map(t => t.id));
+  const grid = document.createElement("div");
+  grid.className = "disciplines-grid";
+
+  // Sort by phase number so Phase 1 is always leftmost regardless of
+  // declaration order in disciplines.md.
+  const sorted = [...disciplines].sort((a, b) => a.phase - b.phase);
+
+  for (const d of sorted) {
+    const col = document.createElement("div");
+    col.className = "discipline-col";
+
+    col.innerHTML = `
+      <div class="phase-tag">Phase ${d.phase}</div>
+      <h3>${escapeHtml(d.name)}</h3>
+      ${d.subtitle ? `<p class="subtitle">${escapeHtml(d.subtitle)}</p>` : ""}
+    `;
+
+    let renderedRows = 0;
+    d.topics.forEach((entry, i) => {
+      const topic = entry.targetId ? TOPIC_BY_ID.get(entry.targetId) : null;
+
+      // If we have a resolved topic but it's filtered out by the sidebar,
+      // skip the row entirely (keeps the grid tight under active filters).
+      if (topic && !visIds.has(topic.id)) return;
+
+      const row = document.createElement("div");
+      // Mirror the Cards-page marking on resolved rows. Unresolved rows
+      // (no matching topic.id in TOPICS) intentionally cannot be marked
+      // — there's nothing stable to key off.
+      const isMarked = topic && STATE.markedIds.has(topic.id);
+      row.className = "discipline-topic"
+        + (topic ? "" : " unresolved")
+        + (isMarked ? " marked" : "");
+      row.innerHTML = `
+        <span class="num">${i + 1}</span>
+        <span class="name">${escapeHtml(topic ? topic.name : entry.raw)}</span>
+        ${topic
+          ? `<span class="badge ${topic.version}">${topic.version}</span>`
+          : `<span class="badge" title="Unresolved topic name in disciplines.md" style="background: var(--bg-elev-2); color: var(--fg-faint);">?</span>`
+        }
+        ${topic
+          ? `<button type="button"
+                     class="mark-toggle${isMarked ? " on" : ""}"
+                     aria-pressed="${isMarked}"
+                     aria-label="${isMarked ? "Unmark as worked on" : "Mark as worked on"}"
+                     title="${isMarked ? "Unmark as worked on" : "Mark as worked on"}">✓</button>`
+          : ``
+        }
+      `;
+      if (topic) {
+        row.addEventListener("click", () => selectTopic(topic.id));
+        // stopPropagation: the toggle is nested inside the row, so without
+        // this the click would also trigger selectTopic and open the side
+        // panel every time the user marks/unmarks.
+        row.querySelector(".mark-toggle").addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleMarked(topic.id);
+        });
+      }
+      col.appendChild(row);
+      renderedRows++;
+    });
+
+    // When filters hide every topic in a column, show a gentle placeholder
+    // so the user understands why the column looks empty.
+    if (renderedRows === 0) {
+      const empty = document.createElement("div");
+      empty.className = "empty-col";
+      empty.textContent = "No topics match current filters.";
+      col.appendChild(empty);
+    }
+
+    grid.appendChild(col);
+  }
+
+  root.appendChild(grid);
+}
+
+/* =============================================================================
+   Dispatcher
+   ============================================================================= */
+
+function renderCurrentView() {
+  switch (STATE.view) {
+    case "graph":       renderGraph(); break;
+    case "roadmap":     renderRoadmap(); break;
+    case "cards":       renderCards(); break;
+    case "hubs":        renderHubs(); break;
+    case "disciplines": renderDisciplines(); break;
+    case "creators":    renderCreators(); break;
+  }
+}
+
+/* =============================================================================
+   URL hash sync — #view=graph&topic=v5-cybernetics-...
+   ============================================================================= */
+
+function syncHash() {
+  const params = new URLSearchParams();
+  params.set("view", STATE.view);
+  if (STATE.selectedId) params.set("topic", STATE.selectedId);
+  history.replaceState(null, "", "#" + params.toString());
+}
+
+function readHash() {
+  const params = new URLSearchParams(location.hash.replace(/^#/, ""));
+  const v = params.get("view");
+  const t = params.get("topic");
+  if (v && document.querySelector(`[data-view="${v}"]`)) STATE.view = v;
+  if (t && TOPIC_BY_ID.has(t)) STATE.selectedId = t;
+}
+
+window.addEventListener("hashchange", () => {
+  const prev = STATE.view;
+  readHash();
+  if (prev !== STATE.view) setView(STATE.view);
+  renderPanel();
+  if (STATE.view === "graph" || STATE.view === "creators") {
+    if (STATE.selectedId) highlightGraphNeighborhood(STATE.selectedId);
+  }
+});
+
+window.addEventListener("resize", () => {
+  // re-render graph views to re-fit viewport
+  if (STATE.view === "graph" || STATE.view === "creators") renderCurrentView();
+});
+
+/* =============================================================================
+   Boot
+   ============================================================================= */
+
+readHash();
+buildFilters();
+setView(STATE.view);
+renderPanel();
+</script>
+</body>
+</html>
