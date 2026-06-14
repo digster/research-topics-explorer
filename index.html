@@ -582,13 +582,27 @@ const LANE_OF = new Map(TOPICS.map(t => [t.id, laneOf(t)]));
 const LANE_COUNTS = new Map(LANES.map(L => [L, TOPICS.filter(t => LANE_OF.get(t.id) === L).length]));
 
 /* --- Thinkers index: keyFigures aggregated across topics -------------------- */
-// Built fresh per render so the version filter narrows it; this is the global
-// view used for the boot-time "N people" headline.
+// `key_figures` is a single free-text column reused across heterogeneous node
+// types (people, books, crafts, concepts), so it also holds publication years,
+// work titles, and concept terms that aren't people. The Thinkers view claims
+// to be "people", so we filter those out at display time. The heuristic catches
+// the ~104 reliably non-name tokens with near-zero false positives (no real
+// person name is all-lowercase, contains a digit, or is wrapped in quotes).
+// Capitalised book/institution titles can't be told apart from names without a
+// curated list, so they intentionally remain.
+function looksLikePerson(s) {
+  if (/\d/.test(s)) return false;                          // years, editions, "4′33″", "4x4 House"
+  if (/^['"‘“]/.test(s)) return false;           // 'quoted phrase' / "title"
+  if (!/[A-ZÀ-Þ]/.test(s) && /[a-z]/.test(s)) return false; // all-lowercase concept term
+  return true;
+}
+// Built fresh per render so the version filter narrows it; also drives the
+// "N people across M topics" headline.
 function buildThinkerIndex(topics) {
   const map = new Map();                    // person -> [topicId, ...]
   for (const t of topics) {
     for (const f of t.keyFigures) {
-      const k = f.trim(); if (!k) continue;
+      const k = f.trim(); if (!k || !looksLikePerson(k)) continue;
       if (!map.has(k)) map.set(k, []);
       map.get(k).push(t.id);
     }

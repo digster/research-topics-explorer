@@ -73,7 +73,11 @@ to keep the data pipeline (and `data.js`) untouched:
   Priority Board view).
 - **`buildThinkerIndex()`** — aggregates `keyFigures` across the *visible*
   topics into `person → [topicId]` for the Thinkers view, so the version filter
-  narrows it. ~898 people; cards feature the 50 who thread through 2+ topics.
+  narrows it. A `looksLikePerson()` display-time filter drops the ~104
+  non-name tokens `key_figures` also carries (publication years, all-lowercase
+  concept terms, quoted titles) — leaving ~794 people; cards feature the 48 who
+  thread through 2+ topics. The filter is Thinkers-only: the Catalog cards and
+  detail panel still show each topic's `key_figures` verbatim.
 
 Shared filtering still flows through `isTopicVisible()` / `visibleTopics()`
 (now version + discipline + lane + progress + search), so every view honours the

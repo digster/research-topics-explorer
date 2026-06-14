@@ -16,7 +16,7 @@ The visual encoding is **one accent colour per discipline** (the 10 thematic gro
 |-----------------|----------------------------------------------------------------------------------------------------|
 | Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress. Sort by discipline, most connected, or A–Z. |
 | Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = in-degree, node colour = discipline. Overlay legend doubles as a clickable version filter. |
-| Thinkers        | The ~898 key figures aggregated across topics. Cards feature the people who thread through 2+ topics; search reveals everyone. A "profile" link jumps to a person's own topic node when one exists. |
+| Thinkers        | Key figures aggregated across topics (~794 after filtering out non-name `key_figures` tokens — years, concept terms, quoted titles). Cards feature the people who thread through 2+ topics; search reveals everyone. A "profile" link jumps to a person's own topic node when one exists. |
 | Reader          | Focused, one-discipline-at-a-time reading layout — a reading-path rail, the current phase's topics with figures, and an "up next" preview. |
 | Hubs            | Top 30 topics by in-degree, out-degree, or cross-version/-discipline "bridge score" (carried over from the prior explorer). |
 
