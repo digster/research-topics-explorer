@@ -121,12 +121,13 @@ survives typing.
   the saved width each time.
 - **Adaptive graph labels** — to keep the Knowledge Graph readable, every node
   owns a (hidden) `<text>` whose visibility is gated by `node.labelMinK`, a
-  per-render threshold from an in-degree ranking: the top `BASE_LABELS` (16) hubs
+  per-render threshold from an in-degree ranking: the top `BASE_LABELS` (12) hubs
   are always shown, the long tail ramps `1.05 → 3.4`. The d3.zoom handler reveals
   labels whose `labelMinK ≤ k` and counter-scales font to `11/k` so labels stay a
   constant ~11px on screen; `:hover` and `.highlight` reveal individual labels via
-  CSS. The looser force layout (size-aware charge, link distance 95, collide
-  pad 10, weak x/y centering) spreads nodes so the shown labels rarely collide.
+  CSS. The looser force layout (size-aware charge, link distance 110 at strength
+  0.3, collide pad 10, weak x/y centering) spreads nodes so the shown labels rarely
+  collide.
 
 ## Workflows
 
