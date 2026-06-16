@@ -82,6 +82,11 @@ to keep the data pipeline (and `data.js`) untouched:
 Shared filtering still flows through `isTopicVisible()` / `visibleTopics()`
 (now version + discipline + lane + progress + search), so every view honours the
 version filter — editable from both the Catalog rail and the graph legend chips.
+All four checkbox groups are **faceted**: each `STATE` Set holds exactly the checked
+boxes, and an empty group means "no constraint" (that facet shows all). So **Reset
+filters** restores full Sets (every box checked) while **Unselect all** empties every
+group — both leave the full catalog visible, but the latter is a one-click clean slate
+for isolating a single facet without unchecking the rest.
 Searchable views (Catalog, Thinkers) build their chrome once (guarded by a
 `data-built` flag) and only re-render the results container, so the search caret
 survives typing.

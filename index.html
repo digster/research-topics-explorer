@@ -693,10 +693,14 @@ const STATE = {
   selectedId: null,
   search: "",
   thinkerQuery: "",
-  versions:    new Set(ALL_VERSIONS),  // all on by default
-  disciplines: new Set(),              // empty = all
-  lanes:       new Set(),              // empty = all
-  progress:    new Set(),              // empty = all; members of {"toread","done"}
+  // Each filter group's Set holds exactly the checked boxes. The default is a full Set
+  // (everything checked); an empty Set means "no constraint" (that facet shows all). So
+  // "Unselect all" empties every group and the catalog stays unconstrained until the user
+  // checks the one or few boxes they actually want.
+  versions:    new Set(ALL_VERSIONS),
+  disciplines: new Set(DISCIPLINES.map(d => d.phase)),
+  lanes:       new Set(LANES),
+  progress:    new Set(["toread", "done"]),
   cardsSort:   "discipline",
   hubsMode:    "indegree",
   readerPhase: DISCIPLINES.length ? DISCIPLINES[0].phase : 1,
@@ -705,7 +709,11 @@ const STATE = {
 
 /* --- Shared visibility filter (drives every view) --------------------------- */
 function isTopicVisible(t) {
-  if (!STATE.versions.has(t.version)) return false;
+  // Faceted filtering: a group constrains the results only when it has selections. An
+  // empty group means "no constraint" (that facet shows all), so unchecking every box in
+  // a group is equivalent to checking them all, and "Unselect all" leaves the full
+  // catalog visible until the user checks the one or few boxes they want.
+  if (STATE.versions.size > 0 && !STATE.versions.has(t.version)) return false;
   if (STATE.disciplines.size > 0 && !STATE.disciplines.has(discOf(t.id).phase)) return false;
   if (STATE.lanes.size > 0 && !STATE.lanes.has(LANE_OF.get(t.id))) return false;
   if (STATE.progress.size > 0) {
@@ -847,6 +855,7 @@ function buildCatalogChrome(root) {
       <div class="filter-group"><h3>Discipline</h3><div id="f-discipline"></div></div>
       <div class="filter-group"><h3>Priority lane</h3><div id="f-lane"></div></div>
       <div class="filter-group"><h3>Progress</h3><div id="f-progress"></div></div>
+      <button class="reset-btn" id="cat-unselect">Unselect all</button>
       <button class="reset-btn" id="cat-reset">Reset filters</button>
     </aside>
     <div class="rail-resizer" id="cat-resizer"></div>
@@ -890,7 +899,6 @@ function buildCatalogChrome(root) {
       <span class="lbl" title="${escapeHtml(d.name)}">${escapeHtml(d.name)}</span>
       <span class="cnt">${d.topics.filter(x => x.targetId).length}</span>`;
     lbl.querySelector("input").addEventListener("change", e => {
-      if (STATE.disciplines.size === 0) DISCIPLINES.forEach(x => STATE.disciplines.add(x.phase));
       if (e.target.checked) STATE.disciplines.add(d.phase); else STATE.disciplines.delete(d.phase);
       renderCatalogResults();
     });
@@ -904,7 +912,6 @@ function buildCatalogChrome(root) {
     lbl.innerHTML = `<input type="checkbox" data-lane="${L}" />
       <span class="lbl">${L}</span><span class="cnt">${LANE_COUNTS.get(L)}</span>`;
     lbl.querySelector("input").addEventListener("change", e => {
-      if (STATE.lanes.size === 0) LANES.forEach(x => STATE.lanes.add(x));
       if (e.target.checked) STATE.lanes.add(L); else STATE.lanes.delete(L);
       renderCatalogResults();
     });
@@ -919,7 +926,6 @@ function buildCatalogChrome(root) {
       <span class="lbl">${label}</span>
       <span class="cnt" id="prog-cnt-${key}"></span>`;
     lbl.querySelector("input").addEventListener("change", e => {
-      if (STATE.progress.size === 0) STATE.progress.add("toread"), STATE.progress.add("done");
       if (e.target.checked) STATE.progress.add(key); else STATE.progress.delete(key);
       renderCatalogResults();
     });
@@ -930,10 +936,20 @@ function buildCatalogChrome(root) {
     const b = e.target.closest("button[data-sort]"); if (!b) return;
     STATE.cardsSort = b.dataset.sort; renderCatalogResults();
   });
+  // Reset = restore the defaults (every box checked) and clear the search text.
   el("cat-reset").addEventListener("click", () => {
     STATE.versions = new Set(ALL_VERSIONS);
-    STATE.disciplines = new Set(); STATE.lanes = new Set(); STATE.progress = new Set();
+    STATE.disciplines = new Set(DISCIPLINES.map(d => d.phase));
+    STATE.lanes = new Set(LANES); STATE.progress = new Set(["toread", "done"]);
     STATE.search = ""; el("cat-search").value = "";
+    syncCatalogRail(); renderCatalogResults();
+  });
+  // Unselect all = empty every group so no facet constrains the results. The boxes clear
+  // and the full catalog stays visible, ready for the user to check just the one or few
+  // filters they want. Search text is left intact.
+  el("cat-unselect").addEventListener("click", () => {
+    STATE.versions = new Set(); STATE.disciplines = new Set();
+    STATE.lanes = new Set(); STATE.progress = new Set();
     syncCatalogRail(); renderCatalogResults();
   });
 
@@ -946,9 +962,9 @@ function buildCatalogChrome(root) {
 function syncCatalogRail() {
   el("cat-search").value = STATE.search;
   el("f-version").querySelectorAll("input").forEach(i => { i.checked = STATE.versions.has(i.dataset.version); });
-  el("f-discipline").querySelectorAll("input").forEach(i => { i.checked = STATE.disciplines.size === 0 || STATE.disciplines.has(Number(i.dataset.disc)); });
-  el("f-lane").querySelectorAll("input").forEach(i => { i.checked = STATE.lanes.size === 0 || STATE.lanes.has(i.dataset.lane); });
-  el("f-progress").querySelectorAll("input").forEach(i => { i.checked = STATE.progress.size === 0 || STATE.progress.has(i.dataset.prog); });
+  el("f-discipline").querySelectorAll("input").forEach(i => { i.checked = STATE.disciplines.has(Number(i.dataset.disc)); });
+  el("f-lane").querySelectorAll("input").forEach(i => { i.checked = STATE.lanes.has(i.dataset.lane); });
+  el("f-progress").querySelectorAll("input").forEach(i => { i.checked = STATE.progress.has(i.dataset.prog); });
 }
 
 function renderCatalogResults() {

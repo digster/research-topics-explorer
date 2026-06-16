@@ -14,7 +14,7 @@ The visual encoding is **one accent colour per discipline** (the 10 thematic gro
 
 | View            | What it shows                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------|
-| Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress — **drag the divider on the rail's right edge to widen it** (handy for the longer discipline names; width is remembered). Sort by discipline, most connected, or A–Z. |
+| Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress — **drag the divider on the rail's right edge to widen it** (handy for the longer discipline names; width is remembered). **Reset filters** re-checks everything; **Unselect all** clears every box in one click so you can isolate a single facet. Sort by discipline, most connected, or A–Z. |
 | Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = in-degree, node colour = discipline. **Labels are adaptive** — only the top hubs are labelled at the default zoom; **zoom in to progressively reveal more**, and **hover** any node (or select it) to show its label. Overlay legend doubles as a clickable version filter. |
 | Thinkers        | Key figures aggregated across topics (~794 after filtering out non-name `key_figures` tokens — years, concept terms, quoted titles). Cards feature the people who thread through 2+ topics; search reveals everyone. A "profile" link jumps to a person's own topic node when one exists. |
 | Reader          | Focused, one-discipline-at-a-time reading layout — a reading-path rail, the current phase's topics with figures, and an "up next" preview. |
@@ -160,7 +160,7 @@ Views are `catalog` · `graph` · `thinkers` · `reader` · `hubs`. Reload-safe 
 - **Hover** a graph node to reveal its label; **zoom in** reveals more labels (top hubs are always shown)
 - **Drag the divider** on the right edge of the Catalog / Reader left rail to resize it (width is persisted)
 - **Search** matches topic names, key figures, and description text
-- Filter checkboxes for version / tier-group / phase compose with search
+- Filter checkboxes (version / discipline / priority lane / progress) are **faceted** — an unchecked group imposes no constraint, so they compose with one another and with search. **Reset filters** re-checks everything; **Unselect all** empties every box so a single facet can be isolated in one click
 
 ## Known limitations
 
