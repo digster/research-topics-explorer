@@ -2,7 +2,7 @@
 
 > **Live demo:** `https://<github-username>.github.io/research-topics-explorer/` — replace `<github-username>` with the account that hosts this repo. See [Deployment](#deployment) below.
 
-A static, no-server visualization tool for exploring 203 research topics across dataset versions v5–v9. The single source of truth is `research-topics.csv`; the original markdown files (`research-topics-v5/6/7.md`, `disciplines.md`) are kept as historical reference but are no longer read by any code.
+A static, no-server visualization tool for exploring 204 research topics across dataset versions v5–v9. The single source of truth is `research-topics.csv`; the original markdown files (`research-topics-v5/6/7.md`, `disciplines.md`) are kept as historical reference but are no longer read by any code.
 
 The pipeline is **version-agnostic**: every version-dependent surface (filters, colors, stats, graph legend, roadmap overlay) derives from the versions actually present in the CSV, so adding v9/v10 rows requires no code changes — see [Adding a new version](#adding-a-new-version).
 
@@ -79,8 +79,8 @@ Output:
 
 ```
 ✓ data.js written
-  topics: 203 (v5=56, v6=32, v7=66, v8=18, v9=31)
-  edges: 834 resolved, 263 unresolved connection slots
+  topics: 204 (v5=56, v6=32, v7=66, v8=18, v9=32)
+  edges: 854 resolved, 263 unresolved connection slots
   disciplines: 10
   creators: 39
 ```
@@ -111,9 +111,11 @@ It covers the CSV grammar, the payload transform (including unknown future versi
 
 Nothing else: filters, stats, legend, badges, hub bars, and the roadmap pick the new version up from the data. To make a group of people show up in the **Creators** view, label their group `… Individual Thinkers & Creators` (the Creators filter matches on that label, not a version).
 
-The **v9** batch follows this pattern: 31 topics in five groups — A *Disciplines & Fields*, B *Cross-Cutting Concepts & Lenses* (e.g. Scaling Laws, Recursion), C *Individual Thinkers & Creators*, D *Non-Western & Comparative Knowledge Systems*, E *Seminal Books & Texts*. Only Groups A and B carry a `likely_phase` (Roadmap overlay); people, traditions, and books stay off the roadmap like v7.
+The **v9** batch follows this pattern: 32 topics in five groups — A *Disciplines & Fields*, B *Cross-Cutting Concepts & Lenses* (e.g. Scaling Laws, Recursion), C *Individual Thinkers & Creators*, D *Non-Western & Comparative Knowledge Systems*, E *Seminal Books & Texts*. Only Groups A and B carry a `likely_phase` (Roadmap overlay); people, traditions, and books stay off the roadmap like v7.
 
 Roughly 30% of raw connection strings have no resolved target — they reference broad fields ("biology", "economics", "AI agents") that have no dedicated topic in this dataset. Those still appear in the side panel as faded chips. To add or fix a connection, edit the `connects_to_ids` slot for that row in the CSV.
+
+Connections are **directed** — the detail panel shows *Outgoing* and *Incoming* separately, and the graph's hub ranking is in-degree-based. When you add a connection, **add the back-link on the target row too** unless the relationship really is one-way, so the topic is reachable from both ends. Append to `connects_to_raw` *and* `connects_to_ids` together; if the target's `connects_to_ids` is shorter than its `connects_to_raw`, pad it with empty slots first or the new id will pair with the wrong label.
 
 ## Architecture
 

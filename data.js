@@ -2,19 +2,19 @@
 // Regenerate with: node parse.mjs
 window.RESEARCH_DATA = {
   "stats": {
-    "topicsTotal": 203,
+    "topicsTotal": 204,
     "byVersion": {
       "v5": 56,
       "v6": 32,
       "v7": 66,
       "v8": 18,
-      "v9": 31
+      "v9": 32
     },
-    "edges": 834,
+    "edges": 854,
     "unresolvedConnections": 263,
     "disciplines": 10,
     "unresolvedDisciplines": 0,
-    "generatedAt": "2026-06-13T03:13:26.268Z"
+    "generatedAt": "2026-09-14T22:57:38.778Z"
   },
   "topics": [
     {
@@ -780,10 +780,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "writing systems/notation",
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 23,
-      "outDegree": 6
+      "inDegree": 24,
+      "outDegree": 7
     },
     {
       "id": "v5-philosophy-of-mathematics",
@@ -1017,10 +1021,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "logic",
           "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 5
+      "inDegree": 13,
+      "outDegree": 6
     },
     {
       "id": "v5-history-and-philosophy-of-science",
@@ -1058,10 +1066,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "all scientific domains",
           "targetId": null
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 11,
-      "outDegree": 3
+      "inDegree": 12,
+      "outDegree": 4
     },
     {
       "id": "v5-anthropology-cultural-evolution-and-technology-studies",
@@ -1172,10 +1184,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 6
+      "inDegree": 13,
+      "outDegree": 7
     },
     {
       "id": "v5-media-theory-and-philosophy-of-technology",
@@ -1230,10 +1246,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "aesthetics",
           "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 7,
-      "outDegree": 8
+      "inDegree": 8,
+      "outDegree": 9
     },
     {
       "id": "v5-linguistics-and-natural-language-structure",
@@ -4275,10 +4295,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Philosophy of Mind",
           "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 4
+      "inDegree": 4,
+      "outDegree": 5
     },
     {
       "id": "v6-comparative-mythology-and-depth-psychology",
@@ -6794,10 +6818,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Economics",
           "targetId": null
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 8,
-      "outDegree": 1
+      "inDegree": 9,
+      "outDegree": 2
     },
     {
       "id": "v7-ethics-consequentialism-deontology-virtue",
@@ -8329,10 +8357,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Actor-Network Theory & STS",
           "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 6
+      "inDegree": 2,
+      "outDegree": 7
     },
     {
       "id": "v9-actor-network-theory-and-sts",
@@ -8379,10 +8411,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Sociology & Social Network Analysis",
           "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 6
+      "inDegree": 4,
+      "outDegree": 7
     },
     {
       "id": "v9-ritual-as-coordination-technology",
@@ -8979,10 +9015,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Actor-Network Theory & STS",
           "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 0,
-      "outDegree": 5
+      "inDegree": 1,
+      "outDegree": 6
     },
     {
       "id": "v9-gilles-deleuze",
@@ -9622,6 +9662,74 @@ window.RESEARCH_DATA = {
       ],
       "inDegree": 1,
       "outDegree": 5
+    },
+    {
+      "id": "v9-critical-theory-and-the-frankfurt-school",
+      "name": "Critical Theory & the Frankfurt School",
+      "version": "v9",
+      "sourceFile": "research-topics.csv",
+      "sourceDate": "2026-09-14",
+      "group": "A",
+      "groupLabel": "Group A — Disciplines & Fields",
+      "keyFigures": [
+        "Theodor Adorno",
+        "Max Horkheimer",
+        "Walter Benjamin",
+        "Herbert Marcuse",
+        "Jürgen Habermas",
+        "Antonio Gramsci",
+        "Nancy Fraser"
+      ],
+      "description": "Social theory turned into a tool for diagnosing domination rather than merely describing society. Horkheimer and Adorno's Dialectic of Enlightenment argues that instrumental reason — rationality collapsed into means-ends efficiency — lets an emancipatory science harden into a new apparatus of control, while their culture industry thesis reads mass media as standardized production that manufactures passive consumers. Benjamin extends it to art under mechanical reproduction, Marcuse to desire under one-dimensional society, Habermas turns critique constructive with communicative rationality and the public sphere, and Gramsci supplies the mechanism — hegemony, where consent rather than force reproduces power. The load-bearing claim for this collection is that no system is neutral: every interface, metric, ranking, algorithm, and taxonomy encodes an interest, and critique is the method for surfacing it. It is the natural counterweight to cybernetics, media theory, and design — the disciplines that explain how a system works, answered by the one that insists on asking who it works for.",
+      "tier": "A",
+      "phase": null,
+      "likelyPhase": "5",
+      "pitch": "The discipline that asks not how a system works but whom it works for — power, ideology, and the culture industry",
+      "idCode": "A7",
+      "connections": [
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "Political Philosophy",
+          "targetId": "v7-political-philosophy"
+        },
+        {
+          "raw": "Semiotics, Structuralism & The Science of Signs",
+          "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        }
+      ],
+      "inDegree": 10,
+      "outDegree": 10
     }
   ],
   "edges": [
@@ -10001,6 +10109,11 @@ window.RESEARCH_DATA = {
       "raw": "writing systems/notation"
     },
     {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
       "source": "v5-philosophy-of-mathematics",
       "target": "v5-category-theory-and-abstract-algebra",
       "raw": "Category theory"
@@ -10121,6 +10234,11 @@ window.RESEARCH_DATA = {
       "raw": "logic"
     },
     {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
       "source": "v5-history-and-philosophy-of-science",
       "target": "v5-epistemology-and-philosophy-of-knowledge",
       "raw": "Epistemology"
@@ -10134,6 +10252,11 @@ window.RESEARCH_DATA = {
       "source": "v5-history-and-philosophy-of-science",
       "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
       "raw": "complexity economics"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
     },
     {
       "source": "v5-anthropology-cultural-evolution-and-technology-studies",
@@ -10196,6 +10319,11 @@ window.RESEARCH_DATA = {
       "raw": "game design"
     },
     {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
       "source": "v5-media-theory-and-philosophy-of-technology",
       "target": "v5-semiotics-structuralism-and-the-science-of-signs",
       "raw": "Semiotics"
@@ -10234,6 +10362,11 @@ window.RESEARCH_DATA = {
       "source": "v5-media-theory-and-philosophy-of-technology",
       "target": "v5-aesthetics-and-philosophy-of-art",
       "raw": "aesthetics"
+    },
+    {
+      "source": "v5-media-theory-and-philosophy-of-technology",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
     },
     {
       "source": "v5-linguistics-and-natural-language-structure",
@@ -11481,6 +11614,11 @@ window.RESEARCH_DATA = {
       "raw": "Philosophy of Mind"
     },
     {
+      "source": "v6-attention-studies-and-the-attention-economy",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
       "source": "v6-comparative-mythology-and-depth-psychology",
       "target": "v5-anthropology-cultural-evolution-and-technology-studies",
       "raw": "Anthropology"
@@ -12264,6 +12402,11 @@ window.RESEARCH_DATA = {
       "source": "v7-political-philosophy",
       "target": "v5-anthropology-cultural-evolution-and-technology-studies",
       "raw": "Anthropology (v5)"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
     },
     {
       "source": "v7-ethics-consequentialism-deontology-virtue",
@@ -13091,6 +13234,11 @@ window.RESEARCH_DATA = {
       "raw": "Actor-Network Theory & STS"
     },
     {
+      "source": "v9-sociology-and-social-network-analysis",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
       "source": "v9-actor-network-theory-and-sts",
       "target": "v5-media-theory-and-philosophy-of-technology",
       "raw": "Media Theory & Philosophy of Technology"
@@ -13119,6 +13267,11 @@ window.RESEARCH_DATA = {
       "source": "v9-actor-network-theory-and-sts",
       "target": "v9-sociology-and-social-network-analysis",
       "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
     },
     {
       "source": "v9-ritual-as-coordination-technology",
@@ -13449,6 +13602,11 @@ window.RESEARCH_DATA = {
       "source": "v9-michel-foucault",
       "target": "v9-actor-network-theory-and-sts",
       "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v9-michel-foucault",
+      "target": "v9-critical-theory-and-the-frankfurt-school",
+      "raw": "Critical Theory & the Frankfurt School"
     },
     {
       "source": "v9-gilles-deleuze",
@@ -13794,6 +13952,56 @@ window.RESEARCH_DATA = {
       "source": "v9-a-thousand-plateaus",
       "target": "v9-actor-network-theory-and-sts",
       "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v9-michel-foucault",
+      "raw": "Michel Foucault"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v7-political-philosophy",
+      "raw": "Political Philosophy"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "raw": "Semiotics, Structuralism & The Science of Signs"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v5-history-and-philosophy-of-science",
+      "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v9-critical-theory-and-the-frankfurt-school",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
     }
   ],
   "creators": [
@@ -14198,6 +14406,10 @@ window.RESEARCH_DATA = {
         {
           "raw": "A Thousand Plateaus",
           "targetId": "v9-a-thousand-plateaus"
+        },
+        {
+          "raw": "Critical Theory & the Frankfurt School",
+          "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ]
     },

@@ -16,7 +16,14 @@ research-topics.csv ──(node parse.mjs)──► data.js ──(<script src>)
   data*, not runtime heuristics: `connects_to_ids` holds resolved target ids
   **positionally aligned** with the human-readable `connects_to_raw`
   (pipe-separated; an empty slot = "this connection never resolved to a
-  topic in the dataset" and renders as a faded chip).
+  topic in the dataset" and renders as a faded chip). Edges are **directed**
+  and reciprocity is *not* derived at runtime: the detail panel splits
+  Outgoing from Incoming and the graph's hub ranking is in-degree-based, so a
+  back-link only exists if the target row also lists the source. **Curation
+  rule: when adding a connection, add the back-link on the target row too**
+  unless the relationship is genuinely one-way. Historically most edges were
+  one-way (~19% reciprocated), so a low in-degree on an older topic reflects
+  curation debt, not an absent relationship.
 - **`parse.mjs`** — pure transform + validation. Exports `parseCSV`,
   `csvToRecords`, `splitPipes`, `versionNum`, `buildPayload`; `main()` runs
   **only when executed directly** (`node parse.mjs`), so importing the module
@@ -75,7 +82,7 @@ to keep the data pipeline (and `data.js`) untouched:
   topics into `person → [topicId]` for the Thinkers view, so the version filter
   narrows it. A `looksLikePerson()` display-time filter drops the ~104
   non-name tokens `key_figures` also carries (publication years, all-lowercase
-  concept terms, quoted titles) — leaving ~794 people; cards feature the 48 who
+  concept terms, quoted titles) — leaving ~801 people; cards feature the 48 who
   thread through 2+ topics. The filter is Thinkers-only: the Catalog cards and
   detail panel still show each topic's `key_figures` verbatim.
 
