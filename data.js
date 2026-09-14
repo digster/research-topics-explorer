@@ -10,11 +10,11 @@ window.RESEARCH_DATA = {
       "v8": 18,
       "v9": 32
     },
-    "edges": 854,
+    "edges": 1520,
     "unresolvedConnections": 263,
     "disciplines": 10,
     "unresolvedDisciplines": 0,
-    "generatedAt": "2026-09-14T22:57:38.778Z"
+    "generatedAt": "2026-09-14T23:05:42.994Z"
   },
   "topics": [
     {
@@ -69,10 +69,66 @@ window.RESEARCH_DATA = {
         {
           "raw": "artificial life",
           "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Operations Research & Optimization",
+          "targetId": "v5-operations-research-and-optimization"
+        },
+        {
+          "raw": "Digital Signal Processing (DSP)",
+          "targetId": "v5-digital-signal-processing-dsp"
+        },
+        {
+          "raw": "Robotics & Embodied Intelligence",
+          "targetId": "v5-robotics-and-embodied-intelligence"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "Gregory Bateson",
+          "targetId": "v7-gregory-bateson"
+        },
+        {
+          "raw": "Thinking in Systems: A Primer",
+          "targetId": "v7-thinking-in-systems-a-primer"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
+        },
+        {
+          "raw": "Physics of Information & the Thermodynamics of Computation",
+          "targetId": "v8-physics-of-information-and-the-thermodynamics-of-computation"
+        },
+        {
+          "raw": "Niche Construction Theory",
+          "targetId": "v8-niche-construction-theory"
+        },
+        {
+          "raw": "Stafford Beer",
+          "targetId": "v9-stafford-beer"
         }
       ],
-      "inDegree": 19,
-      "outDegree": 5
+      "inDegree": 20,
+      "outDegree": 19
     },
     {
       "id": "v5-information-theory",
@@ -121,10 +177,42 @@ window.RESEARCH_DATA = {
         {
           "raw": "machine learning",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "Measurement Theory, Metrology & Representation",
+          "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Digital Signal Processing (DSP)",
+          "targetId": "v5-digital-signal-processing-dsp"
+        },
+        {
+          "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time",
+          "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
+        },
+        {
+          "raw": "Physics of Information & the Thermodynamics of Computation",
+          "targetId": "v8-physics-of-information-and-the-thermodynamics-of-computation"
+        },
+        {
+          "raw": "Information Geometry",
+          "targetId": "v8-information-geometry"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
         }
       ],
       "inDegree": 13,
-      "outDegree": 5
+      "outDegree": 13
     },
     {
       "id": "v5-complex-systems-and-chaos-theory",
@@ -174,10 +262,122 @@ window.RESEARCH_DATA = {
         {
           "raw": "morphogenesis",
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Generative Music & Algorithmic Composition",
+          "targetId": "v5-generative-music-and-algorithmic-composition"
+        },
+        {
+          "raw": "Geometry, Topology & Spatial Computation",
+          "targetId": "v5-geometry-topology-and-spatial-computation"
+        },
+        {
+          "raw": "Biomimicry & Nature-Inspired Design",
+          "targetId": "v5-biomimicry-and-nature-inspired-design"
+        },
+        {
+          "raw": "Simulation & Physics Engines",
+          "targetId": "v5-simulation-and-physics-engines"
+        },
+        {
+          "raw": "Robotics & Embodied Intelligence",
+          "targetId": "v5-robotics-and-embodied-intelligence"
+        },
+        {
+          "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time",
+          "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
+        },
+        {
+          "raw": "Neuroscience & Neural Computation",
+          "targetId": "v5-neuroscience-and-neural-computation"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling in Economics",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "Brian Eno",
+          "targetId": "v7-brian-eno"
+        },
+        {
+          "raw": "Cell & Molecular Biology",
+          "targetId": "v7-cell-and-molecular-biology"
+        },
+        {
+          "raw": "Immunology",
+          "targetId": "v7-immunology"
+        },
+        {
+          "raw": "Synchronization & Coupled Oscillators",
+          "targetId": "v8-synchronization-and-coupled-oscillators"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
+        },
+        {
+          "raw": "Mathematical Epidemiology & Contagion Dynamics",
+          "targetId": "v8-mathematical-epidemiology-and-contagion-dynamics"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
+        },
+        {
+          "raw": "Fluid Dynamics & Turbulence",
+          "targetId": "v8-fluid-dynamics-and-turbulence"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
+        },
+        {
+          "raw": "Henri Poincaré",
+          "targetId": "v9-henri-poincare"
+        },
+        {
+          "raw": "Benoit Mandelbrot",
+          "targetId": "v9-benoit-mandelbrot"
+        },
+        {
+          "raw": "A Thousand Plateaus",
+          "targetId": "v9-a-thousand-plateaus"
         }
       ],
-      "inDegree": 34,
-      "outDegree": 6
+      "inDegree": 35,
+      "outDegree": 34
     },
     {
       "id": "v5-network-science-and-graph-theory",
@@ -219,10 +419,66 @@ window.RESEARCH_DATA = {
         {
           "raw": "sociology",
           "targetId": null
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Cartography & Data Visualization",
+          "targetId": "v5-cartography-and-data-visualization"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling in Economics",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Immunology",
+          "targetId": "v7-immunology"
+        },
+        {
+          "raw": "Synchronization & Coupled Oscillators",
+          "targetId": "v8-synchronization-and-coupled-oscillators"
+        },
+        {
+          "raw": "Mathematical Epidemiology & Contagion Dynamics",
+          "targetId": "v8-mathematical-epidemiology-and-contagion-dynamics"
+        },
+        {
+          "raw": "Topological Data Analysis",
+          "targetId": "v8-topological-data-analysis"
+        },
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
+        },
+        {
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
+        },
+        {
+          "raw": "Gilles Deleuze",
+          "targetId": "v9-gilles-deleuze"
+        },
+        {
+          "raw": "A Thousand Plateaus",
+          "targetId": "v9-a-thousand-plateaus"
         }
       ],
-      "inDegree": 15,
-      "outDegree": 2
+      "inDegree": 16,
+      "outDegree": 16
     },
     {
       "id": "v5-dynamical-systems-and-bifurcation-theory",
@@ -277,10 +533,54 @@ window.RESEARCH_DATA = {
         {
           "raw": "mathematical physics",
           "targetId": "v5-mathematical-physics-and-symmetry"
+        },
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Stochastic Processes & Random Walks",
+          "targetId": "v6-stochastic-processes-and-random-walks"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "Chronobiology & Circadian Rhythms",
+          "targetId": "v6-chronobiology-and-circadian-rhythms"
+        },
+        {
+          "raw": "Reservoir Computing & Neuromorphic Computation",
+          "targetId": "v6-reservoir-computing-and-neuromorphic-computation"
+        },
+        {
+          "raw": "Synchronization & Coupled Oscillators",
+          "targetId": "v8-synchronization-and-coupled-oscillators"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
+        },
+        {
+          "raw": "Mathematical Epidemiology & Contagion Dynamics",
+          "targetId": "v8-mathematical-epidemiology-and-contagion-dynamics"
+        },
+        {
+          "raw": "Fluid Dynamics & Turbulence",
+          "targetId": "v8-fluid-dynamics-and-turbulence"
+        },
+        {
+          "raw": "Henri Poincaré",
+          "targetId": "v9-henri-poincare"
         }
       ],
-      "inDegree": 11,
-      "outDegree": 8
+      "inDegree": 17,
+      "outDegree": 19
     },
     {
       "id": "v5-systems-thinking-and-system-dynamics",
@@ -318,10 +618,54 @@ window.RESEARCH_DATA = {
         {
           "raw": "complexity science",
           "targetId": null
+        },
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "Gregory Bateson",
+          "targetId": "v7-gregory-bateson"
+        },
+        {
+          "raw": "Thinking in Systems: A Primer",
+          "targetId": "v7-thinking-in-systems-a-primer"
+        },
+        {
+          "raw": "Seeing Like a State",
+          "targetId": "v7-seeing-like-a-state"
+        },
+        {
+          "raw": "Permaculture & Regenerative Agriculture",
+          "targetId": "v7-permaculture-and-regenerative-agriculture"
+        },
+        {
+          "raw": "Climate Science & Earth Systems",
+          "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Stafford Beer",
+          "targetId": "v9-stafford-beer"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 2
+      "inDegree": 13,
+      "outDegree": 13
     },
     {
       "id": "v5-causal-inference-and-causal-models",
@@ -376,10 +720,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "AI",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Probabilistic Programming & Graphical Models",
+          "targetId": "v6-probabilistic-programming-and-graphical-models"
+        },
+        {
+          "raw": "Prediction Markets & Epistemic Infrastructure",
+          "targetId": "v7-prediction-markets-and-epistemic-infrastructure"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 7
+      "inDegree": 8,
+      "outDegree": 9
     },
     {
       "id": "v5-category-theory-and-abstract-algebra",
@@ -424,10 +776,38 @@ window.RESEARCH_DATA = {
         {
           "raw": "mathematical physics",
           "targetId": "v5-mathematical-physics-and-symmetry"
+        },
+        {
+          "raw": "Writing Systems, Notation & Symbolic Representation",
+          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Geometry, Topology & Spatial Computation",
+          "targetId": "v5-geometry-topology-and-spatial-computation"
+        },
+        {
+          "raw": "Compiler Design & Programming Language Theory",
+          "targetId": "v5-compiler-design-and-programming-language-theory"
+        },
+        {
+          "raw": "Functional Programming & Lambda Calculus",
+          "targetId": "v6-functional-programming-and-lambda-calculus"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        },
+        {
+          "raw": "Topological Data Analysis",
+          "targetId": "v8-topological-data-analysis"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
         }
       ],
       "inDegree": 11,
-      "outDegree": 4
+      "outDegree": 11
     },
     {
       "id": "v5-cognitive-science-and-perception",
@@ -485,10 +865,118 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Philosophy of Mind & Consciousness",
+          "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
+        },
+        {
+          "raw": "Writing Systems, Notation & Symbolic Representation",
+          "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Typography & Graphic Design History",
+          "targetId": "v5-typography-and-graphic-design-history"
+        },
+        {
+          "raw": "Color Science & Theory",
+          "targetId": "v5-color-science-and-theory"
+        },
+        {
+          "raw": "Cartography & Data Visualization",
+          "targetId": "v5-cartography-and-data-visualization"
+        },
+        {
+          "raw": "Musical Acoustics & Psychoacoustics",
+          "targetId": "v5-musical-acoustics-and-psychoacoustics"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Metaphor Theory & Conceptual Blending",
+          "targetId": "v6-metaphor-theory-and-conceptual-blending"
+        },
+        {
+          "raw": "Memory, Mnemonic Systems & Externalized Knowledge",
+          "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
+        },
+        {
+          "raw": "Neuroethology",
+          "targetId": "v6-neuroethology"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "Chronobiology & Circadian Rhythms",
+          "targetId": "v6-chronobiology-and-circadian-rhythms"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Evolutionary Epistemology",
+          "targetId": "v6-evolutionary-epistemology"
+        },
+        {
+          "raw": "Marvin Minsky",
+          "targetId": "v7-marvin-minsky"
+        },
+        {
+          "raw": "Seymour Papert",
+          "targetId": "v7-seymour-papert"
+        },
+        {
+          "raw": "Perfumery & Olfactory Composition",
+          "targetId": "v7-perfumery-and-olfactory-composition"
+        },
+        {
+          "raw": "Developmental Psychology",
+          "targetId": "v7-developmental-psychology"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
+        },
+        {
+          "raw": "Spatial Cognition & Cognitive Maps",
+          "targetId": "v8-spatial-cognition-and-cognitive-maps"
+        },
+        {
+          "raw": "J.J. Gibson",
+          "targetId": "v9-j-j-gibson"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
+        },
+        {
+          "raw": "Metaphors We Live By",
+          "targetId": "v9-metaphors-we-live-by"
         }
       ],
       "inDegree": 33,
-      "outDegree": 6
+      "outDegree": 33
     },
     {
       "id": "v5-distributed-cognition-and-the-extended-mind",
@@ -543,10 +1031,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "epistemology",
           "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Memory, Mnemonic Systems & Externalized Knowledge",
+          "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
+        },
+        {
+          "raw": "Hypertext & Hypermedia",
+          "targetId": "v6-hypertext-and-hypermedia"
+        },
+        {
+          "raw": "Niche Construction Theory",
+          "targetId": "v8-niche-construction-theory"
+        },
+        {
+          "raw": "J.J. Gibson",
+          "targetId": "v9-j-j-gibson"
         }
       ],
-      "inDegree": 5,
-      "outDegree": 7
+      "inDegree": 12,
+      "outDegree": 12
     },
     {
       "id": "v5-ecological-psychology-and-affordance-theory",
@@ -601,10 +1109,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "design theory",
           "targetId": null
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Neuroethology",
+          "targetId": "v6-neuroethology"
+        },
+        {
+          "raw": "The Design of Everyday Things",
+          "targetId": "v7-the-design-of-everyday-things"
+        },
+        {
+          "raw": "J.J. Gibson",
+          "targetId": "v9-j-j-gibson"
         }
       ],
-      "inDegree": 5,
-      "outDegree": 6
+      "inDegree": 10,
+      "outDegree": 11
     },
     {
       "id": "v5-artificial-life-and-self-organization",
@@ -660,10 +1188,50 @@ window.RESEARCH_DATA = {
         {
           "raw": "morphogenesis",
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Simulation & Physics Engines",
+          "targetId": "v5-simulation-and-physics-engines"
+        },
+        {
+          "raw": "Machine Learning & Statistical Learning Theory",
+          "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        },
+        {
+          "raw": "Neuroethology",
+          "targetId": "v6-neuroethology"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling in Economics",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Reservoir Computing & Neuromorphic Computation",
+          "targetId": "v6-reservoir-computing-and-neuromorphic-computation"
+        },
+        {
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
         }
       ],
-      "inDegree": 13,
-      "outDegree": 5
+      "inDegree": 15,
+      "outDegree": 15
     },
     {
       "id": "v5-collective-intelligence-and-coordination-systems",
@@ -718,10 +1286,66 @@ window.RESEARCH_DATA = {
         {
           "raw": "decision theory",
           "targetId": "v5-decision-theory-and-rationality"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Behavioral Ecology & Sociobiology",
+          "targetId": "v6-behavioral-ecology-and-sociobiology"
+        },
+        {
+          "raw": "The Mythical Man-Month",
+          "targetId": "v7-the-mythical-man-month"
+        },
+        {
+          "raw": "Prediction Markets & Epistemic Infrastructure",
+          "targetId": "v7-prediction-markets-and-epistemic-infrastructure"
+        },
+        {
+          "raw": "Digital Commons & Platform Economics",
+          "targetId": "v7-digital-commons-and-platform-economics"
+        },
+        {
+          "raw": "Mathematical Epidemiology & Contagion Dynamics",
+          "targetId": "v8-mathematical-epidemiology-and-contagion-dynamics"
+        },
+        {
+          "raw": "Social Choice & Voting Theory",
+          "targetId": "v8-social-choice-and-voting-theory"
+        },
+        {
+          "raw": "Niche Construction Theory",
+          "targetId": "v8-niche-construction-theory"
+        },
+        {
+          "raw": "Monetary Theory & the History of Money",
+          "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Ritual as Coordination Technology",
+          "targetId": "v9-ritual-as-coordination-technology"
+        },
+        {
+          "raw": "Stafford Beer",
+          "targetId": "v9-stafford-beer"
+        },
+        {
+          "raw": "Ubuntu / African Relational Philosophy",
+          "targetId": "v9-ubuntu-and-african-relational-philosophy"
         }
       ],
-      "inDegree": 14,
-      "outDegree": 6
+      "inDegree": 20,
+      "outDegree": 20
     },
     {
       "id": "v5-semiotics-structuralism-and-the-science-of-signs",
@@ -784,10 +1408,82 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Metaphor Theory & Conceptual Blending",
+          "targetId": "v6-metaphor-theory-and-conceptual-blending"
+        },
+        {
+          "raw": "Knowledge Graphs, Ontologies & The Semantic Web",
+          "targetId": "v6-knowledge-graphs-ontologies-and-the-semantic-web"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Information Architecture",
+          "targetId": "v6-information-architecture"
+        },
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Ways of Seeing",
+          "targetId": "v7-ways-of-seeing"
+        },
+        {
+          "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
+          "targetId": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison"
+        },
+        {
+          "raw": "Psychoanalysis",
+          "targetId": "v7-psychoanalysis"
+        },
+        {
+          "raw": "Classification, Taxonomy & Knowledge Organization",
+          "targetId": "v8-classification-taxonomy-and-knowledge-organization"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Charles Sanders Peirce",
+          "targetId": "v9-charles-sanders-peirce"
+        },
+        {
+          "raw": "Ferdinand de Saussure",
+          "targetId": "v9-ferdinand-de-saussure"
+        },
+        {
+          "raw": "Jean Baudrillard",
+          "targetId": "v9-jean-baudrillard"
+        },
+        {
+          "raw": "Claude Lévi-Strauss",
+          "targetId": "v9-claude-levi-strauss"
+        },
+        {
+          "raw": "Metaphors We Live By",
+          "targetId": "v9-metaphors-we-live-by"
         }
       ],
       "inDegree": 24,
-      "outDegree": 7
+      "outDegree": 25
     },
     {
       "id": "v5-philosophy-of-mathematics",
@@ -830,10 +1526,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "history of science",
           "targetId": null
+        },
+        {
+          "raw": "Type Theory & Homotopy Type Theory",
+          "targetId": "v6-type-theory-and-homotopy-type-theory"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        },
+        {
+          "raw": "Jorge Luis Borges",
+          "targetId": "v7-jorge-luis-borges"
+        },
+        {
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "Henri Poincaré",
+          "targetId": "v9-henri-poincare"
         }
       ],
-      "inDegree": 7,
-      "outDegree": 3
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v5-phenomenology-and-embodied-experience",
@@ -878,10 +1594,58 @@ window.RESEARCH_DATA = {
         {
           "raw": "aesthetics",
           "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Photography & Optics",
+          "targetId": "v5-photography-and-optics"
+        },
+        {
+          "raw": "Musical Acoustics & Psychoacoustics",
+          "targetId": "v5-musical-acoustics-and-psychoacoustics"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "Andrei Tarkovsky",
+          "targetId": "v7-andrei-tarkovsky"
+        },
+        {
+          "raw": "Tadao Ando",
+          "targetId": "v7-tadao-ando"
+        },
+        {
+          "raw": "Louis Kahn",
+          "targetId": "v7-louis-kahn"
+        },
+        {
+          "raw": "Zen and the Art of Motorcycle Maintenance",
+          "targetId": "v7-zen-and-the-art-of-motorcycle-maintenance"
+        },
+        {
+          "raw": "Existentialism",
+          "targetId": "v7-existentialism"
+        },
+        {
+          "raw": "Brain-Computer Interfaces & Spatial Computing",
+          "targetId": "v7-brain-computer-interfaces-and-spatial-computing"
+        },
+        {
+          "raw": "Metaphors We Live By",
+          "targetId": "v9-metaphors-we-live-by"
         }
       ],
       "inDegree": 17,
-      "outDegree": 5
+      "outDegree": 17
     },
     {
       "id": "v5-philosophy-of-mind-and-consciousness",
@@ -927,10 +1691,66 @@ window.RESEARCH_DATA = {
         {
           "raw": "neuroscience",
           "targetId": "v5-neuroscience-and-neural-computation"
+        },
+        {
+          "raw": "Artificial Life & Self-Organization",
+          "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Marvin Minsky",
+          "targetId": "v7-marvin-minsky"
+        },
+        {
+          "raw": "Gödel, Escher, Bach: An Eternal Golden Braid",
+          "targetId": "v7-g-del-escher-bach-an-eternal-golden-braid"
+        },
+        {
+          "raw": "Finite and Infinite Games",
+          "targetId": "v7-finite-and-infinite-games"
+        },
+        {
+          "raw": "Quantum Mechanics (as physics)",
+          "targetId": "v7-quantum-mechanics-as-physics"
+        },
+        {
+          "raw": "Ethics (Consequentialism / Deontology / Virtue)",
+          "targetId": "v7-ethics-consequentialism-deontology-virtue"
+        },
+        {
+          "raw": "Existentialism",
+          "targetId": "v7-existentialism"
+        },
+        {
+          "raw": "Psychoanalysis",
+          "targetId": "v7-psychoanalysis"
+        },
+        {
+          "raw": "AI Alignment & Safety",
+          "targetId": "v7-ai-alignment-and-safety"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
         }
       ],
-      "inDegree": 16,
-      "outDegree": 6
+      "inDegree": 20,
+      "outDegree": 20
     },
     {
       "id": "v5-eastern-philosophy",
@@ -976,10 +1796,86 @@ window.RESEARCH_DATA = {
         {
           "raw": "aesthetics",
           "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Philosophy of Mind & Consciousness",
+          "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "John Cage",
+          "targetId": "v7-john-cage"
+        },
+        {
+          "raw": "Andrei Tarkovsky",
+          "targetId": "v7-andrei-tarkovsky"
+        },
+        {
+          "raw": "Jorge Luis Borges",
+          "targetId": "v7-jorge-luis-borges"
+        },
+        {
+          "raw": "Zen and the Art of Motorcycle Maintenance",
+          "targetId": "v7-zen-and-the-art-of-motorcycle-maintenance"
+        },
+        {
+          "raw": "Finite and Infinite Games",
+          "targetId": "v7-finite-and-infinite-games"
+        },
+        {
+          "raw": "Bonsai & Japanese Gardening (Karesansui)",
+          "targetId": "v7-bonsai-and-japanese-gardening-karesansui"
+        },
+        {
+          "raw": "Existentialism",
+          "targetId": "v7-existentialism"
+        },
+        {
+          "raw": "Japanese Aesthetics",
+          "targetId": "v7-japanese-aesthetics"
+        },
+        {
+          "raw": "Ritual as Coordination Technology",
+          "targetId": "v9-ritual-as-coordination-technology"
+        },
+        {
+          "raw": "Joseph Needham",
+          "targetId": "v9-joseph-needham"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
+        },
+        {
+          "raw": "Ubuntu / African Relational Philosophy",
+          "targetId": "v9-ubuntu-and-african-relational-philosophy"
+        },
+        {
+          "raw": "Navya-Nyāya",
+          "targetId": "v9-navya-nyaya"
+        },
+        {
+          "raw": "The Glass Bead Game",
+          "targetId": "v9-the-glass-bead-game"
         }
       ],
-      "inDegree": 21,
-      "outDegree": 5
+      "inDegree": 24,
+      "outDegree": 24
     },
     {
       "id": "v5-epistemology-and-philosophy-of-knowledge",
@@ -1025,10 +1921,50 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Causal Inference & Causal Models",
+          "targetId": "v5-causal-inference-and-causal-models"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Philosophy of Mathematics",
+          "targetId": "v5-philosophy-of-mathematics"
+        },
+        {
+          "raw": "Measurement Theory, Metrology & Representation",
+          "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Evolutionary Epistemology",
+          "targetId": "v6-evolutionary-epistemology"
+        },
+        {
+          "raw": "Classification, Taxonomy & Knowledge Organization",
+          "targetId": "v8-classification-taxonomy-and-knowledge-organization"
+        },
+        {
+          "raw": "Charles Sanders Peirce",
+          "targetId": "v9-charles-sanders-peirce"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "Navya-Nyāya",
+          "targetId": "v9-navya-nyaya"
         }
       ],
-      "inDegree": 13,
-      "outDegree": 6
+      "inDegree": 16,
+      "outDegree": 16
     },
     {
       "id": "v5-history-and-philosophy-of-science",
@@ -1070,10 +2006,50 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Causal Inference & Causal Models",
+          "targetId": "v5-causal-inference-and-causal-models"
+        },
+        {
+          "raw": "Measurement Theory, Metrology & Representation",
+          "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        },
+        {
+          "raw": "Evolutionary Epistemology",
+          "targetId": "v6-evolutionary-epistemology"
+        },
+        {
+          "raw": "Paleontology & Deep Time",
+          "targetId": "v7-paleontology-and-deep-time"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "Joseph Needham",
+          "targetId": "v9-joseph-needham"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 4
+      "inDegree": 14,
+      "outDegree": 14
     },
     {
       "id": "v5-anthropology-cultural-evolution-and-technology-studies",
@@ -1125,10 +2101,94 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Linguistics & Natural Language Structure",
+          "targetId": "v5-linguistics-and-natural-language-structure"
+        },
+        {
+          "raw": "Rhetoric, Narrative Theory & Story Systems",
+          "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
+        },
+        {
+          "raw": "Behavioral Ecology & Sociobiology",
+          "targetId": "v6-behavioral-ecology-and-sociobiology"
+        },
+        {
+          "raw": "Cliodynamics & Mathematical History",
+          "targetId": "v6-cliodynamics-and-mathematical-history"
+        },
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Gregory Bateson",
+          "targetId": "v7-gregory-bateson"
+        },
+        {
+          "raw": "Ursula K. Le Guin",
+          "targetId": "v7-ursula-k-le-guin"
+        },
+        {
+          "raw": "Seeing Like a State",
+          "targetId": "v7-seeing-like-a-state"
+        },
+        {
+          "raw": "Political Philosophy",
+          "targetId": "v7-political-philosophy"
+        },
+        {
+          "raw": "Digital Commons & Platform Economics",
+          "targetId": "v7-digital-commons-and-platform-economics"
+        },
+        {
+          "raw": "Monetary Theory & the History of Money",
+          "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Ritual as Coordination Technology",
+          "targetId": "v9-ritual-as-coordination-technology"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "Claude Lévi-Strauss",
+          "targetId": "v9-claude-levi-strauss"
+        },
+        {
+          "raw": "Joseph Needham",
+          "targetId": "v9-joseph-needham"
         }
       ],
-      "inDegree": 24,
-      "outDegree": 6
+      "inDegree": 27,
+      "outDegree": 27
     },
     {
       "id": "v5-aesthetics-and-philosophy-of-art",
@@ -1188,10 +2248,46 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
+        },
+        {
+          "raw": "Comparative Mythology & Depth Psychology",
+          "targetId": "v6-comparative-mythology-and-depth-psychology"
+        },
+        {
+          "raw": "Ways of Seeing",
+          "targetId": "v7-ways-of-seeing"
+        },
+        {
+          "raw": "Perfumery & Olfactory Composition",
+          "targetId": "v7-perfumery-and-olfactory-composition"
+        },
+        {
+          "raw": "Japanese Aesthetics",
+          "targetId": "v7-japanese-aesthetics"
+        },
+        {
+          "raw": "Jean Baudrillard",
+          "targetId": "v9-jean-baudrillard"
+        },
+        {
+          "raw": "Gilles Deleuze",
+          "targetId": "v9-gilles-deleuze"
+        },
+        {
+          "raw": "The Glass Bead Game",
+          "targetId": "v9-the-glass-bead-game"
         }
       ],
-      "inDegree": 13,
-      "outDegree": 7
+      "inDegree": 16,
+      "outDegree": 16
     },
     {
       "id": "v5-media-theory-and-philosophy-of-technology",
@@ -1250,10 +2346,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Ways of Seeing",
+          "targetId": "v7-ways-of-seeing"
+        },
+        {
+          "raw": "Actor-Network Theory & STS",
+          "targetId": "v9-actor-network-theory-and-sts"
+        },
+        {
+          "raw": "Jean Baudrillard",
+          "targetId": "v9-jean-baudrillard"
+        },
+        {
+          "raw": "Marshall McLuhan",
+          "targetId": "v9-marshall-mcluhan"
         }
       ],
-      "inDegree": 8,
-      "outDegree": 9
+      "inDegree": 15,
+      "outDegree": 14
     },
     {
       "id": "v5-linguistics-and-natural-language-structure",
@@ -1304,10 +2420,38 @@ window.RESEARCH_DATA = {
         {
           "raw": "writing systems/notation",
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Metaphor Theory & Conceptual Blending",
+          "targetId": "v6-metaphor-theory-and-conceptual-blending"
+        },
+        {
+          "raw": "Knowledge Graphs, Ontologies & The Semantic Web",
+          "targetId": "v6-knowledge-graphs-ontologies-and-the-semantic-web"
+        },
+        {
+          "raw": "Ferdinand de Saussure",
+          "targetId": "v9-ferdinand-de-saussure"
+        },
+        {
+          "raw": "Claude Lévi-Strauss",
+          "targetId": "v9-claude-levi-strauss"
+        },
+        {
+          "raw": "Pāṇini & Generative Grammar",
+          "targetId": "v9-panini-and-generative-grammar"
+        },
+        {
+          "raw": "Navya-Nyāya",
+          "targetId": "v9-navya-nyaya"
+        },
+        {
+          "raw": "Metaphors We Live By",
+          "targetId": "v9-metaphors-we-live-by"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 6
+      "inDegree": 14,
+      "outDegree": 13
     },
     {
       "id": "v5-logic-formal-semantics-and-model-theory",
@@ -1353,10 +2497,62 @@ window.RESEARCH_DATA = {
         {
           "raw": "machine learning",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "Compiler Design & Programming Language Theory",
+          "targetId": "v5-compiler-design-and-programming-language-theory"
+        },
+        {
+          "raw": "Probabilistic Programming & Graphical Models",
+          "targetId": "v6-probabilistic-programming-and-graphical-models"
+        },
+        {
+          "raw": "Concurrency Theory",
+          "targetId": "v6-concurrency-theory"
+        },
+        {
+          "raw": "Computational Complexity & Intractability",
+          "targetId": "v8-computational-complexity-and-intractability"
+        },
+        {
+          "raw": "Social Choice & Voting Theory",
+          "targetId": "v8-social-choice-and-voting-theory"
+        },
+        {
+          "raw": "Law, Jurisprudence & Computational Law",
+          "targetId": "v8-law-jurisprudence-and-computational-law"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
+        },
+        {
+          "raw": "Charles Sanders Peirce",
+          "targetId": "v9-charles-sanders-peirce"
+        },
+        {
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "Pāṇini & Generative Grammar",
+          "targetId": "v9-panini-and-generative-grammar"
+        },
+        {
+          "raw": "Navya-Nyāya",
+          "targetId": "v9-navya-nyaya"
         }
       ],
-      "inDegree": 16,
-      "outDegree": 5
+      "inDegree": 17,
+      "outDegree": 18
     },
     {
       "id": "v5-rhetoric-narrative-theory-and-story-systems",
@@ -1403,10 +2599,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "anthropology",
           "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Pragmatism",
+          "targetId": "v6-pragmatism"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 4
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v5-writing-systems-notation-and-symbolic-representation",
@@ -1457,10 +2661,58 @@ window.RESEARCH_DATA = {
         {
           "raw": "category theory",
           "targetId": "v5-category-theory-and-abstract-algebra"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Knowledge Graphs, Ontologies & The Semantic Web",
+          "targetId": "v6-knowledge-graphs-ontologies-and-the-semantic-web"
+        },
+        {
+          "raw": "Hypertext & Hypermedia",
+          "targetId": "v6-hypertext-and-hypermedia"
+        },
+        {
+          "raw": "Information Architecture",
+          "targetId": "v6-information-architecture"
+        },
+        {
+          "raw": "Bret Victor",
+          "targetId": "v7-bret-victor"
+        },
+        {
+          "raw": "Jorge Luis Borges",
+          "targetId": "v7-jorge-luis-borges"
+        },
+        {
+          "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
+          "targetId": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison"
+        },
+        {
+          "raw": "Classification, Taxonomy & Knowledge Organization",
+          "targetId": "v8-classification-taxonomy-and-knowledge-organization"
+        },
+        {
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "Pāṇini & Generative Grammar",
+          "targetId": "v9-panini-and-generative-grammar"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
         }
       ],
-      "inDegree": 15,
-      "outDegree": 5
+      "inDegree": 17,
+      "outDegree": 17
     },
     {
       "id": "v5-history-of-computing-and-the-personal-computer-revolution",
@@ -1518,10 +2770,26 @@ window.RESEARCH_DATA = {
         {
           "raw": "design",
           "targetId": null
+        },
+        {
+          "raw": "Memory, Mnemonic Systems & Externalized Knowledge",
+          "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
+        },
+        {
+          "raw": "Hypertext & Hypermedia",
+          "targetId": "v6-hypertext-and-hypermedia"
+        },
+        {
+          "raw": "Alan Kay",
+          "targetId": "v7-alan-kay"
+        },
+        {
+          "raw": "Marshall McLuhan",
+          "targetId": "v9-marshall-mcluhan"
         }
       ],
-      "inDegree": 6,
-      "outDegree": 5
+      "inDegree": 8,
+      "outDegree": 9
     },
     {
       "id": "v5-generative-music-and-algorithmic-composition",
@@ -1567,10 +2835,38 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Musical Acoustics & Psychoacoustics",
+          "targetId": "v5-musical-acoustics-and-psychoacoustics"
+        },
+        {
+          "raw": "Stochastic Processes & Random Walks",
+          "targetId": "v6-stochastic-processes-and-random-walks"
+        },
+        {
+          "raw": "Brian Eno",
+          "targetId": "v7-brian-eno"
+        },
+        {
+          "raw": "Iannis Xenakis",
+          "targetId": "v7-iannis-xenakis"
+        },
+        {
+          "raw": "John Cage",
+          "targetId": "v7-john-cage"
+        },
+        {
+          "raw": "The Glass Bead Game",
+          "targetId": "v9-the-glass-bead-game"
         }
       ],
-      "inDegree": 7,
-      "outDegree": 3
+      "inDegree": 10,
+      "outDegree": 10
     },
     {
       "id": "v5-typography-and-graphic-design-history",
@@ -1617,10 +2913,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "writing systems/notation",
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Islamic Geometric Patterns & Ornament",
+          "targetId": "v6-islamic-geometric-patterns-and-ornament"
+        },
+        {
+          "raw": "Donald Knuth",
+          "targetId": "v7-donald-knuth"
+        },
+        {
+          "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
+          "targetId": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison"
+        },
+        {
+          "raw": "Marshall McLuhan",
+          "targetId": "v9-marshall-mcluhan"
+        },
+        {
+          "raw": "Edward Tufte",
+          "targetId": "v9-edward-tufte"
         }
       ],
-      "inDegree": 8,
-      "outDegree": 4
+      "inDegree": 9,
+      "outDegree": 9
     },
     {
       "id": "v5-photography-and-optics",
@@ -1659,10 +2975,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "computer graphics",
           "targetId": "v5-computer-graphics-and-computational-imaging"
+        },
+        {
+          "raw": "Color Science & Theory",
+          "targetId": "v5-color-science-and-theory"
+        },
+        {
+          "raw": "Andrei Tarkovsky",
+          "targetId": "v7-andrei-tarkovsky"
+        },
+        {
+          "raw": "Ways of Seeing",
+          "targetId": "v7-ways-of-seeing"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 2
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v5-color-science-and-theory",
@@ -1705,10 +3033,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "art history",
           "targetId": null
+        },
+        {
+          "raw": "Edward Tufte",
+          "targetId": "v9-edward-tufte"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 2
+      "inDegree": 3,
+      "outDegree": 3
     },
     {
       "id": "v5-cartography-and-data-visualization",
@@ -1751,10 +3083,34 @@ window.RESEARCH_DATA = {
         {
           "raw": "graphic design",
           "targetId": null
+        },
+        {
+          "raw": "Measurement Theory, Metrology & Representation",
+          "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Information Architecture",
+          "targetId": "v6-information-architecture"
+        },
+        {
+          "raw": "Sailing & Navigation",
+          "targetId": "v7-sailing-and-navigation"
+        },
+        {
+          "raw": "Topological Data Analysis",
+          "targetId": "v8-topological-data-analysis"
+        },
+        {
+          "raw": "Spatial Cognition & Cognitive Maps",
+          "targetId": "v8-spatial-cognition-and-cognitive-maps"
+        },
+        {
+          "raw": "Edward Tufte",
+          "targetId": "v9-edward-tufte"
         }
       ],
-      "inDegree": 6,
-      "outDegree": 2
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v5-human-computer-interaction-and-interface-design",
@@ -1800,10 +3156,86 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "History of Computing & The Personal Computer Revolution",
+          "targetId": "v5-history-of-computing-and-the-personal-computer-revolution"
+        },
+        {
+          "raw": "Computer Graphics & Computational Imaging",
+          "targetId": "v5-computer-graphics-and-computational-imaging"
+        },
+        {
+          "raw": "Pattern Languages, Design Methods & Morphological Analysis",
+          "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
+        },
+        {
+          "raw": "Memory, Mnemonic Systems & Externalized Knowledge",
+          "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
+        },
+        {
+          "raw": "Hypertext & Hypermedia",
+          "targetId": "v6-hypertext-and-hypermedia"
+        },
+        {
+          "raw": "Information Architecture",
+          "targetId": "v6-information-architecture"
+        },
+        {
+          "raw": "Attention Studies & The Attention Economy",
+          "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Alan Kay",
+          "targetId": "v7-alan-kay"
+        },
+        {
+          "raw": "Bret Victor",
+          "targetId": "v7-bret-victor"
+        },
+        {
+          "raw": "Dieter Rams",
+          "targetId": "v7-dieter-rams"
+        },
+        {
+          "raw": "The Sciences of the Artificial",
+          "targetId": "v7-the-sciences-of-the-artificial"
+        },
+        {
+          "raw": "The Design of Everyday Things",
+          "targetId": "v7-the-design-of-everyday-things"
+        },
+        {
+          "raw": "Brain-Computer Interfaces & Spatial Computing",
+          "targetId": "v7-brain-computer-interfaces-and-spatial-computing"
+        },
+        {
+          "raw": "Spatial Cognition & Cognitive Maps",
+          "targetId": "v8-spatial-cognition-and-cognitive-maps"
+        },
+        {
+          "raw": "J.J. Gibson",
+          "targetId": "v9-j-j-gibson"
+        },
+        {
+          "raw": "Edward Tufte",
+          "targetId": "v9-edward-tufte"
         }
       ],
-      "inDegree": 23,
-      "outDegree": 5
+      "inDegree": 24,
+      "outDegree": 24
     },
     {
       "id": "v5-game-design-ludology-and-interactive-systems",
@@ -1858,10 +3290,34 @@ window.RESEARCH_DATA = {
         {
           "raw": "cognitive science",
           "targetId": "v5-cognitive-science-and-perception"
+        },
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Anthropology, Cultural Evolution & Technology Studies",
+          "targetId": "v5-anthropology-cultural-evolution-and-technology-studies"
+        },
+        {
+          "raw": "Aesthetics & Philosophy of Art",
+          "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Generative Music & Algorithmic Composition",
+          "targetId": "v5-generative-music-and-algorithmic-composition"
+        },
+        {
+          "raw": "Computer Graphics & Computational Imaging",
+          "targetId": "v5-computer-graphics-and-computational-imaging"
+        },
+        {
+          "raw": "Pattern Languages, Design Methods & Morphological Analysis",
+          "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 7
+      "inDegree": 13,
+      "outDegree": 13
     },
     {
       "id": "v5-computer-graphics-and-computational-imaging",
@@ -1916,10 +3372,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "machine learning",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Linear Algebra",
+          "targetId": "v7-linear-algebra"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v5-pattern-languages-design-methods-and-morphological-analysis",
@@ -1974,10 +3434,42 @@ window.RESEARCH_DATA = {
         {
           "raw": "organizational design",
           "targetId": null
+        },
+        {
+          "raw": "Metaphor Theory & Conceptual Blending",
+          "targetId": "v6-metaphor-theory-and-conceptual-blending"
+        },
+        {
+          "raw": "Urban Planning & Urbanism",
+          "targetId": "v6-urban-planning-and-urbanism"
+        },
+        {
+          "raw": "Islamic Geometric Patterns & Ornament",
+          "targetId": "v6-islamic-geometric-patterns-and-ornament"
+        },
+        {
+          "raw": "Dieter Rams",
+          "targetId": "v7-dieter-rams"
+        },
+        {
+          "raw": "Frank Lloyd Wright",
+          "targetId": "v7-frank-lloyd-wright"
+        },
+        {
+          "raw": "The Sciences of the Artificial",
+          "targetId": "v7-the-sciences-of-the-artificial"
+        },
+        {
+          "raw": "How Buildings Learn",
+          "targetId": "v7-how-buildings-learn"
+        },
+        {
+          "raw": "The Design of Everyday Things",
+          "targetId": "v7-the-design-of-everyday-things"
         }
       ],
-      "inDegree": 8,
-      "outDegree": 3
+      "inDegree": 11,
+      "outDegree": 11
     },
     {
       "id": "v5-geometry-topology-and-spatial-computation",
@@ -2028,10 +3520,34 @@ window.RESEARCH_DATA = {
         {
           "raw": "morphogenesis",
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Materials Science, Metamaterials & Programmable Matter",
+          "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
+        },
+        {
+          "raw": "History of Mathematics",
+          "targetId": "v6-history-of-mathematics"
+        },
+        {
+          "raw": "Optimal Transport",
+          "targetId": "v8-optimal-transport"
+        },
+        {
+          "raw": "Information Geometry",
+          "targetId": "v8-information-geometry"
+        },
+        {
+          "raw": "Topological Data Analysis",
+          "targetId": "v8-topological-data-analysis"
+        },
+        {
+          "raw": "Henri Poincaré",
+          "targetId": "v9-henri-poincare"
         }
       ],
-      "inDegree": 9,
-      "outDegree": 5
+      "inDegree": 11,
+      "outDegree": 11
     },
     {
       "id": "v5-biomimicry-and-nature-inspired-design",
@@ -2076,10 +3592,50 @@ window.RESEARCH_DATA = {
         {
           "raw": "morphogenesis",
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Eastern Philosophy",
+          "targetId": "v5-eastern-philosophy"
+        },
+        {
+          "raw": "Pattern Languages, Design Methods & Morphological Analysis",
+          "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Origami & Computational Folding",
+          "targetId": "v6-origami-and-computational-folding"
+        },
+        {
+          "raw": "On Growth and Form",
+          "targetId": "v7-on-growth-and-form"
+        },
+        {
+          "raw": "Permaculture & Regenerative Agriculture",
+          "targetId": "v7-permaculture-and-regenerative-agriculture"
+        },
+        {
+          "raw": "Fluid Dynamics & Turbulence",
+          "targetId": "v8-fluid-dynamics-and-turbulence"
+        },
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 4
+      "inDegree": 14,
+      "outDegree": 14
     },
     {
       "id": "v5-morphogenesis-and-biological-pattern-formation",
@@ -2134,10 +3690,46 @@ window.RESEARCH_DATA = {
         {
           "raw": "mathematical physics",
           "targetId": "v5-mathematical-physics-and-symmetry"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time",
+          "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Fractal Geometry & Self-Similarity",
+          "targetId": "v6-fractal-geometry-and-self-similarity"
+        },
+        {
+          "raw": "Process Philosophy",
+          "targetId": "v6-process-philosophy"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        },
+        {
+          "raw": "On Growth and Form",
+          "targetId": "v7-on-growth-and-form"
+        },
+        {
+          "raw": "Cell & Molecular Biology",
+          "targetId": "v7-cell-and-molecular-biology"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
         }
       ],
-      "inDegree": 13,
-      "outDegree": 5
+      "inDegree": 14,
+      "outDegree": 14
     },
     {
       "id": "v5-simulation-and-physics-engines",
@@ -2183,10 +3775,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "artificial life",
           "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Computer Graphics & Computational Imaging",
+          "targetId": "v5-computer-graphics-and-computational-imaging"
+        },
+        {
+          "raw": "Fluid Dynamics & Turbulence",
+          "targetId": "v8-fluid-dynamics-and-turbulence"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 4
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v5-musical-acoustics-and-psychoacoustics",
@@ -2229,10 +3829,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "architecture (acoustic space)",
           "targetId": null
+        },
+        {
+          "raw": "Horology & Mechanical Watchmaking",
+          "targetId": "v7-horology-and-mechanical-watchmaking"
+        },
+        {
+          "raw": "Synchronization & Coupled Oscillators",
+          "targetId": "v8-synchronization-and-coupled-oscillators"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 3
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v5-decision-theory-and-rationality",
@@ -2283,10 +3891,50 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Causal Inference & Causal Models",
+          "targetId": "v5-causal-inference-and-causal-models"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "The Sciences of the Artificial",
+          "targetId": "v7-the-sciences-of-the-artificial"
+        },
+        {
+          "raw": "Sailing & Navigation",
+          "targetId": "v7-sailing-and-navigation"
+        },
+        {
+          "raw": "AI Alignment & Safety",
+          "targetId": "v7-ai-alignment-and-safety"
+        },
+        {
+          "raw": "Prediction Markets & Epistemic Infrastructure",
+          "targetId": "v7-prediction-markets-and-epistemic-infrastructure"
+        },
+        {
+          "raw": "Computational Complexity & Intractability",
+          "targetId": "v8-computational-complexity-and-intractability"
+        },
+        {
+          "raw": "Social Choice & Voting Theory",
+          "targetId": "v8-social-choice-and-voting-theory"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
         }
       ],
-      "inDegree": 14,
-      "outDegree": 6
+      "inDegree": 15,
+      "outDegree": 16
     },
     {
       "id": "v5-game-theory-and-mechanism-design",
@@ -2333,10 +3981,58 @@ window.RESEARCH_DATA = {
         {
           "raw": "game design",
           "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Complex Systems & Chaos Theory",
+          "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Operations Research & Optimization",
+          "targetId": "v5-operations-research-and-optimization"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "Behavioral Ecology & Sociobiology",
+          "targetId": "v6-behavioral-ecology-and-sociobiology"
+        },
+        {
+          "raw": "Complexity Economics & Agent-Based Modeling in Economics",
+          "targetId": "v6-complexity-economics-and-agent-based-modeling-in-economics"
+        },
+        {
+          "raw": "Finite and Infinite Games",
+          "targetId": "v7-finite-and-infinite-games"
+        },
+        {
+          "raw": "Prediction Markets & Epistemic Infrastructure",
+          "targetId": "v7-prediction-markets-and-epistemic-infrastructure"
+        },
+        {
+          "raw": "Social Choice & Voting Theory",
+          "targetId": "v8-social-choice-and-voting-theory"
+        },
+        {
+          "raw": "Law, Jurisprudence & Computational Law",
+          "targetId": "v8-law-jurisprudence-and-computational-law"
+        },
+        {
+          "raw": "Monetary Theory & the History of Money",
+          "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Ritual as Coordination Technology",
+          "targetId": "v9-ritual-as-coordination-technology"
         }
       ],
       "inDegree": 15,
-      "outDegree": 3
+      "outDegree": 15
     },
     {
       "id": "v5-measurement-theory-metrology-and-representation",
@@ -2391,10 +4087,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "machine learning",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Classification, Taxonomy & Knowledge Organization",
+          "targetId": "v8-classification-taxonomy-and-knowledge-organization"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v5-operations-research-and-optimization",
@@ -2440,10 +4140,38 @@ window.RESEARCH_DATA = {
         {
           "raw": "machine learning",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Network Science & Graph Theory",
+          "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "Systems Thinking & System Dynamics",
+          "targetId": "v5-systems-thinking-and-system-dynamics"
+        },
+        {
+          "raw": "Decision Theory & Rationality",
+          "targetId": "v5-decision-theory-and-rationality"
+        },
+        {
+          "raw": "Computational Complexity & Intractability",
+          "targetId": "v8-computational-complexity-and-intractability"
+        },
+        {
+          "raw": "Optimal Transport",
+          "targetId": "v8-optimal-transport"
+        },
+        {
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
+        },
+        {
+          "raw": "Stafford Beer",
+          "targetId": "v9-stafford-beer"
         }
       ],
-      "inDegree": 7,
-      "outDegree": 4
+      "inDegree": 10,
+      "outDegree": 11
     },
     {
       "id": "v5-digital-signal-processing-dsp",
@@ -2487,7 +4215,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -2527,10 +4255,42 @@ window.RESEARCH_DATA = {
         {
           "raw": "software engineering",
           "targetId": null
+        },
+        {
+          "raw": "Type Theory & Homotopy Type Theory",
+          "targetId": "v6-type-theory-and-homotopy-type-theory"
+        },
+        {
+          "raw": "Functional Programming & Lambda Calculus",
+          "targetId": "v6-functional-programming-and-lambda-calculus"
+        },
+        {
+          "raw": "Formal Verification & Model Checking",
+          "targetId": "v6-formal-verification-and-model-checking"
+        },
+        {
+          "raw": "Donald Knuth",
+          "targetId": "v7-donald-knuth"
+        },
+        {
+          "raw": "Structure and Interpretation of Computer Programs (SICP)",
+          "targetId": "v7-structure-and-interpretation-of-computer-programs-sicp"
+        },
+        {
+          "raw": "Domain-Driven Design",
+          "targetId": "v7-domain-driven-design"
+        },
+        {
+          "raw": "Computational Complexity & Intractability",
+          "targetId": "v8-computational-complexity-and-intractability"
+        },
+        {
+          "raw": "Pāṇini & Generative Grammar",
+          "targetId": "v9-panini-and-generative-grammar"
         }
       ],
-      "inDegree": 8,
-      "outDegree": 2
+      "inDegree": 10,
+      "outDegree": 10
     },
     {
       "id": "v5-quantum-computing-and-quantum-information",
@@ -2576,10 +4336,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "mathematical physics",
           "targetId": "v5-mathematical-physics-and-symmetry"
+        },
+        {
+          "raw": "Linear Algebra",
+          "targetId": "v7-linear-algebra"
+        },
+        {
+          "raw": "Quantum Mechanics (as physics)",
+          "targetId": "v7-quantum-mechanics-as-physics"
+        },
+        {
+          "raw": "Computational Complexity & Intractability",
+          "targetId": "v8-computational-complexity-and-intractability"
+        },
+        {
+          "raw": "Physics of Information & the Thermodynamics of Computation",
+          "targetId": "v8-physics-of-information-and-the-thermodynamics-of-computation"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
         }
       ],
       "inDegree": 7,
-      "outDegree": 2
+      "outDegree": 7
     },
     {
       "id": "v5-robotics-and-embodied-intelligence",
@@ -2622,10 +4402,50 @@ window.RESEARCH_DATA = {
         {
           "raw": "materials science",
           "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Ecological Psychology & Affordance Theory",
+          "targetId": "v5-ecological-psychology-and-affordance-theory"
+        },
+        {
+          "raw": "Artificial Life & Self-Organization",
+          "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Philosophy of Mind & Consciousness",
+          "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Biomimicry & Nature-Inspired Design",
+          "targetId": "v5-biomimicry-and-nature-inspired-design"
+        },
+        {
+          "raw": "Simulation & Physics Engines",
+          "targetId": "v5-simulation-and-physics-engines"
+        },
+        {
+          "raw": "Enactivism & Enactive Cognition",
+          "targetId": "v6-enactivism-and-enactive-cognition"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "Neuroethology",
+          "targetId": "v6-neuroethology"
+        },
+        {
+          "raw": "Brain-Computer Interfaces & Spatial Computing",
+          "targetId": "v7-brain-computer-interfaces-and-spatial-computing"
         }
       ],
-      "inDegree": 12,
-      "outDegree": 4
+      "inDegree": 15,
+      "outDegree": 14
     },
     {
       "id": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
@@ -2675,10 +4495,46 @@ window.RESEARCH_DATA = {
         {
           "raw": "mathematical physics",
           "targetId": "v5-mathematical-physics-and-symmetry"
+        },
+        {
+          "raw": "Ecology & Ecosystem Dynamics",
+          "targetId": "v6-ecology-and-ecosystem-dynamics"
+        },
+        {
+          "raw": "Astrobiology & Origin of Life",
+          "targetId": "v6-astrobiology-and-origin-of-life"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "Cosmology & Astrophysics",
+          "targetId": "v7-cosmology-and-astrophysics"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
+        },
+        {
+          "raw": "Physics of Information & the Thermodynamics of Computation",
+          "targetId": "v8-physics-of-information-and-the-thermodynamics-of-computation"
+        },
+        {
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
+        },
+        {
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
         }
       ],
-      "inDegree": 10,
-      "outDegree": 4
+      "inDegree": 13,
+      "outDegree": 13
     },
     {
       "id": "v5-machine-learning-and-statistical-learning-theory",
@@ -2733,10 +4589,138 @@ window.RESEARCH_DATA = {
         {
           "raw": "artificial life",
           "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Cybernetics & Control Theory",
+          "targetId": "v5-cybernetics-and-control-theory"
+        },
+        {
+          "raw": "Causal Inference & Causal Models",
+          "targetId": "v5-causal-inference-and-causal-models"
+        },
+        {
+          "raw": "Distributed Cognition & The Extended Mind",
+          "targetId": "v5-distributed-cognition-and-the-extended-mind"
+        },
+        {
+          "raw": "Collective Intelligence & Coordination Systems",
+          "targetId": "v5-collective-intelligence-and-coordination-systems"
+        },
+        {
+          "raw": "Philosophy of Mind & Consciousness",
+          "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Epistemology & Philosophy of Knowledge",
+          "targetId": "v5-epistemology-and-philosophy-of-knowledge"
+        },
+        {
+          "raw": "Media Theory & Philosophy of Technology",
+          "targetId": "v5-media-theory-and-philosophy-of-technology"
+        },
+        {
+          "raw": "Logic, Formal Semantics & Model Theory",
+          "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Rhetoric, Narrative Theory & Story Systems",
+          "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
+        },
+        {
+          "raw": "History of Computing & The Personal Computer Revolution",
+          "targetId": "v5-history-of-computing-and-the-personal-computer-revolution"
+        },
+        {
+          "raw": "Generative Music & Algorithmic Composition",
+          "targetId": "v5-generative-music-and-algorithmic-composition"
+        },
+        {
+          "raw": "Human-Computer Interaction & Interface Design",
+          "targetId": "v5-human-computer-interaction-and-interface-design"
+        },
+        {
+          "raw": "Game Design, Ludology & Interactive Systems",
+          "targetId": "v5-game-design-ludology-and-interactive-systems"
+        },
+        {
+          "raw": "Computer Graphics & Computational Imaging",
+          "targetId": "v5-computer-graphics-and-computational-imaging"
+        },
+        {
+          "raw": "Measurement Theory, Metrology & Representation",
+          "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Operations Research & Optimization",
+          "targetId": "v5-operations-research-and-optimization"
+        },
+        {
+          "raw": "Robotics & Embodied Intelligence",
+          "targetId": "v5-robotics-and-embodied-intelligence"
+        },
+        {
+          "raw": "Knowledge Graphs, Ontologies & The Semantic Web",
+          "targetId": "v6-knowledge-graphs-ontologies-and-the-semantic-web"
+        },
+        {
+          "raw": "Stochastic Processes & Random Walks",
+          "targetId": "v6-stochastic-processes-and-random-walks"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "Probabilistic Programming & Graphical Models",
+          "targetId": "v6-probabilistic-programming-and-graphical-models"
+        },
+        {
+          "raw": "Evolutionary Epistemology",
+          "targetId": "v6-evolutionary-epistemology"
+        },
+        {
+          "raw": "Reservoir Computing & Neuromorphic Computation",
+          "targetId": "v6-reservoir-computing-and-neuromorphic-computation"
+        },
+        {
+          "raw": "Marvin Minsky",
+          "targetId": "v7-marvin-minsky"
+        },
+        {
+          "raw": "Linear Algebra",
+          "targetId": "v7-linear-algebra"
+        },
+        {
+          "raw": "Statistics (Classical & Modern)",
+          "targetId": "v7-statistics-classical-and-modern"
+        },
+        {
+          "raw": "AI Alignment & Safety",
+          "targetId": "v7-ai-alignment-and-safety"
+        },
+        {
+          "raw": "Mechanistic Interpretability",
+          "targetId": "v7-mechanistic-interpretability"
+        },
+        {
+          "raw": "Optimal Transport",
+          "targetId": "v8-optimal-transport"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
+        },
+        {
+          "raw": "Information Geometry",
+          "targetId": "v8-information-geometry"
+        },
+        {
+          "raw": "Topological Data Analysis",
+          "targetId": "v8-topological-data-analysis"
         }
       ],
-      "inDegree": 43,
-      "outDegree": 5
+      "inDegree": 44,
+      "outDegree": 37
     },
     {
       "id": "v5-mathematical-physics-and-symmetry",
@@ -2791,10 +4775,42 @@ window.RESEARCH_DATA = {
         {
           "raw": "thermodynamics",
           "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Morphogenesis & Biological Pattern Formation",
+          "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Iannis Xenakis",
+          "targetId": "v7-iannis-xenakis"
+        },
+        {
+          "raw": "The Road to Reality",
+          "targetId": "v7-the-road-to-reality"
+        },
+        {
+          "raw": "Real & Complex Analysis",
+          "targetId": "v7-real-and-complex-analysis"
+        },
+        {
+          "raw": "Quantum Mechanics (as physics)",
+          "targetId": "v7-quantum-mechanics-as-physics"
+        },
+        {
+          "raw": "Cosmology & Astrophysics",
+          "targetId": "v7-cosmology-and-astrophysics"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
         }
       ],
       "inDegree": 12,
-      "outDegree": 4
+      "outDegree": 12
     },
     {
       "id": "v5-neuroscience-and-neural-computation",
@@ -2850,10 +4866,58 @@ window.RESEARCH_DATA = {
         {
           "raw": "machine learning",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Dynamical Systems & Bifurcation Theory",
+          "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Causal Inference & Causal Models",
+          "targetId": "v5-causal-inference-and-causal-models"
+        },
+        {
+          "raw": "Reinforcement Learning",
+          "targetId": "v6-reinforcement-learning"
+        },
+        {
+          "raw": "Neuroethology",
+          "targetId": "v6-neuroethology"
+        },
+        {
+          "raw": "Chronobiology & Circadian Rhythms",
+          "targetId": "v6-chronobiology-and-circadian-rhythms"
+        },
+        {
+          "raw": "Reservoir Computing & Neuromorphic Computation",
+          "targetId": "v6-reservoir-computing-and-neuromorphic-computation"
+        },
+        {
+          "raw": "Developmental Psychology",
+          "targetId": "v7-developmental-psychology"
+        },
+        {
+          "raw": "Mechanistic Interpretability",
+          "targetId": "v7-mechanistic-interpretability"
+        },
+        {
+          "raw": "Brain-Computer Interfaces & Spatial Computing",
+          "targetId": "v7-brain-computer-interfaces-and-spatial-computing"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
+        },
+        {
+          "raw": "Synchronization & Coupled Oscillators",
+          "targetId": "v8-synchronization-and-coupled-oscillators"
+        },
+        {
+          "raw": "Spatial Cognition & Cognitive Maps",
+          "targetId": "v8-spatial-cognition-and-cognitive-maps"
         }
       ],
-      "inDegree": 15,
-      "outDegree": 5
+      "inDegree": 16,
+      "outDegree": 17
     },
     {
       "id": "v5-materials-science-metamaterials-and-programmable-matter",
@@ -2904,10 +4968,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "geometry/topology",
           "targetId": "v5-geometry-topology-and-spatial-computation"
+        },
+        {
+          "raw": "Evolutionary Developmental Biology (Evo-Devo)",
+          "targetId": "v5-evolutionary-developmental-biology-evo-devo"
+        },
+        {
+          "raw": "Origami & Computational Folding",
+          "targetId": "v6-origami-and-computational-folding"
+        },
+        {
+          "raw": "Horology & Mechanical Watchmaking",
+          "targetId": "v7-horology-and-mechanical-watchmaking"
+        },
+        {
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
+        },
+        {
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
         }
       ],
-      "inDegree": 7,
-      "outDegree": 3
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v5-evolutionary-developmental-biology-evo-devo",
@@ -2962,10 +5046,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "materials science",
           "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
+        },
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
+        },
+        {
+          "raw": "Niche Construction Theory",
+          "targetId": "v8-niche-construction-theory"
+        },
+        {
+          "raw": "Lynn Margulis",
+          "targetId": "v9-lynn-margulis"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 5
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v6-fractal-geometry-and-self-similarity",
@@ -3016,10 +5112,34 @@ window.RESEARCH_DATA = {
         {
           "raw": "Dynamical Systems",
           "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "On Growth and Form",
+          "targetId": "v7-on-growth-and-form"
+        },
+        {
+          "raw": "Renormalization & Universality",
+          "targetId": "v8-renormalization-and-universality"
+        },
+        {
+          "raw": "Fluid Dynamics & Turbulence",
+          "targetId": "v8-fluid-dynamics-and-turbulence"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
+        },
+        {
+          "raw": "Benoit Mandelbrot",
+          "targetId": "v9-benoit-mandelbrot"
         }
       ],
-      "inDegree": 6,
-      "outDegree": 4
+      "inDegree": 10,
+      "outDegree": 10
     },
     {
       "id": "v6-enactivism-and-enactive-cognition",
@@ -3071,10 +5191,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Robotics & Embodied Intelligence",
           "targetId": "v5-robotics-and-embodied-intelligence"
+        },
+        {
+          "raw": "Gregory Bateson",
+          "targetId": "v7-gregory-bateson"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 7
+      "inDegree": 10,
+      "outDegree": 10
     },
     {
       "id": "v6-process-philosophy",
@@ -3125,10 +5257,26 @@ window.RESEARCH_DATA = {
         {
           "raw": "Cybernetics",
           "targetId": "v5-cybernetics-and-control-theory"
+        },
+        {
+          "raw": "Philosophy of Time",
+          "targetId": "v6-philosophy-of-time"
+        },
+        {
+          "raw": "Gilles Deleuze",
+          "targetId": "v9-gilles-deleuze"
+        },
+        {
+          "raw": "Ubuntu / African Relational Philosophy",
+          "targetId": "v9-ubuntu-and-african-relational-philosophy"
+        },
+        {
+          "raw": "A Thousand Plateaus",
+          "targetId": "v9-a-thousand-plateaus"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 7
+      "inDegree": 11,
+      "outDegree": 11
     },
     {
       "id": "v6-metaphor-theory-and-conceptual-blending",
@@ -3179,10 +5327,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Machine Learning (analogy-based reasoning)",
           "targetId": null
+        },
+        {
+          "raw": "Gödel, Escher, Bach: An Eternal Golden Braid",
+          "targetId": "v7-g-del-escher-bach-an-eternal-golden-braid"
+        },
+        {
+          "raw": "Metaphors We Live By",
+          "targetId": "v9-metaphors-we-live-by"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 4
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v6-memory-mnemonic-systems-and-externalized-knowledge",
@@ -3234,10 +5390,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "HCI",
           "targetId": "v5-human-computer-interaction-and-interface-design"
+        },
+        {
+          "raw": "Spatial Cognition & Cognitive Maps",
+          "targetId": "v8-spatial-cognition-and-cognitive-maps"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 5
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v6-ecology-and-ecosystem-dynamics",
@@ -3293,10 +5453,34 @@ window.RESEARCH_DATA = {
         {
           "raw": "Biomimicry",
           "targetId": "v5-biomimicry-and-nature-inspired-design"
+        },
+        {
+          "raw": "Thinking in Systems: A Primer",
+          "targetId": "v7-thinking-in-systems-a-primer"
+        },
+        {
+          "raw": "Permaculture & Regenerative Agriculture",
+          "targetId": "v7-permaculture-and-regenerative-agriculture"
+        },
+        {
+          "raw": "Climate Science & Earth Systems",
+          "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
+        },
+        {
+          "raw": "Niche Construction Theory",
+          "targetId": "v8-niche-construction-theory"
+        },
+        {
+          "raw": "Lynn Margulis",
+          "targetId": "v9-lynn-margulis"
         }
       ],
-      "inDegree": 6,
-      "outDegree": 6
+      "inDegree": 12,
+      "outDegree": 12
     },
     {
       "id": "v6-type-theory-and-homotopy-type-theory",
@@ -3343,10 +5527,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "Software Architecture",
           "targetId": null
+        },
+        {
+          "raw": "Functional Programming & Lambda Calculus",
+          "targetId": "v6-functional-programming-and-lambda-calculus"
+        },
+        {
+          "raw": "Formal Verification & Model Checking",
+          "targetId": "v6-formal-verification-and-model-checking"
+        },
+        {
+          "raw": "Concurrency Theory",
+          "targetId": "v6-concurrency-theory"
+        },
+        {
+          "raw": "Leslie Lamport",
+          "targetId": "v7-leslie-lamport"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
         }
       ],
-      "inDegree": 6,
-      "outDegree": 3
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
@@ -3397,10 +5601,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Writing Systems",
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
+        },
+        {
+          "raw": "Information Architecture",
+          "targetId": "v6-information-architecture"
+        },
+        {
+          "raw": "Classification, Taxonomy & Knowledge Organization",
+          "targetId": "v8-classification-taxonomy-and-knowledge-organization"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 4
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v6-pragmatism",
@@ -3447,10 +5659,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Rhetoric",
           "targetId": "v5-rhetoric-narrative-theory-and-story-systems"
+        },
+        {
+          "raw": "Charles Sanders Peirce",
+          "targetId": "v9-charles-sanders-peirce"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v6-stochastic-processes-and-random-walks",
@@ -3497,10 +5713,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "Economics",
           "targetId": null
+        },
+        {
+          "raw": "Iannis Xenakis",
+          "targetId": "v7-iannis-xenakis"
+        },
+        {
+          "raw": "Optimal Transport",
+          "targetId": "v8-optimal-transport"
+        },
+        {
+          "raw": "Mathematical Epidemiology & Contagion Dynamics",
+          "targetId": "v8-mathematical-epidemiology-and-contagion-dynamics"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
+        },
+        {
+          "raw": "Benoit Mandelbrot",
+          "targetId": "v9-benoit-mandelbrot"
         }
       ],
-      "inDegree": 5,
-      "outDegree": 3
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v6-reinforcement-learning",
@@ -3551,10 +5787,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "AI Agents",
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 7
+      "inDegree": 7,
+      "outDegree": 8
     },
     {
       "id": "v6-probabilistic-programming-and-graphical-models",
@@ -3601,10 +5841,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Cognitive Science (rational analysis)",
           "targetId": null
+        },
+        {
+          "raw": "Free Energy Principle & Active Inference",
+          "targetId": "v8-free-energy-principle-and-active-inference"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 4
+      "inDegree": 4,
+      "outDegree": 5
     },
     {
       "id": "v6-urban-planning-and-urbanism",
@@ -3655,10 +5899,26 @@ window.RESEARCH_DATA = {
         {
           "raw": "Complex Systems",
           "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Italo Calvino",
+          "targetId": "v7-italo-calvino"
+        },
+        {
+          "raw": "Seeing Like a State",
+          "targetId": "v7-seeing-like-a-state"
+        },
+        {
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 5
+      "inDegree": 9,
+      "outDegree": 9
     },
     {
       "id": "v6-astrobiology-and-origin-of-life",
@@ -3706,10 +5966,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "Philosophy of Mind (emergence of agency)",
           "targetId": null
+        },
+        {
+          "raw": "Paleontology & Deep Time",
+          "targetId": "v7-paleontology-and-deep-time"
+        },
+        {
+          "raw": "Synthetic Biology & CRISPR-era Genetics",
+          "targetId": "v7-synthetic-biology-and-crispr-era-genetics"
+        },
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
+        },
+        {
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
+        },
+        {
+          "raw": "Lynn Margulis",
+          "targetId": "v9-lynn-margulis"
         }
       ],
-      "inDegree": 5,
-      "outDegree": 4
+      "inDegree": 9,
+      "outDegree": 9
     },
     {
       "id": "v6-functional-programming-and-lambda-calculus",
@@ -3756,10 +6036,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Microservices",
           "targetId": null
+        },
+        {
+          "raw": "Rich Hickey",
+          "targetId": "v7-rich-hickey"
+        },
+        {
+          "raw": "Structure and Interpretation of Computer Programs (SICP)",
+          "targetId": "v7-structure-and-interpretation-of-computer-programs-sicp"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 3
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v6-neuroethology",
@@ -3812,7 +6104,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-artificial-life-and-self-organization"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -3861,10 +6153,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "MiroFish",
           "targetId": null
+        },
+        {
+          "raw": "Niche Construction Theory",
+          "targetId": "v8-niche-construction-theory"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 3
+      "inDegree": 4,
+      "outDegree": 4
     },
     {
       "id": "v6-complexity-economics-and-agent-based-modeling-in-economics",
@@ -3911,10 +6207,26 @@ window.RESEARCH_DATA = {
         {
           "raw": "Network Science",
           "targetId": "v5-network-science-and-graph-theory"
+        },
+        {
+          "raw": "History & Philosophy of Science",
+          "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Monetary Theory & the History of Money",
+          "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
+        },
+        {
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 4
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v6-hypertext-and-hypermedia",
@@ -3961,10 +6273,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Memory & Mnemonics",
           "targetId": null
+        },
+        {
+          "raw": "Jorge Luis Borges",
+          "targetId": "v7-jorge-luis-borges"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 4
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v6-information-architecture",
@@ -4010,10 +6326,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Semiotics",
           "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
+        },
+        {
+          "raw": "Memory, Mnemonic Systems & Externalized Knowledge",
+          "targetId": "v6-memory-mnemonic-systems-and-externalized-knowledge"
+        },
+        {
+          "raw": "Classification, Taxonomy & Knowledge Organization",
+          "targetId": "v8-classification-taxonomy-and-knowledge-organization"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 5
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v6-philosophy-of-time",
@@ -4060,10 +6384,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Cognitive Science",
           "targetId": "v5-cognitive-science-and-perception"
+        },
+        {
+          "raw": "Gilles Deleuze",
+          "targetId": "v9-gilles-deleuze"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 5
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v6-cliodynamics-and-mathematical-history",
@@ -4109,10 +6437,34 @@ window.RESEARCH_DATA = {
         {
           "raw": "Dynamical Systems",
           "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Thinking in Systems: A Primer",
+          "targetId": "v7-thinking-in-systems-a-primer"
+        },
+        {
+          "raw": "Climate Science & Earth Systems",
+          "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Longtermism & Existential Risk Studies",
+          "targetId": "v7-longtermism-and-existential-risk-studies"
+        },
+        {
+          "raw": "Mathematical Epidemiology & Contagion Dynamics",
+          "targetId": "v8-mathematical-epidemiology-and-contagion-dynamics"
+        },
+        {
+          "raw": "Monetary Theory & the History of Money",
+          "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Sociology & Social Network Analysis",
+          "targetId": "v9-sociology-and-social-network-analysis"
         }
       ],
-      "inDegree": 6,
-      "outDegree": 5
+      "inDegree": 11,
+      "outDegree": 11
     },
     {
       "id": "v6-chronobiology-and-circadian-rhythms",
@@ -4159,10 +6511,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Architecture",
           "targetId": null
+        },
+        {
+          "raw": "Horology & Mechanical Watchmaking",
+          "targetId": "v7-horology-and-mechanical-watchmaking"
+        },
+        {
+          "raw": "Synchronization & Coupled Oscillators",
+          "targetId": "v8-synchronization-and-coupled-oscillators"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 3
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v6-origami-and-computational-folding",
@@ -4206,7 +6566,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -4249,10 +6609,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Pattern Languages",
           "targetId": "v5-pattern-languages-design-methods-and-morphological-analysis"
+        },
+        {
+          "raw": "M.C. Escher",
+          "targetId": "v7-m-c-escher"
+        },
+        {
+          "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison",
+          "targetId": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 2
+      "inDegree": 4,
+      "outDegree": 4
     },
     {
       "id": "v6-attention-studies-and-the-attention-economy",
@@ -4299,10 +6667,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Digital Commons & Platform Economics",
+          "targetId": "v7-digital-commons-and-platform-economics"
+        },
+        {
+          "raw": "Jean Baudrillard",
+          "targetId": "v9-jean-baudrillard"
+        },
+        {
+          "raw": "Marshall McLuhan",
+          "targetId": "v9-marshall-mcluhan"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 5
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v6-comparative-mythology-and-depth-psychology",
@@ -4345,10 +6725,30 @@ window.RESEARCH_DATA = {
         {
           "raw": "Aesthetics",
           "targetId": "v5-aesthetics-and-philosophy-of-art"
+        },
+        {
+          "raw": "Ursula K. Le Guin",
+          "targetId": "v7-ursula-k-le-guin"
+        },
+        {
+          "raw": "Psychoanalysis",
+          "targetId": "v7-psychoanalysis"
+        },
+        {
+          "raw": "Ritual as Coordination Technology",
+          "targetId": "v9-ritual-as-coordination-technology"
+        },
+        {
+          "raw": "Claude Lévi-Strauss",
+          "targetId": "v9-claude-levi-strauss"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
         }
       ],
-      "inDegree": 5,
-      "outDegree": 3
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v6-formal-verification-and-model-checking",
@@ -4391,10 +6791,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Compiler Design",
           "targetId": "v5-compiler-design-and-programming-language-theory"
+        },
+        {
+          "raw": "Leslie Lamport",
+          "targetId": "v7-leslie-lamport"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 2
+      "inDegree": 3,
+      "outDegree": 3
     },
     {
       "id": "v6-concurrency-theory",
@@ -4437,10 +6841,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Type Theory",
           "targetId": "v6-type-theory-and-homotopy-type-theory"
+        },
+        {
+          "raw": "Leslie Lamport",
+          "targetId": "v7-leslie-lamport"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 2
+      "inDegree": 3,
+      "outDegree": 3
     },
     {
       "id": "v6-history-of-mathematics",
@@ -4482,10 +6890,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "History & Philosophy of Science",
           "targetId": "v5-history-and-philosophy-of-science"
+        },
+        {
+          "raw": "Gottfried Leibniz",
+          "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "Henri Poincaré",
+          "targetId": "v9-henri-poincare"
+        },
+        {
+          "raw": "Joseph Needham",
+          "targetId": "v9-joseph-needham"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 4
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v6-evolutionary-epistemology",
@@ -4530,7 +6950,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-machine-learning-and-statistical-learning-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -4574,10 +6994,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Artificial Life",
           "targetId": "v5-artificial-life-and-self-organization"
+        },
+        {
+          "raw": "Mechanistic Interpretability",
+          "targetId": "v7-mechanistic-interpretability"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 4
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v7-alan-kay",
@@ -4618,7 +7042,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-bret-victor"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -4660,7 +7084,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 1,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -4702,7 +7126,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-compiler-design-and-programming-language-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -4744,7 +7168,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-enactivism-and-enactive-cognition"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -4786,7 +7210,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-seymour-papert"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -4826,10 +7250,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Minsky",
           "targetId": null
+        },
+        {
+          "raw": "Marvin Minsky",
+          "targetId": "v7-marvin-minsky"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 3
+      "inDegree": 4,
+      "outDegree": 4
     },
     {
       "id": "v7-rich-hickey",
@@ -4869,10 +7297,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "DDIA",
           "targetId": null
+        },
+        {
+          "raw": "Structure and Interpretation of Computer Programs (SICP)",
+          "targetId": "v7-structure-and-interpretation-of-computer-programs-sicp"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 1
+      "inDegree": 2,
+      "outDegree": 2
     },
     {
       "id": "v7-leslie-lamport",
@@ -4915,7 +7347,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-type-theory-and-homotopy-type-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -4957,7 +7389,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-john-cage"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5003,7 +7435,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-stochastic-processes-and-random-walks"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5043,10 +7475,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Generative Music (v5)",
           "targetId": "v5-generative-music-and-algorithmic-composition"
+        },
+        {
+          "raw": "Brian Eno",
+          "targetId": "v7-brian-eno"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 2
+      "inDegree": 3,
+      "outDegree": 3
     },
     {
       "id": "v7-andrei-tarkovsky",
@@ -5088,7 +7524,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-photography-and-optics"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5131,7 +7567,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -5173,7 +7609,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-ethics-consequentialism-deontology-virtue"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -5215,7 +7651,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -5257,7 +7693,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-writing-systems-notation-and-symbolic-representation"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -5299,7 +7735,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -5341,7 +7777,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-comparative-mythology-and-depth-psychology"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -5382,7 +7818,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 1,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5424,7 +7860,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-louis-kahn"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5467,7 +7903,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-louis-kahn"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -5507,10 +7943,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Tadao Ando",
           "targetId": "v7-tadao-ando"
+        },
+        {
+          "raw": "Frank Lloyd Wright",
+          "targetId": "v7-frank-lloyd-wright"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 2
+      "inDegree": 3,
+      "outDegree": 3
     },
     {
       "id": "v7-leonardo-da-vinci",
@@ -5593,10 +8033,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Metaphor Theory (v6)",
           "targetId": "v6-metaphor-theory-and-conceptual-blending"
+        },
+        {
+          "raw": "Recursion & Self-Reference",
+          "targetId": "v9-recursion-and-self-reference"
+        },
+        {
+          "raw": "The Glass Bead Game",
+          "targetId": "v9-the-glass-bead-game"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 2
+      "inDegree": 4,
+      "outDegree": 4
     },
     {
       "id": "v7-structure-and-interpretation-of-computer-programs-sicp",
@@ -5634,7 +8082,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-rich-hickey"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5673,7 +8121,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-cliodynamics-and-mathematical-history"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -5712,7 +8160,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -5751,7 +8199,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-collective-intelligence-and-coordination-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -5790,7 +8238,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-compiler-design-and-programming-language-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -5829,7 +8277,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-phenomenology-and-embodied-experience"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -5866,10 +8314,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Stewart Brand (Group B)",
           "targetId": null
+        },
+        {
+          "raw": "The Glass Bead Game",
+          "targetId": "v9-the-glass-bead-game"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 3
+      "inDegree": 4,
+      "outDegree": 4
     },
     {
       "id": "v7-seeing-like-a-state",
@@ -5907,7 +8359,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-political-philosophy"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -5946,7 +8398,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-photography-and-optics"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -5985,7 +8437,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -6024,7 +8476,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-fractal-geometry-and-self-similarity"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6063,7 +8515,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-mathematical-physics-and-symmetry"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -6102,7 +8554,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-dieter-rams"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -6144,7 +8596,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-materials-science-metamaterials-and-programmable-matter"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6185,7 +8637,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-japanese-aesthetics"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -6227,7 +8679,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-islamic-geometric-patterns-and-ornament"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -6269,7 +8721,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-psychoanalysis"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6311,7 +8763,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -6352,10 +8804,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Survival Skills",
           "targetId": null
+        },
+        {
+          "raw": "Spatial Cognition & Cognitive Maps",
+          "targetId": "v8-spatial-cognition-and-cognitive-maps"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 2
+      "inDegree": 3,
+      "outDegree": 3
     },
     {
       "id": "v7-permaculture-and-regenerative-agriculture",
@@ -6396,7 +8852,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6437,7 +8893,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-computer-graphics-and-computational-imaging"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6478,7 +8934,7 @@ window.RESEARCH_DATA = {
           "targetId": null
         }
       ],
-      "inDegree": 0,
+      "inDegree": 1,
       "outDegree": 1
     },
     {
@@ -6518,10 +8974,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Measurement Theory (v5)",
           "targetId": "v5-measurement-theory-metrology-and-representation"
+        },
+        {
+          "raw": "Optimal Transport",
+          "targetId": "v8-optimal-transport"
+        },
+        {
+          "raw": "Information Geometry",
+          "targetId": "v8-information-geometry"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
         }
       ],
-      "inDegree": 5,
-      "outDegree": 3
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v7-quantum-mechanics-as-physics",
@@ -6560,10 +9028,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Philosophy of Mind",
           "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "The Road to Reality",
+          "targetId": "v7-the-road-to-reality"
+        },
+        {
+          "raw": "Cosmology & Astrophysics",
+          "targetId": "v7-cosmology-and-astrophysics"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 3
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v7-cosmology-and-astrophysics",
@@ -6607,7 +9083,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6646,10 +9122,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Complex Systems (v5)",
           "targetId": "v5-complex-systems-and-chaos-theory"
+        },
+        {
+          "raw": "Immunology",
+          "targetId": "v7-immunology"
+        },
+        {
+          "raw": "Symbiosis & Mycorrhizal Networks",
+          "targetId": "v8-symbiosis-and-mycorrhizal-networks"
+        },
+        {
+          "raw": "Lynn Margulis",
+          "targetId": "v9-lynn-margulis"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 3
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v7-immunology",
@@ -6690,7 +9178,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-network-science-and-graph-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -6732,7 +9220,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-history-and-philosophy-of-science"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 2,
       "outDegree": 2
     },
     {
@@ -6771,10 +9259,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Longtermism (Group E)",
           "targetId": "v7-longtermism-and-existential-risk-studies"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
+        },
+        {
+          "raw": "Fluid Dynamics & Turbulence",
+          "targetId": "v8-fluid-dynamics-and-turbulence"
+        },
+        {
+          "raw": "Energy Systems, Infrastructure & How the World Really Works",
+          "targetId": "v9-energy-systems-infrastructure-and-how-the-world-really-works"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 4
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v7-political-philosophy",
@@ -6822,10 +9322,42 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Ursula K. Le Guin",
+          "targetId": "v7-ursula-k-le-guin"
+        },
+        {
+          "raw": "Seeing Like a State",
+          "targetId": "v7-seeing-like-a-state"
+        },
+        {
+          "raw": "Ethics (Consequentialism / Deontology / Virtue)",
+          "targetId": "v7-ethics-consequentialism-deontology-virtue"
+        },
+        {
+          "raw": "Longtermism & Existential Risk Studies",
+          "targetId": "v7-longtermism-and-existential-risk-studies"
+        },
+        {
+          "raw": "Social Choice & Voting Theory",
+          "targetId": "v8-social-choice-and-voting-theory"
+        },
+        {
+          "raw": "Law, Jurisprudence & Computational Law",
+          "targetId": "v8-law-jurisprudence-and-computational-law"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "Ubuntu / African Relational Philosophy",
+          "targetId": "v9-ubuntu-and-african-relational-philosophy"
         }
       ],
-      "inDegree": 9,
-      "outDegree": 2
+      "inDegree": 10,
+      "outDegree": 10
     },
     {
       "id": "v7-ethics-consequentialism-deontology-virtue",
@@ -6866,10 +9398,38 @@ window.RESEARCH_DATA = {
         {
           "raw": "Philosophy of Mind",
           "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Hayao Miyazaki / Studio Ghibli",
+          "targetId": "v7-hayao-miyazaki-studio-ghibli"
+        },
+        {
+          "raw": "Ursula K. Le Guin",
+          "targetId": "v7-ursula-k-le-guin"
+        },
+        {
+          "raw": "Existentialism",
+          "targetId": "v7-existentialism"
+        },
+        {
+          "raw": "Synthetic Biology & CRISPR-era Genetics",
+          "targetId": "v7-synthetic-biology-and-crispr-era-genetics"
+        },
+        {
+          "raw": "Longtermism & Existential Risk Studies",
+          "targetId": "v7-longtermism-and-existential-risk-studies"
+        },
+        {
+          "raw": "Law, Jurisprudence & Computational Law",
+          "targetId": "v8-law-jurisprudence-and-computational-law"
+        },
+        {
+          "raw": "Ubuntu / African Relational Philosophy",
+          "targetId": "v9-ubuntu-and-african-relational-philosophy"
         }
       ],
-      "inDegree": 8,
-      "outDegree": 3
+      "inDegree": 10,
+      "outDegree": 10
     },
     {
       "id": "v7-existentialism",
@@ -6909,10 +9469,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Ethics",
           "targetId": "v7-ethics-consequentialism-deontology-virtue"
+        },
+        {
+          "raw": "Psychoanalysis",
+          "targetId": "v7-psychoanalysis"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 4
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v7-psychoanalysis",
@@ -6952,10 +9516,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Existentialism",
           "targetId": "v7-existentialism"
+        },
+        {
+          "raw": "Perfumery & Olfactory Composition",
+          "targetId": "v7-perfumery-and-olfactory-composition"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 4
+      "inDegree": 5,
+      "outDegree": 5
     },
     {
       "id": "v7-developmental-psychology",
@@ -6996,7 +9564,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-neuroscience-and-neural-computation"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 3,
       "outDegree": 3
     },
     {
@@ -7035,10 +9603,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Tadao Ando (Group A)",
           "targetId": "v7-tadao-ando"
+        },
+        {
+          "raw": "Akira Kurosawa",
+          "targetId": "v7-akira-kurosawa"
+        },
+        {
+          "raw": "Japanese Joinery & Traditional Woodworking",
+          "targetId": "v7-japanese-joinery-and-traditional-woodworking"
+        },
+        {
+          "raw": "Bonsai & Japanese Gardening (Karesansui)",
+          "targetId": "v7-bonsai-and-japanese-gardening-karesansui"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 3
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v7-ai-alignment-and-safety",
@@ -7079,10 +9659,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Philosophy of Mind",
           "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "Mechanistic Interpretability",
+          "targetId": "v7-mechanistic-interpretability"
+        },
+        {
+          "raw": "Longtermism & Existential Risk Studies",
+          "targetId": "v7-longtermism-and-existential-risk-studies"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 4
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v7-mechanistic-interpretability",
@@ -7124,7 +9712,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-reservoir-computing-and-neuromorphic-computation"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -7165,10 +9753,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Ethics (Group D)",
           "targetId": "v7-ethics-consequentialism-deontology-virtue"
+        },
+        {
+          "raw": "Chemistry / Reaction Networks",
+          "targetId": "v9-chemistry-and-reaction-networks"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 3
+      "inDegree": 4,
+      "outDegree": 4
     },
     {
       "id": "v7-brain-computer-interfaces-and-spatial-computing",
@@ -7210,7 +9802,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-robotics-and-embodied-intelligence"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -7253,7 +9845,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-causal-inference-and-causal-models"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -7294,10 +9886,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Political Philosophy",
           "targetId": "v7-political-philosophy"
+        },
+        {
+          "raw": "Climate Science & Earth Systems",
+          "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Extreme Value Theory & Fat Tails",
+          "targetId": "v8-extreme-value-theory-and-fat-tails"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 4
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v7-digital-commons-and-platform-economics",
@@ -7336,10 +9936,22 @@ window.RESEARCH_DATA = {
         {
           "raw": "Attention Economy (v6)",
           "targetId": "v6-attention-studies-and-the-attention-economy"
+        },
+        {
+          "raw": "Law, Jurisprudence & Computational Law",
+          "targetId": "v8-law-jurisprudence-and-computational-law"
+        },
+        {
+          "raw": "Monetary Theory & the History of Money",
+          "targetId": "v8-monetary-theory-and-the-history-of-money"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
         }
       ],
-      "inDegree": 3,
-      "outDegree": 3
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v8-free-energy-principle-and-active-inference",
@@ -7390,10 +10002,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Probabilistic Programming & Graphical Models",
           "targetId": "v6-probabilistic-programming-and-graphical-models"
+        },
+        {
+          "raw": "Humberto Maturana & Francisco Varela",
+          "targetId": "v9-maturana-and-varela"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 7
+      "inDegree": 8,
+      "outDegree": 8
     },
     {
       "id": "v8-synchronization-and-coupled-oscillators",
@@ -7441,7 +10057,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-complex-systems-and-chaos-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -7488,10 +10104,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Quantum Computing & Quantum Information",
           "targetId": "v5-quantum-computing-and-quantum-information"
+        },
+        {
+          "raw": "Physics of Information & the Thermodynamics of Computation",
+          "targetId": "v8-physics-of-information-and-the-thermodynamics-of-computation"
+        },
+        {
+          "raw": "Cryptography & Coding Theory",
+          "targetId": "v9-cryptography-and-coding-theory"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 5
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v8-optimal-transport",
@@ -7539,7 +10163,7 @@ window.RESEARCH_DATA = {
           "targetId": "v8-information-geometry"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -7586,10 +10210,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Dynamical Systems & Bifurcation Theory",
           "targetId": "v5-dynamical-systems-and-bifurcation-theory"
+        },
+        {
+          "raw": "Scaling Laws & Allometry",
+          "targetId": "v9-scaling-laws-and-allometry"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v8-mathematical-epidemiology-and-contagion-dynamics",
@@ -7637,7 +10265,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-stochastic-processes-and-random-walks"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -7680,10 +10308,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Logic, Formal Semantics & Model Theory",
           "targetId": "v5-logic-formal-semantics-and-model-theory"
+        },
+        {
+          "raw": "Law, Jurisprudence & Computational Law",
+          "targetId": "v8-law-jurisprudence-and-computational-law"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 5
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v8-physics-of-information-and-the-thermodynamics-of-computation",
@@ -7727,7 +10359,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-cybernetics-and-control-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -7772,7 +10404,7 @@ window.RESEARCH_DATA = {
           "targetId": "v8-optimal-transport"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -7817,7 +10449,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-network-science-and-graph-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -7864,10 +10496,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Climate Science & Earth Systems",
           "targetId": "v7-climate-science-and-earth-systems"
+        },
+        {
+          "raw": "Benoit Mandelbrot",
+          "targetId": "v9-benoit-mandelbrot"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v8-fluid-dynamics-and-turbulence",
@@ -7915,7 +10551,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-climate-science-and-earth-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -7962,10 +10598,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Cell & Molecular Biology",
           "targetId": "v7-cell-and-molecular-biology"
+        },
+        {
+          "raw": "Lynn Margulis",
+          "targetId": "v9-lynn-margulis"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v8-niche-construction-theory",
@@ -8013,7 +10653,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-collective-intelligence-and-coordination-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8062,7 +10702,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-sailing-and-navigation"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8111,7 +10751,7 @@ window.RESEARCH_DATA = {
           "targetId": "v8-social-choice-and-voting-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8160,7 +10800,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-collective-intelligence-and-coordination-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8209,7 +10849,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-measurement-theory-metrology-and-representation"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8259,7 +10899,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-network-science-and-graph-theory"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8307,10 +10947,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Gottfried Leibniz",
           "targetId": "v9-gottfried-leibniz"
+        },
+        {
+          "raw": "I Ching as Combinatorial System",
+          "targetId": "v9-i-ching-as-combinatorial-system"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v9-sociology-and-social-network-analysis",
@@ -8363,7 +11007,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 7,
       "outDegree": 7
     },
     {
@@ -8415,10 +11059,18 @@ window.RESEARCH_DATA = {
         {
           "raw": "Critical Theory & the Frankfurt School",
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
+        },
+        {
+          "raw": "Michel Foucault",
+          "targetId": "v9-michel-foucault"
+        },
+        {
+          "raw": "A Thousand Plateaus",
+          "targetId": "v9-a-thousand-plateaus"
         }
       ],
-      "inDegree": 4,
-      "outDegree": 7
+      "inDegree": 9,
+      "outDegree": 9
     },
     {
       "id": "v9-ritual-as-coordination-technology",
@@ -8463,7 +11115,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-eastern-philosophy"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -8512,7 +11164,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-operations-research-and-optimization"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8560,10 +11212,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Morphogenesis & Biological Pattern Formation",
           "targetId": "v5-morphogenesis-and-biological-pattern-formation"
+        },
+        {
+          "raw": "Benoit Mandelbrot",
+          "targetId": "v9-benoit-mandelbrot"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v9-recursion-and-self-reference",
@@ -8612,7 +11268,7 @@ window.RESEARCH_DATA = {
           "targetId": "v7-g-del-escher-bach-an-eternal-golden-braid"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8658,7 +11314,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-ferdinand-de-saussure"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -8708,7 +11364,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-cryptography-and-coding-theory"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -8754,7 +11410,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-history-of-mathematics"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -8800,7 +11456,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-scaling-laws-and-allometry"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -8846,7 +11502,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-maturana-and-varela"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -8888,7 +11544,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-claude-levi-strauss"
         }
       ],
-      "inDegree": 2,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -8929,7 +11585,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-aesthetics-and-philosophy-of-art"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -8971,7 +11627,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-typography-and-graphic-design-history"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -9021,7 +11677,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-critical-theory-and-the-frankfurt-school"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 6,
       "outDegree": 6
     },
     {
@@ -9067,7 +11723,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-a-thousand-plateaus"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9113,7 +11769,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-ferdinand-de-saussure"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9157,10 +11813,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Philosophy of Mind & Consciousness",
           "targetId": "v5-philosophy-of-mind-and-consciousness"
+        },
+        {
+          "raw": "J.J. Gibson",
+          "targetId": "v9-j-j-gibson"
         }
       ],
-      "inDegree": 1,
-      "outDegree": 5
+      "inDegree": 6,
+      "outDegree": 6
     },
     {
       "id": "v9-stafford-beer",
@@ -9201,7 +11861,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-collective-intelligence-and-coordination-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -9243,7 +11903,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-human-computer-interaction-and-interface-design"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 4,
       "outDegree": 4
     },
     {
@@ -9289,7 +11949,7 @@ window.RESEARCH_DATA = {
           "targetId": "v6-astrobiology-and-origin-of-life"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9334,7 +11994,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-i-ching-as-combinatorial-system"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9380,7 +12040,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-navya-nyaya"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9428,10 +12088,14 @@ window.RESEARCH_DATA = {
         {
           "raw": "Cryptography & Coding Theory",
           "targetId": "v9-cryptography-and-coding-theory"
+        },
+        {
+          "raw": "Joseph Needham",
+          "targetId": "v9-joseph-needham"
         }
       ],
-      "inDegree": 2,
-      "outDegree": 6
+      "inDegree": 7,
+      "outDegree": 7
     },
     {
       "id": "v9-ubuntu-and-african-relational-philosophy",
@@ -9476,7 +12140,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-collective-intelligence-and-coordination-systems"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9522,7 +12186,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-panini-and-generative-grammar"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9568,7 +12232,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-generative-music-and-algorithmic-composition"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9614,7 +12278,7 @@ window.RESEARCH_DATA = {
           "targetId": "v5-semiotics-structuralism-and-the-science-of-signs"
         }
       ],
-      "inDegree": 0,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9660,7 +12324,7 @@ window.RESEARCH_DATA = {
           "targetId": "v9-actor-network-theory-and-sts"
         }
       ],
-      "inDegree": 1,
+      "inDegree": 5,
       "outDegree": 5
     },
     {
@@ -9759,6 +12423,76 @@ window.RESEARCH_DATA = {
       "raw": "artificial life"
     },
     {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v5-operations-research-and-optimization",
+      "raw": "Operations Research & Optimization"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v5-digital-signal-processing-dsp",
+      "raw": "Digital Signal Processing (DSP)"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v5-robotics-and-embodied-intelligence",
+      "raw": "Robotics & Embodied Intelligence"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v6-reinforcement-learning",
+      "raw": "Reinforcement Learning"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v7-gregory-bateson",
+      "raw": "Gregory Bateson"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v7-thinking-in-systems-a-primer",
+      "raw": "Thinking in Systems: A Primer"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v8-physics-of-information-and-the-thermodynamics-of-computation",
+      "raw": "Physics of Information & the Thermodynamics of Computation"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v8-niche-construction-theory",
+      "raw": "Niche Construction Theory"
+    },
+    {
+      "source": "v5-cybernetics-and-control-theory",
+      "target": "v9-stafford-beer",
+      "raw": "Stafford Beer"
+    },
+    {
       "source": "v5-information-theory",
       "target": "v5-cybernetics-and-control-theory",
       "raw": "Cybernetics"
@@ -9782,6 +12516,46 @@ window.RESEARCH_DATA = {
       "source": "v5-information-theory",
       "target": "v5-machine-learning-and-statistical-learning-theory",
       "raw": "machine learning"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v5-measurement-theory-metrology-and-representation",
+      "raw": "Measurement Theory, Metrology & Representation"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v5-digital-signal-processing-dsp",
+      "raw": "Digital Signal Processing (DSP)"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v8-physics-of-information-and-the-thermodynamics-of-computation",
+      "raw": "Physics of Information & the Thermodynamics of Computation"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v8-information-geometry",
+      "raw": "Information Geometry"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
+    },
+    {
+      "source": "v5-information-theory",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
     },
     {
       "source": "v5-complex-systems-and-chaos-theory",
@@ -9814,6 +12588,146 @@ window.RESEARCH_DATA = {
       "raw": "morphogenesis"
     },
     {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-generative-music-and-algorithmic-composition",
+      "raw": "Generative Music & Algorithmic Composition"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-geometry-topology-and-spatial-computation",
+      "raw": "Geometry, Topology & Spatial Computation"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-biomimicry-and-nature-inspired-design",
+      "raw": "Biomimicry & Nature-Inspired Design"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-simulation-and-physics-engines",
+      "raw": "Simulation & Physics Engines"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-robotics-and-embodied-intelligence",
+      "raw": "Robotics & Embodied Intelligence"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-neuroscience-and-neural-computation",
+      "raw": "Neuroscience & Neural Computation"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v5-evolutionary-developmental-biology-evo-devo",
+      "raw": "Evolutionary Developmental Biology (Evo-Devo)"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-astrobiology-and-origin-of-life",
+      "raw": "Astrobiology & Origin of Life"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "raw": "Complexity Economics & Agent-Based Modeling in Economics"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v6-cliodynamics-and-mathematical-history",
+      "raw": "Cliodynamics & Mathematical History"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v7-brian-eno",
+      "raw": "Brian Eno"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v7-cell-and-molecular-biology",
+      "raw": "Cell & Molecular Biology"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v7-immunology",
+      "raw": "Immunology"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v8-synchronization-and-coupled-oscillators",
+      "raw": "Synchronization & Coupled Oscillators"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v8-mathematical-epidemiology-and-contagion-dynamics",
+      "raw": "Mathematical Epidemiology & Contagion Dynamics"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v8-fluid-dynamics-and-turbulence",
+      "raw": "Fluid Dynamics & Turbulence"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v9-henri-poincare",
+      "raw": "Henri Poincaré"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v9-benoit-mandelbrot",
+      "raw": "Benoit Mandelbrot"
+    },
+    {
+      "source": "v5-complex-systems-and-chaos-theory",
+      "target": "v9-a-thousand-plateaus",
+      "raw": "A Thousand Plateaus"
+    },
+    {
       "source": "v5-network-science-and-graph-theory",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "Complex systems"
@@ -9822,6 +12736,76 @@ window.RESEARCH_DATA = {
       "source": "v5-network-science-and-graph-theory",
       "target": "v5-operations-research-and-optimization",
       "raw": "operations research"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v5-cartography-and-data-visualization",
+      "raw": "Cartography & Data Visualization"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "raw": "Complexity Economics & Agent-Based Modeling in Economics"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v7-immunology",
+      "raw": "Immunology"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v8-synchronization-and-coupled-oscillators",
+      "raw": "Synchronization & Coupled Oscillators"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v8-mathematical-epidemiology-and-contagion-dynamics",
+      "raw": "Mathematical Epidemiology & Contagion Dynamics"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v8-topological-data-analysis",
+      "raw": "Topological Data Analysis"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v9-chemistry-and-reaction-networks",
+      "raw": "Chemistry / Reaction Networks"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v9-gilles-deleuze",
+      "raw": "Gilles Deleuze"
+    },
+    {
+      "source": "v5-network-science-and-graph-theory",
+      "target": "v9-a-thousand-plateaus",
+      "raw": "A Thousand Plateaus"
     },
     {
       "source": "v5-dynamical-systems-and-bifurcation-theory",
@@ -9864,6 +12848,61 @@ window.RESEARCH_DATA = {
       "raw": "mathematical physics"
     },
     {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v6-stochastic-processes-and-random-walks",
+      "raw": "Stochastic Processes & Random Walks"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v6-cliodynamics-and-mathematical-history",
+      "raw": "Cliodynamics & Mathematical History"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v6-chronobiology-and-circadian-rhythms",
+      "raw": "Chronobiology & Circadian Rhythms"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v6-reservoir-computing-and-neuromorphic-computation",
+      "raw": "Reservoir Computing & Neuromorphic Computation"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v8-synchronization-and-coupled-oscillators",
+      "raw": "Synchronization & Coupled Oscillators"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v8-mathematical-epidemiology-and-contagion-dynamics",
+      "raw": "Mathematical Epidemiology & Contagion Dynamics"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v8-fluid-dynamics-and-turbulence",
+      "raw": "Fluid Dynamics & Turbulence"
+    },
+    {
+      "source": "v5-dynamical-systems-and-bifurcation-theory",
+      "target": "v9-henri-poincare",
+      "raw": "Henri Poincaré"
+    },
+    {
       "source": "v5-systems-thinking-and-system-dynamics",
       "target": "v5-cybernetics-and-control-theory",
       "raw": "Cybernetics"
@@ -9872,6 +12911,61 @@ window.RESEARCH_DATA = {
       "source": "v5-systems-thinking-and-system-dynamics",
       "target": "v5-operations-research-and-optimization",
       "raw": "operations research"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v6-cliodynamics-and-mathematical-history",
+      "raw": "Cliodynamics & Mathematical History"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v7-gregory-bateson",
+      "raw": "Gregory Bateson"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v7-thinking-in-systems-a-primer",
+      "raw": "Thinking in Systems: A Primer"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v7-seeing-like-a-state",
+      "raw": "Seeing Like a State"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v7-permaculture-and-regenerative-agriculture",
+      "raw": "Permaculture & Regenerative Agriculture"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v7-climate-science-and-earth-systems",
+      "raw": "Climate Science & Earth Systems"
+    },
+    {
+      "source": "v5-systems-thinking-and-system-dynamics",
+      "target": "v9-stafford-beer",
+      "raw": "Stafford Beer"
     },
     {
       "source": "v5-causal-inference-and-causal-models",
@@ -9909,6 +13003,16 @@ window.RESEARCH_DATA = {
       "raw": "AI"
     },
     {
+      "source": "v5-causal-inference-and-causal-models",
+      "target": "v6-probabilistic-programming-and-graphical-models",
+      "raw": "Probabilistic Programming & Graphical Models"
+    },
+    {
+      "source": "v5-causal-inference-and-causal-models",
+      "target": "v7-prediction-markets-and-epistemic-infrastructure",
+      "raw": "Prediction Markets & Epistemic Infrastructure"
+    },
+    {
       "source": "v5-category-theory-and-abstract-algebra",
       "target": "v5-logic-formal-semantics-and-model-theory",
       "raw": "Logic"
@@ -9927,6 +13031,41 @@ window.RESEARCH_DATA = {
       "source": "v5-category-theory-and-abstract-algebra",
       "target": "v5-mathematical-physics-and-symmetry",
       "raw": "mathematical physics"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v5-writing-systems-notation-and-symbolic-representation",
+      "raw": "Writing Systems, Notation & Symbolic Representation"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v5-geometry-topology-and-spatial-computation",
+      "raw": "Geometry, Topology & Spatial Computation"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v5-compiler-design-and-programming-language-theory",
+      "raw": "Compiler Design & Programming Language Theory"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v6-functional-programming-and-lambda-calculus",
+      "raw": "Functional Programming & Lambda Calculus"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v6-history-of-mathematics",
+      "raw": "History of Mathematics"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v8-topological-data-analysis",
+      "raw": "Topological Data Analysis"
+    },
+    {
+      "source": "v5-category-theory-and-abstract-algebra",
+      "target": "v9-recursion-and-self-reference",
+      "raw": "Recursion & Self-Reference"
     },
     {
       "source": "v5-cognitive-science-and-perception",
@@ -9957,6 +13096,141 @@ window.RESEARCH_DATA = {
       "source": "v5-cognitive-science-and-perception",
       "target": "v5-game-design-ludology-and-interactive-systems",
       "raw": "game design"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-ecological-psychology-and-affordance-theory",
+      "raw": "Ecological Psychology & Affordance Theory"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-philosophy-of-mind-and-consciousness",
+      "raw": "Philosophy of Mind & Consciousness"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-writing-systems-notation-and-symbolic-representation",
+      "raw": "Writing Systems, Notation & Symbolic Representation"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-typography-and-graphic-design-history",
+      "raw": "Typography & Graphic Design History"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-color-science-and-theory",
+      "raw": "Color Science & Theory"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-cartography-and-data-visualization",
+      "raw": "Cartography & Data Visualization"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v5-musical-acoustics-and-psychoacoustics",
+      "raw": "Musical Acoustics & Psychoacoustics"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-metaphor-theory-and-conceptual-blending",
+      "raw": "Metaphor Theory & Conceptual Blending"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-memory-mnemonic-systems-and-externalized-knowledge",
+      "raw": "Memory, Mnemonic Systems & Externalized Knowledge"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-neuroethology",
+      "raw": "Neuroethology"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-philosophy-of-time",
+      "raw": "Philosophy of Time"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-chronobiology-and-circadian-rhythms",
+      "raw": "Chronobiology & Circadian Rhythms"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v6-evolutionary-epistemology",
+      "raw": "Evolutionary Epistemology"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v7-marvin-minsky",
+      "raw": "Marvin Minsky"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v7-seymour-papert",
+      "raw": "Seymour Papert"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v7-perfumery-and-olfactory-composition",
+      "raw": "Perfumery & Olfactory Composition"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v7-developmental-psychology",
+      "raw": "Developmental Psychology"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v8-spatial-cognition-and-cognitive-maps",
+      "raw": "Spatial Cognition & Cognitive Maps"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v9-j-j-gibson",
+      "raw": "J.J. Gibson"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v9-maturana-and-varela",
+      "raw": "Humberto Maturana & Francisco Varela"
+    },
+    {
+      "source": "v5-cognitive-science-and-perception",
+      "target": "v9-metaphors-we-live-by",
+      "raw": "Metaphors We Live By"
     },
     {
       "source": "v5-distributed-cognition-and-the-extended-mind",
@@ -9994,6 +13268,31 @@ window.RESEARCH_DATA = {
       "raw": "epistemology"
     },
     {
+      "source": "v5-distributed-cognition-and-the-extended-mind",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-distributed-cognition-and-the-extended-mind",
+      "target": "v6-memory-mnemonic-systems-and-externalized-knowledge",
+      "raw": "Memory, Mnemonic Systems & Externalized Knowledge"
+    },
+    {
+      "source": "v5-distributed-cognition-and-the-extended-mind",
+      "target": "v6-hypertext-and-hypermedia",
+      "raw": "Hypertext & Hypermedia"
+    },
+    {
+      "source": "v5-distributed-cognition-and-the-extended-mind",
+      "target": "v8-niche-construction-theory",
+      "raw": "Niche Construction Theory"
+    },
+    {
+      "source": "v5-distributed-cognition-and-the-extended-mind",
+      "target": "v9-j-j-gibson",
+      "raw": "J.J. Gibson"
+    },
+    {
       "source": "v5-ecological-psychology-and-affordance-theory",
       "target": "v5-cognitive-science-and-perception",
       "raw": "Cognitive science"
@@ -10024,6 +13323,31 @@ window.RESEARCH_DATA = {
       "raw": "embodied intelligence"
     },
     {
+      "source": "v5-ecological-psychology-and-affordance-theory",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-ecological-psychology-and-affordance-theory",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v5-ecological-psychology-and-affordance-theory",
+      "target": "v6-neuroethology",
+      "raw": "Neuroethology"
+    },
+    {
+      "source": "v5-ecological-psychology-and-affordance-theory",
+      "target": "v7-the-design-of-everyday-things",
+      "raw": "The Design of Everyday Things"
+    },
+    {
+      "source": "v5-ecological-psychology-and-affordance-theory",
+      "target": "v9-j-j-gibson",
+      "raw": "J.J. Gibson"
+    },
+    {
       "source": "v5-artificial-life-and-self-organization",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "Complex systems"
@@ -10047,6 +13371,56 @@ window.RESEARCH_DATA = {
       "source": "v5-artificial-life-and-self-organization",
       "target": "v5-morphogenesis-and-biological-pattern-formation",
       "raw": "morphogenesis"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v5-simulation-and-physics-engines",
+      "raw": "Simulation & Physics Engines"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v5-machine-learning-and-statistical-learning-theory",
+      "raw": "Machine Learning & Statistical Learning Theory"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v5-evolutionary-developmental-biology-evo-devo",
+      "raw": "Evolutionary Developmental Biology (Evo-Devo)"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v6-astrobiology-and-origin-of-life",
+      "raw": "Astrobiology & Origin of Life"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v6-neuroethology",
+      "raw": "Neuroethology"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "raw": "Complexity Economics & Agent-Based Modeling in Economics"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v6-reservoir-computing-and-neuromorphic-computation",
+      "raw": "Reservoir Computing & Neuromorphic Computation"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v9-chemistry-and-reaction-networks",
+      "raw": "Chemistry / Reaction Networks"
+    },
+    {
+      "source": "v5-artificial-life-and-self-organization",
+      "target": "v9-maturana-and-varela",
+      "raw": "Humberto Maturana & Francisco Varela"
     },
     {
       "source": "v5-collective-intelligence-and-coordination-systems",
@@ -10077,6 +13451,76 @@ window.RESEARCH_DATA = {
       "source": "v5-collective-intelligence-and-coordination-systems",
       "target": "v5-decision-theory-and-rationality",
       "raw": "decision theory"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v6-behavioral-ecology-and-sociobiology",
+      "raw": "Behavioral Ecology & Sociobiology"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v7-the-mythical-man-month",
+      "raw": "The Mythical Man-Month"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v7-prediction-markets-and-epistemic-infrastructure",
+      "raw": "Prediction Markets & Epistemic Infrastructure"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v7-digital-commons-and-platform-economics",
+      "raw": "Digital Commons & Platform Economics"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v8-mathematical-epidemiology-and-contagion-dynamics",
+      "raw": "Mathematical Epidemiology & Contagion Dynamics"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v8-social-choice-and-voting-theory",
+      "raw": "Social Choice & Voting Theory"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v8-niche-construction-theory",
+      "raw": "Niche Construction Theory"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v8-monetary-theory-and-the-history-of-money",
+      "raw": "Monetary Theory & the History of Money"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v9-ritual-as-coordination-technology",
+      "raw": "Ritual as Coordination Technology"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v9-stafford-beer",
+      "raw": "Stafford Beer"
+    },
+    {
+      "source": "v5-collective-intelligence-and-coordination-systems",
+      "target": "v9-ubuntu-and-african-relational-philosophy",
+      "raw": "Ubuntu / African Relational Philosophy"
     },
     {
       "source": "v5-semiotics-structuralism-and-the-science-of-signs",
@@ -10114,6 +13558,96 @@ window.RESEARCH_DATA = {
       "raw": "Critical Theory & the Frankfurt School"
     },
     {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v6-metaphor-theory-and-conceptual-blending",
+      "raw": "Metaphor Theory & Conceptual Blending"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
+      "raw": "Knowledge Graphs, Ontologies & The Semantic Web"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v6-information-architecture",
+      "raw": "Information Architecture"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v6-comparative-mythology-and-depth-psychology",
+      "raw": "Comparative Mythology & Depth Psychology"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v7-ways-of-seeing",
+      "raw": "Ways of Seeing"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
+      "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v7-psychoanalysis",
+      "raw": "Psychoanalysis"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v8-classification-taxonomy-and-knowledge-organization",
+      "raw": "Classification, Taxonomy & Knowledge Organization"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-charles-sanders-peirce",
+      "raw": "Charles Sanders Peirce"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-ferdinand-de-saussure",
+      "raw": "Ferdinand de Saussure"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-jean-baudrillard",
+      "raw": "Jean Baudrillard"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-claude-levi-strauss",
+      "raw": "Claude Lévi-Strauss"
+    },
+    {
+      "source": "v5-semiotics-structuralism-and-the-science-of-signs",
+      "target": "v9-metaphors-we-live-by",
+      "raw": "Metaphors We Live By"
+    },
+    {
       "source": "v5-philosophy-of-mathematics",
       "target": "v5-category-theory-and-abstract-algebra",
       "raw": "Category theory"
@@ -10127,6 +13661,31 @@ window.RESEARCH_DATA = {
       "source": "v5-philosophy-of-mathematics",
       "target": "v5-epistemology-and-philosophy-of-knowledge",
       "raw": "epistemology"
+    },
+    {
+      "source": "v5-philosophy-of-mathematics",
+      "target": "v6-type-theory-and-homotopy-type-theory",
+      "raw": "Type Theory & Homotopy Type Theory"
+    },
+    {
+      "source": "v5-philosophy-of-mathematics",
+      "target": "v6-history-of-mathematics",
+      "raw": "History of Mathematics"
+    },
+    {
+      "source": "v5-philosophy-of-mathematics",
+      "target": "v7-jorge-luis-borges",
+      "raw": "Jorge Luis Borges"
+    },
+    {
+      "source": "v5-philosophy-of-mathematics",
+      "target": "v9-gottfried-leibniz",
+      "raw": "Gottfried Leibniz"
+    },
+    {
+      "source": "v5-philosophy-of-mathematics",
+      "target": "v9-henri-poincare",
+      "raw": "Henri Poincaré"
     },
     {
       "source": "v5-phenomenology-and-embodied-experience",
@@ -10152,6 +13711,66 @@ window.RESEARCH_DATA = {
       "source": "v5-phenomenology-and-embodied-experience",
       "target": "v5-aesthetics-and-philosophy-of-art",
       "raw": "aesthetics"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v5-ecological-psychology-and-affordance-theory",
+      "raw": "Ecological Psychology & Affordance Theory"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v5-photography-and-optics",
+      "raw": "Photography & Optics"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v5-musical-acoustics-and-psychoacoustics",
+      "raw": "Musical Acoustics & Psychoacoustics"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v6-philosophy-of-time",
+      "raw": "Philosophy of Time"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v7-andrei-tarkovsky",
+      "raw": "Andrei Tarkovsky"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v7-tadao-ando",
+      "raw": "Tadao Ando"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v7-louis-kahn",
+      "raw": "Louis Kahn"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v7-zen-and-the-art-of-motorcycle-maintenance",
+      "raw": "Zen and the Art of Motorcycle Maintenance"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v7-existentialism",
+      "raw": "Existentialism"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v7-brain-computer-interfaces-and-spatial-computing",
+      "raw": "Brain-Computer Interfaces & Spatial Computing"
+    },
+    {
+      "source": "v5-phenomenology-and-embodied-experience",
+      "target": "v9-metaphors-we-live-by",
+      "raw": "Metaphors We Live By"
     },
     {
       "source": "v5-philosophy-of-mind-and-consciousness",
@@ -10184,6 +13803,76 @@ window.RESEARCH_DATA = {
       "raw": "neuroscience"
     },
     {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v5-artificial-life-and-self-organization",
+      "raw": "Artificial Life & Self-Organization"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-marvin-minsky",
+      "raw": "Marvin Minsky"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-g-del-escher-bach-an-eternal-golden-braid",
+      "raw": "Gödel, Escher, Bach: An Eternal Golden Braid"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-finite-and-infinite-games",
+      "raw": "Finite and Infinite Games"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-quantum-mechanics-as-physics",
+      "raw": "Quantum Mechanics (as physics)"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-ethics-consequentialism-deontology-virtue",
+      "raw": "Ethics (Consequentialism / Deontology / Virtue)"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-existentialism",
+      "raw": "Existentialism"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-psychoanalysis",
+      "raw": "Psychoanalysis"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v7-ai-alignment-and-safety",
+      "raw": "AI Alignment & Safety"
+    },
+    {
+      "source": "v5-philosophy-of-mind-and-consciousness",
+      "target": "v9-maturana-and-varela",
+      "raw": "Humberto Maturana & Francisco Varela"
+    },
+    {
       "source": "v5-eastern-philosophy",
       "target": "v5-phenomenology-and-embodied-experience",
       "raw": "Phenomenology"
@@ -10207,6 +13896,101 @@ window.RESEARCH_DATA = {
       "source": "v5-eastern-philosophy",
       "target": "v5-aesthetics-and-philosophy-of-art",
       "raw": "aesthetics"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v5-philosophy-of-mind-and-consciousness",
+      "raw": "Philosophy of Mind & Consciousness"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v6-philosophy-of-time",
+      "raw": "Philosophy of Time"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-john-cage",
+      "raw": "John Cage"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-andrei-tarkovsky",
+      "raw": "Andrei Tarkovsky"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-jorge-luis-borges",
+      "raw": "Jorge Luis Borges"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-zen-and-the-art-of-motorcycle-maintenance",
+      "raw": "Zen and the Art of Motorcycle Maintenance"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-finite-and-infinite-games",
+      "raw": "Finite and Infinite Games"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-bonsai-and-japanese-gardening-karesansui",
+      "raw": "Bonsai & Japanese Gardening (Karesansui)"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-existentialism",
+      "raw": "Existentialism"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v7-japanese-aesthetics",
+      "raw": "Japanese Aesthetics"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v9-ritual-as-coordination-technology",
+      "raw": "Ritual as Coordination Technology"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v9-joseph-needham",
+      "raw": "Joseph Needham"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v9-ubuntu-and-african-relational-philosophy",
+      "raw": "Ubuntu / African Relational Philosophy"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v9-navya-nyaya",
+      "raw": "Navya-Nyāya"
+    },
+    {
+      "source": "v5-eastern-philosophy",
+      "target": "v9-the-glass-bead-game",
+      "raw": "The Glass Bead Game"
     },
     {
       "source": "v5-epistemology-and-philosophy-of-knowledge",
@@ -10239,6 +14023,56 @@ window.RESEARCH_DATA = {
       "raw": "Critical Theory & the Frankfurt School"
     },
     {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v5-causal-inference-and-causal-models",
+      "raw": "Causal Inference & Causal Models"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v5-philosophy-of-mathematics",
+      "raw": "Philosophy of Mathematics"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v5-measurement-theory-metrology-and-representation",
+      "raw": "Measurement Theory, Metrology & Representation"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v6-evolutionary-epistemology",
+      "raw": "Evolutionary Epistemology"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v8-classification-taxonomy-and-knowledge-organization",
+      "raw": "Classification, Taxonomy & Knowledge Organization"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v9-charles-sanders-peirce",
+      "raw": "Charles Sanders Peirce"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v9-michel-foucault",
+      "raw": "Michel Foucault"
+    },
+    {
+      "source": "v5-epistemology-and-philosophy-of-knowledge",
+      "target": "v9-navya-nyaya",
+      "raw": "Navya-Nyāya"
+    },
+    {
       "source": "v5-history-and-philosophy-of-science",
       "target": "v5-epistemology-and-philosophy-of-knowledge",
       "raw": "Epistemology"
@@ -10257,6 +14091,56 @@ window.RESEARCH_DATA = {
       "source": "v5-history-and-philosophy-of-science",
       "target": "v9-critical-theory-and-the-frankfurt-school",
       "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v5-causal-inference-and-causal-models",
+      "raw": "Causal Inference & Causal Models"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v5-measurement-theory-metrology-and-representation",
+      "raw": "Measurement Theory, Metrology & Representation"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v6-cliodynamics-and-mathematical-history",
+      "raw": "Cliodynamics & Mathematical History"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v6-history-of-mathematics",
+      "raw": "History of Mathematics"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v6-evolutionary-epistemology",
+      "raw": "Evolutionary Epistemology"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v7-paleontology-and-deep-time",
+      "raw": "Paleontology & Deep Time"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v9-michel-foucault",
+      "raw": "Michel Foucault"
+    },
+    {
+      "source": "v5-history-and-philosophy-of-science",
+      "target": "v9-joseph-needham",
+      "raw": "Joseph Needham"
     },
     {
       "source": "v5-anthropology-cultural-evolution-and-technology-studies",
@@ -10287,6 +14171,111 @@ window.RESEARCH_DATA = {
       "source": "v5-anthropology-cultural-evolution-and-technology-studies",
       "target": "v5-game-design-ludology-and-interactive-systems",
       "raw": "game design"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v5-history-and-philosophy-of-science",
+      "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v5-linguistics-and-natural-language-structure",
+      "raw": "Linguistics & Natural Language Structure"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v5-rhetoric-narrative-theory-and-story-systems",
+      "raw": "Rhetoric, Narrative Theory & Story Systems"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v6-behavioral-ecology-and-sociobiology",
+      "raw": "Behavioral Ecology & Sociobiology"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v6-cliodynamics-and-mathematical-history",
+      "raw": "Cliodynamics & Mathematical History"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v6-comparative-mythology-and-depth-psychology",
+      "raw": "Comparative Mythology & Depth Psychology"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v7-gregory-bateson",
+      "raw": "Gregory Bateson"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v7-ursula-k-le-guin",
+      "raw": "Ursula K. Le Guin"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v7-seeing-like-a-state",
+      "raw": "Seeing Like a State"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v7-political-philosophy",
+      "raw": "Political Philosophy"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v7-digital-commons-and-platform-economics",
+      "raw": "Digital Commons & Platform Economics"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v8-monetary-theory-and-the-history-of-money",
+      "raw": "Monetary Theory & the History of Money"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v9-ritual-as-coordination-technology",
+      "raw": "Ritual as Coordination Technology"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v9-michel-foucault",
+      "raw": "Michel Foucault"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v9-claude-levi-strauss",
+      "raw": "Claude Lévi-Strauss"
+    },
+    {
+      "source": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "target": "v9-joseph-needham",
+      "raw": "Joseph Needham"
     },
     {
       "source": "v5-aesthetics-and-philosophy-of-art",
@@ -10322,6 +14311,51 @@ window.RESEARCH_DATA = {
       "source": "v5-aesthetics-and-philosophy-of-art",
       "target": "v9-critical-theory-and-the-frankfurt-school",
       "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v6-comparative-mythology-and-depth-psychology",
+      "raw": "Comparative Mythology & Depth Psychology"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v7-ways-of-seeing",
+      "raw": "Ways of Seeing"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v7-perfumery-and-olfactory-composition",
+      "raw": "Perfumery & Olfactory Composition"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v7-japanese-aesthetics",
+      "raw": "Japanese Aesthetics"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v9-jean-baudrillard",
+      "raw": "Jean Baudrillard"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v9-gilles-deleuze",
+      "raw": "Gilles Deleuze"
+    },
+    {
+      "source": "v5-aesthetics-and-philosophy-of-art",
+      "target": "v9-the-glass-bead-game",
+      "raw": "The Glass Bead Game"
     },
     {
       "source": "v5-media-theory-and-philosophy-of-technology",
@@ -10369,6 +14403,31 @@ window.RESEARCH_DATA = {
       "raw": "Critical Theory & the Frankfurt School"
     },
     {
+      "source": "v5-media-theory-and-philosophy-of-technology",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v5-media-theory-and-philosophy-of-technology",
+      "target": "v7-ways-of-seeing",
+      "raw": "Ways of Seeing"
+    },
+    {
+      "source": "v5-media-theory-and-philosophy-of-technology",
+      "target": "v9-actor-network-theory-and-sts",
+      "raw": "Actor-Network Theory & STS"
+    },
+    {
+      "source": "v5-media-theory-and-philosophy-of-technology",
+      "target": "v9-jean-baudrillard",
+      "raw": "Jean Baudrillard"
+    },
+    {
+      "source": "v5-media-theory-and-philosophy-of-technology",
+      "target": "v9-marshall-mcluhan",
+      "raw": "Marshall McLuhan"
+    },
+    {
       "source": "v5-linguistics-and-natural-language-structure",
       "target": "v5-logic-formal-semantics-and-model-theory",
       "raw": "logic"
@@ -10399,6 +14458,41 @@ window.RESEARCH_DATA = {
       "raw": "writing systems/notation"
     },
     {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v6-metaphor-theory-and-conceptual-blending",
+      "raw": "Metaphor Theory & Conceptual Blending"
+    },
+    {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
+      "raw": "Knowledge Graphs, Ontologies & The Semantic Web"
+    },
+    {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v9-ferdinand-de-saussure",
+      "raw": "Ferdinand de Saussure"
+    },
+    {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v9-claude-levi-strauss",
+      "raw": "Claude Lévi-Strauss"
+    },
+    {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v9-panini-and-generative-grammar",
+      "raw": "Pāṇini & Generative Grammar"
+    },
+    {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v9-navya-nyaya",
+      "raw": "Navya-Nyāya"
+    },
+    {
+      "source": "v5-linguistics-and-natural-language-structure",
+      "target": "v9-metaphors-we-live-by",
+      "raw": "Metaphors We Live By"
+    },
+    {
       "source": "v5-logic-formal-semantics-and-model-theory",
       "target": "v5-philosophy-of-mathematics",
       "raw": "Philosophy of mathematics"
@@ -10424,6 +14518,71 @@ window.RESEARCH_DATA = {
       "raw": "machine learning"
     },
     {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v5-compiler-design-and-programming-language-theory",
+      "raw": "Compiler Design & Programming Language Theory"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v6-probabilistic-programming-and-graphical-models",
+      "raw": "Probabilistic Programming & Graphical Models"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v6-concurrency-theory",
+      "raw": "Concurrency Theory"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v8-computational-complexity-and-intractability",
+      "raw": "Computational Complexity & Intractability"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v8-social-choice-and-voting-theory",
+      "raw": "Social Choice & Voting Theory"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v8-law-jurisprudence-and-computational-law",
+      "raw": "Law, Jurisprudence & Computational Law"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v9-recursion-and-self-reference",
+      "raw": "Recursion & Self-Reference"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v9-charles-sanders-peirce",
+      "raw": "Charles Sanders Peirce"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v9-gottfried-leibniz",
+      "raw": "Gottfried Leibniz"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v9-panini-and-generative-grammar",
+      "raw": "Pāṇini & Generative Grammar"
+    },
+    {
+      "source": "v5-logic-formal-semantics-and-model-theory",
+      "target": "v9-navya-nyaya",
+      "raw": "Navya-Nyāya"
+    },
+    {
       "source": "v5-rhetoric-narrative-theory-and-story-systems",
       "target": "v5-semiotics-structuralism-and-the-science-of-signs",
       "raw": "semiotics"
@@ -10442,6 +14601,16 @@ window.RESEARCH_DATA = {
       "source": "v5-rhetoric-narrative-theory-and-story-systems",
       "target": "v5-anthropology-cultural-evolution-and-technology-studies",
       "raw": "anthropology"
+    },
+    {
+      "source": "v5-rhetoric-narrative-theory-and-story-systems",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-rhetoric-narrative-theory-and-story-systems",
+      "target": "v6-pragmatism",
+      "raw": "Pragmatism"
     },
     {
       "source": "v5-writing-systems-notation-and-symbolic-representation",
@@ -10469,6 +14638,66 @@ window.RESEARCH_DATA = {
       "raw": "category theory"
     },
     {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
+      "raw": "Knowledge Graphs, Ontologies & The Semantic Web"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v6-hypertext-and-hypermedia",
+      "raw": "Hypertext & Hypermedia"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v6-information-architecture",
+      "raw": "Information Architecture"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v7-bret-victor",
+      "raw": "Bret Victor"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v7-jorge-luis-borges",
+      "raw": "Jorge Luis Borges"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
+      "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v8-classification-taxonomy-and-knowledge-organization",
+      "raw": "Classification, Taxonomy & Knowledge Organization"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v9-gottfried-leibniz",
+      "raw": "Gottfried Leibniz"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v9-panini-and-generative-grammar",
+      "raw": "Pāṇini & Generative Grammar"
+    },
+    {
+      "source": "v5-writing-systems-notation-and-symbolic-representation",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
+    },
+    {
       "source": "v5-history-of-computing-and-the-personal-computer-revolution",
       "target": "v5-human-computer-interaction-and-interface-design",
       "raw": "HCI"
@@ -10494,6 +14723,26 @@ window.RESEARCH_DATA = {
       "raw": "philosophy of technology"
     },
     {
+      "source": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "target": "v6-memory-mnemonic-systems-and-externalized-knowledge",
+      "raw": "Memory, Mnemonic Systems & Externalized Knowledge"
+    },
+    {
+      "source": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "target": "v6-hypertext-and-hypermedia",
+      "raw": "Hypertext & Hypermedia"
+    },
+    {
+      "source": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "target": "v7-alan-kay",
+      "raw": "Alan Kay"
+    },
+    {
+      "source": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "target": "v9-marshall-mcluhan",
+      "raw": "Marshall McLuhan"
+    },
+    {
       "source": "v5-generative-music-and-algorithmic-composition",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "complex systems"
@@ -10507,6 +14756,41 @@ window.RESEARCH_DATA = {
       "source": "v5-generative-music-and-algorithmic-composition",
       "target": "v5-game-design-ludology-and-interactive-systems",
       "raw": "game design"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v5-musical-acoustics-and-psychoacoustics",
+      "raw": "Musical Acoustics & Psychoacoustics"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v6-stochastic-processes-and-random-walks",
+      "raw": "Stochastic Processes & Random Walks"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v7-brian-eno",
+      "raw": "Brian Eno"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v7-iannis-xenakis",
+      "raw": "Iannis Xenakis"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v7-john-cage",
+      "raw": "John Cage"
+    },
+    {
+      "source": "v5-generative-music-and-algorithmic-composition",
+      "target": "v9-the-glass-bead-game",
+      "raw": "The Glass Bead Game"
     },
     {
       "source": "v5-typography-and-graphic-design-history",
@@ -10529,6 +14813,31 @@ window.RESEARCH_DATA = {
       "raw": "writing systems/notation"
     },
     {
+      "source": "v5-typography-and-graphic-design-history",
+      "target": "v6-islamic-geometric-patterns-and-ornament",
+      "raw": "Islamic Geometric Patterns & Ornament"
+    },
+    {
+      "source": "v5-typography-and-graphic-design-history",
+      "target": "v7-donald-knuth",
+      "raw": "Donald Knuth"
+    },
+    {
+      "source": "v5-typography-and-graphic-design-history",
+      "target": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
+      "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison"
+    },
+    {
+      "source": "v5-typography-and-graphic-design-history",
+      "target": "v9-marshall-mcluhan",
+      "raw": "Marshall McLuhan"
+    },
+    {
+      "source": "v5-typography-and-graphic-design-history",
+      "target": "v9-edward-tufte",
+      "raw": "Edward Tufte"
+    },
+    {
       "source": "v5-photography-and-optics",
       "target": "v5-phenomenology-and-embodied-experience",
       "raw": "phenomenology"
@@ -10537,6 +14846,21 @@ window.RESEARCH_DATA = {
       "source": "v5-photography-and-optics",
       "target": "v5-computer-graphics-and-computational-imaging",
       "raw": "computer graphics"
+    },
+    {
+      "source": "v5-photography-and-optics",
+      "target": "v5-color-science-and-theory",
+      "raw": "Color Science & Theory"
+    },
+    {
+      "source": "v5-photography-and-optics",
+      "target": "v7-andrei-tarkovsky",
+      "raw": "Andrei Tarkovsky"
+    },
+    {
+      "source": "v5-photography-and-optics",
+      "target": "v7-ways-of-seeing",
+      "raw": "Ways of Seeing"
     },
     {
       "source": "v5-color-science-and-theory",
@@ -10549,6 +14873,11 @@ window.RESEARCH_DATA = {
       "raw": "cognitive science"
     },
     {
+      "source": "v5-color-science-and-theory",
+      "target": "v9-edward-tufte",
+      "raw": "Edward Tufte"
+    },
+    {
       "source": "v5-cartography-and-data-visualization",
       "target": "v5-network-science-and-graph-theory",
       "raw": "Network science"
@@ -10557,6 +14886,36 @@ window.RESEARCH_DATA = {
       "source": "v5-cartography-and-data-visualization",
       "target": "v5-cognitive-science-and-perception",
       "raw": "cognitive science"
+    },
+    {
+      "source": "v5-cartography-and-data-visualization",
+      "target": "v5-measurement-theory-metrology-and-representation",
+      "raw": "Measurement Theory, Metrology & Representation"
+    },
+    {
+      "source": "v5-cartography-and-data-visualization",
+      "target": "v6-information-architecture",
+      "raw": "Information Architecture"
+    },
+    {
+      "source": "v5-cartography-and-data-visualization",
+      "target": "v7-sailing-and-navigation",
+      "raw": "Sailing & Navigation"
+    },
+    {
+      "source": "v5-cartography-and-data-visualization",
+      "target": "v8-topological-data-analysis",
+      "raw": "Topological Data Analysis"
+    },
+    {
+      "source": "v5-cartography-and-data-visualization",
+      "target": "v8-spatial-cognition-and-cognitive-maps",
+      "raw": "Spatial Cognition & Cognitive Maps"
+    },
+    {
+      "source": "v5-cartography-and-data-visualization",
+      "target": "v9-edward-tufte",
+      "raw": "Edward Tufte"
     },
     {
       "source": "v5-human-computer-interaction-and-interface-design",
@@ -10582,6 +14941,101 @@ window.RESEARCH_DATA = {
       "source": "v5-human-computer-interaction-and-interface-design",
       "target": "v5-game-design-ludology-and-interactive-systems",
       "raw": "game design"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v5-ecological-psychology-and-affordance-theory",
+      "raw": "Ecological Psychology & Affordance Theory"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "raw": "History of Computing & The Personal Computer Revolution"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v5-computer-graphics-and-computational-imaging",
+      "raw": "Computer Graphics & Computational Imaging"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "raw": "Pattern Languages, Design Methods & Morphological Analysis"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v6-memory-mnemonic-systems-and-externalized-knowledge",
+      "raw": "Memory, Mnemonic Systems & Externalized Knowledge"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v6-hypertext-and-hypermedia",
+      "raw": "Hypertext & Hypermedia"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v6-information-architecture",
+      "raw": "Information Architecture"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v6-attention-studies-and-the-attention-economy",
+      "raw": "Attention Studies & The Attention Economy"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v7-alan-kay",
+      "raw": "Alan Kay"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v7-bret-victor",
+      "raw": "Bret Victor"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v7-dieter-rams",
+      "raw": "Dieter Rams"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v7-the-sciences-of-the-artificial",
+      "raw": "The Sciences of the Artificial"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v7-the-design-of-everyday-things",
+      "raw": "The Design of Everyday Things"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v7-brain-computer-interfaces-and-spatial-computing",
+      "raw": "Brain-Computer Interfaces & Spatial Computing"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v8-spatial-cognition-and-cognitive-maps",
+      "raw": "Spatial Cognition & Cognitive Maps"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v9-j-j-gibson",
+      "raw": "J.J. Gibson"
+    },
+    {
+      "source": "v5-human-computer-interaction-and-interface-design",
+      "target": "v9-edward-tufte",
+      "raw": "Edward Tufte"
     },
     {
       "source": "v5-game-design-ludology-and-interactive-systems",
@@ -10619,6 +15073,36 @@ window.RESEARCH_DATA = {
       "raw": "cognitive science"
     },
     {
+      "source": "v5-game-design-ludology-and-interactive-systems",
+      "target": "v5-ecological-psychology-and-affordance-theory",
+      "raw": "Ecological Psychology & Affordance Theory"
+    },
+    {
+      "source": "v5-game-design-ludology-and-interactive-systems",
+      "target": "v5-anthropology-cultural-evolution-and-technology-studies",
+      "raw": "Anthropology, Cultural Evolution & Technology Studies"
+    },
+    {
+      "source": "v5-game-design-ludology-and-interactive-systems",
+      "target": "v5-aesthetics-and-philosophy-of-art",
+      "raw": "Aesthetics & Philosophy of Art"
+    },
+    {
+      "source": "v5-game-design-ludology-and-interactive-systems",
+      "target": "v5-generative-music-and-algorithmic-composition",
+      "raw": "Generative Music & Algorithmic Composition"
+    },
+    {
+      "source": "v5-game-design-ludology-and-interactive-systems",
+      "target": "v5-computer-graphics-and-computational-imaging",
+      "raw": "Computer Graphics & Computational Imaging"
+    },
+    {
+      "source": "v5-game-design-ludology-and-interactive-systems",
+      "target": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "raw": "Pattern Languages, Design Methods & Morphological Analysis"
+    },
+    {
       "source": "v5-computer-graphics-and-computational-imaging",
       "target": "v5-geometry-topology-and-spatial-computation",
       "raw": "Geometry"
@@ -10649,6 +15133,11 @@ window.RESEARCH_DATA = {
       "raw": "machine learning"
     },
     {
+      "source": "v5-computer-graphics-and-computational-imaging",
+      "target": "v7-linear-algebra",
+      "raw": "Linear Algebra"
+    },
+    {
       "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
       "target": "v5-human-computer-interaction-and-interface-design",
       "raw": "HCI"
@@ -10662,6 +15151,46 @@ window.RESEARCH_DATA = {
       "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
       "target": "v5-biomimicry-and-nature-inspired-design",
       "raw": "biomimicry"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v6-metaphor-theory-and-conceptual-blending",
+      "raw": "Metaphor Theory & Conceptual Blending"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v6-urban-planning-and-urbanism",
+      "raw": "Urban Planning & Urbanism"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v6-islamic-geometric-patterns-and-ornament",
+      "raw": "Islamic Geometric Patterns & Ornament"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v7-dieter-rams",
+      "raw": "Dieter Rams"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v7-frank-lloyd-wright",
+      "raw": "Frank Lloyd Wright"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v7-the-sciences-of-the-artificial",
+      "raw": "The Sciences of the Artificial"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v7-how-buildings-learn",
+      "raw": "How Buildings Learn"
+    },
+    {
+      "source": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "target": "v7-the-design-of-everyday-things",
+      "raw": "The Design of Everyday Things"
     },
     {
       "source": "v5-geometry-topology-and-spatial-computation",
@@ -10689,6 +15218,36 @@ window.RESEARCH_DATA = {
       "raw": "morphogenesis"
     },
     {
+      "source": "v5-geometry-topology-and-spatial-computation",
+      "target": "v5-materials-science-metamaterials-and-programmable-matter",
+      "raw": "Materials Science, Metamaterials & Programmable Matter"
+    },
+    {
+      "source": "v5-geometry-topology-and-spatial-computation",
+      "target": "v6-history-of-mathematics",
+      "raw": "History of Mathematics"
+    },
+    {
+      "source": "v5-geometry-topology-and-spatial-computation",
+      "target": "v8-optimal-transport",
+      "raw": "Optimal Transport"
+    },
+    {
+      "source": "v5-geometry-topology-and-spatial-computation",
+      "target": "v8-information-geometry",
+      "raw": "Information Geometry"
+    },
+    {
+      "source": "v5-geometry-topology-and-spatial-computation",
+      "target": "v8-topological-data-analysis",
+      "raw": "Topological Data Analysis"
+    },
+    {
+      "source": "v5-geometry-topology-and-spatial-computation",
+      "target": "v9-henri-poincare",
+      "raw": "Henri Poincaré"
+    },
+    {
       "source": "v5-biomimicry-and-nature-inspired-design",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "Complex systems"
@@ -10707,6 +15266,56 @@ window.RESEARCH_DATA = {
       "source": "v5-biomimicry-and-nature-inspired-design",
       "target": "v5-morphogenesis-and-biological-pattern-formation",
       "raw": "morphogenesis"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v5-eastern-philosophy",
+      "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v5-pattern-languages-design-methods-and-morphological-analysis",
+      "raw": "Pattern Languages, Design Methods & Morphological Analysis"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v5-evolutionary-developmental-biology-evo-devo",
+      "raw": "Evolutionary Developmental Biology (Evo-Devo)"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v6-origami-and-computational-folding",
+      "raw": "Origami & Computational Folding"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v7-on-growth-and-form",
+      "raw": "On Growth and Form"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v7-permaculture-and-regenerative-agriculture",
+      "raw": "Permaculture & Regenerative Agriculture"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v8-fluid-dynamics-and-turbulence",
+      "raw": "Fluid Dynamics & Turbulence"
+    },
+    {
+      "source": "v5-biomimicry-and-nature-inspired-design",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
     },
     {
       "source": "v5-morphogenesis-and-biological-pattern-formation",
@@ -10734,6 +15343,51 @@ window.RESEARCH_DATA = {
       "raw": "mathematical physics"
     },
     {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "raw": "Thermodynamics, Statistical Mechanics & Arrow of Time"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v5-evolutionary-developmental-biology-evo-devo",
+      "raw": "Evolutionary Developmental Biology (Evo-Devo)"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v6-fractal-geometry-and-self-similarity",
+      "raw": "Fractal Geometry & Self-Similarity"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v6-process-philosophy",
+      "raw": "Process Philosophy"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v6-astrobiology-and-origin-of-life",
+      "raw": "Astrobiology & Origin of Life"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v7-on-growth-and-form",
+      "raw": "On Growth and Form"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v7-cell-and-molecular-biology",
+      "raw": "Cell & Molecular Biology"
+    },
+    {
+      "source": "v5-morphogenesis-and-biological-pattern-formation",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
       "source": "v5-simulation-and-physics-engines",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "complex systems"
@@ -10754,6 +15408,16 @@ window.RESEARCH_DATA = {
       "raw": "artificial life"
     },
     {
+      "source": "v5-simulation-and-physics-engines",
+      "target": "v5-computer-graphics-and-computational-imaging",
+      "raw": "Computer Graphics & Computational Imaging"
+    },
+    {
+      "source": "v5-simulation-and-physics-engines",
+      "target": "v8-fluid-dynamics-and-turbulence",
+      "raw": "Fluid Dynamics & Turbulence"
+    },
+    {
       "source": "v5-musical-acoustics-and-psychoacoustics",
       "target": "v5-generative-music-and-algorithmic-composition",
       "raw": "generative music"
@@ -10767,6 +15431,16 @@ window.RESEARCH_DATA = {
       "source": "v5-musical-acoustics-and-psychoacoustics",
       "target": "v5-phenomenology-and-embodied-experience",
       "raw": "phenomenology"
+    },
+    {
+      "source": "v5-musical-acoustics-and-psychoacoustics",
+      "target": "v7-horology-and-mechanical-watchmaking",
+      "raw": "Horology & Mechanical Watchmaking"
+    },
+    {
+      "source": "v5-musical-acoustics-and-psychoacoustics",
+      "target": "v8-synchronization-and-coupled-oscillators",
+      "raw": "Synchronization & Coupled Oscillators"
     },
     {
       "source": "v5-decision-theory-and-rationality",
@@ -10799,6 +15473,56 @@ window.RESEARCH_DATA = {
       "raw": "game design"
     },
     {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v5-causal-inference-and-causal-models",
+      "raw": "Causal Inference & Causal Models"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v6-reinforcement-learning",
+      "raw": "Reinforcement Learning"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v7-the-sciences-of-the-artificial",
+      "raw": "The Sciences of the Artificial"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v7-sailing-and-navigation",
+      "raw": "Sailing & Navigation"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v7-ai-alignment-and-safety",
+      "raw": "AI Alignment & Safety"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v7-prediction-markets-and-epistemic-infrastructure",
+      "raw": "Prediction Markets & Epistemic Infrastructure"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v8-computational-complexity-and-intractability",
+      "raw": "Computational Complexity & Intractability"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v8-social-choice-and-voting-theory",
+      "raw": "Social Choice & Voting Theory"
+    },
+    {
+      "source": "v5-decision-theory-and-rationality",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
       "source": "v5-game-theory-and-mechanism-design",
       "target": "v5-decision-theory-and-rationality",
       "raw": "decision theory"
@@ -10812,6 +15536,66 @@ window.RESEARCH_DATA = {
       "source": "v5-game-theory-and-mechanism-design",
       "target": "v5-game-design-ludology-and-interactive-systems",
       "raw": "game design"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v5-complex-systems-and-chaos-theory",
+      "raw": "Complex Systems & Chaos Theory"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v5-operations-research-and-optimization",
+      "raw": "Operations Research & Optimization"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v6-reinforcement-learning",
+      "raw": "Reinforcement Learning"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v6-behavioral-ecology-and-sociobiology",
+      "raw": "Behavioral Ecology & Sociobiology"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "raw": "Complexity Economics & Agent-Based Modeling in Economics"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v7-finite-and-infinite-games",
+      "raw": "Finite and Infinite Games"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v7-prediction-markets-and-epistemic-infrastructure",
+      "raw": "Prediction Markets & Epistemic Infrastructure"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v8-social-choice-and-voting-theory",
+      "raw": "Social Choice & Voting Theory"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v8-law-jurisprudence-and-computational-law",
+      "raw": "Law, Jurisprudence & Computational Law"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v8-monetary-theory-and-the-history-of-money",
+      "raw": "Monetary Theory & the History of Money"
+    },
+    {
+      "source": "v5-game-theory-and-mechanism-design",
+      "target": "v9-ritual-as-coordination-technology",
+      "raw": "Ritual as Coordination Technology"
     },
     {
       "source": "v5-measurement-theory-metrology-and-representation",
@@ -10844,6 +15628,11 @@ window.RESEARCH_DATA = {
       "raw": "machine learning"
     },
     {
+      "source": "v5-measurement-theory-metrology-and-representation",
+      "target": "v8-classification-taxonomy-and-knowledge-organization",
+      "raw": "Classification, Taxonomy & Knowledge Organization"
+    },
+    {
       "source": "v5-operations-research-and-optimization",
       "target": "v5-game-theory-and-mechanism-design",
       "raw": "Game theory"
@@ -10862,6 +15651,41 @@ window.RESEARCH_DATA = {
       "source": "v5-operations-research-and-optimization",
       "target": "v5-machine-learning-and-statistical-learning-theory",
       "raw": "machine learning"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v5-network-science-and-graph-theory",
+      "raw": "Network Science & Graph Theory"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v5-systems-thinking-and-system-dynamics",
+      "raw": "Systems Thinking & System Dynamics"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v5-decision-theory-and-rationality",
+      "raw": "Decision Theory & Rationality"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v8-computational-complexity-and-intractability",
+      "raw": "Computational Complexity & Intractability"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v8-optimal-transport",
+      "raw": "Optimal Transport"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "raw": "Energy Systems, Infrastructure & How the World Really Works"
+    },
+    {
+      "source": "v5-operations-research-and-optimization",
+      "target": "v9-stafford-beer",
+      "raw": "Stafford Beer"
     },
     {
       "source": "v5-digital-signal-processing-dsp",
@@ -10884,6 +15708,46 @@ window.RESEARCH_DATA = {
       "raw": "logic"
     },
     {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v6-type-theory-and-homotopy-type-theory",
+      "raw": "Type Theory & Homotopy Type Theory"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v6-functional-programming-and-lambda-calculus",
+      "raw": "Functional Programming & Lambda Calculus"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v6-formal-verification-and-model-checking",
+      "raw": "Formal Verification & Model Checking"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v7-donald-knuth",
+      "raw": "Donald Knuth"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v7-structure-and-interpretation-of-computer-programs-sicp",
+      "raw": "Structure and Interpretation of Computer Programs (SICP)"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v7-domain-driven-design",
+      "raw": "Domain-Driven Design"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v8-computational-complexity-and-intractability",
+      "raw": "Computational Complexity & Intractability"
+    },
+    {
+      "source": "v5-compiler-design-and-programming-language-theory",
+      "target": "v9-panini-and-generative-grammar",
+      "raw": "Pāṇini & Generative Grammar"
+    },
+    {
       "source": "v5-quantum-computing-and-quantum-information",
       "target": "v5-information-theory",
       "raw": "Information theory"
@@ -10892,6 +15756,31 @@ window.RESEARCH_DATA = {
       "source": "v5-quantum-computing-and-quantum-information",
       "target": "v5-mathematical-physics-and-symmetry",
       "raw": "mathematical physics"
+    },
+    {
+      "source": "v5-quantum-computing-and-quantum-information",
+      "target": "v7-linear-algebra",
+      "raw": "Linear Algebra"
+    },
+    {
+      "source": "v5-quantum-computing-and-quantum-information",
+      "target": "v7-quantum-mechanics-as-physics",
+      "raw": "Quantum Mechanics (as physics)"
+    },
+    {
+      "source": "v5-quantum-computing-and-quantum-information",
+      "target": "v8-computational-complexity-and-intractability",
+      "raw": "Computational Complexity & Intractability"
+    },
+    {
+      "source": "v5-quantum-computing-and-quantum-information",
+      "target": "v8-physics-of-information-and-the-thermodynamics-of-computation",
+      "raw": "Physics of Information & the Thermodynamics of Computation"
+    },
+    {
+      "source": "v5-quantum-computing-and-quantum-information",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
     },
     {
       "source": "v5-robotics-and-embodied-intelligence",
@@ -10914,6 +15803,56 @@ window.RESEARCH_DATA = {
       "raw": "materials science"
     },
     {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v5-ecological-psychology-and-affordance-theory",
+      "raw": "Ecological Psychology & Affordance Theory"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v5-artificial-life-and-self-organization",
+      "raw": "Artificial Life & Self-Organization"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v5-philosophy-of-mind-and-consciousness",
+      "raw": "Philosophy of Mind & Consciousness"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v5-biomimicry-and-nature-inspired-design",
+      "raw": "Biomimicry & Nature-Inspired Design"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v5-simulation-and-physics-engines",
+      "raw": "Simulation & Physics Engines"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v6-enactivism-and-enactive-cognition",
+      "raw": "Enactivism & Enactive Cognition"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v6-reinforcement-learning",
+      "raw": "Reinforcement Learning"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v6-neuroethology",
+      "raw": "Neuroethology"
+    },
+    {
+      "source": "v5-robotics-and-embodied-intelligence",
+      "target": "v7-brain-computer-interfaces-and-spatial-computing",
+      "raw": "Brain-Computer Interfaces & Spatial Computing"
+    },
+    {
       "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
       "target": "v5-information-theory",
       "raw": "Information theory"
@@ -10932,6 +15871,51 @@ window.RESEARCH_DATA = {
       "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
       "target": "v5-mathematical-physics-and-symmetry",
       "raw": "mathematical physics"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v6-ecology-and-ecosystem-dynamics",
+      "raw": "Ecology & Ecosystem Dynamics"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v6-astrobiology-and-origin-of-life",
+      "raw": "Astrobiology & Origin of Life"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v6-philosophy-of-time",
+      "raw": "Philosophy of Time"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v7-cosmology-and-astrophysics",
+      "raw": "Cosmology & Astrophysics"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v8-physics-of-information-and-the-thermodynamics-of-computation",
+      "raw": "Physics of Information & the Thermodynamics of Computation"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v9-chemistry-and-reaction-networks",
+      "raw": "Chemistry / Reaction Networks"
+    },
+    {
+      "source": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
+      "target": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "raw": "Energy Systems, Infrastructure & How the World Really Works"
     },
     {
       "source": "v5-machine-learning-and-statistical-learning-theory",
@@ -10959,6 +15943,166 @@ window.RESEARCH_DATA = {
       "raw": "artificial life"
     },
     {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-cybernetics-and-control-theory",
+      "raw": "Cybernetics & Control Theory"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-causal-inference-and-causal-models",
+      "raw": "Causal Inference & Causal Models"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-distributed-cognition-and-the-extended-mind",
+      "raw": "Distributed Cognition & The Extended Mind"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-collective-intelligence-and-coordination-systems",
+      "raw": "Collective Intelligence & Coordination Systems"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-philosophy-of-mind-and-consciousness",
+      "raw": "Philosophy of Mind & Consciousness"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-epistemology-and-philosophy-of-knowledge",
+      "raw": "Epistemology & Philosophy of Knowledge"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-media-theory-and-philosophy-of-technology",
+      "raw": "Media Theory & Philosophy of Technology"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-logic-formal-semantics-and-model-theory",
+      "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-rhetoric-narrative-theory-and-story-systems",
+      "raw": "Rhetoric, Narrative Theory & Story Systems"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-history-of-computing-and-the-personal-computer-revolution",
+      "raw": "History of Computing & The Personal Computer Revolution"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-generative-music-and-algorithmic-composition",
+      "raw": "Generative Music & Algorithmic Composition"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-human-computer-interaction-and-interface-design",
+      "raw": "Human-Computer Interaction & Interface Design"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-game-design-ludology-and-interactive-systems",
+      "raw": "Game Design, Ludology & Interactive Systems"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-computer-graphics-and-computational-imaging",
+      "raw": "Computer Graphics & Computational Imaging"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-measurement-theory-metrology-and-representation",
+      "raw": "Measurement Theory, Metrology & Representation"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-operations-research-and-optimization",
+      "raw": "Operations Research & Optimization"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v5-robotics-and-embodied-intelligence",
+      "raw": "Robotics & Embodied Intelligence"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
+      "raw": "Knowledge Graphs, Ontologies & The Semantic Web"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v6-stochastic-processes-and-random-walks",
+      "raw": "Stochastic Processes & Random Walks"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v6-reinforcement-learning",
+      "raw": "Reinforcement Learning"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v6-probabilistic-programming-and-graphical-models",
+      "raw": "Probabilistic Programming & Graphical Models"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v6-evolutionary-epistemology",
+      "raw": "Evolutionary Epistemology"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v6-reservoir-computing-and-neuromorphic-computation",
+      "raw": "Reservoir Computing & Neuromorphic Computation"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v7-marvin-minsky",
+      "raw": "Marvin Minsky"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v7-linear-algebra",
+      "raw": "Linear Algebra"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v7-statistics-classical-and-modern",
+      "raw": "Statistics (Classical & Modern)"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v7-ai-alignment-and-safety",
+      "raw": "AI Alignment & Safety"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v7-mechanistic-interpretability",
+      "raw": "Mechanistic Interpretability"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v8-optimal-transport",
+      "raw": "Optimal Transport"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v8-information-geometry",
+      "raw": "Information Geometry"
+    },
+    {
+      "source": "v5-machine-learning-and-statistical-learning-theory",
+      "target": "v8-topological-data-analysis",
+      "raw": "Topological Data Analysis"
+    },
+    {
       "source": "v5-mathematical-physics-and-symmetry",
       "target": "v5-quantum-computing-and-quantum-information",
       "raw": "quantum computing"
@@ -10977,6 +16121,46 @@ window.RESEARCH_DATA = {
       "source": "v5-mathematical-physics-and-symmetry",
       "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
       "raw": "thermodynamics"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v5-morphogenesis-and-biological-pattern-formation",
+      "raw": "Morphogenesis & Biological Pattern Formation"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v7-iannis-xenakis",
+      "raw": "Iannis Xenakis"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v7-the-road-to-reality",
+      "raw": "The Road to Reality"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v7-real-and-complex-analysis",
+      "raw": "Real & Complex Analysis"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v7-quantum-mechanics-as-physics",
+      "raw": "Quantum Mechanics (as physics)"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v7-cosmology-and-astrophysics",
+      "raw": "Cosmology & Astrophysics"
+    },
+    {
+      "source": "v5-mathematical-physics-and-symmetry",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
     },
     {
       "source": "v5-neuroscience-and-neural-computation",
@@ -11004,6 +16188,66 @@ window.RESEARCH_DATA = {
       "raw": "machine learning"
     },
     {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v5-dynamical-systems-and-bifurcation-theory",
+      "raw": "Dynamical Systems & Bifurcation Theory"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v5-causal-inference-and-causal-models",
+      "raw": "Causal Inference & Causal Models"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v6-reinforcement-learning",
+      "raw": "Reinforcement Learning"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v6-neuroethology",
+      "raw": "Neuroethology"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v6-chronobiology-and-circadian-rhythms",
+      "raw": "Chronobiology & Circadian Rhythms"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v6-reservoir-computing-and-neuromorphic-computation",
+      "raw": "Reservoir Computing & Neuromorphic Computation"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v7-developmental-psychology",
+      "raw": "Developmental Psychology"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v7-mechanistic-interpretability",
+      "raw": "Mechanistic Interpretability"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v7-brain-computer-interfaces-and-spatial-computing",
+      "raw": "Brain-Computer Interfaces & Spatial Computing"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v8-synchronization-and-coupled-oscillators",
+      "raw": "Synchronization & Coupled Oscillators"
+    },
+    {
+      "source": "v5-neuroscience-and-neural-computation",
+      "target": "v8-spatial-cognition-and-cognitive-maps",
+      "raw": "Spatial Cognition & Cognitive Maps"
+    },
+    {
       "source": "v5-materials-science-metamaterials-and-programmable-matter",
       "target": "v5-biomimicry-and-nature-inspired-design",
       "raw": "biomimicry"
@@ -11017,6 +16261,31 @@ window.RESEARCH_DATA = {
       "source": "v5-materials-science-metamaterials-and-programmable-matter",
       "target": "v5-geometry-topology-and-spatial-computation",
       "raw": "geometry/topology"
+    },
+    {
+      "source": "v5-materials-science-metamaterials-and-programmable-matter",
+      "target": "v5-evolutionary-developmental-biology-evo-devo",
+      "raw": "Evolutionary Developmental Biology (Evo-Devo)"
+    },
+    {
+      "source": "v5-materials-science-metamaterials-and-programmable-matter",
+      "target": "v6-origami-and-computational-folding",
+      "raw": "Origami & Computational Folding"
+    },
+    {
+      "source": "v5-materials-science-metamaterials-and-programmable-matter",
+      "target": "v7-horology-and-mechanical-watchmaking",
+      "raw": "Horology & Mechanical Watchmaking"
+    },
+    {
+      "source": "v5-materials-science-metamaterials-and-programmable-matter",
+      "target": "v9-chemistry-and-reaction-networks",
+      "raw": "Chemistry / Reaction Networks"
+    },
+    {
+      "source": "v5-materials-science-metamaterials-and-programmable-matter",
+      "target": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "raw": "Energy Systems, Infrastructure & How the World Really Works"
     },
     {
       "source": "v5-evolutionary-developmental-biology-evo-devo",
@@ -11044,6 +16313,21 @@ window.RESEARCH_DATA = {
       "raw": "materials science"
     },
     {
+      "source": "v5-evolutionary-developmental-biology-evo-devo",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
+    },
+    {
+      "source": "v5-evolutionary-developmental-biology-evo-devo",
+      "target": "v8-niche-construction-theory",
+      "raw": "Niche Construction Theory"
+    },
+    {
+      "source": "v5-evolutionary-developmental-biology-evo-devo",
+      "target": "v9-lynn-margulis",
+      "raw": "Lynn Margulis"
+    },
+    {
       "source": "v6-fractal-geometry-and-self-similarity",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "Complex Systems & Chaos Theory"
@@ -11062,6 +16346,36 @@ window.RESEARCH_DATA = {
       "source": "v6-fractal-geometry-and-self-similarity",
       "target": "v5-dynamical-systems-and-bifurcation-theory",
       "raw": "Dynamical Systems"
+    },
+    {
+      "source": "v6-fractal-geometry-and-self-similarity",
+      "target": "v7-on-growth-and-form",
+      "raw": "On Growth and Form"
+    },
+    {
+      "source": "v6-fractal-geometry-and-self-similarity",
+      "target": "v8-renormalization-and-universality",
+      "raw": "Renormalization & Universality"
+    },
+    {
+      "source": "v6-fractal-geometry-and-self-similarity",
+      "target": "v8-fluid-dynamics-and-turbulence",
+      "raw": "Fluid Dynamics & Turbulence"
+    },
+    {
+      "source": "v6-fractal-geometry-and-self-similarity",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
+      "source": "v6-fractal-geometry-and-self-similarity",
+      "target": "v9-recursion-and-self-reference",
+      "raw": "Recursion & Self-Reference"
+    },
+    {
+      "source": "v6-fractal-geometry-and-self-similarity",
+      "target": "v9-benoit-mandelbrot",
+      "raw": "Benoit Mandelbrot"
     },
     {
       "source": "v6-enactivism-and-enactive-cognition",
@@ -11099,6 +16413,21 @@ window.RESEARCH_DATA = {
       "raw": "Robotics & Embodied Intelligence"
     },
     {
+      "source": "v6-enactivism-and-enactive-cognition",
+      "target": "v7-gregory-bateson",
+      "raw": "Gregory Bateson"
+    },
+    {
+      "source": "v6-enactivism-and-enactive-cognition",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
+      "source": "v6-enactivism-and-enactive-cognition",
+      "target": "v9-maturana-and-varela",
+      "raw": "Humberto Maturana & Francisco Varela"
+    },
+    {
       "source": "v6-process-philosophy",
       "target": "v5-dynamical-systems-and-bifurcation-theory",
       "raw": "Dynamical Systems"
@@ -11134,6 +16463,26 @@ window.RESEARCH_DATA = {
       "raw": "Cybernetics"
     },
     {
+      "source": "v6-process-philosophy",
+      "target": "v6-philosophy-of-time",
+      "raw": "Philosophy of Time"
+    },
+    {
+      "source": "v6-process-philosophy",
+      "target": "v9-gilles-deleuze",
+      "raw": "Gilles Deleuze"
+    },
+    {
+      "source": "v6-process-philosophy",
+      "target": "v9-ubuntu-and-african-relational-philosophy",
+      "raw": "Ubuntu / African Relational Philosophy"
+    },
+    {
+      "source": "v6-process-philosophy",
+      "target": "v9-a-thousand-plateaus",
+      "raw": "A Thousand Plateaus"
+    },
+    {
       "source": "v6-metaphor-theory-and-conceptual-blending",
       "target": "v5-linguistics-and-natural-language-structure",
       "raw": "Linguistics"
@@ -11152,6 +16501,16 @@ window.RESEARCH_DATA = {
       "source": "v6-metaphor-theory-and-conceptual-blending",
       "target": "v5-pattern-languages-design-methods-and-morphological-analysis",
       "raw": "Pattern Languages"
+    },
+    {
+      "source": "v6-metaphor-theory-and-conceptual-blending",
+      "target": "v7-g-del-escher-bach-an-eternal-golden-braid",
+      "raw": "Gödel, Escher, Bach: An Eternal Golden Braid"
+    },
+    {
+      "source": "v6-metaphor-theory-and-conceptual-blending",
+      "target": "v9-metaphors-we-live-by",
+      "raw": "Metaphors We Live By"
     },
     {
       "source": "v6-memory-mnemonic-systems-and-externalized-knowledge",
@@ -11177,6 +16536,11 @@ window.RESEARCH_DATA = {
       "source": "v6-memory-mnemonic-systems-and-externalized-knowledge",
       "target": "v5-human-computer-interaction-and-interface-design",
       "raw": "HCI"
+    },
+    {
+      "source": "v6-memory-mnemonic-systems-and-externalized-knowledge",
+      "target": "v8-spatial-cognition-and-cognitive-maps",
+      "raw": "Spatial Cognition & Cognitive Maps"
     },
     {
       "source": "v6-ecology-and-ecosystem-dynamics",
@@ -11209,6 +16573,36 @@ window.RESEARCH_DATA = {
       "raw": "Biomimicry"
     },
     {
+      "source": "v6-ecology-and-ecosystem-dynamics",
+      "target": "v7-thinking-in-systems-a-primer",
+      "raw": "Thinking in Systems: A Primer"
+    },
+    {
+      "source": "v6-ecology-and-ecosystem-dynamics",
+      "target": "v7-permaculture-and-regenerative-agriculture",
+      "raw": "Permaculture & Regenerative Agriculture"
+    },
+    {
+      "source": "v6-ecology-and-ecosystem-dynamics",
+      "target": "v7-climate-science-and-earth-systems",
+      "raw": "Climate Science & Earth Systems"
+    },
+    {
+      "source": "v6-ecology-and-ecosystem-dynamics",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
+    },
+    {
+      "source": "v6-ecology-and-ecosystem-dynamics",
+      "target": "v8-niche-construction-theory",
+      "raw": "Niche Construction Theory"
+    },
+    {
+      "source": "v6-ecology-and-ecosystem-dynamics",
+      "target": "v9-lynn-margulis",
+      "raw": "Lynn Margulis"
+    },
+    {
       "source": "v6-type-theory-and-homotopy-type-theory",
       "target": "v5-category-theory-and-abstract-algebra",
       "raw": "Category Theory"
@@ -11222,6 +16616,31 @@ window.RESEARCH_DATA = {
       "source": "v6-type-theory-and-homotopy-type-theory",
       "target": "v5-compiler-design-and-programming-language-theory",
       "raw": "Compiler Design"
+    },
+    {
+      "source": "v6-type-theory-and-homotopy-type-theory",
+      "target": "v6-functional-programming-and-lambda-calculus",
+      "raw": "Functional Programming & Lambda Calculus"
+    },
+    {
+      "source": "v6-type-theory-and-homotopy-type-theory",
+      "target": "v6-formal-verification-and-model-checking",
+      "raw": "Formal Verification & Model Checking"
+    },
+    {
+      "source": "v6-type-theory-and-homotopy-type-theory",
+      "target": "v6-concurrency-theory",
+      "raw": "Concurrency Theory"
+    },
+    {
+      "source": "v6-type-theory-and-homotopy-type-theory",
+      "target": "v7-leslie-lamport",
+      "raw": "Leslie Lamport"
+    },
+    {
+      "source": "v6-type-theory-and-homotopy-type-theory",
+      "target": "v9-recursion-and-self-reference",
+      "raw": "Recursion & Self-Reference"
     },
     {
       "source": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
@@ -11242,6 +16661,16 @@ window.RESEARCH_DATA = {
       "source": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
       "target": "v5-writing-systems-notation-and-symbolic-representation",
       "raw": "Writing Systems"
+    },
+    {
+      "source": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
+      "target": "v6-information-architecture",
+      "raw": "Information Architecture"
+    },
+    {
+      "source": "v6-knowledge-graphs-ontologies-and-the-semantic-web",
+      "target": "v8-classification-taxonomy-and-knowledge-organization",
+      "raw": "Classification, Taxonomy & Knowledge Organization"
     },
     {
       "source": "v6-pragmatism",
@@ -11274,6 +16703,11 @@ window.RESEARCH_DATA = {
       "raw": "Rhetoric"
     },
     {
+      "source": "v6-pragmatism",
+      "target": "v9-charles-sanders-peirce",
+      "raw": "Charles Sanders Peirce"
+    },
+    {
       "source": "v6-stochastic-processes-and-random-walks",
       "target": "v5-generative-music-and-algorithmic-composition",
       "raw": "Generative Music"
@@ -11287,6 +16721,31 @@ window.RESEARCH_DATA = {
       "source": "v6-stochastic-processes-and-random-walks",
       "target": "v5-dynamical-systems-and-bifurcation-theory",
       "raw": "Dynamical Systems"
+    },
+    {
+      "source": "v6-stochastic-processes-and-random-walks",
+      "target": "v7-iannis-xenakis",
+      "raw": "Iannis Xenakis"
+    },
+    {
+      "source": "v6-stochastic-processes-and-random-walks",
+      "target": "v8-optimal-transport",
+      "raw": "Optimal Transport"
+    },
+    {
+      "source": "v6-stochastic-processes-and-random-walks",
+      "target": "v8-mathematical-epidemiology-and-contagion-dynamics",
+      "raw": "Mathematical Epidemiology & Contagion Dynamics"
+    },
+    {
+      "source": "v6-stochastic-processes-and-random-walks",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
+      "source": "v6-stochastic-processes-and-random-walks",
+      "target": "v9-benoit-mandelbrot",
+      "raw": "Benoit Mandelbrot"
     },
     {
       "source": "v6-reinforcement-learning",
@@ -11324,6 +16783,11 @@ window.RESEARCH_DATA = {
       "raw": "AI Agents"
     },
     {
+      "source": "v6-reinforcement-learning",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
+    },
+    {
       "source": "v6-probabilistic-programming-and-graphical-models",
       "target": "v5-causal-inference-and-causal-models",
       "raw": "Causal Inference"
@@ -11342,6 +16806,11 @@ window.RESEARCH_DATA = {
       "source": "v6-probabilistic-programming-and-graphical-models",
       "target": "v5-machine-learning-and-statistical-learning-theory",
       "raw": "AI"
+    },
+    {
+      "source": "v6-probabilistic-programming-and-graphical-models",
+      "target": "v8-free-energy-principle-and-active-inference",
+      "raw": "Free Energy Principle & Active Inference"
     },
     {
       "source": "v6-urban-planning-and-urbanism",
@@ -11369,6 +16838,26 @@ window.RESEARCH_DATA = {
       "raw": "Complex Systems"
     },
     {
+      "source": "v6-urban-planning-and-urbanism",
+      "target": "v7-italo-calvino",
+      "raw": "Italo Calvino"
+    },
+    {
+      "source": "v6-urban-planning-and-urbanism",
+      "target": "v7-seeing-like-a-state",
+      "raw": "Seeing Like a State"
+    },
+    {
+      "source": "v6-urban-planning-and-urbanism",
+      "target": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "raw": "Energy Systems, Infrastructure & How the World Really Works"
+    },
+    {
+      "source": "v6-urban-planning-and-urbanism",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
       "source": "v6-astrobiology-and-origin-of-life",
       "target": "v5-artificial-life-and-self-organization",
       "raw": "Artificial Life"
@@ -11389,6 +16878,31 @@ window.RESEARCH_DATA = {
       "raw": "Morphogenesis"
     },
     {
+      "source": "v6-astrobiology-and-origin-of-life",
+      "target": "v7-paleontology-and-deep-time",
+      "raw": "Paleontology & Deep Time"
+    },
+    {
+      "source": "v6-astrobiology-and-origin-of-life",
+      "target": "v7-synthetic-biology-and-crispr-era-genetics",
+      "raw": "Synthetic Biology & CRISPR-era Genetics"
+    },
+    {
+      "source": "v6-astrobiology-and-origin-of-life",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
+    },
+    {
+      "source": "v6-astrobiology-and-origin-of-life",
+      "target": "v9-chemistry-and-reaction-networks",
+      "raw": "Chemistry / Reaction Networks"
+    },
+    {
+      "source": "v6-astrobiology-and-origin-of-life",
+      "target": "v9-lynn-margulis",
+      "raw": "Lynn Margulis"
+    },
+    {
       "source": "v6-functional-programming-and-lambda-calculus",
       "target": "v5-category-theory-and-abstract-algebra",
       "raw": "Category Theory"
@@ -11402,6 +16916,21 @@ window.RESEARCH_DATA = {
       "source": "v6-functional-programming-and-lambda-calculus",
       "target": "v5-compiler-design-and-programming-language-theory",
       "raw": "Compiler Design"
+    },
+    {
+      "source": "v6-functional-programming-and-lambda-calculus",
+      "target": "v7-rich-hickey",
+      "raw": "Rich Hickey"
+    },
+    {
+      "source": "v6-functional-programming-and-lambda-calculus",
+      "target": "v7-structure-and-interpretation-of-computer-programs-sicp",
+      "raw": "Structure and Interpretation of Computer Programs (SICP)"
+    },
+    {
+      "source": "v6-functional-programming-and-lambda-calculus",
+      "target": "v9-recursion-and-self-reference",
+      "raw": "Recursion & Self-Reference"
     },
     {
       "source": "v6-neuroethology",
@@ -11444,6 +16973,11 @@ window.RESEARCH_DATA = {
       "raw": "Anthropology"
     },
     {
+      "source": "v6-behavioral-ecology-and-sociobiology",
+      "target": "v8-niche-construction-theory",
+      "raw": "Niche Construction Theory"
+    },
+    {
       "source": "v6-complexity-economics-and-agent-based-modeling-in-economics",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "Complex Systems"
@@ -11464,6 +16998,26 @@ window.RESEARCH_DATA = {
       "raw": "Network Science"
     },
     {
+      "source": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "target": "v5-history-and-philosophy-of-science",
+      "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "target": "v8-monetary-theory-and-the-history-of-money",
+      "raw": "Monetary Theory & the History of Money"
+    },
+    {
+      "source": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
+      "source": "v6-complexity-economics-and-agent-based-modeling-in-economics",
+      "target": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "raw": "Energy Systems, Infrastructure & How the World Really Works"
+    },
+    {
       "source": "v6-hypertext-and-hypermedia",
       "target": "v5-history-of-computing-and-the-personal-computer-revolution",
       "raw": "History of Computing"
@@ -11482,6 +17036,11 @@ window.RESEARCH_DATA = {
       "source": "v6-hypertext-and-hypermedia",
       "target": "v5-distributed-cognition-and-the-extended-mind",
       "raw": "Distributed Cognition"
+    },
+    {
+      "source": "v6-hypertext-and-hypermedia",
+      "target": "v7-jorge-luis-borges",
+      "raw": "Jorge Luis Borges"
     },
     {
       "source": "v6-information-architecture",
@@ -11509,6 +17068,16 @@ window.RESEARCH_DATA = {
       "raw": "Semiotics"
     },
     {
+      "source": "v6-information-architecture",
+      "target": "v6-memory-mnemonic-systems-and-externalized-knowledge",
+      "raw": "Memory, Mnemonic Systems & Externalized Knowledge"
+    },
+    {
+      "source": "v6-information-architecture",
+      "target": "v8-classification-taxonomy-and-knowledge-organization",
+      "raw": "Classification, Taxonomy & Knowledge Organization"
+    },
+    {
       "source": "v6-philosophy-of-time",
       "target": "v5-thermodynamics-statistical-mechanics-and-arrow-of-time",
       "raw": "Thermodynamics"
@@ -11532,6 +17101,11 @@ window.RESEARCH_DATA = {
       "source": "v6-philosophy-of-time",
       "target": "v5-cognitive-science-and-perception",
       "raw": "Cognitive Science"
+    },
+    {
+      "source": "v6-philosophy-of-time",
+      "target": "v9-gilles-deleuze",
+      "raw": "Gilles Deleuze"
     },
     {
       "source": "v6-cliodynamics-and-mathematical-history",
@@ -11559,6 +17133,36 @@ window.RESEARCH_DATA = {
       "raw": "Dynamical Systems"
     },
     {
+      "source": "v6-cliodynamics-and-mathematical-history",
+      "target": "v7-thinking-in-systems-a-primer",
+      "raw": "Thinking in Systems: A Primer"
+    },
+    {
+      "source": "v6-cliodynamics-and-mathematical-history",
+      "target": "v7-climate-science-and-earth-systems",
+      "raw": "Climate Science & Earth Systems"
+    },
+    {
+      "source": "v6-cliodynamics-and-mathematical-history",
+      "target": "v7-longtermism-and-existential-risk-studies",
+      "raw": "Longtermism & Existential Risk Studies"
+    },
+    {
+      "source": "v6-cliodynamics-and-mathematical-history",
+      "target": "v8-mathematical-epidemiology-and-contagion-dynamics",
+      "raw": "Mathematical Epidemiology & Contagion Dynamics"
+    },
+    {
+      "source": "v6-cliodynamics-and-mathematical-history",
+      "target": "v8-monetary-theory-and-the-history-of-money",
+      "raw": "Monetary Theory & the History of Money"
+    },
+    {
+      "source": "v6-cliodynamics-and-mathematical-history",
+      "target": "v9-sociology-and-social-network-analysis",
+      "raw": "Sociology & Social Network Analysis"
+    },
+    {
       "source": "v6-chronobiology-and-circadian-rhythms",
       "target": "v5-dynamical-systems-and-bifurcation-theory",
       "raw": "Dynamical Systems"
@@ -11572,6 +17176,16 @@ window.RESEARCH_DATA = {
       "source": "v6-chronobiology-and-circadian-rhythms",
       "target": "v5-cognitive-science-and-perception",
       "raw": "Cognitive Science"
+    },
+    {
+      "source": "v6-chronobiology-and-circadian-rhythms",
+      "target": "v7-horology-and-mechanical-watchmaking",
+      "raw": "Horology & Mechanical Watchmaking"
+    },
+    {
+      "source": "v6-chronobiology-and-circadian-rhythms",
+      "target": "v8-synchronization-and-coupled-oscillators",
+      "raw": "Synchronization & Coupled Oscillators"
     },
     {
       "source": "v6-origami-and-computational-folding",
@@ -11592,6 +17206,16 @@ window.RESEARCH_DATA = {
       "source": "v6-islamic-geometric-patterns-and-ornament",
       "target": "v5-pattern-languages-design-methods-and-morphological-analysis",
       "raw": "Pattern Languages"
+    },
+    {
+      "source": "v6-islamic-geometric-patterns-and-ornament",
+      "target": "v7-m-c-escher",
+      "raw": "M.C. Escher"
+    },
+    {
+      "source": "v6-islamic-geometric-patterns-and-ornament",
+      "target": "v7-calligraphy-chinese-japanese-islamic-and-latin-traditions-in-comparison",
+      "raw": "Calligraphy — Chinese, Japanese, Islamic, and Latin Traditions in Comparison"
     },
     {
       "source": "v6-attention-studies-and-the-attention-economy",
@@ -11619,6 +17243,21 @@ window.RESEARCH_DATA = {
       "raw": "Critical Theory & the Frankfurt School"
     },
     {
+      "source": "v6-attention-studies-and-the-attention-economy",
+      "target": "v7-digital-commons-and-platform-economics",
+      "raw": "Digital Commons & Platform Economics"
+    },
+    {
+      "source": "v6-attention-studies-and-the-attention-economy",
+      "target": "v9-jean-baudrillard",
+      "raw": "Jean Baudrillard"
+    },
+    {
+      "source": "v6-attention-studies-and-the-attention-economy",
+      "target": "v9-marshall-mcluhan",
+      "raw": "Marshall McLuhan"
+    },
+    {
       "source": "v6-comparative-mythology-and-depth-psychology",
       "target": "v5-anthropology-cultural-evolution-and-technology-studies",
       "raw": "Anthropology"
@@ -11634,6 +17273,31 @@ window.RESEARCH_DATA = {
       "raw": "Aesthetics"
     },
     {
+      "source": "v6-comparative-mythology-and-depth-psychology",
+      "target": "v7-ursula-k-le-guin",
+      "raw": "Ursula K. Le Guin"
+    },
+    {
+      "source": "v6-comparative-mythology-and-depth-psychology",
+      "target": "v7-psychoanalysis",
+      "raw": "Psychoanalysis"
+    },
+    {
+      "source": "v6-comparative-mythology-and-depth-psychology",
+      "target": "v9-ritual-as-coordination-technology",
+      "raw": "Ritual as Coordination Technology"
+    },
+    {
+      "source": "v6-comparative-mythology-and-depth-psychology",
+      "target": "v9-claude-levi-strauss",
+      "raw": "Claude Lévi-Strauss"
+    },
+    {
+      "source": "v6-comparative-mythology-and-depth-psychology",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
+    },
+    {
       "source": "v6-formal-verification-and-model-checking",
       "target": "v6-type-theory-and-homotopy-type-theory",
       "raw": "Type Theory"
@@ -11644,6 +17308,11 @@ window.RESEARCH_DATA = {
       "raw": "Compiler Design"
     },
     {
+      "source": "v6-formal-verification-and-model-checking",
+      "target": "v7-leslie-lamport",
+      "raw": "Leslie Lamport"
+    },
+    {
       "source": "v6-concurrency-theory",
       "target": "v5-logic-formal-semantics-and-model-theory",
       "raw": "Logic"
@@ -11652,6 +17321,11 @@ window.RESEARCH_DATA = {
       "source": "v6-concurrency-theory",
       "target": "v6-type-theory-and-homotopy-type-theory",
       "raw": "Type Theory"
+    },
+    {
+      "source": "v6-concurrency-theory",
+      "target": "v7-leslie-lamport",
+      "raw": "Leslie Lamport"
     },
     {
       "source": "v6-history-of-mathematics",
@@ -11672,6 +17346,21 @@ window.RESEARCH_DATA = {
       "source": "v6-history-of-mathematics",
       "target": "v5-history-and-philosophy-of-science",
       "raw": "History & Philosophy of Science"
+    },
+    {
+      "source": "v6-history-of-mathematics",
+      "target": "v9-gottfried-leibniz",
+      "raw": "Gottfried Leibniz"
+    },
+    {
+      "source": "v6-history-of-mathematics",
+      "target": "v9-henri-poincare",
+      "raw": "Henri Poincaré"
+    },
+    {
+      "source": "v6-history-of-mathematics",
+      "target": "v9-joseph-needham",
+      "raw": "Joseph Needham"
     },
     {
       "source": "v6-evolutionary-epistemology",
@@ -11712,6 +17401,11 @@ window.RESEARCH_DATA = {
       "source": "v6-reservoir-computing-and-neuromorphic-computation",
       "target": "v5-artificial-life-and-self-organization",
       "raw": "Artificial Life"
+    },
+    {
+      "source": "v6-reservoir-computing-and-neuromorphic-computation",
+      "target": "v7-mechanistic-interpretability",
+      "raw": "Mechanistic Interpretability"
     },
     {
       "source": "v7-alan-kay",
@@ -11814,9 +17508,19 @@ window.RESEARCH_DATA = {
       "raw": "Alan Kay"
     },
     {
+      "source": "v7-seymour-papert",
+      "target": "v7-marvin-minsky",
+      "raw": "Marvin Minsky"
+    },
+    {
       "source": "v7-rich-hickey",
       "target": "v6-functional-programming-and-lambda-calculus",
       "raw": "Functional Programming (v6)"
+    },
+    {
+      "source": "v7-rich-hickey",
+      "target": "v7-structure-and-interpretation-of-computer-programs-sicp",
+      "raw": "Structure and Interpretation of Computer Programs (SICP)"
     },
     {
       "source": "v7-leslie-lamport",
@@ -11872,6 +17576,11 @@ window.RESEARCH_DATA = {
       "source": "v7-john-cage",
       "target": "v5-generative-music-and-algorithmic-composition",
       "raw": "Generative Music (v5)"
+    },
+    {
+      "source": "v7-john-cage",
+      "target": "v7-brian-eno",
+      "raw": "Brian Eno"
     },
     {
       "source": "v7-andrei-tarkovsky",
@@ -11999,6 +17708,11 @@ window.RESEARCH_DATA = {
       "raw": "Tadao Ando"
     },
     {
+      "source": "v7-louis-kahn",
+      "target": "v7-frank-lloyd-wright",
+      "raw": "Frank Lloyd Wright"
+    },
+    {
       "source": "v7-g-del-escher-bach-an-eternal-golden-braid",
       "target": "v5-philosophy-of-mind-and-consciousness",
       "raw": "Philosophy of Mind"
@@ -12007,6 +17721,16 @@ window.RESEARCH_DATA = {
       "source": "v7-g-del-escher-bach-an-eternal-golden-braid",
       "target": "v6-metaphor-theory-and-conceptual-blending",
       "raw": "Metaphor Theory (v6)"
+    },
+    {
+      "source": "v7-g-del-escher-bach-an-eternal-golden-braid",
+      "target": "v9-recursion-and-self-reference",
+      "raw": "Recursion & Self-Reference"
+    },
+    {
+      "source": "v7-g-del-escher-bach-an-eternal-golden-braid",
+      "target": "v9-the-glass-bead-game",
+      "raw": "The Glass Bead Game"
     },
     {
       "source": "v7-structure-and-interpretation-of-computer-programs-sicp",
@@ -12092,6 +17816,11 @@ window.RESEARCH_DATA = {
       "source": "v7-finite-and-infinite-games",
       "target": "v5-eastern-philosophy",
       "raw": "Eastern Philosophy"
+    },
+    {
+      "source": "v7-finite-and-infinite-games",
+      "target": "v9-the-glass-bead-game",
+      "raw": "The Glass Bead Game"
     },
     {
       "source": "v7-seeing-like-a-state",
@@ -12259,6 +17988,11 @@ window.RESEARCH_DATA = {
       "raw": "Decision Theory (v5)"
     },
     {
+      "source": "v7-sailing-and-navigation",
+      "target": "v8-spatial-cognition-and-cognitive-maps",
+      "raw": "Spatial Cognition & Cognitive Maps"
+    },
+    {
       "source": "v7-permaculture-and-regenerative-agriculture",
       "target": "v6-ecology-and-ecosystem-dynamics",
       "raw": "Ecology (v6)"
@@ -12309,6 +18043,21 @@ window.RESEARCH_DATA = {
       "raw": "Measurement Theory (v5)"
     },
     {
+      "source": "v7-statistics-classical-and-modern",
+      "target": "v8-optimal-transport",
+      "raw": "Optimal Transport"
+    },
+    {
+      "source": "v7-statistics-classical-and-modern",
+      "target": "v8-information-geometry",
+      "raw": "Information Geometry"
+    },
+    {
+      "source": "v7-statistics-classical-and-modern",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
       "source": "v7-quantum-mechanics-as-physics",
       "target": "v5-quantum-computing-and-quantum-information",
       "raw": "Quantum Computing (v5)"
@@ -12322,6 +18071,16 @@ window.RESEARCH_DATA = {
       "source": "v7-quantum-mechanics-as-physics",
       "target": "v5-philosophy-of-mind-and-consciousness",
       "raw": "Philosophy of Mind"
+    },
+    {
+      "source": "v7-quantum-mechanics-as-physics",
+      "target": "v7-the-road-to-reality",
+      "raw": "The Road to Reality"
+    },
+    {
+      "source": "v7-quantum-mechanics-as-physics",
+      "target": "v7-cosmology-and-astrophysics",
+      "raw": "Cosmology & Astrophysics"
     },
     {
       "source": "v7-cosmology-and-astrophysics",
@@ -12352,6 +18111,21 @@ window.RESEARCH_DATA = {
       "source": "v7-cell-and-molecular-biology",
       "target": "v5-complex-systems-and-chaos-theory",
       "raw": "Complex Systems (v5)"
+    },
+    {
+      "source": "v7-cell-and-molecular-biology",
+      "target": "v7-immunology",
+      "raw": "Immunology"
+    },
+    {
+      "source": "v7-cell-and-molecular-biology",
+      "target": "v8-symbiosis-and-mycorrhizal-networks",
+      "raw": "Symbiosis & Mycorrhizal Networks"
+    },
+    {
+      "source": "v7-cell-and-molecular-biology",
+      "target": "v9-lynn-margulis",
+      "raw": "Lynn Margulis"
     },
     {
       "source": "v7-immunology",
@@ -12399,6 +18173,21 @@ window.RESEARCH_DATA = {
       "raw": "Longtermism (Group E)"
     },
     {
+      "source": "v7-climate-science-and-earth-systems",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
+      "source": "v7-climate-science-and-earth-systems",
+      "target": "v8-fluid-dynamics-and-turbulence",
+      "raw": "Fluid Dynamics & Turbulence"
+    },
+    {
+      "source": "v7-climate-science-and-earth-systems",
+      "target": "v9-energy-systems-infrastructure-and-how-the-world-really-works",
+      "raw": "Energy Systems, Infrastructure & How the World Really Works"
+    },
+    {
       "source": "v7-political-philosophy",
       "target": "v5-anthropology-cultural-evolution-and-technology-studies",
       "raw": "Anthropology (v5)"
@@ -12407,6 +18196,46 @@ window.RESEARCH_DATA = {
       "source": "v7-political-philosophy",
       "target": "v9-critical-theory-and-the-frankfurt-school",
       "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v7-ursula-k-le-guin",
+      "raw": "Ursula K. Le Guin"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v7-seeing-like-a-state",
+      "raw": "Seeing Like a State"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v7-ethics-consequentialism-deontology-virtue",
+      "raw": "Ethics (Consequentialism / Deontology / Virtue)"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v7-longtermism-and-existential-risk-studies",
+      "raw": "Longtermism & Existential Risk Studies"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v8-social-choice-and-voting-theory",
+      "raw": "Social Choice & Voting Theory"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v8-law-jurisprudence-and-computational-law",
+      "raw": "Law, Jurisprudence & Computational Law"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v9-michel-foucault",
+      "raw": "Michel Foucault"
+    },
+    {
+      "source": "v7-political-philosophy",
+      "target": "v9-ubuntu-and-african-relational-philosophy",
+      "raw": "Ubuntu / African Relational Philosophy"
     },
     {
       "source": "v7-ethics-consequentialism-deontology-virtue",
@@ -12422,6 +18251,41 @@ window.RESEARCH_DATA = {
       "source": "v7-ethics-consequentialism-deontology-virtue",
       "target": "v5-philosophy-of-mind-and-consciousness",
       "raw": "Philosophy of Mind"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v7-hayao-miyazaki-studio-ghibli",
+      "raw": "Hayao Miyazaki / Studio Ghibli"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v7-ursula-k-le-guin",
+      "raw": "Ursula K. Le Guin"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v7-existentialism",
+      "raw": "Existentialism"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v7-synthetic-biology-and-crispr-era-genetics",
+      "raw": "Synthetic Biology & CRISPR-era Genetics"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v7-longtermism-and-existential-risk-studies",
+      "raw": "Longtermism & Existential Risk Studies"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v8-law-jurisprudence-and-computational-law",
+      "raw": "Law, Jurisprudence & Computational Law"
+    },
+    {
+      "source": "v7-ethics-consequentialism-deontology-virtue",
+      "target": "v9-ubuntu-and-african-relational-philosophy",
+      "raw": "Ubuntu / African Relational Philosophy"
     },
     {
       "source": "v7-existentialism",
@@ -12444,6 +18308,11 @@ window.RESEARCH_DATA = {
       "raw": "Ethics"
     },
     {
+      "source": "v7-existentialism",
+      "target": "v7-psychoanalysis",
+      "raw": "Psychoanalysis"
+    },
+    {
       "source": "v7-psychoanalysis",
       "target": "v6-comparative-mythology-and-depth-psychology",
       "raw": "Comparative Mythology (v6)"
@@ -12462,6 +18331,11 @@ window.RESEARCH_DATA = {
       "source": "v7-psychoanalysis",
       "target": "v7-existentialism",
       "raw": "Existentialism"
+    },
+    {
+      "source": "v7-psychoanalysis",
+      "target": "v7-perfumery-and-olfactory-composition",
+      "raw": "Perfumery & Olfactory Composition"
     },
     {
       "source": "v7-developmental-psychology",
@@ -12494,6 +18368,21 @@ window.RESEARCH_DATA = {
       "raw": "Tadao Ando (Group A)"
     },
     {
+      "source": "v7-japanese-aesthetics",
+      "target": "v7-akira-kurosawa",
+      "raw": "Akira Kurosawa"
+    },
+    {
+      "source": "v7-japanese-aesthetics",
+      "target": "v7-japanese-joinery-and-traditional-woodworking",
+      "raw": "Japanese Joinery & Traditional Woodworking"
+    },
+    {
+      "source": "v7-japanese-aesthetics",
+      "target": "v7-bonsai-and-japanese-gardening-karesansui",
+      "raw": "Bonsai & Japanese Gardening (Karesansui)"
+    },
+    {
       "source": "v7-ai-alignment-and-safety",
       "target": "v5-machine-learning-and-statistical-learning-theory",
       "raw": "Machine Learning (v5)"
@@ -12512,6 +18401,16 @@ window.RESEARCH_DATA = {
       "source": "v7-ai-alignment-and-safety",
       "target": "v5-philosophy-of-mind-and-consciousness",
       "raw": "Philosophy of Mind"
+    },
+    {
+      "source": "v7-ai-alignment-and-safety",
+      "target": "v7-mechanistic-interpretability",
+      "raw": "Mechanistic Interpretability"
+    },
+    {
+      "source": "v7-ai-alignment-and-safety",
+      "target": "v7-longtermism-and-existential-risk-studies",
+      "raw": "Longtermism & Existential Risk Studies"
     },
     {
       "source": "v7-mechanistic-interpretability",
@@ -12547,6 +18446,11 @@ window.RESEARCH_DATA = {
       "source": "v7-synthetic-biology-and-crispr-era-genetics",
       "target": "v7-ethics-consequentialism-deontology-virtue",
       "raw": "Ethics (Group D)"
+    },
+    {
+      "source": "v7-synthetic-biology-and-crispr-era-genetics",
+      "target": "v9-chemistry-and-reaction-networks",
+      "raw": "Chemistry / Reaction Networks"
     },
     {
       "source": "v7-brain-computer-interfaces-and-spatial-computing",
@@ -12609,6 +18513,16 @@ window.RESEARCH_DATA = {
       "raw": "Political Philosophy"
     },
     {
+      "source": "v7-longtermism-and-existential-risk-studies",
+      "target": "v7-climate-science-and-earth-systems",
+      "raw": "Climate Science & Earth Systems"
+    },
+    {
+      "source": "v7-longtermism-and-existential-risk-studies",
+      "target": "v8-extreme-value-theory-and-fat-tails",
+      "raw": "Extreme Value Theory & Fat Tails"
+    },
+    {
       "source": "v7-digital-commons-and-platform-economics",
       "target": "v5-collective-intelligence-and-coordination-systems",
       "raw": "Collective Intelligence (v5)"
@@ -12622,6 +18536,21 @@ window.RESEARCH_DATA = {
       "source": "v7-digital-commons-and-platform-economics",
       "target": "v6-attention-studies-and-the-attention-economy",
       "raw": "Attention Economy (v6)"
+    },
+    {
+      "source": "v7-digital-commons-and-platform-economics",
+      "target": "v8-law-jurisprudence-and-computational-law",
+      "raw": "Law, Jurisprudence & Computational Law"
+    },
+    {
+      "source": "v7-digital-commons-and-platform-economics",
+      "target": "v8-monetary-theory-and-the-history-of-money",
+      "raw": "Monetary Theory & the History of Money"
+    },
+    {
+      "source": "v7-digital-commons-and-platform-economics",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
     },
     {
       "source": "v8-free-energy-principle-and-active-inference",
@@ -12657,6 +18586,11 @@ window.RESEARCH_DATA = {
       "source": "v8-free-energy-principle-and-active-inference",
       "target": "v6-probabilistic-programming-and-graphical-models",
       "raw": "Probabilistic Programming & Graphical Models"
+    },
+    {
+      "source": "v8-free-energy-principle-and-active-inference",
+      "target": "v9-maturana-and-varela",
+      "raw": "Humberto Maturana & Francisco Varela"
     },
     {
       "source": "v8-synchronization-and-coupled-oscillators",
@@ -12712,6 +18646,16 @@ window.RESEARCH_DATA = {
       "source": "v8-computational-complexity-and-intractability",
       "target": "v5-quantum-computing-and-quantum-information",
       "raw": "Quantum Computing & Quantum Information"
+    },
+    {
+      "source": "v8-computational-complexity-and-intractability",
+      "target": "v8-physics-of-information-and-the-thermodynamics-of-computation",
+      "raw": "Physics of Information & the Thermodynamics of Computation"
+    },
+    {
+      "source": "v8-computational-complexity-and-intractability",
+      "target": "v9-cryptography-and-coding-theory",
+      "raw": "Cryptography & Coding Theory"
     },
     {
       "source": "v8-optimal-transport",
@@ -12774,6 +18718,11 @@ window.RESEARCH_DATA = {
       "raw": "Dynamical Systems & Bifurcation Theory"
     },
     {
+      "source": "v8-renormalization-and-universality",
+      "target": "v9-scaling-laws-and-allometry",
+      "raw": "Scaling Laws & Allometry"
+    },
+    {
       "source": "v8-mathematical-epidemiology-and-contagion-dynamics",
       "target": "v5-network-science-and-graph-theory",
       "raw": "Network Science & Graph Theory"
@@ -12827,6 +18776,11 @@ window.RESEARCH_DATA = {
       "source": "v8-social-choice-and-voting-theory",
       "target": "v5-logic-formal-semantics-and-model-theory",
       "raw": "Logic, Formal Semantics & Model Theory"
+    },
+    {
+      "source": "v8-social-choice-and-voting-theory",
+      "target": "v8-law-jurisprudence-and-computational-law",
+      "raw": "Law, Jurisprudence & Computational Law"
     },
     {
       "source": "v8-physics-of-information-and-the-thermodynamics-of-computation",
@@ -12934,6 +18888,11 @@ window.RESEARCH_DATA = {
       "raw": "Climate Science & Earth Systems"
     },
     {
+      "source": "v8-extreme-value-theory-and-fat-tails",
+      "target": "v9-benoit-mandelbrot",
+      "raw": "Benoit Mandelbrot"
+    },
+    {
       "source": "v8-fluid-dynamics-and-turbulence",
       "target": "v5-dynamical-systems-and-bifurcation-theory",
       "raw": "Dynamical Systems & Bifurcation Theory"
@@ -12992,6 +18951,11 @@ window.RESEARCH_DATA = {
       "source": "v8-symbiosis-and-mycorrhizal-networks",
       "target": "v7-cell-and-molecular-biology",
       "raw": "Cell & Molecular Biology"
+    },
+    {
+      "source": "v8-symbiosis-and-mycorrhizal-networks",
+      "target": "v9-lynn-margulis",
+      "raw": "Lynn Margulis"
     },
     {
       "source": "v8-niche-construction-theory",
@@ -13204,6 +19168,11 @@ window.RESEARCH_DATA = {
       "raw": "Gottfried Leibniz"
     },
     {
+      "source": "v9-cryptography-and-coding-theory",
+      "target": "v9-i-ching-as-combinatorial-system",
+      "raw": "I Ching as Combinatorial System"
+    },
+    {
       "source": "v9-sociology-and-social-network-analysis",
       "target": "v5-network-science-and-graph-theory",
       "raw": "Network Science & Graph Theory"
@@ -13272,6 +19241,16 @@ window.RESEARCH_DATA = {
       "source": "v9-actor-network-theory-and-sts",
       "target": "v9-critical-theory-and-the-frankfurt-school",
       "raw": "Critical Theory & the Frankfurt School"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v9-michel-foucault",
+      "raw": "Michel Foucault"
+    },
+    {
+      "source": "v9-actor-network-theory-and-sts",
+      "target": "v9-a-thousand-plateaus",
+      "raw": "A Thousand Plateaus"
     },
     {
       "source": "v9-ritual-as-coordination-technology",
@@ -13357,6 +19336,11 @@ window.RESEARCH_DATA = {
       "source": "v9-scaling-laws-and-allometry",
       "target": "v5-morphogenesis-and-biological-pattern-formation",
       "raw": "Morphogenesis & Biological Pattern Formation"
+    },
+    {
+      "source": "v9-scaling-laws-and-allometry",
+      "target": "v9-benoit-mandelbrot",
+      "raw": "Benoit Mandelbrot"
     },
     {
       "source": "v9-recursion-and-self-reference",
@@ -13684,6 +19668,11 @@ window.RESEARCH_DATA = {
       "raw": "Philosophy of Mind & Consciousness"
     },
     {
+      "source": "v9-maturana-and-varela",
+      "target": "v9-j-j-gibson",
+      "raw": "J.J. Gibson"
+    },
+    {
       "source": "v9-stafford-beer",
       "target": "v5-cybernetics-and-control-theory",
       "raw": "Cybernetics & Control Theory"
@@ -13827,6 +19816,11 @@ window.RESEARCH_DATA = {
       "source": "v9-i-ching-as-combinatorial-system",
       "target": "v9-cryptography-and-coding-theory",
       "raw": "Cryptography & Coding Theory"
+    },
+    {
+      "source": "v9-i-ching-as-combinatorial-system",
+      "target": "v9-joseph-needham",
+      "raw": "Joseph Needham"
     },
     {
       "source": "v9-ubuntu-and-african-relational-philosophy",

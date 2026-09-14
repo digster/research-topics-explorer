@@ -16,14 +16,16 @@ research-topics.csv ──(node parse.mjs)──► data.js ──(<script src>)
   data*, not runtime heuristics: `connects_to_ids` holds resolved target ids
   **positionally aligned** with the human-readable `connects_to_raw`
   (pipe-separated; an empty slot = "this connection never resolved to a
-  topic in the dataset" and renders as a faded chip). Edges are **directed**
-  and reciprocity is *not* derived at runtime: the detail panel splits
-  Outgoing from Incoming and the graph's hub ranking is in-degree-based, so a
-  back-link only exists if the target row also lists the source. **Curation
-  rule: when adding a connection, add the back-link on the target row too**
-  unless the relationship is genuinely one-way. Historically most edges were
-  one-way (~19% reciprocated), so a low in-degree on an older topic reflects
-  curation debt, not an absent relationship.
+  topic in the dataset" and renders as a faded chip). The connection graph is
+  **symmetric**: every relationship is stored in both rows, and nothing derives
+  reciprocity at runtime. **Curation rule: when adding a connection, add the
+  back-link on the target row too.** (Until 2026-09-14 most edges were one-way
+  — only ~19% reciprocated — which made in-degree a measure of how often a row
+  happened to be mentioned rather than how connected a topic was; the symmetric
+  closure added 666 back-links across 115 rows.) A row may still name one topic
+  through two raw labels ("AI" and "machine learning" both resolve to Machine
+  Learning): that is one relationship with two authored phrasings, kept in the
+  CSV and deduped by target in the app.
 - **`parse.mjs`** — pure transform + validation. Exports `parseCSV`,
   `csvToRecords`, `splitPipes`, `versionNum`, `buildPayload`; `main()` runs
   **only when executed directly** (`node parse.mjs`), so importing the module
@@ -74,6 +76,16 @@ to keep the data pipeline (and `data.js`) untouched:
   (`DISCIPLINE_COLORS`). This discipline colour is the app's *primary* visual
   encoding (Catalog stripes/tags, graph node fill, Hubs bars); version is a
   secondary badge.
+- **`NEIGHBOURS` / `DEGREE`** — `topic.id → Set<neighbour id>` and its size,
+  folded from `DATA.edges` at boot. Because the stored graph is symmetric,
+  in-degree and out-degree are the same number and summing them double-counts;
+  because a row may name one topic through two raw labels, even a single
+  direction can over-count. Collapsing to distinct neighbours fixes both.
+  **Every view that ranks or sizes by connectedness reads `DEGREE`** — Catalog
+  card "N links" and the "most connected" sort, graph node radius and the
+  label-reveal ranking — so they cannot drift apart. The Hubs view is the one
+  exception: it honours the version filter, so it recomputes neighbours against
+  the visible set rather than reading the global map.
 - **`LANE_OF` / `laneOf()`** — a "priority lane" (Start here / Foundations /
   Deep dives / Niche & emerging / Thinkers & texts) derived by keyword-matching
   `groupLabel`. Pure presentation; used only as a Catalog filter (there is no
@@ -114,6 +126,16 @@ survives typing.
   `… Individual Thinkers & Creators` (v7 Group A, v9 Group C, …). Derived
   from the data, not a version hardcode, so new creator cohorts join the
   Creators view automatically as long as they use that group label.
+- **Detail panel / Hubs after symmetry** — with every edge stored both ways, an
+  Outgoing/Incoming split would print the same topics twice, and Hubs'
+  in-degree and out-degree tabs would rank identically. The panel shows one
+  deduped **Connects to (N)** list (unresolved slots still trail it as faded
+  chips) and Hubs offers **Connections** and **Bridge score**.
+- **Graph link dedup** — `renderGraph` collapses `EDGES` to one line per
+  unordered pair. Without it the symmetric data draws every relationship twice,
+  stacking strokes (heavier than a single edge) and making `forceLink` apply
+  its pull once per copy, which contracts the deliberately loose layout. 1520
+  directed edges → 754 drawn lines.
 - **Marked as worked on** — a binary toggle writes ids into
   `localStorage["rte:markedTopics"]` (Catalog cards in `index.html`; Cards view
   in `index.v0.html`), and the sage wash mirrors read-only elsewhere (Reader in
@@ -133,7 +155,7 @@ survives typing.
   the saved width each time.
 - **Adaptive graph labels** — to keep the Knowledge Graph readable, every node
   owns a (hidden) `<text>` whose visibility is gated by `node.labelMinK`, a
-  per-render threshold from an in-degree ranking: the top `BASE_LABELS` (12) hubs
+  per-render threshold from a degree ranking: the top `BASE_LABELS` (12) hubs
   are always shown, the long tail ramps `1.05 → 3.4`. The d3.zoom handler reveals
   labels whose `labelMinK ≤ k` and counter-scales font to `11/k` so labels stay a
   constant ~11px on screen; `:hover` and `.highlight` reveal individual labels via

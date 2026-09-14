@@ -598,6 +598,20 @@ function laneOf(t) {
 const LANE_OF = new Map(TOPICS.map(t => [t.id, laneOf(t)]));
 const LANE_COUNTS = new Map(LANES.map(L => [L, TOPICS.filter(t => LANE_OF.get(t.id) === L).length]));
 
+// NEIGHBOURS / DEGREE — connections are symmetric in the data, so in-degree and
+// out-degree are the same number and adding them would double-count. Collapse
+// each topic's edges to its set of distinct neighbours: that also absorbs the
+// handful of rows naming one topic through two raw labels ("AI" and "machine
+// learning"), which is one relationship, not two. Every view that ranks or
+// sizes by connectedness reads DEGREE so they all agree.
+const NEIGHBOURS = new Map(TOPICS.map(t => [t.id, new Set()]));
+for (const e of EDGES) {
+  if (e.source === e.target) continue;
+  NEIGHBOURS.get(e.source)?.add(e.target);
+  NEIGHBOURS.get(e.target)?.add(e.source);
+}
+const DEGREE = new Map(TOPICS.map(t => [t.id, NEIGHBOURS.get(t.id).size]));
+
 /* --- Thinkers index: keyFigures aggregated across topics -------------------- */
 // `key_figures` is a single free-text column reused across heterogeneous node
 // types (people, books, crafts, concepts), so it also holds publication years,
@@ -702,7 +716,7 @@ const STATE = {
   lanes:       new Set(LANES),
   progress:    new Set(["toread", "done"]),
   cardsSort:   "discipline",
-  hubsMode:    "indegree",
+  hubsMode:    "connections",
   readerPhase: DISCIPLINES.length ? DISCIPLINES[0].phase : 1,
   markedIds:   new Set(loadMarked()),
 };
@@ -795,8 +809,22 @@ function renderPanel() {
   if (!t) { panel.classList.remove("open"); return; }
 
   const d = discOf(t.id);
-  const incoming = TOPICS.filter(o => o.connections.some(c => c.targetId === t.id));
   const isCreator = /Individual Thinkers & Creators/i.test(t.groupLabel);
+
+  // Connections are symmetric in the data (every edge has its back-link), so an
+  // Outgoing/Incoming split would render the same topics twice. Show one list.
+  // A row can also name the same topic through two raw labels ("AI" and
+  // "machine learning") — that is one relationship, so keep the first label and
+  // drop the repeat. Unresolved slots have no target to dedupe on and all stay.
+  const seen = new Set();
+  const resolved = [];
+  const unresolved = [];
+  for (const c of t.connections) {
+    if (!c.targetId) { unresolved.push(c); continue; }
+    if (seen.has(c.targetId)) continue;
+    seen.add(c.targetId);
+    resolved.push(c);
+  }
 
   panel.innerHTML = `
     <button class="close" id="panel-close" aria-label="Close">&times;</button>
@@ -804,25 +832,17 @@ function renderPanel() {
       ${d.phase ? `<span class="disc-tag" style="background:${discTint(d.color)}; color:${discInk(d.color)};">${escapeHtml(d.name)}</span>` : ""}
       <span class="badge ver">${t.version}</span>
       <span class="badge ver">${escapeHtml(LANE_OF.get(t.id))}</span>
-      <span class="badge ver">in ${t.inDegree} · out ${t.outDegree}</span>
+      <span class="badge ver">${resolved.length} connection${resolved.length === 1 ? "" : "s"}</span>
     </div>
     <h2>${escapeHtml(t.name)}</h2>
     ${t.keyFigures.length ? `<div class="figures">${escapeHtml(t.keyFigures.join(", "))}</div>` : ""}
     <div class="description">${marked.parse(t.description || "")}</div>
 
-    ${t.connections.length ? `
-      <h4>Outgoing — ${isCreator ? "resonates with" : "connects to"} (${t.connections.length})</h4>
+    ${resolved.length || unresolved.length ? `
+      <h4>${isCreator ? "Resonates with" : "Connects to"} (${resolved.length})</h4>
       <div class="chips">
-        ${t.connections.map(c => c.targetId
-          ? `<span class="chip" data-id="${c.targetId}">${escapeHtml(c.raw)}</span>`
-          : `<span class="chip unresolved" title="No matching topic in this dataset">${escapeHtml(c.raw)}</span>`
-        ).join("")}
-      </div>` : ""}
-
-    ${incoming.length ? `
-      <h4>Incoming — referenced by (${incoming.length})</h4>
-      <div class="chips">
-        ${incoming.map(o => `<span class="chip" data-id="${o.id}">${escapeHtml(o.name)}</span>`).join("")}
+        ${resolved.map(c => `<span class="chip" data-id="${c.targetId}">${escapeHtml(c.raw)}</span>`).join("")}
+        ${unresolved.map(c => `<span class="chip unresolved" title="No matching topic in this dataset">${escapeHtml(c.raw)}</span>`).join("")}
       </div>` : ""}
 
     <div class="source">
@@ -976,7 +996,7 @@ function renderCatalogResults() {
   const visible = visibleTopics();
   const sorted = [...visible].sort((a, b) => {
     switch (STATE.cardsSort) {
-      case "connected":  return (b.inDegree + b.outDegree) - (a.inDegree + a.outDegree) || a.name.localeCompare(b.name);
+      case "connected":  return DEGREE.get(b.id) - DEGREE.get(a.id) || a.name.localeCompare(b.name);
       case "az":         return a.name.localeCompare(b.name);
       default:           // by discipline phase, then name
         return (discOf(a.id).phase || 99) - (discOf(b.id).phase || 99) || a.name.localeCompare(b.name);
@@ -1006,7 +1026,7 @@ function renderCatalogResults() {
       ${t.keyFigures.length ? `<div class="figures">${escapeHtml(t.keyFigures.slice(0, 4).join(", "))}${t.keyFigures.length > 4 ? "…" : ""}</div>` : ""}
       <div class="meta">
         <span>${t.version}</span><span>${escapeHtml(LANE_OF.get(t.id))}</span>
-        <span class="links">${t.inDegree + t.outDegree} links</span>
+        <span class="links">${DEGREE.get(t.id)} links</span>
       </div>
     `;
     card.addEventListener("click", () => selectTopic(t.id));
@@ -1031,21 +1051,34 @@ function renderGraph(targetId = "graph") {
   const visIds = new Set(visible.map(t => t.id));
   const nodes = visible.map(t => ({
     id: t.id, name: t.name, color: discOf(t.id).color,
-    inDegree: t.inDegree, r: 4 + Math.sqrt(t.inDegree) * 2,
+    degree: DEGREE.get(t.id), r: 4 + Math.sqrt(DEGREE.get(t.id)) * 2,
   }));
-  // Per-node zoom threshold for label reveal. Rank nodes by in-degree so the top
+  // Per-node zoom threshold for label reveal. Rank nodes by degree so the top
   // hubs are always labelled (base view stays readable) and the long tail reveals
   // progressively as you zoom in, rather than every label firing at once.
   const BASE_LABELS = 12;                          // labels visible at default zoom (k=1)
-  const ranked = [...nodes].sort((a, b) => b.inDegree - a.inDegree);
+  const ranked = [...nodes].sort((a, b) => b.degree - a.degree);
   ranked.forEach((n, i) => {
     if (i < BASE_LABELS) { n.labelMinK = 0; return; }
     const f = (i - BASE_LABELS) / Math.max(1, ranked.length - BASE_LABELS);
     n.labelMinK = 1.05 + f * 2.35;                 // ramps 1.05 → 3.4 across the tail
   });
-  const links = EDGES
-    .filter(e => visIds.has(e.source) && visIds.has(e.target) && e.source !== e.target)
-    .map(e => ({ source: e.source, target: e.target }));
+  // EDGES is directed and symmetric, so every relationship appears twice (A->B
+  // and B->A), and a few rows name the same topic through two raw labels. Drawn
+  // as-is that means duplicate lines stacked on each other — visually heavier
+  // than a single edge — and forceLink applying its pull once per copy, which
+  // would contract the deliberately loose layout. Collapse to one line per
+  // unordered pair.
+  const seenPairs = new Set();
+  const links = [];
+  for (const e of EDGES) {
+    if (e.source === e.target) continue;
+    if (!visIds.has(e.source) || !visIds.has(e.target)) continue;
+    const key = e.source < e.target ? `${e.source}\u0000${e.target}` : `${e.target}\u0000${e.source}`;
+    if (seenPairs.has(key)) continue;
+    seenPairs.add(key);
+    links.push({ source: e.source, target: e.target });
+  }
 
   const svg = d3.select(container).append("svg")
     .attr("class", "force-graph").attr("viewBox", [0, 0, width, height]);
@@ -1118,7 +1151,7 @@ function buildGraphOverlay(container) {
         ${ALL_VERSIONS.map(v => `<span class="ver-chip${STATE.versions.has(v) ? "" : " off"}" data-version="${v}">${v} (${VERSION_COUNTS.get(v)})</span>`).join("")}
       </div>
     </div>
-    <div class="muted">node size = in-degree · hover for label · zoom in to reveal more</div>
+    <div class="muted">node size = connections · hover for label · zoom in to reveal more</div>
     <div class="gbtns"><button id="g-freeze">freeze</button><button id="g-reheat">reheat</button></div>
   `;
   container.appendChild(overlay);
@@ -1315,17 +1348,17 @@ function renderReader() {
 }
 
 /* =============================================================================
-   View — Hubs (carried over from v0: in-degree / out-degree / bridge score)
+   View — Hubs (connections / bridge score; the separate in- and out-degree
+   modes merged once connections became symmetric)
    ============================================================================= */
 function renderHubs() {
   const root = el("hubs");
   root.innerHTML = `
     <h2>Most-connected topics</h2>
-    <div class="sub">Ranked by how the rest of the corpus references them. Bridge score rewards out-edges that span versions or disciplines — the connective glue of the dataset. Respects the active version filter.</div>
+    <div class="sub">Ranked by how many other topics each one connects to. Connections are mutual, so this counts distinct neighbours in both directions. Bridge score rewards connections that span versions or disciplines — the connective glue of the dataset. Respects the active version filter.</div>
     <div class="hubs-tabs" id="hubs-tabs">
-      <button data-mode="indegree"  ${STATE.hubsMode === "indegree"  ? "class='active'" : ""}>In-degree</button>
-      <button data-mode="outdegree" ${STATE.hubsMode === "outdegree" ? "class='active'" : ""}>Out-degree</button>
-      <button data-mode="bridges"   ${STATE.hubsMode === "bridges"   ? "class='active'" : ""}>Bridge score</button>
+      <button data-mode="connections" ${STATE.hubsMode === "connections" ? "class='active'" : ""}>Connections</button>
+      <button data-mode="bridges"     ${STATE.hubsMode === "bridges"     ? "class='active'" : ""}>Bridge score</button>
     </div>
     <div id="hubs-list"></div>
   `;
@@ -1336,33 +1369,35 @@ function renderHubs() {
 
   const visible = visibleTopics();
   const visIds = new Set(visible.map(t => t.id));
+
+  // Distinct neighbours inside the current filter. The global DEGREE map can't
+  // be reused here because Hubs honours the version filter, so a topic's count
+  // must drop when its neighbours are filtered out. Connections are symmetric,
+  // so a topic's own list already names everything that names it back.
+  function visibleNeighbours(t) {
+    const set = new Set();
+    for (const id of NEIGHBOURS.get(t.id)) if (visIds.has(id)) set.add(id);
+    return set;
+  }
   function bridgeScore(t) {
     let s = 0;
-    for (const c of t.connections) {
-      if (!c.targetId || !visIds.has(c.targetId)) continue;
-      const o = TOPIC_BY_ID.get(c.targetId);
+    for (const id of visibleNeighbours(t)) {
+      const o = TOPIC_BY_ID.get(id);
       if (o.version !== t.version) s += 2;
       else if (discOf(o.id).phase !== discOf(t.id).phase) s += 1;
     }
     return s;
   }
 
-  let scored;
-  if (STATE.hubsMode === "indegree") {
-    const inV = new Map();
-    for (const t of visible) for (const c of t.connections) if (c.targetId && visIds.has(c.targetId)) inV.set(c.targetId, (inV.get(c.targetId) || 0) + 1);
-    scored = visible.map(t => ({ t, val: inV.get(t.id) || 0 }));
-  } else if (STATE.hubsMode === "outdegree") {
-    scored = visible.map(t => ({ t, val: t.connections.filter(c => c.targetId && visIds.has(c.targetId)).length }));
-  } else {
-    scored = visible.map(t => ({ t, val: bridgeScore(t) }));
-  }
-  scored.sort((a, b) => b.val - a.val);
-  scored = scored.slice(0, 30);
-  const max = Math.max(1, ...scored.map(x => x.val));
+  const scored = STATE.hubsMode === "bridges"
+    ? visible.map(t => ({ t, val: bridgeScore(t) }))
+    : visible.map(t => ({ t, val: visibleNeighbours(t).size }));
+  scored.sort((a, b) => b.val - a.val || a.t.name.localeCompare(b.t.name));
+  const top = scored.slice(0, 30);
+  const max = Math.max(1, ...top.map(x => x.val));
 
   const list = el("hubs-list");
-  for (const { t, val } of scored) {
+  for (const { t, val } of top) {
     const row = document.createElement("div");
     row.className = "hub-row";
     row.innerHTML = `

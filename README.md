@@ -15,10 +15,10 @@ The visual encoding is **one accent colour per discipline** (the 10 thematic gro
 | View            | What it shows                                                                                      |
 |-----------------|----------------------------------------------------------------------------------------------------|
 | Catalog         | The workhorse: searchable / sortable grid of every topic with discipline tag, figures, and link count. Left rail filters by **Version**, Discipline, Priority lane, and Progress — **drag the divider on the rail's right edge to widen it** (handy for the longer discipline names; width is remembered). **Reset filters** re-checks everything; **Unselect all** clears every box in one click so you can isolate a single facet. Sort by discipline, most connected, or A–Z. |
-| Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = in-degree, node colour = discipline. **Labels are adaptive** — only the top hubs are labelled at the default zoom; **zoom in to progressively reveal more**, and **hover** any node (or select it) to show its label. Overlay legend doubles as a clickable version filter. |
+| Knowledge Graph | Force-directed constellation of all topics on a dark canvas. Node size = number of connections, node colour = discipline. One line per relationship (connections are mutual, so the two directed edges are collapsed). **Labels are adaptive** — only the top hubs are labelled at the default zoom; **zoom in to progressively reveal more**, and **hover** any node (or select it) to show its label. Overlay legend doubles as a clickable version filter. |
 | Thinkers        | Key figures aggregated across topics (~794 after filtering out non-name `key_figures` tokens — years, concept terms, quoted titles). Cards feature the people who thread through 2+ topics; search reveals everyone. A "profile" link jumps to a person's own topic node when one exists. |
 | Reader          | Focused, one-discipline-at-a-time reading layout — a reading-path rail, the current phase's topics with figures, and an "up next" preview. |
-| Hubs            | Top 30 topics by in-degree, out-degree, or cross-version/-discipline "bridge score" (carried over from the prior explorer). |
+| Hubs            | Top 30 topics by number of connections, or by cross-version/-discipline "bridge score" (carried over from the prior explorer). |
 
 The slide-over side panel renders the selected topic's full markdown description, key figures, outgoing connections, and incoming references — every chip is clickable to navigate. Press <kbd>Esc</kbd> or the ✕ to close it.
 
@@ -80,7 +80,7 @@ Output:
 ```
 ✓ data.js written
   topics: 204 (v5=56, v6=32, v7=66, v8=18, v9=32)
-  edges: 854 resolved, 263 unresolved connection slots
+  edges: 1520 resolved, 263 unresolved connection slots
   disciplines: 10
   creators: 39
 ```
@@ -113,9 +113,11 @@ Nothing else: filters, stats, legend, badges, hub bars, and the roadmap pick the
 
 The **v9** batch follows this pattern: 32 topics in five groups — A *Disciplines & Fields*, B *Cross-Cutting Concepts & Lenses* (e.g. Scaling Laws, Recursion), C *Individual Thinkers & Creators*, D *Non-Western & Comparative Knowledge Systems*, E *Seminal Books & Texts*. Only Groups A and B carry a `likely_phase` (Roadmap overlay); people, traditions, and books stay off the roadmap like v7.
 
-Roughly 30% of raw connection strings have no resolved target — they reference broad fields ("biology", "economics", "AI agents") that have no dedicated topic in this dataset. Those still appear in the side panel as faded chips. To add or fix a connection, edit the `connects_to_ids` slot for that row in the CSV.
+About 15% of raw connection strings (263 of 1783 slots) have no resolved target — they reference broad fields ("biology", "economics", "AI agents") that have no dedicated topic in this dataset. Those still appear in the side panel as faded chips. To add or fix a connection, edit the `connects_to_ids` slot for that row in the CSV.
 
-Connections are **directed** — the detail panel shows *Outgoing* and *Incoming* separately, and the graph's hub ranking is in-degree-based. When you add a connection, **add the back-link on the target row too** unless the relationship really is one-way, so the topic is reachable from both ends. Append to `connects_to_raw` *and* `connects_to_ids` together; if the target's `connects_to_ids` is shorter than its `connects_to_raw`, pad it with empty slots first or the new id will pair with the wrong label.
+Connections are **mutual**: every edge is stored in both directions, so a topic's row names everything that names it back. When you add a connection, **add the back-link on the target row too** — nothing derives it at runtime. Append to `connects_to_raw` *and* `connects_to_ids` together; if the target's `connects_to_ids` is shorter than its `connects_to_raw`, pad it with empty slots first or the new id will pair with the wrong label.
+
+A row may name the same topic through two different raw labels (`"AI"` and `"machine learning"` both resolve to Machine Learning). That is one relationship with two authored phrasings — the CSV keeps both, and the app dedupes by target when counting, listing, and drawing edges.
 
 ## Architecture
 

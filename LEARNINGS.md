@@ -44,16 +44,13 @@ unresolved slots, so a dropped pipe quietly turns real links into faded
 chips. Build the two lists from one array of pairs rather than typing two
 parallel strings.
 
-## Edges are directed — add the back-link yourself
+## The connection graph is symmetric — keep it that way
 
-Nothing in the pipeline infers reciprocity. The detail panel renders *Outgoing*
-and *Incoming* as separate lists and the graph's `labelMinK` hub ranking is
-**in-degree**-based, so a topic that links out to ten others but is listed by
-none of them shows `in 0 · out 10` and can never rank as a hub — even if it is
-conceptually central.
+As of 2026-09-14 every relationship is stored in **both** rows (the symmetric
+closure added 666 back-links across 115 of 204 rows). Nothing derives
+reciprocity at runtime, so a new one-way edge silently breaks the invariant.
 
-**Curation rule: when you add a connection, add the back-link on the target row
-too**, unless the relationship really is one-way.
+**Rule: when you add a connection, add the back-link on the target row too.**
 
 Two traps when writing the back-link:
 
@@ -66,8 +63,39 @@ Two traps when writing the back-link:
   occurs **exactly once**, and swap it. A full rewrite normalizes quoting and
   line endings across all 200+ rows and buries the real change in the diff.
 
-Baseline as of 2026-09-14: 854 directed edges, ~21% reciprocated. Most one-way
-edges are historical curation debt, not deliberate asymmetry.
+To check the invariant:
+
+```sh
+node -e 'const fs=require("fs"),vm=require("vm");const c={window:{}};vm.createContext(c);
+vm.runInContext(fs.readFileSync("data.js","utf8"),c);const D=c.window.RESEARCH_DATA;
+const o=new Map(D.topics.map(t=>[t.id,new Set()]));for(const e of D.edges)o.get(e.source).add(e.target);
+let n=0;for(const[s,ts]of o)for(const t of ts)if(!o.get(t).has(s))n++;console.log("one-way edges:",n);'
+```
+
+## Degree: count distinct neighbours, never in + out
+
+Because the graph is symmetric, `inDegree` and `outDegree` (emitted by
+`parse.mjs`) are the **same number**, so the old `inDegree + outDegree` idiom
+double-counts every topic. Worse, both count **slots, not distinct targets**,
+and 12 rows name one topic through two raw labels ("AI" *and* "machine
+learning" both resolve to Machine Learning) — one relationship, two slots.
+
+`index.html` therefore derives `NEIGHBOURS` / `DEGREE` at boot (distinct
+neighbours per topic) and every view that ranks or sizes by connectedness reads
+it. Don't reach for `t.inDegree` / `t.outDegree` in view code. The Hubs view is
+the deliberate exception: it honours the version filter, so it recomputes
+neighbours against the visible set.
+
+## Symmetric data means the graph must dedupe its links
+
+`renderGraph` collapses `EDGES` to one line per unordered pair. Skip that and
+every relationship is drawn **twice**: the stacked strokes read heavier than a
+single edge, and `d3.forceLink` applies its pull once per copy, contracting the
+layout that was deliberately loosened (distance 110, strength 0.3) to spread
+the hub cluster. 1520 directed edges → **754** drawn lines.
+
+Note the dedup also absorbs the duplicate-raw-label rows, which is why 754 is
+lower than `edges.length / 2` (760).
 
 ## Each version cohort has its own field dialect
 
