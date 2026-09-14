@@ -252,3 +252,45 @@ test("integration: real CSV builds a consistent payload with no warnings", async
     assert.ok(ids.has(e.source) && ids.has(e.target), "edges must reference known topics");
   }
 });
+
+// Connections are curated as mutual: every A -> B is stored alongside its
+// B -> A (the symmetric closure was taken on 2026-09-14). Nothing derives
+// reciprocity at runtime, so a hand-added one-way row breaks real behaviour —
+// the detail panel's single "Connects to" list and the Hubs "Connections"
+// ranking both assume mutual edges, and the graph sizes nodes and ranks labels
+// by degree. The failure names the offenders because the fix is always the
+// same: append the back-link to the target row.
+test("integration: every connection in the real CSV is mutual", async () => {
+  const csv = await readFile(join(__dirname, "research-topics.csv"), "utf8");
+  const { payload } = buildPayload(csvToRecords(csv));
+
+  // Distinct neighbours per topic. A row may name one target through two raw
+  // labels ("AI" and "machine learning" both resolve to Machine Learning) —
+  // that is one relationship, and the Set collapses it.
+  const outgoing = new Map(payload.topics.map((t) => [t.id, new Set()]));
+  for (const e of payload.edges) outgoing.get(e.source).add(e.target);
+
+  const nameOf = new Map(payload.topics.map((t) => [t.id, t.name]));
+  const oneWay = [];
+  for (const [source, targets] of outgoing) {
+    for (const target of targets) {
+      if (!outgoing.get(target).has(source)) oneWay.push({ source, target });
+    }
+  }
+
+  if (oneWay.length) {
+    const shown = oneWay.slice(0, 10).map(({ source, target }) =>
+      `  ${source}\n` +
+      `    -> ${target}, which does not link back.\n` +
+      `    fix: on the ${target} row, append "${nameOf.get(source)}" to ` +
+      `connects_to_raw and "${source}" to connects_to_ids\n` +
+      `         (positionally aligned — pad a short ids list with empty slots first)`
+    ).join("\n");
+    const more = oneWay.length > 10 ? `\n  …and ${oneWay.length - 10} more` : "";
+    assert.fail(
+      `${oneWay.length} one-way connection(s); every connection must be mutual.\n` +
+      `${shown}${more}\n` +
+      `See "The connection graph is symmetric" in LEARNINGS.md.`
+    );
+  }
+});

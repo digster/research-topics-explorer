@@ -178,6 +178,14 @@ id/name/version, non-numeric `phase`, `connects_to_ids` slots exceeding
 prints zero warnings — the integration test enforces that, and it avoids
 hardcoded row counts so future versions keep it green.
 
+Two invariants the parser itself does **not** check are enforced by the
+integration tests instead. Edges must reference known topics, and **every
+connection must be mutual** — the symmetric closure is curated data, so a
+hand-added one-way row would parse cleanly and silently break the detail
+panel's single "Connects to" list, the Hubs "Connections" ranking, and the
+graph's degree-based node sizing. That test names each offending pair and the
+exact columns to append to, because the fix is always the same.
+
 ## Conventions that differ from the obvious
 
 - Multi-value CSV cells are **pipe-separated** (values contain commas).

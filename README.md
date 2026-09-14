@@ -101,7 +101,7 @@ The parser has a test suite (`node:test`, no dependencies):
 node --test parse.test.mjs
 ```
 
-It covers the CSV grammar, the payload transform (including unknown future versions like v9/v10 flowing through untouched — the regression that once made new versions invisible), validation warnings, and structural invariants against the real CSV. `parse.mjs` is import-safe: importing it never rewrites `data.js`; only `node parse.mjs` does.
+It covers the CSV grammar, the payload transform (including unknown future versions like v9/v10 flowing through untouched — the regression that once made new versions invisible), validation warnings, and structural invariants against the real CSV — including that **every connection is mutual**, since a one-way row parses cleanly but breaks the views that assume symmetry. A failure names each offending pair and the columns to fix. `parse.mjs` is import-safe: importing it never rewrites `data.js`; only `node parse.mjs` does.
 
 ### Adding a new version
 

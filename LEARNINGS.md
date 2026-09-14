@@ -63,14 +63,11 @@ Two traps when writing the back-link:
   occurs **exactly once**, and swap it. A full rewrite normalizes quoting and
   line endings across all 200+ rows and buries the real change in the diff.
 
-To check the invariant:
-
-```sh
-node -e 'const fs=require("fs"),vm=require("vm");const c={window:{}};vm.createContext(c);
-vm.runInContext(fs.readFileSync("data.js","utf8"),c);const D=c.window.RESEARCH_DATA;
-const o=new Map(D.topics.map(t=>[t.id,new Set()]));for(const e of D.edges)o.get(e.source).add(e.target);
-let n=0;for(const[s,ts]of o)for(const t of ts)if(!o.get(t).has(s))n++;console.log("one-way edges:",n);'
-```
+**This is enforced by a test.** `node --test parse.test.mjs` includes
+*"integration: every connection in the real CSV is mutual"*, which fails with
+the offending pairs and the exact columns to append to. If you are editing
+connections, run the suite before committing — the parser itself will not catch
+a one-way row, since it is valid CSV that produces a warning-free `data.js`.
 
 ## Degree: count distinct neighbours, never in + out
 
